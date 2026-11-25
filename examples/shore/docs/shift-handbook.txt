@@ -1,0 +1,8 @@
+Shift swap notice: Submit swap requests at least 36 hours before the affected shift.
+Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal.
+Annual leave notice: File annual leave requests at least 10 calendar days before departure.
+Annual leave approver: The department lead approves annual leave in the leave portal.
+Emergency leave contact: Call the duty coordinator before the scheduled shift begins.
+Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes.
+Training leave allowance: Staff may request two paid training days each calendar year.
+Returning from leave: Confirm the next rostered shift with the duty coordinator.
