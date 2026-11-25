@@ -49,13 +49,24 @@ export function indexDocs(docs) {
   return chunks;
 }
 function selectTools(brief,docs) {
-  const s=brief.toLowerCase().split(/[.;\n]/).filter(v=>!/(?:do not|must not|never|exclude|refuse|out of scope)/.test(v)).join(' ');
-  return registry.filter(tool=>({
-    csv_lookup:docs.some(d=>/\.csv$/i.test(d.name)) && /catalog|lookup|look up|inventory|csv|register|stock|specimen|record/.test(s),
-    calculator:/calculat|arithmetic|multiply|compute totals/.test(s),
-    current_date:/current date|today.s date/.test(s),
-    weather:/live weather|current weather/.test(s)
-  })[tool]);
+  const intent={
+    csv_lookup:/catalog|lookup|look up|inventory|csv|register|stock|specimen|record/,
+    calculator:/calculat|arithmetic|multiply|compute totals/,
+    current_date:/current date|today.s date/,
+    weather:/live weather|current weather/
+  };
+  const allowed=new Set(), denied=new Set();
+  // Split at polarity changes. Keep coordinated terms under the same negation.
+  for(const clause of brief.toLowerCase().split(/[.;\n]|\bbut\b/)){
+    const boundary=clause.search(/\b(?:do not|must not|never|without|exclude|refuse|out of scope|no)\b/);
+    const positive=boundary<0?clause:clause.slice(0,boundary);
+    const negative=boundary<0?'':clause.slice(boundary);
+    for(const tool of registry){
+      if(intent[tool].test(positive))allowed.add(tool);
+      if(intent[tool].test(negative))denied.add(tool);
+    }
+  }
+  return registry.filter(tool=>allowed.has(tool)&&!denied.has(tool)&&(tool!=='csv_lookup'||docs.some(d=>/\.csv$/i.test(d.name))));
 }
 const cited=c=>({id:c.id,source:c.source,text:c.text});
 const refusal=(text=unknown)=>({status:'refused',text,citations:[]});
@@ -88,12 +99,24 @@ export function answer(def,q){
     const keys=terms(field[1]).filter(t=>!['detail','information','guidance','procedure','policy','rule'].includes(t));
     if(keys.length && !def.chunks.some(c=>overlap(keys,terms(c.text))>0))return refusal();
   }
+  let candidates=def.chunks;
+  const scope=q.match(/^according to (.+?),\s*(.+)$/i);
+  if(scope){
+    candidates=candidates.filter(c=>c.source.toLowerCase()===scope[1].trim().toLowerCase());
+    if(!candidates.length)return refusal();
+    q=scope[2];
+  }
   const parts=def.retrieval.splitConjunction?q.split(/\s+(?:and also|as well as|and)\s+/i):[q];
   let hits=[];
   for(const part of parts){
-    const ranked=rank(def.chunks,part);
+    const ranked=rank(candidates,part);
     const best=ranked[0];
     if(!best || best.score<def.retrieval.threshold) return refusal();
+    const alternatives=ranked.filter(r=>r.score===best.score && r.c.topic.toLowerCase()===best.c.topic.toLowerCase());
+    if(new Set(alternatives.map(r=>r.c.text)).size>1){
+      const citations=alternatives.map(r=>cited(r.c));
+      return {status:'clarify',text:'The sources give different passages for “'+best.c.topic+'”. Specify a source, for example: According to '+best.c.source+', '+part,citations};
+    }
     hits.push(best.c);
   }
   hits=[...new Map(hits.map(c=>[c.id,c])).values()];
