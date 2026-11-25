@@ -35,3 +35,13 @@ test('tiny sources produce distinct questions',()=>{
   assert.ok(evals.length>=20);
   assert.equal(new Set(evals.map(e=>e.question)).size,evals.length);
 });
+
+import {validateDesign} from './model.mjs';
+test('local model outputs must satisfy the question budget and reference real labels',()=>{
+  const valid={audience:'Staff',tone:'Plain',prompt:'Quote the source.',topics:['Hours'],
+    questions:['When does it open?','When does it close?','What hours apply?'].map(question=>({topic:'Hours',question}))};
+  assert.deepEqual(validateDesign(valid,['Hours']),valid);
+  assert.throws(()=>validateDesign({...valid,questions:[]},['Hours']),/Invalid topics or questions/);
+  assert.throws(()=>validateDesign(valid,['Fees']),/unknown source label/);
+  assert.throws(()=>validateDesign({...valid,questions:Array(3).fill(valid.questions[0])},['Hours']),/duplicate question/);
+});

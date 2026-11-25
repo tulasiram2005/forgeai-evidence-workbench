@@ -39,7 +39,7 @@ export async function enrich(brief, docs) {
     name: String(d.name ?? d.source ?? '').slice(0, 160),
     excerpt: String(d.text ?? d.content ?? '').slice(0, excerptLimit)
   }));
-  const labels=indexDocs(docs).map(c=>c.topic).slice(0,100);
+  const labels=[...new Set(indexDocs(docs).map(c=>c.topic))].slice(0,100);
   const designSchema=structuredClone(schema);
   designSchema.properties.questions.items.properties.topic={type:'string',enum:labels};
   const model = process.env.FORGE_MODEL || 'qwen2.5:1.5b';
@@ -60,13 +60,25 @@ export async function enrich(brief, docs) {
   const payload = await response.json();
   const raw = nonempty(llama ? payload.choices?.[0]?.message?.content : payload.message?.content, 20_000);
   const result = JSON.parse(raw);
-  if (!Array.isArray(result.topics) || !result.topics.length || result.topics.length > 24 ||
-      !Array.isArray(result.questions) || result.questions.length > 24) {
+  return validateDesign(result, labels);
+}
+
+export function validateDesign(result, labels) {
+  if (!result || !Array.isArray(result.topics) || result.topics.length < 1 || result.topics.length > 6 ||
+      !Array.isArray(result.questions) || result.questions.length < 3 || result.questions.length > 6) {
     throw new Error('Invalid topics or questions returned by the local compiler.');
+  }
+  const questions = result.questions.map(q => {
+    const topic = nonempty(q?.topic, 180);
+    if (!labels.includes(topic)) throw new Error('Generated question references an unknown source label.');
+    return { topic, question: nonempty(q.question, 500) };
+  });
+  if (new Set(questions.map(q => q.question.toLowerCase())).size !== questions.length) {
+    throw new Error('Local compiler returned a duplicate question.');
   }
   return {
     audience: nonempty(result.audience, 512), tone: nonempty(result.tone, 512),
     prompt: nonempty(result.prompt, 2400), topics: result.topics.map(t => nonempty(t, 200)),
-    questions: result.questions.map(q => ({topic:nonempty(q.topic, 180), question:nonempty(q.question, 500)}))
+    questions
   };
 }
