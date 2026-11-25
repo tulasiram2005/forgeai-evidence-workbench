@@ -27,6 +27,14 @@ async function documents(folder){
   await walk(folder);return docs;
 }
 async function main(){
+  if(command==='review'){
+    const {runReview}=await import('./public/review.mjs');
+    const suite=await json(args[1]);
+    const result=await runReview(await json(args[0]),Array.isArray(suite)?suite:suite.cases);
+    console.log(JSON.stringify(result,null,2));
+    if(result.passed!==result.total)process.exitCode=2;
+    return;
+  }
   if(command==='build'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
@@ -54,6 +62,6 @@ async function main(){
     const results=evaluate(await json(args[0]),await json(args[1])),failures=results.filter(r=>!r.passed);
     console.log(JSON.stringify({passed:results.length-failures.length,total:results.length,failures},null,2));
     if(failures.length)process.exitCode=2;
-  }else throw Error('Commands: build, ask, regression. See README.md for examples.');
+  }else throw Error('Commands: build, ask, review, regression. See README.md for examples.');
 }
 main().catch(e=>{console.error(e.message);process.exitCode=1;});

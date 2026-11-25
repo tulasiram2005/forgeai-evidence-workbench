@@ -71,3 +71,18 @@ test('capability denials override earlier grants and keep coordinated prohibitio
   assert.deepEqual(build('Look up inventory and calculate totals, but never use live weather.',docs).definition.tools,['csv_lookup','calculator']);
   assert.deepEqual(build('Calculate totals. Never use inventory, calculate totals or use live weather.',docs).definition.tools,[]);
 });
+
+import {runReview} from './public/review.mjs';
+test('reviewer cases bind to a definition and distinguish wrong numbers and sources',async()=>{
+  const cases=[{question:'What are the details for Kiln cooldown?',status:'answered',facts:['18 HOURS'],source:'oven.txt'}];
+  const snapshot=JSON.stringify(run.definition);
+  const ok=await runReview(run.definition,cases);
+  assert.equal(ok.passed,1);
+  assert.equal(ok.definitionSha256.length,64);
+  const miss=await runReview(run.definition,[{...cases[0],facts:['8 hours'],source:'another.txt'}]);
+  assert.equal(miss.results[0].issues.length,2);
+  assert.equal(miss.passed,0);
+  assert.equal(JSON.stringify(run.definition),snapshot);
+  assert.deepEqual(await runReview(run.definition,ok.cases),ok);
+  await assert.rejects(runReview(run.definition,[cases[0],cases[0]]),/distinct/);
+});

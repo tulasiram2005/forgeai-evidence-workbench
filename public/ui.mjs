@@ -1,3 +1,4 @@
+import { validateCase, runReview } from './review.mjs';
 import { answer } from './engine.mjs';
 
 const byId = id => document.getElementById(id);
@@ -18,7 +19,7 @@ let staged = [];
 let readingFiles = false;
 
 function selectView(view) {
-  for (const name of ['evidence', 'runner', 'definition']) {
+  for (const name of ['evidence', 'runner', 'definition', 'review']) {
     byId(name).hidden = view !== name;
     byId('tab-' + name).setAttribute('aria-pressed', String(name === view));
   }
@@ -77,6 +78,7 @@ function blueprintBlock(title, value) {
 }
 
 function render(run, key) {
+  clearReviewResult();
   activeRun = run;
   currentKey = key;
   const { definition, requirements, report, iterations, evals } = run;
@@ -291,4 +293,60 @@ byId('build-form').addEventListener('submit', async event => {
   } catch (error) { byId('build-error').textContent = error.message; }
   finally { button.disabled = false; button.textContent = 'Compile and evaluate ↗'; }
 });
+const reviewCases = [];
+let receipt;
+let reviewRevision = 0;
+function clearReviewResult() {
+  reviewRevision++;
+  receipt = null;
+  byId('review-results').replaceChildren();
+  byId('review-message').textContent = '';
+  byId('review-download').hidden = true;
+}
+function showReviewCases() {
+  clearReviewResult();
+  byId('review-list').replaceChildren(...reviewCases.map((entry, index) => {
+    const row = item('div', undefined, 'review-entry');
+    const remove = item('button', 'Remove', 'outline');
+    remove.setAttribute('aria-label', 'Remove '+entry.question);
+    remove.onclick = () => { reviewCases.splice(index,1); showReviewCases(); };
+    row.append(item('strong',entry.question),item('p',[entry.status,...entry.facts,entry.source].filter(Boolean).join(' · ')),remove);
+    return row;
+  }));
+  byId('review-run').disabled = !reviewCases.length;
+}
+byId('review-status').onchange = () => { byId('review-facts-field').hidden = byId('review-status').value !== 'answered'; };
+byId('review-form').onsubmit = event => {
+  event.preventDefault();
+  try {
+    const status = byId('review-status').value;
+    const entry = validateCase({question:byId('review-question').value,status,
+      facts:status === 'answered' ? byId('review-facts').value.split(/\n/).map(s=>s.trim()).filter(Boolean) : [],source:byId('review-source').value});
+    if (reviewCases.length >= 50) throw Error('The review already has 50 questions.');
+    if (reviewCases.some(c=>c.question.toLowerCase()===entry.question.toLowerCase())) throw Error('This question is already in your review.');
+    reviewCases.push(entry);
+    event.target.reset(); byId('review-facts-field').hidden=false; showReviewCases(); byId('review-question').focus();
+  } catch (e) { byId('review-message').textContent=e.message; }
+};
+byId('review-run').onclick = async () => {
+  if (!activeRun) return;
+  clearReviewResult();
+  const revision = reviewRevision;
+  try {
+    const output = await runReview(activeRun.definition,reviewCases);
+    if (revision !== reviewRevision) return;
+    receipt=output;
+    byId('review-message').textContent=output.passed+' of '+output.total+' reviewer cases passed.';
+    byId('review-results').replaceChildren(...output.results.map((result,index)=>{
+      const block=item('article',undefined,'result-card');
+      block.append(item('span',result.passed?'Pass':'Fail','tag '+(result.passed?'pass':'fail')),item('h3',output.cases[index].question),
+        evidenceRow('Observed',result.actual.status),item('p',result.actual.text));
+      for(const issue of result.issues) block.append(evidenceRow('Mismatch',issue));
+      for(const citation of result.actual.citations) block.append(evidenceRow('Source',citation.source+' · '+citation.id));
+      return block;
+    }));
+    byId('review-download').hidden=false;
+  } catch (e) { if(revision === reviewRevision) byId('review-message').textContent=e.message; }
+};
+byId('review-download').onclick=()=>{if(receipt) download(receipt,'forgeai-review.json');};
 loadRun('shore');
