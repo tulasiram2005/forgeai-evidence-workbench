@@ -20,7 +20,7 @@ function csvRows(input) {
   if(value || row.length) {row.push(value.trim());rows.push(row);}
   return rows.filter(r=>r.some(Boolean));
 }
-function indexDocs(docs) {
+export function indexDocs(docs) {
   if(!Array.isArray(docs)||!docs.length||docs.length>limits.files) throw Error('Supply 1–32 documents.');
   if(docs.some(d=>!d || typeof d.name!=='string'||typeof d.text!=='string') || new Set(docs.map(d=>d.name)).size!==docs.length) throw Error('Each source needs a unique filename and text.');
   if(docs.reduce((n,d)=>n+d.text.length,0)>limits.chars) throw Error('Corpus exceeds 400,000 characters.');
@@ -82,6 +82,12 @@ export function answer(def,q){
   }
   if(/^weather\s/i.test(q) && def.tools.includes('weather')) return refusal('Use the connected CLI runner for live weather.');
   if(!terms(q).length || /^(which one|what about it)\??$/i.test(q)) return {status:'clarify',text:'Which topic or record do you mean?',citations:[]};
+  // A known record alone cannot establish a separately requested attribute.
+  const field=q.match(/^(?:what|which) (?:is|are) (?:the )?(.+?) (?:for|of) (.+)/i);
+  if(field){
+    const keys=terms(field[1]).filter(t=>!['detail','information','guidance','procedure','policy','rule'].includes(t));
+    if(keys.length && !def.chunks.some(c=>overlap(keys,terms(c.text))>0))return refusal();
+  }
   const parts=def.retrieval.splitConjunction?q.split(/\s+(?:and also|as well as|and)\s+/i):[q];
   let hits=[];
   for(const part of parts){
@@ -168,7 +174,11 @@ function requestedTopics(brief){
   return subjects;
 }
 function support(chunks,topic){
-  const tokens=terms(topic);
+  const boilerplate=new Set(['procedure','packing','material','catalogue','request']);
+  const aliases={quantitie:'quantity',codes:'code'};
+  const all=terms(topic).map(t=>aliases[t]||t);
+  const specific=all.filter(t=>!boilerplate.has(t));
+  const tokens=specific.length?specific:all;
   if(!tokens.length)return false;
   return chunks.some(c=>overlap(tokens,terms(c.text+' '+c.source))/tokens.length>=0.64);
 }

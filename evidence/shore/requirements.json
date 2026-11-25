@@ -1,0 +1,35 @@
+{
+  "scope": "Build an assistant for North Pier shore staff. Answer questions about shift swaps, leave requests, travel reimbursement, and payroll appeals in plain, friendly English. Cite the relevant handbook or expenses notice. State when a policy is missing.",
+  "audience": "North Pier shore staff",
+  "tone": "friendly",
+  "mustAnswer": [
+    "Travel reimbursement deadline",
+    "Travel reimbursement evidence",
+    "Local rail fare",
+    "Taxi approval",
+    "Meal allowance",
+    "Expense correction",
+    "Mileage rate",
+    "Missing receipt",
+    "Shift swap notice",
+    "Shift swap approval",
+    "Annual leave notice",
+    "Annual leave approver",
+    "Emergency leave contact",
+    "Shift swap record",
+    "Training leave allowance",
+    "Returning from leave"
+  ],
+  "mustRefuse": [
+    "payroll appeals"
+  ],
+  "groundability": "Partial coverage",
+  "clarifyingQuestions": [
+    "Who will use the agent?",
+    "What tone should it use?",
+    "Which source supports the flagged topics?"
+  ],
+  "assumptions": [
+    "Unanswered intake questions use the displayed audience and tone."
+  ]
+}

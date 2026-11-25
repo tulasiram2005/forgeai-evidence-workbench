@@ -1,0 +1,72 @@
+{
+  "passed": 32,
+  "total": 36,
+  "stop": "No targeted repair available",
+  "failures": [
+    {
+      "id": "E17",
+      "question": "What is the travel reimbursement deadline, and what evidence is required to submit a claim?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E18",
+      "question": "How should a shift swap notice be submitted, and what is the required confirmation process?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E19",
+      "question": "What is the process for filing an annual leave request, and who approves it?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E22",
+      "question": "What is the purpose of keeping the roster portal confirmation until the following payroll cycle closes?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    }
+  ],
+  "model": "qwen2.5:1.5b",
+  "limitations": [
+    "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",
+    "A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "passed": 34,
+  "total": 37,
+  "stop": "No improvement; retained best definition",
+  "failures": [
+    {
+      "id": "E17",
+      "question": "What is the packing material code for glassine sleeves and how many sheets are included in the pack?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E20",
+      "question": "What must be done by two technicians before sealing the crates?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E22",
+      "question": "How should the outer wrapping seams of the crates be sealed?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    }
+  ],
+  "model": "qwen2.5:1.5b",
+  "limitations": [
+    "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",
+    "A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes."
+  ]
+}

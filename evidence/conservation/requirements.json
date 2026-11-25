@@ -1,0 +1,36 @@
+{
+  "scope": "Build a precise reference assistant for museum conservation technicians. Look up packing material catalogue codes and quantities from the CSV, explain packing and dispatch procedures, and flag unsupported insurance valuation requests. Cite the catalogue or dispatch note for each answer.",
+  "audience": "museum conservation technicians",
+  "tone": "informative and professional",
+  "mustAnswer": [
+    "Glassine sleeve packing",
+    "Humidity card placement",
+    "Transit foam spacing",
+    "Dispatch inspection",
+    "Dispatch cutoff",
+    "Linen tape use",
+    "Crate label position",
+    "Seal discrepancy",
+    "MAT101 Acid-free tissue",
+    "MAT102 Glassine sleeves",
+    "MAT103 Linen tape",
+    "MAT104 Blue corner guards",
+    "MAT105 Tyvek wraps",
+    "MAT106 Transit foam",
+    "MAT107 Humidity cards",
+    "MAT108 Archive cartons"
+  ],
+  "mustRefuse": [
+    "insurance valuation requests",
+    "insurance valuation"
+  ],
+  "groundability": "Partial coverage",
+  "clarifyingQuestions": [
+    "Who will use the agent?",
+    "What tone should it use?",
+    "Which source supports the flagged topics?"
+  ],
+  "assumptions": [
+    "Unanswered intake questions use the displayed audience and tone."
+  ]
+}

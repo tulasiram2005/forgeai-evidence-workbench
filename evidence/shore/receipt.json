@@ -1,0 +1,50 @@
+{
+  "compiler": "qwen2.5:1.5b",
+  "inputs": [
+    {
+      "source": "expense-notice.txt",
+      "sha256": "7386a1aa5a934f60693e0cc53d210a17e4ef2d655007a29384452d321e107fde"
+    },
+    {
+      "source": "shift-handbook.txt",
+      "sha256": "fd12a00d2fa85a324a4adbc16b67a56f7a22e828bfd2e428d4442aaac4a9b19c"
+    }
+  ],
+  "enrichment": {
+    "audience": "North Pier shore staff",
+    "tone": "friendly",
+    "prompt": "Create a document-grounded assistant that answers questions about shift swaps, leave requests, travel reimbursement, and payroll appeals in plain, friendly English. Cite the relevant handbook or expenses notice.",
+    "topics": [
+      "shift swaps",
+      "leave requests",
+      "travel reimbursement",
+      "payroll appeals"
+    ],
+    "questions": [
+      {
+        "topic": "Travel reimbursement deadline",
+        "question": "What is the travel reimbursement deadline, and what evidence is required to submit a claim?"
+      },
+      {
+        "topic": "Shift swap notice",
+        "question": "How should a shift swap notice be submitted, and what is the required confirmation process?"
+      },
+      {
+        "topic": "Annual leave notice",
+        "question": "What is the process for filing an annual leave request, and who approves it?"
+      },
+      {
+        "topic": "Annual leave approver",
+        "question": "Who is the department lead responsible for approving annual leave requests?"
+      },
+      {
+        "topic": "Missing receipt",
+        "question": "What should be done if a receipt is missing when submitting an expense claim?"
+      },
+      {
+        "topic": "Shift swap record",
+        "question": "What is the purpose of keeping the roster portal confirmation until the following payroll cycle closes?"
+      }
+    ]
+  }
+}

@@ -27,3 +27,6 @@ test('small and malformed corpora fail predictably',()=>{
   assert.throws(()=>build('x',[{name:'s.csv',text:'a,b\nx,"unclosed'}]));
   assert.throws(()=>build('x',[{name:'big',text:'x'.repeat(400001)}]));
 });
+test('unknown fields do not inherit the score of a familiar record',()=>{
+  assert.equal(answer(run.definition,'What is the replacement premium for Kiln cooldown?').status,'refused');
+});
