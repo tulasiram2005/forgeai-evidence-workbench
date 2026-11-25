@@ -42,26 +42,37 @@ function renderCases() {
   const retained = activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
   const results = retained?.results ?? [];
   const definitions = new Map(activeRun.evals.map(entry => [entry.id, entry]));
-  for (const result of results) {
+  const search = byId('case-search').value.trim().toLowerCase();
+  const sorted = [...results].sort((a,b) => Number(a.passed)-Number(b.passed));
+  for (const result of sorted) {
+    if (search && !(result.id+' '+result.question).toLowerCase().includes(search)) continue;
     if ((filter === 'fail' && result.passed) || (filter === 'pass' && !result.passed)) continue;
     const definition = definitions.get(result.id) ?? {};
     const details = item('details', undefined, 'case');
+    details.id = 'case-'+result.id;
     const summary = item('summary');
-    summary.append(item('span', result.passed ? 'Pass' : 'Fail', 'tag ' + (result.passed ? 'pass' : 'fail')), item('span', result.question ?? definition.question ?? result.id, 'question'));
+    summary.append(item('span',result.id,'case-id'),item('span', result.passed ? 'Pass' : 'Fail', 'tag ' + (result.passed ? 'pass' : 'fail')), item('span', result.question ?? definition.question ?? result.id, 'question'));
     const body = item('div', undefined, 'case-body');
-    body.append(evidenceRow('Case', result.id));
-    if (definition.type || definition.kind) body.append(evidenceRow('Class', pretty(definition.type ?? definition.kind)));
-    if (result.category) body.append(evidenceRow('Diagnosis', pretty(result.category)));
+    const context = [pretty(definition.type ?? definition.kind), pretty(result.category)].filter(Boolean);
+    if (context.length) body.append(item('p', context.join(' / '), 'case-context'));
+    const comparison = item('div', undefined, 'case-comparison');
+    const reference = item('section');
+    reference.append(item('h3','Expected'));
+    if (definition.status) reference.append(item('strong',pretty(definition.status)));
     const expected = definition.expected ?? definition.facts ?? definition.expectedFacts;
-    if (definition.status) body.append(evidenceRow('Expected outcome', definition.status));
     if (Array.isArray(expected)) {
-      for (const fact of expected) body.append(evidenceRow(fact.source + ' · ' + fact.id, fact.text));
-    } else if (expected !== undefined) body.append(evidenceRow('Expected', expected));
+      for (const fact of expected) reference.append(item('p',fact.text),item('small',fact.source+' · '+fact.id));
+    } else if (expected !== undefined) reference.append(item('p',format(expected)));
+    const response = item('section');
+    response.append(item('h3','Observed'));
     const observed = result.answer ?? result.output ?? result.actual;
     if (observed !== undefined) {
-      body.append(evidenceRow('Observed', observed?.text ?? observed));
-      for (const cite of observed.citations ?? []) body.append(evidenceRow('Cited', cite.source + ' · ' + cite.id));
+      if (observed.status) response.append(item('strong',pretty(observed.status)));
+      response.append(item('p',format(observed?.text ?? observed)));
+      for (const cite of observed.citations ?? []) response.append(item('small',cite.source+' · '+cite.id));
     }
+    comparison.append(reference,response);
+    body.append(comparison);
     if (result.reason) body.append(evidenceRow('Judgment', result.reason));
     if (definition.sources) body.append(evidenceRow('Expected sources', definition.sources));
     details.append(summary, body);
@@ -69,6 +80,7 @@ function renderCases() {
   }
   if (!list.childElementCount) list.append(item('p', 'No cases match this filter.', 'empty'));
 }
+byId('case-search').addEventListener('input', renderCases);
 byId('case-filter').addEventListener('change', renderCases);
 
 function blueprintBlock(title, value) {
@@ -90,8 +102,24 @@ function render(run, key) {
   byId('score').replaceChildren(document.createTextNode(String(report.passed)), item('small', ' / ' + report.total));
   const percent = report.total ? Math.round(100 * report.passed / report.total) : 0;
   byId('score-note').textContent = percent + '% of cases passed';
-  const units = Math.min(40, report.total);
-  byId('score-meter').replaceChildren(...Array.from({ length: units }, (_, i) => item('i', undefined, i < Math.round(percent * units / 100) ? 'on' : '')));
+  const retained = iterations.find(entry => entry.passed === report.passed);
+  byId('score-meter').replaceChildren(...(retained?.results ?? []).map(result => {
+    const button = item('button',result.id,result.passed ? 'map-pass' : 'map-fail');
+    const label = result.id+' · '+(result.passed?'Passed':'Failed')+' · '+result.question;
+    button.title = label;
+    button.setAttribute('aria-label',label);
+    button.onclick = () => {
+      selectView('evidence');
+      byId('case-search').value='';
+      byId('case-filter').value='all';
+      renderCases();
+      const row=byId('case-'+result.id);
+      row.open=true;
+      row.querySelector('summary').focus({preventScroll:true});
+      row.scrollIntoView({block:'center'});
+    };
+    return button;
+  }));
   byId('trace').replaceChildren(...iterations.map((entry, i) => {
     const node = item('div', undefined, 'step');
     const change = entry.change;
@@ -106,6 +134,7 @@ function render(run, key) {
     }
   }
   if (report.limitations?.length) byId('stop').append(item('p', report.limitations[0]));
+  byId('case-search').value = '';
   byId('case-filter').value = 'all';
   renderCases();
   const grid = item('div', undefined, 'blue-grid');
