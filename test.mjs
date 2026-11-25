@@ -30,3 +30,8 @@ test('small and malformed corpora fail predictably',()=>{
 test('unknown fields do not inherit the score of a familiar record',()=>{
   assert.equal(answer(run.definition,'What is the replacement premium for Kiln cooldown?').status,'refused');
 });
+test('tiny sources produce distinct questions',()=>{
+  const {evals}=build('Explain kiln cooldown.',[{name:'studio.txt',text:'Kiln cooldown: Leave for 18 hours.'}]);
+  assert.ok(evals.length>=20);
+  assert.equal(new Set(evals.map(e=>e.question)).size,evals.length);
+});
