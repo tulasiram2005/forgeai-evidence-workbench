@@ -97,6 +97,12 @@ function render(run, key) {
     return node;
   }));
   byId('stop').replaceChildren(item('p', 'Stopped · ' + pretty(report.stop)), item('p', 'Compiler · ' + (report.model || 'Local')));
+  if (report.metrics) {
+    for (const [key,label] of [['citationPrecision','Cited passages matching expectations'],['evidenceRecall','Expected passages recovered'],['requiredRefusals','Required refusals observed']]) {
+      const metric = report.metrics[key];
+      if (metric) byId('stop').append(item('p', label + ' · ' + (metric.total ? metric.matched + '/' + metric.total : 'N/A')));
+    }
+  }
   if (report.limitations?.length) byId('stop').append(item('p', report.limitations[0]));
   byId('case-filter').value = 'all';
   renderCases();
