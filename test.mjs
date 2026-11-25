@@ -53,3 +53,21 @@ test('evidence counts distinguish extra citations, missing answers and required 
   const results=[{id:1,actual:{citations:[a,a,b],status:'answered'}},{id:2,actual:{citations:[],status:'refused'}},{id:3,actual:{citations:[],status:'refused'}}];
   assert.deepEqual(summarizeEvidence(cases,results),{citationPrecision:{matched:1,total:2},evidenceRecall:{matched:1,total:2},requiredRefusals:{matched:1,total:1}});
 });
+
+test('source-qualified queries resolve conflicting notices independently of file order',()=>{
+  const a={name:'early.txt',text:'Access hours: Close at 17:00.'};
+  const b={name:'late.txt',text:'Access hours: Close at 19:00.'};
+  for(const documents of [[a,b],[b,a]]){
+    const def=build('Explain access hours.',documents).definition;
+    const q=answer(def,'What are the access hours?');
+    assert.equal(q.status,'clarify');
+    assert.deepEqual(q.citations.map(c=>c.source).sort(),['early.txt','late.txt']);
+    assert.match(answer(def,'According to late.txt, what are the access hours?').text,/19:00/);
+    assert.equal(answer(def,'According to missing.txt, what are the access hours?').status,'refused');
+  }
+});
+test('capability denials override earlier grants and keep coordinated prohibitions together',()=>{
+  const docs=[{name:'a.csv',text:'code,count\nA17,2'}];
+  assert.deepEqual(build('Look up inventory and calculate totals, but never use live weather.',docs).definition.tools,['csv_lookup','calculator']);
+  assert.deepEqual(build('Calculate totals. Never use inventory, calculate totals or use live weather.',docs).definition.tools,[]);
+});

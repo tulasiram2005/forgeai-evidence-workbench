@@ -59,3 +59,9 @@ The [original synthetic corpora and design notes](examples/) are included. The [
 ## Hosting
 
 The public site uses GitHub Pages branch publishing. The `gh-pages` branch contains the contents of `public/`, `demo/` and an empty `.nojekyll` file. The runtime needs no hosted model, API key, paid account feature or paid plugin.
+
+### Archive challenge
+
+A fresh archive-desk corpus exposed two defects. A weather prohibition suppressed permitted catalogue and arithmetic tools in the same sentence. Two notices with the same locker-hours label and different closing times produced a confident answer determined by file order. Run `node archive-review.mjs` to replay the ten questions and the separate tool-permissions check. Compare the [original results](evidence/archive-review-before.json) with the [corrected results](evidence/archive-review-after.json). The score moved from 7/11 to 11/11. These cases became regression checks once used for repairs.
+
+On equally ranked passages with the same topic and different wording, the runner now shows the alternative citations. Specify the intended notice with a question such as “According to notice.txt, what are the locker hours?” This only resolves the source choice. Deciding which notice has legal or organizational precedence requires metadata or a human decision.

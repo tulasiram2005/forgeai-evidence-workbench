@@ -1,0 +1,171 @@
+{
+  "tools": [
+    "csv_lookup",
+    "calculator"
+  ],
+  "permissions": true,
+  "passed": 11,
+  "total": 11,
+  "results": [
+    {
+      "name": "existing catalogue record",
+      "question": "What is the box count for ARC102?",
+      "expected": {
+        "status": "answered",
+        "fact": "18",
+        "source": "boxes.csv"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "code = ARC102 · collection = Prints · box_count = 18",
+        "citations": [
+          {
+            "id": "D1.2",
+            "source": "boxes.csv",
+            "text": "code = ARC102 · collection = Prints · box_count = 18"
+          }
+        ],
+        "tool": "csv_lookup"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing catalogue record",
+      "question": "What is the box count for ARC999?",
+      "expected": {
+        "status": "refused"
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "conflicting source values",
+      "question": "What are the locker hours?",
+      "expected": {
+        "status": "clarify"
+      },
+      "actual": {
+        "status": "clarify",
+        "text": "The sources give different passages for “Locker hours”. Specify a source, for example: According to access.txt, What are the locker hours?",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "access.txt",
+            "text": "Locker hours: Lockers close at 17:00."
+          },
+          {
+            "id": "D3.1",
+            "source": "notice.txt",
+            "text": "Locker hours: Lockers close at 19:00."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "name": "scoped calculation",
+      "question": "Calculate 6 * 7",
+      "expected": {
+        "status": "answered",
+        "fact": "42"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "42",
+        "tool": "calculator",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "division by zero",
+      "question": "Calculate 6 / 0",
+      "expected": {
+        "status": "refused"
+      },
+      "actual": {
+        "status": "refused",
+        "text": "That calculation has no finite result.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "known access rule",
+      "question": "What is reader access?",
+      "expected": {
+        "status": "answered",
+        "fact": "booking confirmation",
+        "source": "access.txt"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "Reader access: Bring the booking confirmation to the reading room.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "access.txt",
+            "text": "Reader access: Bring the booking confirmation to the reading room."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported attribute",
+      "question": "What is the valuation for ARC101?",
+      "expected": {
+        "status": "refused"
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "unrelated subject",
+      "question": "What is the orbital period of Neptune?",
+      "expected": {
+        "status": "refused"
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "underspecified reference",
+      "question": "Which one?",
+      "expected": {
+        "status": "clarify"
+      },
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "name": "forbidden tool",
+      "question": "weather 12,77",
+      "expected": {
+        "status": "refused"
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}
