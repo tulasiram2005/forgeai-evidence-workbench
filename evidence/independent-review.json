@@ -1,0 +1,150 @@
+{
+  "description": "Curated review probes, excluded from the optimization loop. Small illustrative sample.",
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "domain": "shore",
+      "question": "How much notice is needed for a shift swap?",
+      "expected": {
+        "status": "answered",
+        "fact": "36 hours"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "shift-handbook.txt",
+            "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "domain": "shore",
+      "question": "What about payroll appeals?",
+      "expected": {
+        "status": "refused",
+        "fact": ""
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "domain": "shore",
+      "question": "How many days after I return can I submit travel expenses?",
+      "expected": {
+        "status": "answered",
+        "fact": "14 calendar days"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "expense-notice.txt",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "domain": "shore",
+      "question": "What about it?",
+      "expected": {
+        "status": "clarify",
+        "fact": ""
+      },
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "domain": "conservation",
+      "question": "What is the pack quantity for MAT102?",
+      "expected": {
+        "status": "answered",
+        "fact": "24"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "code = MAT102 · material = Glassine sleeves · pack_quantity = 24 · unit = sleeves",
+        "citations": [
+          {
+            "id": "D2.2",
+            "source": "material-catalogue.csv",
+            "text": "code = MAT102 · material = Glassine sleeves · pack_quantity = 24 · unit = sleeves"
+          }
+        ],
+        "tool": "csv_lookup"
+      },
+      "passed": true
+    },
+    {
+      "domain": "conservation",
+      "question": "How much is the collection insured for?",
+      "expected": {
+        "status": "refused",
+        "fact": ""
+      },
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "domain": "conservation",
+      "question": "When do sealed crates need to get to the collection bay?",
+      "expected": {
+        "status": "answered",
+        "fact": "15:30"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "Dispatch cutoff: Sealed crates must reach the collection bay by 15:30 local time.",
+        "citations": [
+          {
+            "id": "D1.5",
+            "source": "dispatch-note.txt",
+            "text": "Dispatch cutoff: Sealed crates must reach the collection bay by 15:30 local time."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "domain": "conservation",
+      "question": "How much spacing does transit foam require?",
+      "expected": {
+        "status": "answered",
+        "fact": "30 millimeter"
+      },
+      "actual": {
+        "status": "answered",
+        "text": "Transit foam spacing: Leave a 30 millimeter foam buffer around each framed object.",
+        "citations": [
+          {
+            "id": "D1.3",
+            "source": "dispatch-note.txt",
+            "text": "Transit foam spacing: Leave a 30 millimeter foam buffer around each framed object."
+          }
+        ]
+      },
+      "passed": true
+    }
+  ]
+}
