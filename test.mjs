@@ -86,3 +86,19 @@ test('reviewer cases bind to a definition and distinguish wrong numbers and sour
   assert.deepEqual(await runReview(run.definition,ok.cases),ok);
   await assert.rejects(runReview(run.definition,[cases[0],cases[0]]),/distinct/);
 });
+
+test('long prose keeps whole words at passage boundaries and preserves CSV records',()=>{
+  const text=Array.from({length:150},(_,i)=>'material'+i).join(' ');
+  const def=build('Explain materials.',[{name:'manual.txt',text}]).definition;
+  assert.ok(def.chunks.length>1);
+  assert.ok(def.chunks.every(c=>c.text.length<=750));
+  assert.equal(def.chunks.map(c=>c.text).join(' '),text);
+});
+
+import {semanticAnswer} from './retrieval/hybrid.mjs';
+test('optional dense ranking preserves refusals and source conflict handling',()=>{
+  const def=build('Explain archive hours.',[{name:'A.txt',text:'Archive hours: Close at 17:00.'},{name:'B.txt',text:'Archive hours: Close at 19:00.'}]).definition;
+  const fakeEncoder={score:(query,id)=>id==='D1.1'?0.98:0.12};
+  assert.equal(semanticAnswer(def,'Archive hours?',fakeEncoder).status,'clarify');
+  assert.equal(semanticAnswer(def,'Neptune orbital period?',fakeEncoder).status,'refused');
+});

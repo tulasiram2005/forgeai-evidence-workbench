@@ -35,8 +35,15 @@ export function indexDocs(docs) {
         for(const part of raw.split(/(?<=[.!?])\s+(?=[A-Z0-9])/)){
           const text=part.trim().replace(/^[-*#]+\s*/,'');
           if(text.length<8||!terms(text).length||suspicious.test(text)) continue;
-          for(let j=0;j<text.length;j+=750){
-            const slice=text.slice(j,j+750);
+          let remainder=text;
+          while(remainder){
+            let end=Math.min(750,remainder.length);
+            if(end<remainder.length && !/\s/.test(remainder[end])){
+              const boundary=remainder.slice(0,end).search(/\s+\S*$/);
+              if(boundary>0)end=boundary;
+            }
+            const slice=remainder.slice(0,end).trimEnd();
+            remainder=remainder.slice(end).trimStart();
             const label=slice.match(/^([^:]{2,90}):/);
             entries.push({topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
           }
@@ -70,7 +77,7 @@ function selectTools(brief,docs) {
 }
 const cited=c=>({id:c.id,source:c.source,text:c.text});
 const refusal=(text=unknown)=>({status:'refused',text,citations:[]});
-function rank(chunks,question){
+export function rank(chunks,question){
   const qt=terms(question);
   return chunks.map(c=>{
     const tokens=terms(c.text), title=terms(c.topic);
@@ -80,7 +87,7 @@ function rank(chunks,question){
     return {c,score,matched};
   }).sort((a,b)=>b.score-a.score || b.matched-a.matched);
 }
-export function answer(def,q){
+export function answer(def,q,ranker=rank){
   q=String(q).trim().slice(0,2000);
   if(!q || suspicious.test(q)) return refusal();
   if(def.gaps?.some(g=>terms(g).length && terms(g).every(t=>terms(q).includes(t)))) return refusal();
@@ -109,7 +116,7 @@ export function answer(def,q){
   const parts=def.retrieval.splitConjunction?q.split(/\s+(?:and also|as well as|and)\s+/i):[q];
   let hits=[];
   for(const part of parts){
-    const ranked=rank(candidates,part);
+    const ranked=ranker(candidates,part);
     const best=ranked[0];
     if(!best || best.score<def.retrieval.threshold) return refusal();
     const alternatives=ranked.filter(r=>r.score===best.score && r.c.topic.toLowerCase()===best.c.topic.toLowerCase());
@@ -173,9 +180,9 @@ function makeEvals(chunks,questions,gaps){
   }
   return tests;
 }
-export function evaluate(def,cases){
+export function evaluate(def,cases,runner=answer){
   return cases.map(e=>{
-    const a=answer(def,e.question);
+    const a=runner(def,e.question);
     const grounded=a.citations.every(s=>def.chunks.some(c=>c.id===s.id&&c.source===s.source&&c.text===s.text)) && (a.status!=='answered'||a.text===a.citations.map(s=>s.text).join('\n'));
     const correct=e.expected.every(s=>a.citations.some(c=>c.source===s.source&&c.text===s.text)) && (e.status!=='answered'||a.citations.length===e.expected.length);
     const passed=grounded && correct && a.status===e.status;

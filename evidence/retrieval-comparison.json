@@ -1,0 +1,66 @@
+[
+  {
+    "domain": "shore",
+    "encoder": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "dimensions": 384
+    },
+    "answerableCases": 26,
+    "passageRetrieval": {
+      "lexical": {
+        "hits": 30,
+        "total": 30,
+        "first": 26
+      },
+      "dense": {
+        "hits": 30,
+        "total": 30,
+        "first": 25
+      },
+      "fusion": {
+        "hits": 30,
+        "total": 30,
+        "first": 24
+      }
+    },
+    "endToEnd": {
+      "total": 36,
+      "lexical": 32,
+      "hybrid": 32,
+      "changed": []
+    }
+  },
+  {
+    "domain": "conservation",
+    "encoder": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "dimensions": 384
+    },
+    "answerableCases": 26,
+    "passageRetrieval": {
+      "lexical": {
+        "hits": 30,
+        "total": 30,
+        "first": 25
+      },
+      "dense": {
+        "hits": 30,
+        "total": 30,
+        "first": 24
+      },
+      "fusion": {
+        "hits": 30,
+        "total": 30,
+        "first": 25
+      }
+    },
+    "endToEnd": {
+      "total": 37,
+      "lexical": 34,
+      "hybrid": 34,
+      "changed": []
+    }
+  }
+]

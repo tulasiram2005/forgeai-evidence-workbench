@@ -71,3 +71,22 @@ On equally ranked passages with the same topic and different wording, the runner
 Open **Blind review** on a released or custom agent. Queue your questions, choose the expected outcome, and supply required answer phrases for answerable questions. An optional exact filename checks citation provenance. Run the suite to reveal answers and mismatches. The original build score stays independent. Expectations use case-insensitive token sequences, so “8 hours” and “18 hours” differ. Equivalent paraphrases can still require human judgment.
 
 Download the receipt to retain the expected cases, observed answers, citations, mismatch reasons and a SHA-256 fingerprint of the evaluated definition. Replay the same cases on any exported definition with `node cli.mjs review definition.json forgeai-review.json`. The command prints a fresh receipt and returns exit code 2 for failures. Compare fingerprints to distinguish a replay of the same definition from a comparison against a changed agent. The browser keeps reviewer questions in memory until the tab is closed or refreshed.
+
+### Optional local hybrid retrieval
+
+The CLI can rank source passages with a second signal from a 384-dimensional transformer encoder. It embeds queries and passages with the same pinned MiniLM weights, computes cosine similarity on normalized vectors, and combines dense and lexical ranks with reciprocal rank fusion (constant 60). The answer runner chooses among passages eligible under the released lexical threshold. Low vocabulary overlap can therefore still produce refusals. The connected weather tool runs through the regular CLI path.
+
+Install the optional Python dependencies in a virtual environment and download the pinned model once. Inference runs offline on CPU. Each CLI invocation encodes the corpus in memory, which suits experiments with small folders. The benchmark batches queries for each corpus.
+
+```sh
+python3 -m pip install -r retrieval/requirements.txt
+hf download sentence-transformers/all-MiniLM-L6-v2 --revision c9745ed1d9f207416be6d2e6f8de32d1f16199bf
+node cli.mjs ask evidence/shore/definition.json --semantic 'What is the shift swap notice?'
+node retrieval/compare.mjs
+```
+
+In the [frozen comparison](evidence/retrieval-comparison.json), lexical, dense and fused retrieval each recovered 60 of 60 expected passage occurrences across 52 answerable questions at rank three. The hybrid and lexical answer runners each passed 66 of 73 total checks. The two synthetic corpora are small; these results support keeping lexical retrieval as the zero-download default. They do not measure latency or generalization to a different collection.
+
+Prose chunks follow line and sentence boundaries. Long passages split at whitespace within a 750-character ceiling where possible; a longer unbroken token needs a hard split. CSV rows stay intact with their headers and identifiers. Generation of agent designs uses local Qwen at temperature zero. Dense encoding and rank fusion have no sampling temperature.
+
+The factory’s evaluation and bounded repair loop is agentic. A knowledge graph could help with repeated multi-hop relationships across many documents; these suites supply no evidence of that bottleneck. Google’s Open Knowledge Format is a candidate for exchanging curated knowledge bundles. General Markdown ingestion does not implement OKF schema validation or graph traversal. See [Google’s description of OKF](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing), the [encoder model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), and the [rank fusion paper](https://cormack.uwaterloo.ca/cormack/cormacksigir09-rrf.pdf).

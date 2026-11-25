@@ -56,6 +56,11 @@ async function main(){
       await rename(tmp,target);
     }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));
+  }else if(command==='ask' && args[1]==='--semantic'){
+    const {encode,semanticAnswer,answerQueries}=await import('./retrieval/hybrid.mjs');
+    const def=await json(args[0]), q=args.slice(2).join(' ');
+    const encoder=encode(def,answerQueries(q));
+    console.log(JSON.stringify({...semanticAnswer(def,q,encoder),encoder:encoder.model},null,2));
   }else if(command==='ask'){
     console.log(JSON.stringify(await connectedAnswer(await json(args[0]),args.slice(1).join(' ')),null,2));
   }else if(command==='regression'){
