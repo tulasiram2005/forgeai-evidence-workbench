@@ -49,6 +49,20 @@
       }
     }
   ],
+  "metrics": {
+    "citationPrecision": {
+      "matched": 27,
+      "total": 27
+    },
+    "evidenceRecall": {
+      "matched": 27,
+      "total": 30
+    },
+    "requiredRefusals": {
+      "matched": 9,
+      "total": 9
+    }
+  },
   "model": "qwen2.5:1.5b",
   "limitations": [
     "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",

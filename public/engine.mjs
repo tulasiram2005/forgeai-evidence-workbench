@@ -160,6 +160,30 @@ export function evaluate(def,cases){
     return {id:e.id,question:e.question,kind:e.kind,passed,category,grounded,correct,expectedStatus:e.status,actual:a};
   });
 }
+// Micro-average distinct (source, passage) pairs per case. Missing answers
+// contribute zero retrieved pairs while their expected evidence still counts.
+export function summarizeEvidence(cases, results) {
+  const byId = new Map(cases.map(entry => [entry.id, entry]));
+  const precision = {matched:0, total:0}, recall = {matched:0, total:0};
+  const refusals = {matched:0, total:0};
+  const passageKey = c => JSON.stringify([c.source, c.text]);
+  for (const result of results) {
+    const entry = byId.get(result.id);
+    const expected = new Set(entry.expected.map(passageKey));
+    const actual = new Set(result.actual.citations.map(passageKey));
+    const matches = [...actual].filter(key => expected.has(key)).length;
+    precision.matched += matches;
+    precision.total += actual.size;
+    recall.matched += matches;
+    recall.total += expected.size;
+    if (entry.status === 'refused') {
+      refusals.total++;
+      if (result.actual.status === 'refused') refusals.matched++;
+    }
+  }
+  return {citationPrecision:precision, evidenceRecall:recall, requiredRefusals:refusals};
+}
+
 function requestedTopics(brief){
   const subjects=[];
   for(const sentence of brief.split(/[.;!?\n]/)){
@@ -213,6 +237,7 @@ export function build(brief,docs,opts={}){
       definition={...definition,retrieval:{...definition.retrieval,threshold:0.44}};
     }else{stop='No targeted repair available';break;}
   }
-  const failures=evaluate(best,evals).filter(r=>!r.passed);
-  return {requirements,definition:best,evals,iterations,report:{passed:bestCount,total:evals.length,stop,failures,model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
+  const released=evaluate(best,evals);
+  const failures=released.filter(r=>!r.passed);
+  return {requirements,definition:best,evals,iterations,report:{passed:bestCount,total:evals.length,stop,failures,metrics:summarizeEvidence(evals,released),model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
 }

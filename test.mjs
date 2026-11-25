@@ -45,3 +45,11 @@ test('local model outputs must satisfy the question budget and reference real la
   assert.throws(()=>validateDesign(valid,['Fees']),/unknown source label/);
   assert.throws(()=>validateDesign({...valid,questions:Array(3).fill(valid.questions[0])},['Hours']),/duplicate question/);
 });
+
+import {summarizeEvidence} from './public/engine.mjs';
+test('evidence counts distinguish extra citations, missing answers and required refusals',()=>{
+  const a={source:'a',text:'passage'},b={source:'b',text:'passage'};
+  const cases=[{id:1,expected:[a],status:'answered'},{id:2,expected:[b],status:'answered'},{id:3,expected:[],status:'refused'}];
+  const results=[{id:1,actual:{citations:[a,a,b],status:'answered'}},{id:2,actual:{citations:[],status:'refused'}},{id:3,actual:{citations:[],status:'refused'}}];
+  assert.deepEqual(summarizeEvidence(cases,results),{citationPrecision:{matched:1,total:2},evidenceRecall:{matched:1,total:2},requiredRefusals:{matched:1,total:1}});
+});
