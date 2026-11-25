@@ -21,12 +21,21 @@
 <div class="run-summary"><div class="dark-label"><span class="signal"></span> Build dossier</div><h2 id="run-title">Opening build…</h2><p id="run-brief">Reading the evidence bundle.</p><div id="run-meta" class="run-meta"></div></div>
 <div class="score-panel"><div class="dark-label">Final evaluation</div><div class="score" id="score">—</div><div id="score-meter" aria-hidden="true"></div><p id="score-note">Cases passed</p></div>
 </section>
-<nav class="tabs" aria-label="Build views"><button id="tab-evidence" aria-pressed="true" data-view="evidence">Evidence ledger</button><button id="tab-runner" data-view="runner" aria-pressed="false">Test the agent</button><button id="tab-definition" data-view="definition" aria-pressed="false">Agent blueprint</button></nav>
+<nav class="tabs" aria-label="Build views"><button id="tab-evidence" aria-pressed="true" data-view="evidence">Evidence ledger</button><button id="tab-runner" data-view="runner" aria-pressed="false">Test the agent</button><button id="tab-definition" data-view="definition" aria-pressed="false">Agent blueprint</button><button id="tab-review" data-view="review" aria-pressed="false">Blind review</button></nav>
 <section id="evidence" class="view">
 <div class="evidence-layout"><section><div class="section-head"><div><div class="kicker">Evaluation</div><h2>Case ledger</h2></div><div><label for="case-filter" class="sr">Filter cases</label><select id="case-filter"><option value="all">All cases</option><option value="fail">Failed only</option><option value="pass">Passed only</option></select></div></div><div id="cases"></div></section><aside><div class="kicker">Optimizer</div><h2>Build trace</h2><div id="trace"></div><div class="stop-note" id="stop"></div><button id="download-run" class="outline">Download dossier <span aria-hidden="true">↓</span></button></aside></div>
 </section>
 <section id="runner" class="view" hidden><div class="runner-layout"><div><div class="kicker">Runtime</div><h2>Question the agent</h2><p class="helper">Try a policy question, a cross-document lookup, or a question outside its scope.</p><form id="chat-form"><label for="query">Your question</label><textarea id="query" required maxlength="2000" rows="3" placeholder="Ask about this build’s sources…"></textarea><button class="primary" id="ask">Run question <span aria-hidden="true">↗</span></button></form><div id="response" role="status" aria-live="polite"></div></div><aside><div class="kicker">From this evaluation</div><h2>Test queries</h2><div id="suggestions"></div></aside></div></section>
 <section id="definition" class="view" hidden><div class="section-head"><div><div class="kicker">Configuration</div><h2>Agent blueprint</h2></div><button id="export-definition" class="outline">Export agent ↓</button></div><div id="blueprint"></div></section>
+<section id="review" class="view" hidden>
+<div class="runner-layout"><section><h2>Blind review</h2><p class="helper">Set expectations before revealing the agent’s answers. These questions run against the finished build and stay outside its optimizer.</p>
+<form id="review-form"><label for="review-question">Review question</label><textarea id="review-question" required maxlength="2000" rows="2"></textarea>
+<label for="review-status">Expected outcome</label><select id="review-status"><option value="answered">Answer</option><option value="refused">Refuse</option><option value="clarify">Ask for clarification</option></select>
+<div id="review-facts-field"><label for="review-facts">Required answer phrases</label><textarea id="review-facts" rows="2" maxlength="3612" placeholder="One phrase per line, such as 36 hours"></textarea></div>
+<label for="review-source">Expected source filename (optional)</label><input id="review-source" maxlength="300">
+<button class="outline" type="submit">Add question</button></form></section>
+<aside><h2>Your questions</h2><div id="review-list"></div><button id="review-run" class="primary" disabled>Run blind review</button></aside></div>
+<p id="review-message" role="status"></p><div id="review-results"></div><button id="review-download" class="outline" hidden>Download review receipt</button></section>
 <p id="status" class="status" role="status" aria-live="polite"></p>
 </main>
 <footer class="shell"><strong>ForgeAI</strong><a href="./demo/forgeai-walkthrough.mp4">Recorded walkthrough</a><a href="#main">Back to bench ↑</a></footer>
