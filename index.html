@@ -9,8 +9,8 @@
 <meta name="description" content="ForgeAI compiles a brief and source documents into a tested, portable agent. Inspect evidence, trace failures, and question the finished agent.">
 <title>ForgeAI · Inspection bench</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23191d40'/%3E%3Cpath d='M15 15h37l-7 9H26v6h16l-7 9h-9v11H15z' fill='%23e4ee77'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="./style.css?v=inspection2">
-<script type="module" src="./ui.mjs?v=source-audit1"></script>
+<link rel="stylesheet" href="./style.css?v=impact1">
+<script type="module" src="./ui.mjs?v=impact1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to workbench</a>
@@ -21,7 +21,7 @@
 <div class="run-summary"><p class="kicker">Agent release</p><h1 id="run-title">Opening build…</h1><p id="run-brief">Reading the evidence bundle.</p><div id="run-meta" class="run-meta"></div></div>
 <div class="score-panel"><div class="score-head"><div><div class="dark-label">Evaluation map</div><div class="score" id="score">—</div></div><p id="score-note">Cases passed</p></div><div id="score-meter" aria-label="Open an evaluation case"></div><div class="map-key"><span><i></i>Passed</span><span><i></i>Failed</span></div></div>
 </section>
-<nav class="tabs" aria-label="Build views"><button id="tab-evidence" aria-pressed="true" data-view="evidence">Evidence ledger</button><button id="tab-runner" data-view="runner" aria-pressed="false">Test the agent</button><button id="tab-definition" data-view="definition" aria-pressed="false">Agent blueprint</button><button id="tab-review" data-view="review" aria-pressed="false">Blind review</button></nav>
+<nav class="tabs" aria-label="Build views"><button id="tab-evidence" aria-pressed="true" data-view="evidence">Evidence ledger</button><button id="tab-runner" data-view="runner" aria-pressed="false">Test the agent</button><button id="tab-definition" data-view="definition" aria-pressed="false">Agent blueprint</button><button id="tab-review" data-view="review" aria-pressed="false">Blind review</button><button id="tab-impact" data-view="impact" aria-pressed="false">Change impact</button></nav>
 <section id="evidence" class="view">
 <div class="evidence-layout"><section><div class="section-head"><h2>Case ledger</h2><div><label for="case-filter" class="sr">Filter cases</label><select id="case-filter"><option value="all">All cases</option><option value="fail">Failed only</option><option value="pass">Passed only</option></select></div></div><label for="case-search" class="sr">Search questions or case IDs</label><input id="case-search" type="search" placeholder="Search questions or case IDs"><div id="cases"></div></section><aside><h2>Build trace</h2><div id="trace"></div><details class="report-notes"><summary>Release metrics &amp; notes</summary><div class="stop-note" id="stop"></div></details></aside></div>
 </section>
@@ -36,6 +36,11 @@
 <button class="outline" type="submit">Add question</button></form></section>
 <aside><h2>Your questions</h2><div id="review-list"></div><button id="review-run" class="primary" disabled>Run blind review</button></aside></div>
 <p id="review-message" role="status"></p><div id="review-results"></div><button id="review-download" class="outline" hidden>Download review receipt</button></section>
+<section id="impact" class="view" hidden><h2>Document-change impact</h2>
+<p class="helper">Replay the active build’s questions against a revised agent. Inspect changes before adopting a new policy or catalogue.</p>
+<label for="impact-file">Revised definition or dossier (JSON)</label><input type="file" id="impact-file" accept=".json,application/json">
+<button id="impact-demo" class="outline">Try the shore policy revision</button>
+<p id="impact-status" role="status"></p><div id="impact-results"></div><button id="impact-download" class="outline" hidden>Download impact report</button></section>
 <p id="status" class="status" role="status" aria-live="polite"></p>
 </main>
 <footer class="shell"><strong>ForgeAI</strong><a href="./demo/forgeai-walkthrough.mp4">Recorded walkthrough</a><a href="#main">Back to bench ↑</a></footer>

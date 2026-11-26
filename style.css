@@ -185,3 +185,9 @@ dialog h2 {font-size:43px;margin-bottom:10px}
 .case-comparison p {margin-top:6px}
 .case-comparison small {display:block;margin-top:5px;color:var(--muted);font:11px/1.6 var(--mono)}
 @media(max-width:650px) {.case-comparison {grid-template-columns:1fr}}
+
+#impact-status {margin:15px 0;font-weight:600}
+#impact-file {display:block;max-width:100%;margin-bottom:12px}
+#impact-results details summary {font-weight:600;overflow-wrap:anywhere}
+#impact-results details p {margin-top:8px}
+@media(max-width:650px){.tabs{overflow-x:auto;justify-content:flex-start;gap:14px}.tabs button{white-space:nowrap}}
