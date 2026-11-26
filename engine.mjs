@@ -178,6 +178,13 @@ function makeEvals(chunks,questions,gaps){
     const c=sample[tests.length%sample.length];
     add('missing attribute','What is the '+field+' for '+c.topic+'?',[],'refused');
   }
+  // A tiny corpus can explicitly mention every missing-field template.
+  // Exercise its actual topic under different phrasing in that case.
+  for(const prompt of ['Describe','Summarize','Explain','Tell me about','What is','Give details for','Which rules cover','What applies to','What guidance covers','What does the source say about','What should I know about','How does the handbook describe','What are the instructions for','Give the source wording for','Which passage explains','What is documented about','What can you tell me about','Please clarify','What information covers','What details apply to']){
+    if(tests.length>=20)break;
+    const c=sample[tests.length%sample.length];
+    add('paraphrase',prompt+' '+c.topic+'?',[c]);
+  }
   return tests;
 }
 export function evaluate(def,cases,runner=answer){
@@ -239,13 +246,19 @@ function support(chunks,topic){
   if(!tokens.length)return false;
   return chunks.some(c=>overlap(tokens,terms(c.text+' '+c.source))/tokens.length>=0.64);
 }
-export function build(brief,docs,opts={}){
+export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs)){
   if(typeof brief!=='string'||!brief.trim()||brief.length>6000)throw Error('Supply a brief of 1–6,000 characters.');
-  const chunks=indexDocs(docs), model=opts.enrichment||{};
+  const model=opts.enrichment||{};
   const labels=[...new Set(chunks.map(c=>c.topic))];
   const candidates=[...new Set([...(model.topics||[]),...requestedTopics(brief)])];
   const gaps=candidates.filter(x=>!support(chunks,x));
   const requirements={scope:brief,audience:opts.audience||model.audience||'Requester and document users',tone:opts.tone||model.tone||'Concise and factual',mustAnswer:labels,mustRefuse:gaps,groundability:gaps.length?'Partial coverage':'No lexical gap detected',clarifyingQuestions:['Who will use the agent?','What tone should it use?',...(gaps.length?['Which source supports the flagged topics?']:[])],assumptions:['Unanswered intake questions use the displayed audience and tone.']};
+  return requirements;
+}
+export function build(brief,docs,opts={}){
+  const chunks=indexDocs(docs), model=opts.enrichment||{};
+  const requirements=opts.approvedRequirements??inspectRequirements(brief,docs,opts,chunks);
+  const gaps=requirements.mustRefuse;
   let definition={version:1,systemPrompt:[model.prompt||'Answer the requester using the supplied corpus.', 'Audience: '+requirements.audience+'. Tone: '+requirements.tone+'. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.'].join('\n'),requirements,tools:selectTools(brief,docs),gaps,chunks,retrieval:{chunking:'Sentence or CSV record; 750-character text ceiling',threshold:0.52,splitConjunction:false},outputContract:{status:['answered','clarify','refused'],text:'string',citations:'Array<{id, source, text}>',tool:'optional registry ID'}};
   const evals=makeEvals(chunks,model.questions,gaps), iterations=[];
   let previous=-1, best=definition, bestCount=-1, addressed=[],change='Initial definition',stop='Iteration limit reached';
