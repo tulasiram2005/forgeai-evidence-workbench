@@ -44,6 +44,12 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='impact'){
+    const {compareReleases}=await import('./public/impact.mjs');
+    const [before,after,suite]=await Promise.all(args.slice(0,3).map(json));
+    console.log(JSON.stringify(await compareReleases(before.definition??before,after.definition??after,suite.evals??suite,runtimeAnswer),null,2));
+    return;
+  }
   if(command==='review'){
     const {runReview}=await import('./public/review.mjs');
     const suite=await json(args[1]);
@@ -137,6 +143,6 @@ async function main(){
     const failures=results.filter(r=>!r.passed);
     console.log(JSON.stringify({passed:results.length-failures.length,total:results.length,failures},null,2));
     if(failures.length)process.exitCode=2;
-  }else throw Error('Commands: build, ask, audit, verify, review, regression, tournament. See README.md for examples.');
+  }else throw Error('Commands: build, ask, impact, audit, verify, review, regression, tournament. See README.md for examples.');
 }
 main().catch(e=>{console.error(e.message);process.exitCode=1;});

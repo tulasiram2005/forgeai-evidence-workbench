@@ -133,3 +133,24 @@ test('withholding a source changes only the trial and exposes duplicate support'
   assert.equal((await auditSources(single,'What is the drying time?')).trials[0].response.status,'refused');
   assert.deepEqual((await auditSources(single,'Orbital currency?')).trials,[]);
 });
+
+import {compareReleases} from './public/impact.mjs';
+test('revision comparison distinguishes a changed deadline, a lost answer, and unaffected text',async()=>{
+  const load=async name=>JSON.parse(await (await import('node:fs/promises')).readFile(new URL(name,import.meta.url),'utf8'));
+  const [before,after,cases]=await Promise.all(['./evidence/shore/definition.json','./public/runs/shore-revision.json','./evidence/shore/evals.json'].map(load));
+  const report=await compareReleases(before,after,cases);
+  assert.deepEqual(report,await load('./evidence/shore/change-impact.json'));
+  assert.equal(report.changed,6);
+  assert.equal(report.results.filter(r=>r.change==='Answer lost').length,1);
+  assert.equal(report.results.filter(r=>r.change==='Unchanged').length,30);
+  assert.ok(report.results.some(r=>r.before.text.includes('36 hours')&&r.after.text.includes('48 hours')));
+});
+test('identical answers retain provenance changes but ignore passage renumbering',async()=>{
+  const before=build('Explain return window.',[{name:'a.txt',text:'Return window: Within five days.'}]).definition;
+  const after=structuredClone(before);
+  const cases=[{id:'R1',question:'What is the return window?'}];
+  after.chunks[0].id='D9.2';
+  assert.equal((await compareReleases(before,after,cases)).changed,0);
+  after.chunks[0].source='b.txt';
+  assert.equal((await compareReleases(before,after,cases)).results[0].change,'Citation changed');
+});

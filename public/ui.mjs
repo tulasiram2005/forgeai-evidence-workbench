@@ -20,7 +20,7 @@ let staged = [];
 let readingFiles = false;
 
 function selectView(view) {
-  for (const name of ['evidence', 'runner', 'definition', 'review']) {
+  for (const name of ['evidence', 'runner', 'definition', 'review', 'impact']) {
     byId(name).hidden = view !== name;
     byId('tab-' + name).setAttribute('aria-pressed', String(name === view));
   }
@@ -91,9 +91,11 @@ function blueprintBlock(title, value) {
 }
 
 function render(run, key) {
+  resetImpact();
   clearReviewResult();
   activeRun = run;
   currentKey = key;
+  byId('impact-demo').hidden=key!=='shore';
   const { definition, requirements, report, iterations, evals } = run;
   const reqBrief = requirements.brief ?? run.brief ?? requirements.scope;
   byId('run-title').textContent = titles[key] ?? 'Custom agent build';
@@ -403,4 +405,60 @@ byId('review-run').onclick = async () => {
   } catch (e) { if(revision === reviewRevision) byId('review-message').textContent=e.message; }
 };
 byId('review-download').onclick=()=>{if(receipt) download(receipt,'forgeai-review.json');};
+let impactJob=0, impactWorker, impactReport, impactTimer;
+function resetImpact(){
+  impactJob++;
+  impactWorker?.terminate();
+  clearTimeout(impactTimer);
+  impactReport=null;
+  byId('impact-results').replaceChildren();
+  byId('impact-status').textContent='';
+  byId('impact-download').hidden=true;
+  byId('impact-demo').hidden=currentKey!=='shore';
+}
+async function runImpact(load){
+  resetImpact();
+  const job=impactJob;
+  try {
+    if(!activeRun)throw Error('Select an active build first.');
+    byId('impact-status').textContent='Comparing releases…';
+    const candidate=await load();
+    if(job!==impactJob)return;
+    const worker=new Worker(new URL('./impact.worker.mjs',import.meta.url),{type:'module'});
+    impactWorker=worker;
+    const fail=message=>{worker.terminate();clearTimeout(impactTimer);byId('impact-status').textContent=message;};
+    impactTimer=setTimeout(()=>fail('Comparison exceeded 45 seconds.'),45000);
+    worker.onerror=()=>fail('Could not run the comparison.');
+    worker.onmessage=({data})=>{
+      if(job!==impactJob)return;
+      if(data.error){fail(data.error);return;}
+      clearTimeout(impactTimer);worker.terminate();
+      impactReport=data.report;
+      byId('impact-status').textContent=impactReport.changed+' of '+impactReport.total+' responses changed.';
+      const result=byId('impact-results');
+      for(const source of impactReport.sources)result.append(evidenceRow(source.change,source.name));
+      for(const c of impactReport.results.filter(c=>c.change!=='Unchanged')){
+        const row=item('details',undefined,'result-card');
+        row.append(item('summary',c.id+' · '+c.change+' · '+c.question));
+        for(const [label,res] of [['Before',c.before],['After',c.after]]){
+          row.append(evidenceRow(label+' ('+res.status+')',res.text));
+          for(const cite of res.citations)row.append(evidenceRow('Source',cite.source+' · '+cite.id));
+        }
+        result.append(row);
+      }
+      byId('impact-download').hidden=false;
+    };
+    worker.postMessage({before:activeRun.definition,after:candidate.definition??candidate,cases:activeRun.evals});
+  } catch(e){if(job===impactJob)byId('impact-status').textContent=e.message;}
+}
+byId('impact-file').onchange=event=>{
+  const file=event.target.files[0];event.target.value='';
+  if(file)runImpact(async()=>{if(file.size>8000000)throw Error('Choose JSON under 8 MB.');return JSON.parse(await file.text());});
+};
+byId('impact-demo').onclick=()=>runImpact(async()=>{
+  const response=await fetch('./runs/shore-revision.json');
+  if(!response.ok)throw Error('Could not load the sample revision.');
+  return response.json();
+});
+byId('impact-download').onclick=()=>download(impactReport,'forgeai-impact.json');
 loadRun('shore');

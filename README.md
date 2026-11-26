@@ -130,3 +130,11 @@ The explicit multi-part verifier reports a status and citations per question cla
 In **Test the agent**, ask a question and choose **Test source dependency** beneath a cited answer. ForgeAI withholds each cited document separately and repeats the original question using the same released configuration. Compare the text, status and remaining citations, or download the full receipt. The experiment is read-only and runs locally in the browser. A matching answer from another file may reflect duplicated material. A changed answer calls for inspection of the remaining passage.
 
 CLI equivalent: `node cli.mjs audit evidence/shore/definition.json 'How much notice is needed for a shift swap?'`. The [recorded example](evidence/shore/source-removal.json) shows what happens when the shift handbook is unavailable. This tests the answer runner’s dependence on indexed passages; the generated requirements and prompt remain fixed.
+
+### Which answers change after a document revision?
+
+Open **Change impact** and supply a revised definition or dossier. The browser replays the active build’s original questions against both releases in a worker. Inspect changed responses with their original and revised citations, or download the complete report including unaffected cases and fingerprints of both definitions. Passage renumbering alone does not count as a citation change. Wording changes are literal; deciding whether a revision is correct needs a reviewer.
+
+**Try the shore policy revision** compares the released shore definition with a controlled copy that changes the shift-swap deadline from 36 to 48 hours and drops the mileage-rate passage. Only the indexed passages differ. Six of 36 responses change: five quote the revised deadline and one loses its answer. The other 30 retain their status, text and cited source content. New topics outside the original questions require further review.
+
+CLI equivalent: `node cli.mjs impact evidence/shore/definition.json public/runs/shore-revision.json evidence/shore/evals.json`. The [full example report](evidence/shore/change-impact.json) preserves both sides. When comparing independently generated releases, differences may also come from changed configuration or model behavior. Local-model definitions require the CLI and a running local model.
