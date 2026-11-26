@@ -6,7 +6,7 @@ const object=(properties)=>({type:'object',properties,required:Object.keys(prope
 const clock=()=>performance.now();
 function remaining(deadline){
   const ms=Math.floor(deadline-clock());
-  if(ms<=0)throw Error('Tournament latency budget exhausted.');
+  if(ms<=0)throw new DOMException('Tournament latency budget exhausted.','TimeoutError');
   return Math.min(ms,120000);
 }
 export async function modelAnswer(def,question,deadline=clock()+120000){

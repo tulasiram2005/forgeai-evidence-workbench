@@ -109,3 +109,11 @@ test('sparse corpus still produces the minimum suite when every fallback field e
   assert.ok(evals.length>=20);
   assert.equal(new Set(evals.map(c=>c.question)).size,evals.length);
 });
+
+import {tournament} from './tournament.mjs';
+test('a one-millisecond tournament budget returns a partial report without a winner',async()=>{
+  const result=await tournament(run.definition,run.evals,1,'qwen2.5:1.5b');
+  assert.equal(result.definition,null);
+  assert.equal(result.report.winner,null);
+  assert.match(result.report.stop,/Latency limit/);
+});
