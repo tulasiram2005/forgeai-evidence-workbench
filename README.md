@@ -2,7 +2,7 @@
 
 Turn a brief and a document folder into an agent you can question, an evaluation suite you can replay, and an evidence trail you can inspect.
 
-**[Open the live workbench](https://tulasiram2005.github.io/forgeai-evidence-workbench/) · [Watch the captioned walkthrough (3 min 41 sec)](https://tulasiram2005.github.io/forgeai-evidence-workbench/demo/forgeai-walkthrough.mp4)**
+**[Open the live workbench](https://forgeai-evidence-workbench.onrender.com/) · [Watch the captioned walkthrough (3 min 41 sec)](https://forgeai-evidence-workbench.onrender.com/demo/forgeai-walkthrough.mp4)**
 
 Start with **Test the agent** and ask “How much notice is needed for a shift swap?” Open its source passage. Switch to **Conservation operations** and ask “What is the pack quantity for MAT102?” The second question executes a catalogue lookup. Choose **New build** to try your own sources. Files and answers for custom builds stay in the browser tab. Export the dossier before closing the tab.
 
@@ -58,7 +58,7 @@ The [original synthetic corpora and design notes](examples/) are included. The [
 
 ## Hosting
 
-The public site uses GitHub Pages branch publishing. The `gh-pages` branch contains the contents of `public/`, `demo/` and an empty `.nojekyll` file. The runtime needs no hosted model, API key, paid account feature or paid plugin.
+Render publishes the live workbench from main after the test suite passes. Its build copies the public assets and demo into dist. A [GitHub Pages mirror](https://tulasiram2005.github.io/forgeai-evidence-workbench/) uses branch publishing. The `gh-pages` branch contains the contents of `public/`, `demo/` and an empty `.nojekyll` file. The runtime needs no hosted model, API key, paid account feature or paid plugin.
 
 ### Archive challenge
 
