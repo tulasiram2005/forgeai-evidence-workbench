@@ -3,8 +3,8 @@ import {resolve,join,relative,dirname,extname} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createInterface} from 'node:readline/promises';
-import {build,connectedAnswer,evaluate} from './public/engine.mjs';
-import {enrich} from './model.mjs';
+import {connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
+import {Worker} from 'node:worker_threads';
 
 const [command,...args]=process.argv.slice(2);
 const flag=k=>args.includes(k)?args[args.indexOf(k)+1]:undefined;
@@ -26,13 +26,58 @@ async function documents(folder){
   }
   await walk(folder);return docs;
 }
+async function runBuild(workerData,budgetMs){
+  if(!Number.isInteger(budgetMs)||budgetMs<1||budgetMs>1800000)throw Error('Budget must be 1–1,800,000 milliseconds.');
+  const worker=new Worker(new URL('./build-worker.mjs',import.meta.url),{workerData});
+  let timer;
+  try{
+    return await new Promise((resolve,reject)=>{
+      timer=setTimeout(()=>reject(Error('Build latency budget exhausted before release.')),budgetMs);
+      worker.once('message',resolve);
+      worker.once('error',reject);
+      worker.once('exit',code=>reject(Error('Build worker exited before release ('+code+').')));
+    });
+  }finally{clearTimeout(timer);await worker.terminate();}
+}
+async function runtimeAnswer(def,query){
+  if(def.runtime?.kind==='local-evidence-selector')return (await import('./tournament.mjs')).modelAnswer(def,query);
+  return connectedAnswer(def,query);
+}
 async function main(){
   if(command==='review'){
     const {runReview}=await import('./public/review.mjs');
     const suite=await json(args[1]);
-    const result=await runReview(await json(args[0]),Array.isArray(suite)?suite:suite.cases);
+    const result=await runReview(await json(args[0]),Array.isArray(suite)?suite:suite.cases,runtimeAnswer);
     console.log(JSON.stringify(result,null,2));
     if(result.passed!==result.total)process.exitCode=2;
+    return;
+  }
+  if(command==='verify'){
+    const def=await json(args[0]);
+    const query=args.slice(1).join(' ').trim();
+    if(!query || query.length>2000)throw Error('Supply a question of up to 2,000 characters.');
+    // Keep noun pairs intact. Split explicit requests or clauses with a fresh interrogative.
+    const parts=query.split(/(?:[,;]?\s+and(?:\s+also)?\s+(?=(?:what|which|when|where|who|how|why|does|do|can|is|are)\b)|\?\s+(?=\S))/i);
+    const findings=[];
+    for(const part of parts){
+      const question=part.trim(),actual=await runtimeAnswer(def,question);
+      findings.push({question,...actual});
+    }
+    const complete=findings.every(f=>f.status==='answered');
+    console.log(JSON.stringify({complete,parts:findings},null,2));
+    if(!complete)process.exitCode=2;
+    return;
+  }
+  if(command==='tournament'){
+    const {tournament}=await import('./tournament.mjs');
+    const [definitionFile,suiteFile,out]=args;
+    if(!out)throw Error('Use tournament DEFINITION EVALS NEW_DIRECTORY [--budget-ms N].');
+    const result=await tournament(await json(definitionFile),await json(suiteFile),Number(flag('--budget-ms')??180000),process.env.FORGE_MODEL||'qwen2.5:1.5b');
+    await mkdir(out);
+    await writeFile(join(out,'comparison.json'),JSON.stringify(result.report,null,2)+'\n');
+    if(result.definition)await writeFile(join(out,'definition.json'),JSON.stringify(result.definition,null,2)+'\n');
+    console.log(JSON.stringify({winner:result.report.winner,stop:result.report.stop,scores:result.report.candidates.map(c=>[c.passed,c.results.length])}));
+    if(!result.definition)process.exitCode=2;
     return;
   }
   if(command==='build'){
@@ -43,11 +88,22 @@ async function main(){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
     }
-    if(args.includes('--model')){
-      opts.enrichment=await enrich(brief,docs);opts.model=process.env.FORGE_MODEL||'qwen2.5:1.5b';
+    if(args.includes('--checkpoint')){
+      const draft=inspectRequirements(brief,docs,opts);
+      console.log(JSON.stringify(draft,null,2));
+      const rl=createInterface({input:process.stdin,output:process.stdout});
+      try{
+        const confirmation=await rl.question('Approve these requirements before generation? Type APPROVE to proceed: ');
+        if(confirmation.trim()!=='APPROVE')throw Error('Build cancelled before generation.');
+      }finally{rl.close();}
+      opts.approvedRequirements=draft;
     }
-    const run=build(brief,docs,opts);
-    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment:opts.enrichment||null};
+    const budgetMs=Number(flag('--budget-ms')??180000);
+    const model=args.includes('--model')?(process.env.FORGE_MODEL||'qwen2.5:1.5b'):null;
+    const start=performance.now();
+    const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
+    run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
+    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
     const target=resolve(out);await mkdir(dirname(target),{recursive:true});const tmp=await mkdtemp(join(dirname(target),'.forge-'));
     try{
       for(const [name,value] of Object.entries({...run,receipt})){
@@ -59,14 +115,22 @@ async function main(){
   }else if(command==='ask' && args[1]==='--semantic'){
     const {encode,semanticAnswer,answerQueries}=await import('./retrieval/hybrid.mjs');
     const def=await json(args[0]), q=args.slice(2).join(' ');
+    if(def.runtime?.kind==='local-evidence-selector')throw Error('Use ask without --semantic to run the tournament prompt.');
     const encoder=encode(def,answerQueries(q));
     console.log(JSON.stringify({...semanticAnswer(def,q,encoder),encoder:encoder.model},null,2));
   }else if(command==='ask'){
-    console.log(JSON.stringify(await connectedAnswer(await json(args[0]),args.slice(1).join(' ')),null,2));
+    const def=await json(args[0]),question=args.slice(1).join(' ');
+    const response=await runtimeAnswer(def,question);
+    console.log(JSON.stringify(response,null,2));
   }else if(command==='regression'){
-    const results=evaluate(await json(args[0]),await json(args[1])),failures=results.filter(r=>!r.passed);
+    const def=await json(args[0]),cases=await json(args[1]),results=[];
+    for(const c of cases){
+      const observed=await runtimeAnswer(def,c.question);
+      results.push(...evaluate(def,[c],()=>observed));
+    }
+    const failures=results.filter(r=>!r.passed);
     console.log(JSON.stringify({passed:results.length-failures.length,total:results.length,failures},null,2));
     if(failures.length)process.exitCode=2;
-  }else throw Error('Commands: build, ask, review, regression. See README.md for examples.');
+  }else throw Error('Commands: build, ask, verify, review, regression, tournament. See README.md for examples.');
 }
 main().catch(e=>{console.error(e.message);process.exitCode=1;});

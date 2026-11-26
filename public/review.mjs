@@ -22,22 +22,23 @@ export function validateCase(entry) {
   return {question:entry.question.trim(), status:entry.status, facts:facts.map(f => f.trim()), source:source.trim()};
 }
 
-export async function runReview(definition, cases) {
+export async function runReview(definition, cases, runner=answer) {
   if (!Array.isArray(cases) || !cases.length || cases.length > 50) throw Error('Add between 1 and 50 questions.');
   const validated = cases.map(validateCase);
   if (new Set(validated.map(c => c.question.toLowerCase())).size !== validated.length) throw Error('Each review question must be distinct.');
   const bytes = new TextEncoder().encode(JSON.stringify(definition));
   const hash = await crypto.subtle.digest('SHA-256', bytes);
-  const results = validated.map(entry => {
-    const actual = answer(definition, entry.question);
+  const results = [];
+  for (const entry of validated) {
+    const actual = await runner(definition, entry.question);
     const issues = [];
     if (actual.status !== entry.status) issues.push('Expected '+entry.status+'; observed '+actual.status+'.');
     for (const fact of entry.facts) {
       if (!containsPhrase(actual.text, fact)) issues.push('Missing phrase: '+fact);
     }
     if (entry.source && !actual.citations.some(c => c.source === entry.source)) issues.push('Missing source: '+entry.source);
-    return {passed:issues.length === 0, issues, actual};
-  });
+    results.push({passed:issues.length === 0, issues, actual});
+  }
   return {version:1, definitionSha256:Array.from(new Uint8Array(hash), b => b.toString(16).padStart(2,'0')).join(''),
     passed:results.filter(r => r.passed).length, total:results.length, cases:validated, results};
 }

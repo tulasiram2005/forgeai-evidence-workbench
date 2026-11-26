@@ -1,0 +1,23 @@
+{
+  "scope": "Build a reference assistant for a printmaking studio. Explain drying time, pickup procedure and courier reimbursement. Cite the studio records.",
+  "audience": "printmaking studio staff",
+  "tone": "informative",
+  "mustAnswer": [
+    "Pickup procedure",
+    "Ticket replacement",
+    "Drying time",
+    "Rack labels"
+  ],
+  "mustRefuse": [
+    "courier reimbursement"
+  ],
+  "groundability": "Partial coverage",
+  "clarifyingQuestions": [
+    "Who will use the agent?",
+    "What tone should it use?",
+    "Which source supports the flagged topics?"
+  ],
+  "assumptions": [
+    "Unanswered intake questions use the displayed audience and tone."
+  ]
+}

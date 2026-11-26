@@ -1,0 +1,37 @@
+{
+  "compiler": "qwen2.5:1.5b",
+  "inputs": [
+    {
+      "source": "collection.txt",
+      "sha256": "7432af770a05a7d3eb05cd60e5674585ec37d77a2f5ba8224ed04f88462fe2b6"
+    },
+    {
+      "source": "drying.txt",
+      "sha256": "1261103526d505ae34441cd1b88602bb16204412c4c510b9c2dc4ce37c90a849"
+    }
+  ],
+  "enrichment": {
+    "audience": "printmaking studio staff",
+    "tone": "informative",
+    "prompt": "Create a reference guide for the printmaking studio, including information on drying time, pickup procedure, and courier reimbursement.",
+    "topics": [
+      "drying time",
+      "pickup procedure",
+      "courier reimbursement"
+    ],
+    "questions": [
+      {
+        "topic": "Drying time",
+        "question": "What is the recommended drying time for prints in the studio?"
+      },
+      {
+        "topic": "Pickup procedure",
+        "question": "How do you present a numbered studio ticket at the collection desk?"
+      },
+      {
+        "topic": "Rack labels",
+        "question": "What is the purpose of attaching a blue date slip to each rack in the studio?"
+      }
+    ]
+  }
+}

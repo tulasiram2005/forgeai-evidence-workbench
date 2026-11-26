@@ -45,24 +45,27 @@ export async function enrich(brief, docs) {
   const model = process.env.FORGE_MODEL || 'qwen2.5:1.5b';
   const messages = [{role:'system',content:compilerPrompt},
     {role:'user', content:JSON.stringify({brief, samples,allowedQuestionLabels:labels})}];
+  const result = await localJSON(messages, designSchema, model);
+  return validateDesign(result, labels);
+}
+
+export async function localJSON(messages, schema, model, maxTokens=850, timeoutMs=120_000) {
   const llama = process.env.FORGE_BACKEND === 'llama.cpp';
   const url = llama ? 'http://127.0.0.1:18435/v1/chat/completions' : 'http://127.0.0.1:11434/api/chat';
   const request = llama
-    ? {model, messages, temperature:0, seed:17, max_tokens:850,
-       response_format:{type:'json_schema',json_schema:{name:'design',strict:true,schema:designSchema}}}
-    : {model, messages, stream:false, format:designSchema,
-       options:{temperature:0, seed:17, num_predict:850, num_ctx:4096}};
+    ? {model, messages, temperature:0, seed:17, max_tokens:maxTokens,
+       response_format:{type:'json_schema',json_schema:{name:'design',strict:true,schema:schema}}}
+    : {model, messages, stream:false, format:schema,
+       options:{temperature:0, seed:17, num_predict:maxTokens, num_ctx:4096}};
   const response = await fetch(url, {
-    method:'POST', redirect:'error', signal:AbortSignal.timeout(120_000),
+    method:'POST', redirect:'error', signal:AbortSignal.timeout(timeoutMs),
     headers:{'content-type':'application/json'}, body:JSON.stringify(request)
   });
   if (!response.ok) throw new Error('Local model server returned HTTP ' + response.status);
   const payload = await response.json();
   const raw = nonempty(llama ? payload.choices?.[0]?.message?.content : payload.message?.content, 20_000);
-  const result = JSON.parse(raw);
-  return validateDesign(result, labels);
+  return JSON.parse(raw);
 }
-
 export function validateDesign(result, labels) {
   if (!result || !Array.isArray(result.topics) || result.topics.length < 1 || result.topics.length > 6 ||
       !Array.isArray(result.questions) || result.questions.length < 3 || result.questions.length > 6) {

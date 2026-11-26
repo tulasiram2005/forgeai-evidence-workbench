@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "systemPrompt": "First look for reasons to refuse.",
+  "requirements": {
+    "scope": "Build an assistant for North Pier shore staff. Answer questions about shift swaps, leave requests, travel reimbursement, and payroll appeals in plain, friendly English. Cite the relevant handbook or expenses notice. State when a policy is missing.",
+    "audience": "North Pier shore staff",
+    "tone": "friendly",
+    "mustAnswer": [
+      "Travel reimbursement deadline",
+      "Travel reimbursement evidence",
+      "Local rail fare",
+      "Taxi approval",
+      "Meal allowance",
+      "Expense correction",
+      "Mileage rate",
+      "Missing receipt",
+      "Shift swap notice",
+      "Shift swap approval",
+      "Annual leave notice",
+      "Annual leave approver",
+      "Emergency leave contact",
+      "Shift swap record",
+      "Training leave allowance",
+      "Returning from leave"
+    ],
+    "mustRefuse": [
+      "payroll appeals"
+    ],
+    "groundability": "Partial coverage",
+    "clarifyingQuestions": [
+      "Who will use the agent?",
+      "What tone should it use?",
+      "Which source supports the flagged topics?"
+    ],
+    "assumptions": [
+      "Unanswered intake questions use the displayed audience and tone."
+    ]
+  },
+  "tools": [],
+  "gaps": [
+    "payroll appeals"
+  ],
+  "chunks": [
+    {
+      "topic": "Travel reimbursement deadline",
+      "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return.",
+      "source": "expense-notice.txt",
+      "id": "D1.1"
+    },
+    {
+      "topic": "Travel reimbursement evidence",
+      "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference.",
+      "source": "expense-notice.txt",
+      "id": "D1.2"
+    },
+    {
+      "topic": "Local rail fare",
+      "text": "Local rail fare: Claim the standard class ticket price for approved journeys.",
+      "source": "expense-notice.txt",
+      "id": "D1.3"
+    },
+    {
+      "topic": "Taxi approval",
+      "text": "Taxi approval: Obtain written supervisor approval before booking a taxi.",
+      "source": "expense-notice.txt",
+      "id": "D1.4"
+    },
+    {
+      "topic": "Meal allowance",
+      "text": "Meal allowance: The overnight meal allowance is 28 credits per person.",
+      "source": "expense-notice.txt",
+      "id": "D1.5"
+    },
+    {
+      "topic": "Expense correction",
+      "text": "Expense correction: Reopen a returned claim within five working days.",
+      "source": "expense-notice.txt",
+      "id": "D1.6"
+    },
+    {
+      "topic": "Mileage rate",
+      "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer.",
+      "source": "expense-notice.txt",
+      "id": "D1.7"
+    },
+    {
+      "topic": "Missing receipt",
+      "text": "Missing receipt: Attach a signed loss declaration to the expense claim.",
+      "source": "expense-notice.txt",
+      "id": "D1.8"
+    },
+    {
+      "topic": "Shift swap notice",
+      "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+      "source": "shift-handbook.txt",
+      "id": "D2.1"
+    },
+    {
+      "topic": "Shift swap approval",
+      "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal.",
+      "source": "shift-handbook.txt",
+      "id": "D2.2"
+    },
+    {
+      "topic": "Annual leave notice",
+      "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure.",
+      "source": "shift-handbook.txt",
+      "id": "D2.3"
+    },
+    {
+      "topic": "Annual leave approver",
+      "text": "Annual leave approver: The department lead approves annual leave in the leave portal.",
+      "source": "shift-handbook.txt",
+      "id": "D2.4"
+    },
+    {
+      "topic": "Emergency leave contact",
+      "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins.",
+      "source": "shift-handbook.txt",
+      "id": "D2.5"
+    },
+    {
+      "topic": "Shift swap record",
+      "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes.",
+      "source": "shift-handbook.txt",
+      "id": "D2.6"
+    },
+    {
+      "topic": "Training leave allowance",
+      "text": "Training leave allowance: Staff may request two paid training days each calendar year.",
+      "source": "shift-handbook.txt",
+      "id": "D2.7"
+    },
+    {
+      "topic": "Returning from leave",
+      "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator.",
+      "source": "shift-handbook.txt",
+      "id": "D2.8"
+    }
+  ],
+  "retrieval": {
+    "chunking": "Sentence or CSV record; 750-character text ceiling",
+    "threshold": 0.44,
+    "splitConjunction": true
+  },
+  "outputContract": {
+    "status": [
+      "answered",
+      "clarify",
+      "refused"
+    ],
+    "text": "string",
+    "citations": "Array<{id, source, text}>",
+    "tool": "optional registry ID"
+  },
+  "runtime": {
+    "kind": "local-evidence-selector",
+    "model": "qwen2.5:1.5b"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "passed": 19,
+  "total": 20,
+  "stop": "No improvement; retained best definition",
+  "failures": [
+    {
+      "id": "E07",
+      "question": "What is the purpose of attaching a blue date slip to each rack in the studio?",
+      "kind": "paraphrase",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    }
+  ],
+  "metrics": {
+    "citationPrecision": {
+      "matched": 10,
+      "total": 10
+    },
+    "evidenceRecall": {
+      "matched": 10,
+      "total": 11
+    },
+    "requiredRefusals": {
+      "matched": 9,
+      "total": 9
+    }
+  },
+  "model": "qwen2.5:1.5b",
+  "limitations": [
+    "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",
+    "A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes."
+  ],
+  "budget": {
+    "limitMs": 180000,
+    "elapsedMs": 2579,
+    "scope": "model generation, compilation and optimization after intake"
+  }
+}

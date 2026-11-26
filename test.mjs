@@ -102,3 +102,10 @@ test('optional dense ranking preserves refusals and source conflict handling',()
   assert.equal(semanticAnswer(def,'Archive hours?',fakeEncoder).status,'clarify');
   assert.equal(semanticAnswer(def,'Neptune orbital period?',fakeEncoder).status,'refused');
 });
+
+test('sparse corpus still produces the minimum suite when every fallback field exists',()=>{
+  const fields='replacement premium patent holder auction estimate customs tariff warranty period supplier email appeal hotline tax exemption certification fee discount schedule serial registration renewal charge supplier address credit ceiling insurance deductible expiry date license class invoice reference shipping surcharge registration fee';
+  const {evals}=build('Explain coverage.',[{name:'fields.txt',text:'Coverage: '+fields+'.'}]);
+  assert.ok(evals.length>=20);
+  assert.equal(new Set(evals.map(c=>c.question)).size,evals.length);
+});

@@ -90,3 +90,37 @@ In the [frozen comparison](evidence/retrieval-comparison.json), lexical, dense a
 Prose chunks follow line and sentence boundaries. Long passages split at whitespace within a 750-character ceiling where possible; a longer unbroken token needs a hard split. CSV rows stay intact with their headers and identifiers. Generation of agent designs uses local Qwen at temperature zero. Dense encoding and rank fusion have no sampling temperature.
 
 The factory’s evaluation and bounded repair loop is agentic. A knowledge graph could help with repeated multi-hop relationships across many documents; these suites supply no evidence of that bottleneck. Google’s Open Knowledge Format is a candidate for exchanging curated knowledge bundles. General Markdown ingestion does not implement OKF schema validation or graph traversal. See [Google’s description of OKF](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing), the [encoder model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), and the [rank fusion paper](https://cormack.uwaterloo.ca/cormack/cormacksigir09-rrf.pdf).
+
+## Review against the OceanAI assignment
+
+| Core deliverable | Evidence and qualification |
+| --- | --- |
+| Intake interviewer | CLI reads the brief and folder. Optional audience and tone interview; unattended builds record defaults. |
+| Groundability guard | Requirements list unsupported topics. Lexical matching can miss an implicit gap. |
+| Declarative agent generator | Exported prompt, retrieval controls, permitted tools and output contract in each definition. |
+| Generated eval suite | Source-linked cases, model paraphrases, refusal and ambiguity cases. Cross-document cases require at least two suitable sources. |
+| Automated judge | Checks expected outcome, cited source text and required evidence. Strict references can penalize a reasonable extra passage. |
+| Critic and optimizer | Up to three rounds on frozen cases, with failure categories, targeted changes, before/after scores and retained best configuration. |
+| Honest reporting | Every release includes its remaining failures and the actual responses. |
+| Generic runner | Browser runner and CLI. The local prompt-tournament definition uses its selected prompt at inference time. |
+| Two complete demonstrations | [Shore](evidence/shore/) and [conservation](evidence/conservation/). An additional [print-studio trial](evidence/print-studio/) ran the local model unattended and scored 19/20. Its disputed question asks why a label is attached; the supplied policy only instructs staff to attach it. |
+
+**Model scope.** The full CLI path uses a small local model for design and question generation. The optional tournament also uses it to select evidence. Grounding checks, scoring and repair decisions run in code. Hosted custom builds use the deterministic path. A literal reading that requires an LLM invocation at every stage is a qualification to this implementation.
+
+### Bonus evidence
+
+- **Prompt tournament.** Two locally proposed prompts compete on the same frozen cases. The local model sees each candidate prompt plus untrusted candidate passages and selects passage IDs. The answer is constructed from validated IDs. Capability checks and refusals precede model selection. Both candidates receive identical cases and the same deterministic scoring rule. A tie goes to the first proposal. In the [completed 36-case comparison](evidence/shore-prompt-tournament/comparison.json), the candidates scored 14 and 20. The existing 32/36 extractive release remains the default. The [winning candidate](evidence/shore-prompt-tournament/definition.json) is separately runnable.
+- **Budget enforcement.** A CLI build runs model generation, compilation and optimization in a worker with a configurable wall-clock limit (default 180 seconds after intake). Expiry discards the unfinished build. The optimizer stops on a non-improving iteration. Browser compilation has a 45-second limit. The tournament has its own total latency limit; an interrupted comparison records partial progress without selecting a winner.
+- **Human checkpoint.** Add `--checkpoint` to display the full requirements and explicitly approve them before local-model generation or compilation. Declining stops the build. Omit the flag for an unattended review.
+- **Regression and hosted UI.** Replay a previous frozen suite against a revised definition. The public workbench and video links appear at the top of this README.
+- **Human baseline.** A genuinely human-authored comparator has not been evaluated. The prompt comparison, developer probes and blind-review facility serve different purposes.
+
+```sh
+node cli.mjs build --brief examples/shore/brief.txt --docs examples/shore/docs --out runs/approved --checkpoint --budget-ms 180000
+# Start the local model server first. Use FORGE_BACKEND=llama.cpp for that backend.
+node cli.mjs tournament evidence/shore/definition.json evidence/shore/evals.json runs/tournament --budget-ms 180000
+node cli.mjs ask runs/tournament/definition.json 'How much notice is needed for a shift swap?'
+node cli.mjs verify evidence/shore/definition.json 'What is the travel reimbursement deadline, and what about payroll appeals?'
+```
+
+The explicit multi-part verifier reports a status and citations per question clause. A missing part yields exit code 2. Its rule recognizes explicitly worded interrogative clauses; complex references across clauses can require clarification.
