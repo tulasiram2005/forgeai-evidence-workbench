@@ -1,3 +1,4 @@
+import {auditSources} from './source-audit.mjs';
 import { validateCase, runReview } from './review.mjs';
 import { answer } from './engine.mjs';
 
@@ -204,6 +205,30 @@ byId('chat-form').addEventListener('submit', async event => {
       const quote = item('div', undefined, 'quote');
       quote.append(item('strong', citation.source + (citation.id ? ' · ' + citation.id : '')), item('span', citation.text));
       panel.append(quote);
+    }
+    if(response.citations.some(c=>startingRun.definition.chunks.some(chunk=>chunk.source===c.source))){
+      const audit=item('button','Test source dependency','outline');
+      audit.type='button';
+      const output=item('div');
+      output.setAttribute('aria-live','polite');
+      audit.onclick=async()=>{
+        audit.disabled=true;
+        try {
+          const receipt=await auditSources(startingRun.definition,question,answer,response);
+          output.replaceChildren(item('h3','Source-removal audit'),item('p','Each trial repeats the question with one cited document withheld.'));
+          for(const trial of receipt.trials){
+            const block=item('div',undefined,'quote');
+            block.append(item('strong','Without '+trial.source),evidenceRow('Outcome',trial.response.status),
+              item('p',trial.response.text));
+            for(const cite of trial.response.citations)block.append(evidenceRow('Remaining source',cite.source+' · '+cite.id));
+            output.append(block);
+          }
+          const save=item('button','Download audit','outline');
+          save.onclick=()=>download(receipt,'forgeai-source-audit.json');
+          output.append(save);
+        } catch(error){output.textContent=error.message;audit.disabled=false;}
+      };
+      panel.append(audit,output);
     }
     byId('response').replaceChildren(panel);
   } catch (error) {

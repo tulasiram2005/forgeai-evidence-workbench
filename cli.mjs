@@ -52,6 +52,12 @@ async function main(){
     if(result.passed!==result.total)process.exitCode=2;
     return;
   }
+  if(command==='audit'){
+    const {auditSources}=await import('./public/source-audit.mjs');
+    const result=await auditSources(await json(args[0]),args.slice(1).join(' '),runtimeAnswer);
+    console.log(JSON.stringify(result,null,2));
+    return;
+  }
   if(command==='verify'){
     const def=await json(args[0]);
     const query=args.slice(1).join(' ').trim();
@@ -131,6 +137,6 @@ async function main(){
     const failures=results.filter(r=>!r.passed);
     console.log(JSON.stringify({passed:results.length-failures.length,total:results.length,failures},null,2));
     if(failures.length)process.exitCode=2;
-  }else throw Error('Commands: build, ask, verify, review, regression, tournament. See README.md for examples.');
+  }else throw Error('Commands: build, ask, audit, verify, review, regression, tournament. See README.md for examples.');
 }
 main().catch(e=>{console.error(e.message);process.exitCode=1;});

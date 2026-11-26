@@ -124,3 +124,9 @@ node cli.mjs verify evidence/shore/definition.json 'What is the travel reimburse
 ```
 
 The explicit multi-part verifier reports a status and citations per question clause. A missing part yields exit code 2. Its rule recognizes explicitly worded interrogative clauses; complex references across clauses can require clarification.
+
+### Source-removal audit
+
+In **Test the agent**, ask a question and choose **Test source dependency** beneath a cited answer. ForgeAI withholds each cited document separately and repeats the original question using the same released configuration. Compare the text, status and remaining citations, or download the full receipt. The experiment is read-only and runs locally in the browser. A matching answer from another file may reflect duplicated material. A changed answer calls for inspection of the remaining passage.
+
+CLI equivalent: `node cli.mjs audit evidence/shore/definition.json 'How much notice is needed for a shift swap?'`. The [recorded example](evidence/shore/source-removal.json) shows what happens when the shift handbook is unavailable. This tests the answer runner’s dependence on indexed passages; the generated requirements and prompt remain fixed.

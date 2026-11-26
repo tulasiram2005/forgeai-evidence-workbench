@@ -117,3 +117,19 @@ test('a one-millisecond tournament budget returns a partial report without a win
   assert.equal(result.report.winner,null);
   assert.match(result.report.stop,/Latency limit/);
 });
+
+import {auditSources} from './public/source-audit.mjs';
+test('withholding a source changes only the trial and exposes duplicate support',async()=>{
+  const passage='Drying time: Wait eighteen hours.';
+  const docs=[{name:'manual.txt',text:passage},{name:'notice.txt',text:passage}];
+  const definition=build('Explain drying time.',docs).definition;
+  const snapshot=JSON.stringify(definition);
+  const duplicate=await auditSources(definition,'What is the drying time?');
+  assert.equal(duplicate.trials.length,1);
+  assert.equal(duplicate.trials[0].sameText,true);
+  assert.notEqual(duplicate.trials[0].source,duplicate.trials[0].response.citations[0].source);
+  assert.equal(JSON.stringify(definition),snapshot);
+  const single=build('Explain drying time.',docs.slice(0,1)).definition;
+  assert.equal((await auditSources(single,'What is the drying time?')).trials[0].response.status,'refused');
+  assert.deepEqual((await auditSources(single,'Orbital currency?')).trials,[]);
+});

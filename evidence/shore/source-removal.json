@@ -1,0 +1,27 @@
+{
+  "question": "How much notice is needed for a shift swap?",
+  "baseline": {
+    "status": "answered",
+    "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+    "citations": [
+      {
+        "id": "D2.1",
+        "source": "shift-handbook.txt",
+        "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+      }
+    ]
+  },
+  "trials": [
+    {
+      "source": "shift-handbook.txt",
+      "removedPassages": 8,
+      "response": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "sameText": false,
+      "sameStatus": false
+    }
+  ]
+}
