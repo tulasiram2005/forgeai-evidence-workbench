@@ -16,7 +16,8 @@ for(const suite of [...suites,'holdout4']){
    }
    const lexical=check(old.pointers.map(p=>p.id)),hybrid=check(trace.ranks.hybrid.top.slice(0,3));
    assert.equal(lexical.source,old.correct);
-   rows.push({suite,name,question:old.question,lexical,hybrid});
+   const lexicalThree=check(trace.ranks.lexical.top.slice(0,3));
+   rows.push({suite,name,question:old.question,lexical,lexicalThree,hybrid});
   }
  }
 }
@@ -24,6 +25,6 @@ assert.equal(rows.length,archived.length);
 const summary={};
 for(const metric of ['source','allFacts']){
  const count=pred=>rows.filter(pred).length;
- summary[metric]={lexical:count(r=>r.lexical[metric]),hybrid:count(r=>r.hybrid[metric]),gained:count(r=>!r.lexical[metric]&&r.hybrid[metric]),lost:count(r=>r.lexical[metric]&&!r.hybrid[metric])};
+ summary[metric]={lexical:count(r=>r.lexical[metric]),lexicalThree:count(r=>r.lexicalThree[metric]),hybrid:count(r=>r.hybrid[metric]),hybridGainOverLexicalThree:count(r=>r.hybrid[metric]&&!r.lexicalThree[metric]),hybridLossAgainstLexicalThree:count(r=>!r.hybrid[metric]&&r.lexicalThree[metric]),gained:count(r=>!r.lexical[metric]&&r.hybrid[metric]),lost:count(r=>r.lexical[metric]&&!r.hybrid[metric])};
 }
 console.log(JSON.stringify({scope:'Development replay of archived rankings on answerable refusals only. Hybrid always shows three passages where available; lexical may show fewer. No human timing or near-miss safety measured.',total:rows.length,emptyLexical:rows.filter(r=>!r.lexical.ids.length).length,summary,rows},null,2));
