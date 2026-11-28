@@ -1,3 +1,4 @@
+import {overlap as questionOverlap} from './verdict.mjs';
 import {calibrateGate,gateRows} from './gate.mjs';
 import {validationIds,judgeControls,splitCases,splitScore} from './validation.mjs';
 // Shared by the browser and CLI. No network, persistence or ambient tool access.
@@ -189,7 +190,7 @@ export function makeEvals(chunks,questions,gaps,minimum=20){
   }
   for(const x of questions||[]){
     const c=sample.find(c=>c.topic.toLowerCase()===String(x.topic).toLowerCase());
-    if(c && typeof x.question==='string') add('paraphrase',x.question,[c]);
+    if(c && typeof x.question==='string') add(minimum>=60 && questionOverlap(x.question,c.text)<=.4?'paraphrase-hard':'paraphrase',x.question,[c]);
   }
   const other=sample.find(c=>c.source!==sample[0].source);
   if(other) for(const a of sample.filter(c=>c.source!==other.source).slice(0,4))

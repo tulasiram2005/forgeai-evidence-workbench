@@ -1,3 +1,5 @@
+import {strictAnswer} from './public/evidence-first.mjs';
+import {describeRelease} from './public/verdict.mjs';
 import {parentPort,workerData} from 'node:worker_threads';
 import {build,answer} from './public/engine.mjs';
 import {enrich} from './model.mjs';
@@ -45,9 +47,10 @@ if(opts.release){
   opts.prepareRunner=opts.cliRerank?(d,rows)=>{
     const scores=opts.scoreQuestions(d,rows.map(c=>c.question));
     return (def,q)=>answer(def,q,undefined,scores);
-  }:prepareRunner;
+  }:opts.evidenceFirst?()=>strictAnswer:prepareRunner;
 }
 const run=build(brief,docs,opts);
+if(opts.release)run.report.assessment=describeRelease(run);
 if(opts.degraded)run.report.degraded=opts.degraded;
 if(opts.expandIndex)run.definition.searchExpansion=await (await import('./retrieval/expand.mjs')).expandIndex(run.definition);
 parentPort.postMessage({run,enrichment:opts.enrichment??null});

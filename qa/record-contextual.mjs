@@ -9,7 +9,7 @@ for(const fixture of ['examples/holdout/dispatch','examples/holdout3/optics']){
   const temp=fs.mkdtempSync(join(tmpdir(),'forge-web-reference-'));
   try{
     const out=join(temp,'run');
-    execFileSync(process.execPath,['cli.mjs','forge','--brief',fixture+'/brief.txt','--docs',fixture+'/docs','--out',out,'--deterministic']);
+    execFileSync(process.execPath,['cli.mjs','forge','--brief',fixture+'/brief.txt','--docs',fixture+'/docs','--out',out,'--deterministic','--contextual-review']);
     const definition=JSON.parse(fs.readFileSync(out+'/definition.json'));
     const cases=JSON.parse(fs.readFileSync(fixture+'/cases.json'));
     const run=prepareRunner(definition,cases);

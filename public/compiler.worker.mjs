@@ -1,3 +1,5 @@
+import {strictAnswer} from './evidence-first.mjs';
+import {describeRelease} from './verdict.mjs';
 import {build,indexDocs,inspectRequirements,makeEvals} from './engine.mjs';
 import {splitCases} from './validation.mjs';
 
@@ -18,10 +20,11 @@ self.addEventListener('message',async event=>{
     const digest=new Uint8Array(await crypto.subtle.digest('SHA-256',bytes));
     const sha256=Array.from(digest,b=>b.toString(16).padStart(2,'0')).join('');
     const {contextualRunner}=await import('./browser-minilm.mjs');
-    const runner=await contextualRunner({chunks},cases.map(c=>c.question));
+    const runner=options.contextualReview?await contextualRunner({chunks},cases.map(c=>c.question)):strictAnswer;
     const run=build(brief,documents,{...opts,approvedRequirements:requirements,
       prepareRunner:()=>runner,commitTest:()=>({sha256})});
-    run.definition.runtime={kind:'contextual-minilm'};
+    run.definition.runtime={kind:options.contextualReview?'contextual-minilm':'evidence-first'};
+    run.report.assessment=describeRelease(run);
     self.postMessage({run});
   }catch(error){self.postMessage({error:error.message});}
 });

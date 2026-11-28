@@ -1,3 +1,4 @@
+import {strictAnswer} from './public/evidence-first.mjs';
 import {ollamaPort} from './model.mjs';
 import {readFile,readdir,writeFile,mkdir,mkdtemp,rename,rm,stat} from 'node:fs/promises';
 import {resolve,join,relative,dirname,extname} from 'node:path';
@@ -27,6 +28,7 @@ async function runBuild(workerData,budgetMs){
   }finally{clearTimeout(timer);await worker.terminate();}
 }
 async function runtimeAnswer(def,query){
+  if(def.runtime?.kind==='evidence-first')return strictAnswer(def,query);
   if(def.retrieval?.gate){
     const {loadLocalGate,crossScores}=await import('./retrieval/local-gate.mjs');
     await loadLocalGate();
@@ -127,7 +129,7 @@ async function main(){
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
     const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')};
     if(command==='forge'){
-      Object.assign(opts,{autoDetect:!args.includes('--model'),release:true,contextual:true,splitValidation:true});
+      Object.assign(opts,{evidenceFirst:!opts.gateV2 && !opts.expandIndex && !args.includes('--contextual-review'),autoDetect:!args.includes('--model'),release:true,contextual:true,splitValidation:true});
       for(const old of ['--structured','--split-validation','--contextual'])if(args.includes(old))console.error('Deprecated '+old+' is already enabled.');
     }
     if(args.includes('--interview')){
@@ -161,7 +163,7 @@ async function main(){
     const start=performance.now();
     const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
     if(run.report.degraded)console.error('DEGRADED: '+run.report.degraded+'. Using deterministic templates.');
-    if(opts.release && !opts.gateV2)run.definition.runtime={kind:'contextual-minilm'};
+    if(opts.release && !opts.gateV2)run.definition.runtime={kind:opts.evidenceFirst?'evidence-first':'contextual-minilm'};
     run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
     const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
       for(const [name,value] of Object.entries({...run,receipt})){
@@ -178,6 +180,12 @@ async function main(){
         '', '## Remaining failures','',...run.report.failures.map(r=>'- '+r.id+' · '+r.category+' · '+r.question),
         ...(run.report.failures.length?[]:['All generated checks passed.']), '', '## Limits','',...run.report.limitations,''];
       if(run.report.splits)lines.push('## Frozen split scores','',...Object.entries(run.report.splits).map(([name,m])=>name+' '+m.passed+'/'+m.total+' (95% Wilson '+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)'),'','Test slice SHA-256 '+run.report.commitment.sha256,'');
+      if(run.report.assessment){
+        const a=run.report.assessment;
+        lines.push('## Release verdict','',a.verdict+' for autonomous answering.','',
+          'Easy tier '+a.easy.passed+'/'+a.easy.total+'. Hard model paraphrases '+(a.hard.total?a.hard.passed+'/'+a.hard.total:'unmeasured')+'.',
+          ...(a.warning?[a.warning]:[]),'','Evidence-first forecast for overall case pass '+(100*a.forecast).toFixed(1)+'%, retrospective pilot n='+a.n+'. Includes correct refusals and clarifications.','');
+      }
       await writeFile(join(tmp,'FINAL.md'),lines.join('\n'));
       await rename(tmp,target);
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));

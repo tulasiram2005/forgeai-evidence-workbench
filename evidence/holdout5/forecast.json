@@ -1,0 +1,45 @@
+{
+  "qualified": false,
+  "config": "strict",
+  "metric": "overall case pass, including correct refusals and clarifications",
+  "n": 5,
+  "forecast": 0.46799999999999997,
+  "meanAbsoluteError": 0.04799999999999997,
+  "observations": [
+    {
+      "suite": "holdout",
+      "total": 75,
+      "passed": 33,
+      "actual": 0.44,
+      "forecast": 0.475
+    },
+    {
+      "suite": "holdout2",
+      "total": 60,
+      "passed": 24,
+      "actual": 0.4,
+      "forecast": 0.485
+    },
+    {
+      "suite": "holdout3",
+      "total": 60,
+      "passed": 30,
+      "actual": 0.5,
+      "forecast": 0.46
+    },
+    {
+      "suite": "holdout4",
+      "total": 60,
+      "passed": 30,
+      "actual": 0.5,
+      "forecast": 0.46
+    },
+    {
+      "suite": "holdout5",
+      "total": 60,
+      "passed": 30,
+      "actual": 0.5,
+      "forecast": 0.46
+    }
+  ]
+}

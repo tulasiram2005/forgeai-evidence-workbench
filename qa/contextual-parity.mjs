@@ -13,7 +13,7 @@ try{
         const run=await new Promise((resolve,reject)=>{
           worker.onmessage=({data})=>data.error?reject(Error(data.error)):resolve(data.run);
           worker.onerror=e=>reject(Error(e.message));
-          worker.postMessage({brief,documents,options:{}});
+          worker.postMessage({brief,documents,options:{contextualReview:true}});
         });
         const {contextualRunner}=await import('/browser-minilm.mjs');
         const runner=await contextualRunner(run.definition,questions.map(c=>c.question));
