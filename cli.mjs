@@ -156,7 +156,8 @@ async function main(){
         if(response.ok && (await response.json()).models.some(m=>m.name===requested)) model=requested;
       }catch{ /* The portable compiler works without Ollama. */ }
     }
-    if(command==='forge')console.error(model?'Local model: '+model:'Using deterministic compiler. No model inference requested or available.');
+    if(command==='forge')console.error(model?'Local model: '+model:'Using deterministic agent compiler.');
+    if(opts.expandIndex)console.error('Generating ranking metadata with the local model.');
     const start=performance.now();
     const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
     run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
