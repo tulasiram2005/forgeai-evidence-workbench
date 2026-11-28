@@ -165,3 +165,11 @@ Each folder has 25 cases. The build reads its documents before the harness opens
 Across 30 answerable questions, refusals moved from 30 to 22 in the dense experiment. On 30 questions requiring refusal, incorrect answers moved from four to zero. All three files use synthetic examples, including shared question templates. The results guided development and need replication on another blind corpus. The dense path remains opt-in. With the pinned MiniLM model available locally, append `--experimental-dense` to the holdout command or use `ask DEFINITION --experimental-dense QUESTION`.
 
 [Original receipts](evidence/holdout/) · [Structured intake](evidence/v2/holdout/) · [Dense experiment](evidence/v2/dense/) · [Procurement release](evidence/v2/spares/FINAL.md) · [Interface changes and limitations](docs/ui/CHANGES.md)
+
+### Evidence controls and optional composition
+
+`node cli.mjs rescore DEFINITION EVALS` compares the strict release judge against a fact-and-provenance rule. A required phrase must occur in the answer and in a verified passage from an acceptable source. Replaying the two original releases changed zero verdicts across 73 cases. Each version of the judge has limits, especially with equivalent paraphrases. [Verdict comparisons](evidence/v2/rescore/)
+
+`node cli.mjs scope DEFINITION "topic one" "topic two" --semantic` displays the best lexical passage, its missing terms and its optional cosine score. Partial coverage warrants inspection. Token overlap alone cannot establish that a policy grants permission. [Recorded inspection](evidence/v2/shore-scope.json)
+
+`node cli.mjs ask DEFINITION --compose "question"` uses the local model to compose a cited response from whole passages or their complete labelled values. Invalid references, changed quantities and dropped qualifiers trigger a retry followed by extractive fallback. Run `node compare-compose.mjs` with the local model running to replay the three-way comparison. The extractive runner and both local prompt variants each passed 32 of the same 36 questions, with zero degraded answers on this run. The tie retained the extractive runner. [All candidate answers](evidence/v2/compose/comparison.json)

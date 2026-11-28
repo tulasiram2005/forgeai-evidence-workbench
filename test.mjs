@@ -51,7 +51,7 @@ test('evidence counts distinguish extra citations, missing answers and required 
   const a={source:'a',text:'passage'},b={source:'b',text:'passage'};
   const cases=[{id:1,expected:[a],status:'answered'},{id:2,expected:[b],status:'answered'},{id:3,expected:[],status:'refused'}];
   const results=[{id:1,actual:{citations:[a,a,b],status:'answered'}},{id:2,actual:{citations:[],status:'refused'}},{id:3,actual:{citations:[],status:'refused'}}];
-  assert.deepEqual(summarizeEvidence(cases,results),{citationPrecision:{matched:1,total:2},evidenceRecall:{matched:1,total:2},requiredRefusals:{matched:1,total:1}});
+  assert.deepEqual(summarizeEvidence(cases,results),{citationPrecision:{matched:1,total:2},evidenceRecall:{matched:1,total:2},requiredRefusals:{matched:1,total:1},refusalPrecision:{matched:1,total:2}});
 });
 
 test('source-qualified queries resolve conflicting notices independently of file order',()=>{
@@ -200,4 +200,10 @@ test('alternative fact judge accepts alternate sources while preserving numeric 
   assert.equal(factVerdict(run.definition,gold,actual).passed,true);
   assert.equal(factVerdict(run.definition,{...gold,must_include_facts:['8 hours']},actual).passed,false);
   assert.equal(factVerdict(run.definition,gold,{...actual,citations:[{...c,text:'wrong'}]}).passed,false);
+});
+
+import {scopeReview} from './scope-review.mjs';
+test('coverage inspection distinguishes three overlapping unsupported attributes',()=>{
+  const traps=['kiln warranty','glaze freight','clay valuation'];
+  assert.ok(scopeReview(run.definition,traps).every(r=>r.verdict!=='supported' && r.missing.length && r.supportingPassage));
 });

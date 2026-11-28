@@ -220,7 +220,8 @@ export function summarizeEvidence(cases, results) {
       if (result.actual.status === 'refused') refusals.matched++;
     }
   }
-  return {citationPrecision:precision, evidenceRecall:recall, requiredRefusals:refusals};
+  const refusalPrecision={matched:refusals.matched,total:results.filter(r=>r.actual.status==='refused').length};
+  return {citationPrecision:precision, evidenceRecall:recall, requiredRefusals:refusals, refusalPrecision};
 }
 
 function requestedTopics(brief){

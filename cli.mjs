@@ -51,6 +51,13 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='scope'){
+    const {scopeReview}=await import('./scope-review.mjs');
+    const def=await json(args[0]),topics=args.slice(1).filter(a=>a!=='--semantic');
+    if(!topics.length || topics.length>64 || topics.some(t=>!t.trim()||t.length>300))throw Error('Supply 1–64 topics of up to 300 characters.');
+    const encoder=args.includes('--semantic')?(await import('./retrieval/hybrid.mjs')).encode(def,topics):null;
+    console.log(JSON.stringify(scopeReview(def,topics,encoder),null,2));return;
+  }
   if(command==='rescore'){
     const {factVerdict}=await import('./fact-judge.mjs');
     const [def,cases]=await Promise.all(args.slice(0,2).map(json));
@@ -158,6 +165,10 @@ async function main(){
         ...run.iterations.map(r=>'- Round '+r.round+' · '+r.passed+'/'+r.total+(r.accepted===undefined?'':' · tuning '+r.tuning+'/'+(r.total-run.report.validationIds.length)+' · validation '+r.validation+'/'+run.report.validationIds.length+' · '+(r.accepted?'accepted':'rejected'))),
         '', 'Released round '+run.report.retainedRound+'. '+run.report.stop+'.','','## Judge controls','',
         ...run.report.judgeControls.map(c=>'- '+c.name+' · '+(c.rejected?'rejected':'accepted')),
+        '', '## Results by class','',
+        ...Object.entries(Object.groupBy(run.iterations[run.report.retainedRound-1].results,r=>r.kind)).map(([kind,rows])=>'- '+kind+' · '+rows.filter(r=>r.passed).length+'/'+rows.length),
+        '', '## Refusal quality','',
+        ...['refusalPrecision','requiredRefusals'].map(key=>{const m=run.report.metrics[key];return '- '+(key==='refusalPrecision'?'Precision':'Recall')+' · '+(m.total?m.matched+'/'+m.total:'No eligible cases');}),
         '', '## Remaining failures','',...run.report.failures.map(r=>'- '+r.id+' · '+r.category+' · '+r.question),
         ...(run.report.failures.length?[]:['All generated checks passed.']), '', '## Limits','',...run.report.limitations,''];
       await writeFile(join(tmp,'FINAL.md'),lines.join('\n'));

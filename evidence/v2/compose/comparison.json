@@ -1,0 +1,1602 @@
+{
+  "cases": 36,
+  "winner": "Extractive",
+  "tieBreak": "Fewer degraded answers, then listed order",
+  "methods": [
+    {
+      "name": "Extractive",
+      "results": [
+        {
+          "id": "E01",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E02",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference.",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E03",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys.",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E04",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi.",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E05",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Meal allowance: The overnight meal allowance is 28 credits per person.",
+            "citations": [
+              {
+                "id": "D1.5",
+                "source": "expense-notice.txt",
+                "text": "Meal allowance: The overnight meal allowance is 28 credits per person."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E06",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Expense correction: Reopen a returned claim within five working days.",
+            "citations": [
+              {
+                "id": "D1.6",
+                "source": "expense-notice.txt",
+                "text": "Expense correction: Reopen a returned claim within five working days."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E07",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer.",
+            "citations": [
+              {
+                "id": "D1.7",
+                "source": "expense-notice.txt",
+                "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E08",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim.",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E09",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E10",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal.",
+            "citations": [
+              {
+                "id": "D2.2",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E11",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure.",
+            "citations": [
+              {
+                "id": "D2.3",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E12",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal.",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E13",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins.",
+            "citations": [
+              {
+                "id": "D2.5",
+                "source": "shift-handbook.txt",
+                "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E14",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes.",
+            "citations": [
+              {
+                "id": "D2.6",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E15",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Training leave allowance: Staff may request two paid training days each calendar year.",
+            "citations": [
+              {
+                "id": "D2.7",
+                "source": "shift-handbook.txt",
+                "text": "Training leave allowance: Staff may request two paid training days each calendar year."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E16",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator.",
+            "citations": [
+              {
+                "id": "D2.8",
+                "source": "shift-handbook.txt",
+                "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E17",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E18",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E19",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E20",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal.",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E21",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim.",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E22",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E23",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return.\nShift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E24",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference.\nShift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E25",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys.\nShift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E26",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi.\nShift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ]
+          }
+        },
+        {
+          "id": "E27",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E28",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E29",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E30",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E31",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E32",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E33",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        },
+        {
+          "id": "E34",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": []
+          }
+        },
+        {
+          "id": "E35",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": []
+          }
+        },
+        {
+          "id": "E36",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": []
+          }
+        }
+      ],
+      "passed": 32,
+      "degradations": 0
+    },
+    {
+      "name": "Compose 1",
+      "prompt": "Check every part of the question against evidence.",
+      "results": [
+        {
+          "id": "E01",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return. [P1]",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E02",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference. [P1]",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E03",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys. [P1]",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E04",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi. [P1]",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E05",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Meal allowance: The overnight meal allowance is 28 credits per person. [P1]",
+            "citations": [
+              {
+                "id": "D1.5",
+                "source": "expense-notice.txt",
+                "text": "Meal allowance: The overnight meal allowance is 28 credits per person."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E06",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Expense correction: Reopen a returned claim within five working days. [P1]",
+            "citations": [
+              {
+                "id": "D1.6",
+                "source": "expense-notice.txt",
+                "text": "Expense correction: Reopen a returned claim within five working days."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E07",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer. [P1]",
+            "citations": [
+              {
+                "id": "D1.7",
+                "source": "expense-notice.txt",
+                "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E08",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim. [P1]",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E09",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift. [P1]",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E10",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.2",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E11",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure. [P1]",
+            "citations": [
+              {
+                "id": "D2.3",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E12",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E13",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins. [P1]",
+            "citations": [
+              {
+                "id": "D2.5",
+                "source": "shift-handbook.txt",
+                "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E14",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes. [P1]",
+            "citations": [
+              {
+                "id": "D2.6",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E15",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Training leave allowance: Staff may request two paid training days each calendar year. [P1]",
+            "citations": [
+              {
+                "id": "D2.7",
+                "source": "shift-handbook.txt",
+                "text": "Training leave allowance: Staff may request two paid training days each calendar year."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E16",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator. [P1]",
+            "citations": [
+              {
+                "id": "D2.8",
+                "source": "shift-handbook.txt",
+                "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E17",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E18",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E19",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E20",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E21",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim. [P1]",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E22",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E23",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E24",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E25",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E26",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E27",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E28",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E29",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E30",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E31",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E32",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E33",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E34",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E35",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E36",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        }
+      ],
+      "passed": 32,
+      "degradations": 0
+    },
+    {
+      "name": "Compose 2",
+      "prompt": "First look for reasons to refuse.",
+      "results": [
+        {
+          "id": "E01",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return. [P1]",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              }
+            ],
+            "attempts": 2,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E02",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference. [P1]",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E03",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys. [P1]",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E04",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi. [P1]",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E05",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Meal allowance: The overnight meal allowance is 28 credits per person. [P1]",
+            "citations": [
+              {
+                "id": "D1.5",
+                "source": "expense-notice.txt",
+                "text": "Meal allowance: The overnight meal allowance is 28 credits per person."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E06",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Expense correction: Reopen a returned claim within five working days. [P1]",
+            "citations": [
+              {
+                "id": "D1.6",
+                "source": "expense-notice.txt",
+                "text": "Expense correction: Reopen a returned claim within five working days."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E07",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer. [P1]",
+            "citations": [
+              {
+                "id": "D1.7",
+                "source": "expense-notice.txt",
+                "text": "Mileage rate: Approved private vehicle travel earns 0.42 credits per kilometer."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E08",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim. [P1]",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E09",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift. [P1]",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 2,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E10",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.2",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap approval: Both employees and the roster supervisor must confirm in the roster portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E11",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure. [P1]",
+            "citations": [
+              {
+                "id": "D2.3",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave notice: File annual leave requests at least 10 calendar days before departure."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E12",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E13",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins. [P1]",
+            "citations": [
+              {
+                "id": "D2.5",
+                "source": "shift-handbook.txt",
+                "text": "Emergency leave contact: Call the duty coordinator before the scheduled shift begins."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E14",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes. [P1]",
+            "citations": [
+              {
+                "id": "D2.6",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E15",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Training leave allowance: Staff may request two paid training days each calendar year. [P1]",
+            "citations": [
+              {
+                "id": "D2.7",
+                "source": "shift-handbook.txt",
+                "text": "Training leave allowance: Staff may request two paid training days each calendar year."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E16",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator. [P1]",
+            "citations": [
+              {
+                "id": "D2.8",
+                "source": "shift-handbook.txt",
+                "text": "Returning from leave: Confirm the next rostered shift with the duty coordinator."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E17",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E18",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E19",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E20",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Annual leave approver: The department lead approves annual leave in the leave portal. [P1]",
+            "citations": [
+              {
+                "id": "D2.4",
+                "source": "shift-handbook.txt",
+                "text": "Annual leave approver: The department lead approves annual leave in the leave portal."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E21",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Missing receipt: Attach a signed loss declaration to the expense claim. [P1]",
+            "citations": [
+              {
+                "id": "D1.8",
+                "source": "expense-notice.txt",
+                "text": "Missing receipt: Attach a signed loss declaration to the expense claim."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E22",
+          "passed": false,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E23",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 2,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E24",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.2",
+                "source": "expense-notice.txt",
+                "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E25",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Local rail fare: Claim the standard class ticket price for approved journeys. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.3",
+                "source": "expense-notice.txt",
+                "text": "Local rail fare: Claim the standard class ticket price for approved journeys."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E26",
+          "passed": true,
+          "actual": {
+            "status": "answered",
+            "text": "Taxi approval: Obtain written supervisor approval before booking a taxi. [P1]\nShift swap notice: Submit swap requests at least 36 hours before the affected shift. [P2]",
+            "citations": [
+              {
+                "id": "D1.4",
+                "source": "expense-notice.txt",
+                "text": "Taxi approval: Obtain written supervisor approval before booking a taxi."
+              },
+              {
+                "id": "D2.1",
+                "source": "shift-handbook.txt",
+                "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+              }
+            ],
+            "attempts": 1,
+            "degraded": false
+          }
+        },
+        {
+          "id": "E27",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E28",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E29",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E30",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E31",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E32",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E33",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E34",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E35",
+          "passed": true,
+          "actual": {
+            "status": "clarify",
+            "text": "Which topic or record do you mean?",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        },
+        {
+          "id": "E36",
+          "passed": true,
+          "actual": {
+            "status": "refused",
+            "text": "I could not establish that from the supplied sources.",
+            "citations": [],
+            "degraded": false,
+            "attempts": 0
+          }
+        }
+      ],
+      "passed": 32,
+      "degradations": 0
+    }
+  ]
+}

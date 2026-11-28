@@ -49,6 +49,10 @@
     "requiredRefusals": {
       "matched": 8,
       "total": 8
+    },
+    "refusalPrecision": {
+      "matched": 8,
+      "total": 8
     }
   },
   "model": "Deterministic local compiler",

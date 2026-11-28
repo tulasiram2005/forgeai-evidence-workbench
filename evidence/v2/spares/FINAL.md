@@ -16,6 +16,21 @@ Released round 2. All generated checks passed.
 - Fabricated number · rejected
 - Wrong source · rejected
 
+## Results by class
+
+- grounded · 6/6
+- cross-source · 4/4
+- near-domain refusal · 3/3
+- scope gap · 3/3
+- out of scope · 3/3
+- ambiguous · 2/2
+- instruction boundary · 1/1
+
+## Refusal quality
+
+- Precision · 10/10
+- Recall · 10/10
+
 ## Remaining failures
 
 All generated checks passed.
