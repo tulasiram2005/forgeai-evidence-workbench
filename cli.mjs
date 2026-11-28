@@ -73,7 +73,7 @@ async function main(){
   }
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense')}),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),contextual:args.includes('--contextual')}),null,2));
     return;
   }
   if(command==='impact'){
@@ -127,7 +127,7 @@ async function main(){
   if(command==='build' || command==='forge'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
-    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation')};
+    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),contextual:args.includes('--contextual')};
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
@@ -178,12 +178,12 @@ async function main(){
   }else if(command==='ask' && args[1]==='--compose'){
     const {compose}=await import('./compose.mjs');
     console.log(JSON.stringify(await compose(await json(args[0]),args.slice(2).join(' ')),null,2));
-  }else if(command==='ask' && ['--semantic','--experimental-dense'].includes(args[1])){
+  }else if(command==='ask' && ['--semantic','--experimental-dense','--contextual'].includes(args[1])){
     const {encode,semanticAnswer,answerQueries,experimentalAnswer,experimentQueries}=await import('./retrieval/hybrid.mjs');
     const def=await json(args[0]), q=args.slice(2).join(' ');
     if(def.runtime?.kind==='local-evidence-selector')throw Error('Use ask without --semantic to run the tournament prompt.');
-    const experimental=args[1]==='--experimental-dense';
-    const encoder=encode(def,experimental?experimentQueries(q):answerQueries(q));
+    const experimental=args[1]!=='--semantic';
+    const encoder=encode(def,experimental?experimentQueries(q):answerQueries(q),args[1]==='--contextual');
     console.log(JSON.stringify({...(experimental?experimentalAnswer:semanticAnswer)(def,q,encoder),encoder:encoder.model},null,2));
   }else if(command==='ask'){
     const def=await json(args[0]),question=args.slice(1).join(' ');

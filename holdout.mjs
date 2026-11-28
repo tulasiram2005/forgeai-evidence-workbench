@@ -9,9 +9,9 @@ export async function holdout(folder, readDocuments, options={}) {
   // Only open reviewer expectations after the agent definition is final.
   const cases = JSON.parse(await readFile(join(folder,'cases.json'),'utf8'));
   let runner=answer;
-  if(options.experimentalDense){
+  if(options.experimentalDense || options.contextual){
     const {experimentalAnswer,experimentQueries,encode}=await import('./retrieval/hybrid.mjs');
-    const encoder=encode(definition,cases.flatMap(c=>experimentQueries(c.question)));
+    const encoder=encode(definition,cases.flatMap(c=>experimentQueries(c.question)),options.contextual);
     runner=(d,q)=>experimentalAnswer(d,q,encoder);
   }
   const results = cases.map(entry => {

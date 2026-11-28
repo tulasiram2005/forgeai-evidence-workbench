@@ -2,15 +2,23 @@ import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {answer, rank} from '../public/engine.mjs';
 
-export function encode(def, queries) {
+export function passageContext(chunk) {
+  if(chunk.section?.length)return chunk.section.join(' > ')+'. '+chunk.text;
+  if(chunk.columns?.length && chunk.row){
+    const labels={sku:'catalogue item code',pack:'units per pack',qty:'quantity',uom:'unit of measure'};
+    return chunk.columns.map((name,i)=>(labels[name.trim().toLowerCase()]??name)+': '+(chunk.row[i]??'')).join('. ');
+  }
+  return chunk.text;
+}
+export function encode(def, queries, contextual=false) {
   const unique = [...new Set(queries)];
-  const payload = {passages:def.chunks.map(c=>c.text), queries:unique};
+  const payload = {passages:def.chunks.map(c=>contextual?passageContext(c):c.text), queries:unique};
   const script = fileURLToPath(new URL('./semantic.py', import.meta.url));
   const raw = execFileSync('python3',[script],{input:JSON.stringify(payload),encoding:'utf8',timeout:120000,maxBuffer:16_000_000});
   const {scores,...model} = JSON.parse(raw);
   const chunks = new Map(def.chunks.map((c,i)=>[c.id,i]));
   const table = new Map(unique.map((q,i)=>[q,scores[i]]));
-  return {model, score:(query,id)=>table.get(query)?.[chunks.get(id)]};
+  return {model, contextual, score:(query,id)=>table.get(query)?.[chunks.get(id)]};
 }
 
 // Ties share rank. Otherwise file order could masquerade as retrieval evidence.
@@ -59,10 +67,22 @@ export function experimentalAnswer(def, query, encoder) {
   // Dense similarity alone cannot establish author identity or an invented field.
   if(/\b(?:invent|fabricate|ignore)\b/i.test(query))return {status:'refused',text:'I could not establish that from the supplied sources.',citations:[]};
   const response=answer(def,query,(chunks,part)=>{
-    const rows=candidates(chunks,part,encoder);
+    // Embeddings can place adjacent catalogue codes almost on top of each other.
+    // Restrict candidates to passages containing every explicit record identifier.
+    let pool=chunks;
+    if(encoder.contextual){
+      const identifiers=value=>(value.toLowerCase().match(/[a-z0-9]+(?:[-_][a-z0-9]+)*/g)??[])
+        .filter(token=>/[a-z]/.test(token) && /[0-9]/.test(token));
+      const keys=identifiers(part);
+      if(keys.length)pool=chunks.filter(c=>{
+        const actual=new Set(identifiers(c.text));
+        return keys.every(id=>actual.has(id));
+      });
+    }
+    const rows=candidates(pool,part,encoder);
     const dense=[...rows].sort((a,b)=>b.cosine-a.cosine);
     const top=dense[0];
-    if(top.cosine>=0.50 && top.cosine-(dense[1]?.cosine??0)>=0.08){
+    if(top && top.cosine>=0.50 && top.cosine-(dense[1]?.cosine??0)>=0.08){
       const score=Math.max(top.score,def.retrieval.threshold);
       // Preserve ties for conflicting same-topic sources.
       return [top,...rows.filter(r=>r!==top && r.c.topic===top.c.topic)].map(r=>({...r,score}));

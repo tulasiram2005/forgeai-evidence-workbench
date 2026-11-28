@@ -207,3 +207,29 @@ test('coverage inspection distinguishes three overlapping unsupported attributes
   const traps=['kiln warranty','glaze freight','clay valuation'];
   assert.ok(scopeReview(run.definition,traps).every(r=>r.verdict!=='supported' && r.missing.length && r.supportingPassage));
 });
+
+import {indexDocs} from './public/engine.mjs';
+import {passageContext} from './retrieval/hybrid.mjs';
+test('contextual intake binds markdown hierarchy to verbatim passages and resets sibling headings',()=>{
+  const chunks=indexDocs([{name:'lab.md',text:'# Instruments\n## Balance\nWait for the green lamp.\n## Timer\nRecord the elapsed time.'}],{contextual:true});
+  assert.equal(chunks.length,2);
+  assert.deepEqual(chunks.map(c=>c.section),[['Instruments','Balance'],['Instruments','Timer']]);
+  assert.equal(chunks[0].text,'Wait for the green lamp.');
+  assert.equal(passageContext(chunks[0]),'Instruments > Balance. Wait for the green lamp.');
+});
+test('CSV contextual embedding can expand column labels while citations retain original headings',()=>{
+  const [row]=indexDocs([{name:'stock.csv',text:'sku,qty\nC31,21'}],{contextual:true});
+  assert.equal(row.text,'sku = C31 · qty = 21');
+  assert.match(passageContext(row),/quantity: 21/);
+  assert.equal(passageContext({text:'Legacy passage.'}),'Legacy passage.');
+});
+
+import {experimentalAnswer} from './retrieval/hybrid.mjs';
+test('contextual ranker requires the exact identifier even for near-identical codes',()=>{
+  const def=build('Look up catalogue stock',[{name:'parts.csv',text:'sku,pack\nAX-71,4 caps\nAX-710,9 clips'}],{contextual:true}).definition;
+  const encoder={contextual:true,score:()=>0.95};
+  assert.equal(experimentalAnswer(def,'How many clips come in AX-72?',encoder).status,'refused');
+  const response=experimentalAnswer(def,'How many pieces come in ax-71?',encoder);
+  assert.equal(response.status,'answered');
+  assert.equal(response.citations[0].text,'sku = AX-71 · pack = 4 caps');
+});

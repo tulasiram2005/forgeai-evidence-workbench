@@ -1,0 +1,10 @@
+[
+  {"kind":"catalogue","question":"How many seals come in an NX47 kit?","status":"answered","facts":["11 seals"],"sources":["kits.csv"]},
+  {"kind":"catalogue","question":"How many clips will one NX48 kit contain?","status":"answered","facts":["19 clips"],"sources":["kits.csv"]},
+  {"kind":"near miss","question":"How many clips come in the NX49 kit?","status":"refused"},
+  {"kind":"near miss","question":"What is the warranty period for NX47?","status":"refused"},
+  {"kind":"paraphrase","question":"At what temperature should a cold delivery wait?","status":"answered","facts":["6 degrees"],"sources":["receiving.md"]},
+  {"kind":"paraphrase","question":"Who receives the pictures of damaged boxes?","status":"answered","facts":["depot supervisor"],"sources":["receiving.md"]},
+  {"kind":"cross-document","question":"How many seals come in an NX47 kit? Also, at what temperature should a cold delivery wait?","status":"answered","facts":["11 seals","6 degrees"],"sources":["kits.csv","receiving.md"]},
+  {"kind":"ambiguous","question":"Which one?","status":"clarify"}
+]

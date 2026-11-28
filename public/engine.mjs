@@ -21,7 +21,7 @@ function csvRows(input) {
   if(value || row.length) {row.push(value.trim());rows.push(row);}
   return rows.filter(r=>r.some(Boolean));
 }
-export function indexDocs(docs) {
+export function indexDocs(docs, opts={}) {
   if(!Array.isArray(docs)||!docs.length||docs.length>limits.files) throw Error('Supply 1–32 documents.');
   if(docs.some(d=>!d || typeof d.name!=='string'||typeof d.text!=='string') || new Set(docs.map(d=>d.name)).size!==docs.length) throw Error('Each source needs a unique filename and text.');
   if(docs.reduce((n,d)=>n+d.text.length,0)>limits.chars) throw Error('Corpus exceeds 400,000 characters.');
@@ -30,10 +30,17 @@ export function indexDocs(docs) {
     let entries=[];
     if(/\.csv$/i.test(d.name)){
       const [head,...rows]=csvRows(d.text);
-      entries=rows.map(r=>({topic:r.slice(0,2).join(' '),text:r.map((v,i)=>(head[i]||'Value')+' = '+v).join(' · '), row:r}));
+      entries=rows.map(r=>({topic:r.slice(0,2).join(' '),text:r.map((v,i)=>(head[i]||'Value')+' = '+v).join(' · '), row:r,...(opts.contextual?{columns:head}:{})}));
     }else {
+      const headings=[];
       const pages=d.pages ?? [d.text];
       for(const [pageIndex,page] of pages.entries()) for(const raw of page.split(/\r?\n/)){
+        const heading=opts.contextual && /\.md$/i.test(d.name) && raw.match(/^ {0,3}(#{1,6})\s+(.+?)\s*#*$/);
+        if(heading){
+          headings.length=heading[1].length-1;
+          if(!suspicious.test(heading[2]))headings.push(heading[2]);
+          continue;
+        }
         for(const part of raw.split(/(?<=[.!?])\s+(?=[A-Z0-9])/)){
           const text=part.trim().replace(/^[-*#]+\s*/,'');
           if(text.length<8||!terms(text).length||suspicious.test(text)) continue;
@@ -47,7 +54,7 @@ export function indexDocs(docs) {
             const slice=remainder.slice(0,end).trimEnd();
             remainder=remainder.slice(end).trimStart();
             const label=slice.match(/^([^:]{2,90}):/);
-            entries.push({...(d.pages?{page:pageIndex+1}:{}),topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
+            entries.push({...(headings.some(Boolean)?{section:headings.filter(Boolean)}:{}),...(d.pages?{page:pageIndex+1}:{}),topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
           }
         }
       }
@@ -249,7 +256,7 @@ function support(chunks,topic){
   if(!tokens.length)return false;
   return chunks.some(c=>overlap(tokens,terms(c.text+' '+c.source))/tokens.length>=0.64);
 }
-export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs)){
+export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs,opts)){
   if(typeof brief!=='string'||!brief.trim()||brief.length>6000)throw Error('Supply a brief of 1–6,000 characters.');
   const model=opts.enrichment||{};
   const labels=[...new Set(chunks.map(c=>c.topic))];
@@ -259,7 +266,7 @@ export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs)){
   return requirements;
 }
 export function build(brief,docs,opts={}){
-  const chunks=indexDocs(docs), model=opts.enrichment||{};
+  const chunks=indexDocs(docs,opts), model=opts.enrichment||{};
   const requirements=opts.approvedRequirements??inspectRequirements(brief,docs,opts,chunks);
   const gaps=requirements.mustRefuse;
   let definition={version:1,systemPrompt:[model.prompt||'Answer the requester using the supplied corpus.', 'Audience: '+requirements.audience+'. Tone: '+requirements.tone+'. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.'].join('\n'),requirements,tools:selectTools(brief,docs),gaps,chunks,retrieval:{chunking:'Sentence or CSV record; 750-character text ceiling',threshold:0.52,splitConjunction:false},outputContract:{status:['answered','clarify','refused'],text:'string',citations:'Array<{id, source, text}>',tool:'optional registry ID'}};
