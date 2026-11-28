@@ -41,6 +41,17 @@ byId('open-failures').onclick=()=>{
   byId('case-filter').focus();
 };
 fetch('./runs/holdout-summary.json').then(response=>response.json()).then(data=>{
+  const table=item('table');
+  table.append(item('caption','Cases passed on the same frozen questions'));
+  const heading=item('tr');
+  for(const name of ['Folder','Baseline','Structured intake','Local dense experiment'])heading.append(item('th',name));
+  table.append(heading);
+  for(const r of data){
+    const line=item('tr');line.append(item('th',r.name));
+    for(const score of [r.baseline,r,r.dense]) line.append(item('td',score.passed+'/'+score.total));
+    table.append(line);
+  }
+  byId('field-detail').replaceChildren(table,item('p','The headline strip shows structured lexical intake. The dense experiment runs on the CLI. These developer-authored fixtures are separate from each workspace’s generated case map.'));
   byId('field-scores').replaceChildren(...data.map(r=>{
     const cell=item('div');cell.append(item('strong',r.passed+'/'+r.total),item('span',r.name));return cell;
   }));
@@ -92,6 +103,10 @@ function renderCases() {
     comparison.append(reference,response);
     body.append(comparison);
     if (result.reason) body.append(evidenceRow('Judgment', result.reason));
+    body.append(evidenceRow('Round history', activeRun.iterations.map(r=>{
+      const observed=r.results.find(x=>x.id===result.id);
+      return 'R'+r.round+' '+(!observed?'unrecorded':observed.passed?'pass':'fail');
+    }).join(' / ')));
     if (definition.sources) body.append(evidenceRow('Expected sources', definition.sources));
     details.append(summary, body);
     list.append(details);
@@ -145,7 +160,13 @@ function render(run, key) {
     node.append(item('strong', 'Round ' + (i + 1) + ' · ' + entry.passed + '/' + entry.total), item('p', typeof change === 'object' ? format(change) : pretty(change || 'Initial evaluation')));
     return node;
   }));
+  const classes=new Map();
+  for(const r of retained?.results??[]){
+    const score=classes.get(r.kind)??{passed:0,total:0};
+    score.total++;score.passed+=Number(r.passed);classes.set(r.kind,score);
+  }
   byId('stop').replaceChildren(item('p', 'Stopped · ' + pretty(report.stop)), item('p', 'Compiler · ' + (report.model || 'Local')));
+  for(const [kind,score] of classes)byId('stop').append(evidenceRow(pretty(kind),score.passed+'/'+score.total));
   if (report.metrics) {
     for (const [key,label] of [['citationPrecision','Cited passages matching expectations'],['evidenceRecall','Expected passages recovered'],['requiredRefusals','Required refusals observed']]) {
       const metric = report.metrics[key];

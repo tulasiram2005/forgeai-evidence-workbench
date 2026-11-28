@@ -215,3 +215,9 @@ dialog h2 {font-size:43px;margin-bottom:10px}
 .result-card>.outline {margin-block:8px 16px}
 del {background:#f6dfd2;color:#743a25} ins {background:#dceadc;color:#19452d}
 @media(max-width:650px){.field-strip{display:grid;gap:8px}.field-strip>div{justify-content:space-between}.field-strip a{margin:0}.tabs{display:flex;flex-wrap:wrap;gap:0 16px}.tabs button{padding:10px 0}}
+.field-method {padding:8px 0;color:var(--muted);font-size:13px}
+.field-method summary {width:fit-content;color:var(--blue);font-weight:600}
+.field-method table {width:100%;border-collapse:collapse;text-align:left;margin:12px 0;font-variant-numeric:tabular-nums}
+.field-method caption {text-align:left;margin-bottom:8px}
+.field-method th,.field-method td {border-bottom:1px solid var(--line);padding:8px 4px}
+@media(max-width:650px){.field-method table{table-layout:fixed}.field-method th{overflow-wrap:anywhere}}

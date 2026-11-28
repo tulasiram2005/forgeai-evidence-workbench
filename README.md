@@ -138,3 +138,30 @@ Open **Change impact** and supply a revised definition or dossier. The browser r
 **Try the shore policy revision** compares the released shore definition with a controlled copy that changes the shift-swap deadline from 36 to 48 hours and drops the mileage-rate passage. Only the indexed passages differ. Six of 36 responses change: five quote the revised deadline and one loses its answer. The other 30 retain their status, text and cited source content. New topics outside the original questions require further review.
 
 CLI equivalent: `node cli.mjs impact evidence/shore/definition.json public/runs/shore-revision.json evidence/shore/evals.json`. The [full example report](evidence/shore/change-impact.json) preserves both sides. When comparing independently generated releases, differences may also come from changed configuration or model behavior. Local-model definitions require the CLI and a running local model.
+
+## V2 live review runbook
+
+Use Node 22+ and install the pinned pypdf dependency for PDF folders. Build into a new directory. The local model is optional.
+
+```sh
+node cli.mjs forge --brief examples/holdout/spares/brief.txt --docs examples/holdout/spares/docs --out runs/review-spares --structured --split-validation --budget-ms 180000
+node cli.mjs ask runs/review-spares/definition.json 'What is the return window?'
+node cli.mjs holdout examples/holdout/spares --structured --split-validation
+```
+
+Read FINAL.md, inspect the failures and review the generated and reserved case counts. Forge probes the local Ollama model list. If the model is unavailable it reports deterministic mode. If a connected model stalls, rerun with a fresh output directory and `--deterministic`. An explicitly requested model failure remains visible. Structured intake adds page provenance for text PDFs and extracts DOCX paragraphs. A blank or scanned page requests a transcript. The browser continues to accept text, Markdown and CSV.
+
+### Frozen reviewer questions
+
+Each folder has 25 cases. The build reads its documents before the harness opens its questions. The same reviewer cases run in every column. Local dense mode combines a semantic confidence gate, clause handling and conservative refusal rules. Its score measures the combined experiment. Generated validation cases share a corpus with tuning cases and are a separate measurement.
+
+| Folder | Original lexical | Structured lexical with split | Local dense experiment |
+|---|---:|---:|---:|
+| Staff | 9/25 | 13/25 | 16/25 |
+| Ship spares | 13/25 | 13/25 | 17/25 |
+| Technical bench | 13/25 | 13/25 | 14/25 |
+| Total | 35/75 | 39/75 | 47/75 |
+
+Across 30 answerable questions, refusals moved from 30 to 22 in the dense experiment. On 30 questions requiring refusal, incorrect answers moved from four to zero. All three files use synthetic examples, including shared question templates. The results guided development and need replication on another blind corpus. The dense path remains opt-in. With the pinned MiniLM model available locally, append `--experimental-dense` to the holdout command or use `ask DEFINITION --experimental-dense QUESTION`.
+
+[Original receipts](evidence/holdout/) · [Structured intake](evidence/v2/holdout/) · [Dense experiment](evidence/v2/dense/) · [Procurement release](evidence/v2/spares/FINAL.md) · [Interface changes and limitations](docs/ui/CHANGES.md)

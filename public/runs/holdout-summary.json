@@ -32,6 +32,74 @@
     "falseAnswersOnRefusals": {
       "count": 0,
       "total": 10
+    },
+    "baseline": {
+      "passed": 9,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 0,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 0,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 1,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 10,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 4,
+        "total": 10
+      }
+    },
+    "dense": {
+      "passed": 16,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 2,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 1,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 5,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 7,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 0,
+        "total": 10
+      }
     }
   },
   {
@@ -67,6 +135,74 @@
     "falseAnswersOnRefusals": {
       "count": 0,
       "total": 10
+    },
+    "baseline": {
+      "passed": 13,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 0,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 0,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 5,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 10,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 0,
+        "total": 10
+      }
+    },
+    "dense": {
+      "passed": 17,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 3,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 1,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 5,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 6,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 0,
+        "total": 10
+      }
     }
   },
   {
@@ -102,6 +238,74 @@
     "falseAnswersOnRefusals": {
       "count": 0,
       "total": 10
+    },
+    "baseline": {
+      "passed": 13,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 0,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 0,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 5,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 10,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 0,
+        "total": 10
+      }
+    },
+    "dense": {
+      "passed": 14,
+      "total": 25,
+      "classes": {
+        "paraphrase": {
+          "passed": 1,
+          "total": 5
+        },
+        "cross-document": {
+          "passed": 0,
+          "total": 5
+        },
+        "near miss": {
+          "passed": 5,
+          "total": 5
+        },
+        "unsupported instruction": {
+          "passed": 5,
+          "total": 5
+        },
+        "ambiguous": {
+          "passed": 3,
+          "total": 5
+        }
+      },
+      "falseRefusals": {
+        "count": 9,
+        "total": 10
+      },
+      "falseAnswersOnRefusals": {
+        "count": 0,
+        "total": 10
+      }
     }
   }
 ]
