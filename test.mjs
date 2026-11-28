@@ -179,3 +179,25 @@ test('PDF page provenance survives retrieval',()=>{
   const def=build('Explain pickup time',[{name:'schedule.pdf',text,pages:['',text]}]).definition;
   assert.equal(answer(def,'Pickup time').citations[0].page,2);
 });
+
+import {compose,verifyComposition} from './compose.mjs';
+test('composed evidence rejects changed units, numbers, identities and missing citations',async()=>{
+  const q='What are the details for Kiln cooldown?';
+  const citations=answer(run.definition,q).citations;
+  for(const row of [{text:'Wait 81 hours before removal.',passage:'P1'},{text:'Wait 18 days before removal.',passage:'P1'},
+    {text:citations[0].text,passage:'P2'},{text:'Safe immediately.'}]){
+    assert.throws(()=>verifyComposition({sentences:[row]},citations));
+  }
+  let attempts=0;
+  const result=await compose(run.definition,q,{generate:async()=>{attempts++;return {sentences:[]};}});
+  assert.equal(attempts,2);assert.equal(result.degraded,true);assert.equal(result.text,citations[0].text);
+});
+
+import {factVerdict} from './fact-judge.mjs';
+test('alternative fact judge accepts alternate sources while preserving numeric boundaries',()=>{
+  const c=run.definition.chunks[0],actual={status:'answered',text:c.text,citations:[c]};
+  const gold={status:'answered',must_include_facts:['18 hours'],acceptable_sources:['revision.txt',c.source]};
+  assert.equal(factVerdict(run.definition,gold,actual).passed,true);
+  assert.equal(factVerdict(run.definition,{...gold,must_include_facts:['8 hours']},actual).passed,false);
+  assert.equal(factVerdict(run.definition,gold,{...actual,citations:[{...c,text:'wrong'}]}).passed,false);
+});

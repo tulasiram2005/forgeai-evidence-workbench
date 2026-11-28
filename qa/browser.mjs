@@ -10,11 +10,14 @@ await page.goto(url);
 await page.waitForSelector('#score-meter button');
 for(const width of [360,768,1280,1728]){
  await page.setViewportSize({width,height:880});
+ await page.locator('#tab-evidence').click();
+ await page.evaluate(()=>window.scrollTo(0,0));
+ await page.screenshot({path:dir+'/'+width+'-overview.jpg',type:'jpeg',quality:70});
  for(const tab of ['evidence','runner','definition','review','impact']){
  await page.locator('#tab-'+tab).click();
  if(tab==='impact'){await page.locator('#impact-demo').click();await page.waitForFunction(()=>document.querySelector('#impact-status').textContent.includes('36'));await page.locator('#impact-results summary').first().click();}
  if(tab==='runner'){await page.fill('#query','How much notice is needed for a shift swap?');await page.click('#ask');await page.getByText('Test source dependency',{exact:true}).click();}
- await page.evaluate(()=>window.scrollTo(0,0));
+ await page.locator('#'+tab).evaluate(el=>el.scrollIntoView({block:'start'}));
  await page.screenshot({path:dir+'/'+width+'-'+tab+'.jpg',type:'jpeg',quality:64});
  }
 }

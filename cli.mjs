@@ -51,6 +51,19 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='rescore'){
+    const {factVerdict}=await import('./fact-judge.mjs');
+    const [def,cases]=await Promise.all(args.slice(0,2).map(json));
+    const scores=[];
+    for(const entry of cases){
+      const actual=await runtimeAnswer(def,entry.question);
+      const old=evaluate(def,[entry],()=>actual)[0].passed;
+      scores.push({id:entry.id,previous:old,...factVerdict(def,entry,actual)});
+    }
+    console.log(JSON.stringify({total:scores.length,original:scores.filter(r=>r.previous).length,
+      factBased:scores.filter(r=>r.passed).length,flips:scores.filter(r=>r.previous!==r.passed),scores},null,2));
+    return;
+  }
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
     console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense')}),null,2));
@@ -151,6 +164,9 @@ async function main(){
       await rename(tmp,target);
     }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));
+  }else if(command==='ask' && args[1]==='--compose'){
+    const {compose}=await import('./compose.mjs');
+    console.log(JSON.stringify(await compose(await json(args[0]),args.slice(2).join(' ')),null,2));
   }else if(command==='ask' && ['--semantic','--experimental-dense'].includes(args[1])){
     const {encode,semanticAnswer,answerQueries,experimentalAnswer,experimentQueries}=await import('./retrieval/hybrid.mjs');
     const def=await json(args[0]), q=args.slice(2).join(' ');

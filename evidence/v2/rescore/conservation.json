@@ -1,0 +1,230 @@
+{
+  "total": 37,
+  "original": 34,
+  "factBased": 34,
+  "flips": [],
+  "scores": [
+    {
+      "id": "E01",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E02",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E03",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E04",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E05",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E06",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E07",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E08",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E09",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E10",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E11",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E12",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E13",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E14",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E15",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E16",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E17",
+      "previous": false,
+      "passed": false,
+      "reason": "Outcome mismatch"
+    },
+    {
+      "id": "E18",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E19",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E20",
+      "previous": false,
+      "passed": false,
+      "reason": "Outcome mismatch"
+    },
+    {
+      "id": "E21",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E22",
+      "previous": false,
+      "passed": false,
+      "reason": "Outcome mismatch"
+    },
+    {
+      "id": "E23",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E24",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E25",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E26",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E27",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E28",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E29",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E30",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E31",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E32",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E33",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E34",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E35",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E36",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    },
+    {
+      "id": "E37",
+      "previous": true,
+      "passed": true,
+      "reason": "All reference requirements met"
+    }
+  ]
+}
