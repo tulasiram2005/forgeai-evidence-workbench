@@ -1,0 +1,3507 @@
+[
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Who can get me back into a frozen login?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4493879973888397,
+      "margin": 0.115774005651474,
+      "idfCoverage": 0,
+      "reranker": 0.000009733135811984539
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "duty librarian"
+    ],
+    "goldSources": [
+      "accounts.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Ask the duty librarian to release a locked session.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Unlocking"
+            ],
+            "topic": "Ask the duty librarian to",
+            "text": "Ask the duty librarian to release a locked session.",
+            "source": "accounts.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who can get me back into a frozen login?",
+          "score": 0.4493879973888397,
+          "margin": 0.115774005651474,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Ask the duty librarian to release a locked session.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Ask the duty librarian to release a locked session.\nUse the blue renewal terminal.\nVisitor passes expire after 45 minutes.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Renewal"
+              ],
+              "topic": "Use the blue renewal terminal.",
+              "text": "Use the blue renewal terminal.",
+              "source": "accounts.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "How much time does a guest get?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3416979908943176,
+      "margin": 0.26974599063396454,
+      "idfCoverage": 0,
+      "reranker": 0.000012672326192841865
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "45 minutes"
+    ],
+    "goldSources": [
+      "accounts.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Visitor passes expire after 45 minutes.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Temporary access"
+            ],
+            "topic": "Visitor passes expire after 45",
+            "text": "Visitor passes expire after 45 minutes.",
+            "source": "accounts.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much time does a guest get?",
+          "score": 0.3416979908943176,
+          "margin": 0.26974599063396454,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.\nCompleted posters wait at desk Cedar.\nA failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What should I show to prove my identity?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2848080098628998,
+      "margin": 0.11982201039791107,
+      "idfCoverage": 0,
+      "reranker": 0.000010081918844662141
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.3",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "library card"
+    ],
+    "goldSources": [
+      "accounts.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Present a library card at the counter.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Identification"
+            ],
+            "topic": "Present a library card at",
+            "text": "Present a library card at the counter.",
+            "source": "accounts.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What should I show to prove my identity?",
+          "score": 0.2848080098628998,
+          "margin": 0.11982201039791107,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.\nLoad ivory stock for proof copies.\nA failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Which machine extends my pass?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2882019877433777,
+      "margin": 0.010001987218856812,
+      "idfCoverage": 0,
+      "reranker": 0.000016980207874439657
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D1.4",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "blue renewal terminal"
+    ],
+    "goldSources": [
+      "accounts.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Use the blue renewal terminal.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Renewal"
+            ],
+            "topic": "Use the blue renewal terminal.",
+            "text": "Use the blue renewal terminal.",
+            "source": "accounts.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which machine extends my pass?",
+          "score": 0.2882019877433777,
+          "margin": 0.010001987218856812,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.\nUse the blue renewal terminal.\nPresent a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Renewal"
+              ],
+              "topic": "Use the blue renewal terminal.",
+              "text": "Use the blue renewal terminal.",
+              "source": "accounts.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What balance adjustment follows a failed print?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4759719967842102,
+      "margin": 0.11543300747871399,
+      "idfCoverage": 0.29903553623144075,
+      "reranker": 0.000131735869217664
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D2.2",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D2.2",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D1.3",
+          "D2.4",
+          "D1.1",
+          "D2.3",
+          "D1.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "3 credits"
+    ],
+    "goldSources": [
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A failed job earns 3 credits.",
+        "citations": [
+          {
+            "section": [
+              "Print support",
+              "Refunds"
+            ],
+            "topic": "A failed job earns 3",
+            "text": "A failed job earns 3 credits.",
+            "source": "printing.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What balance adjustment follows a failed print?",
+          "score": 0.4759719967842102,
+          "margin": 0.11543300747871399,
+          "promoted": false,
+          "lexicalMaximum": 0.161
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.\nOnly the floor technician clears stalled jobs.\nCompleted posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What shade should draft sheets be?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.33305901288986206,
+      "margin": 0.03841102123260498,
+      "idfCoverage": 0,
+      "reranker": 0.000010094328899867833
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "ivory"
+    ],
+    "goldSources": [
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Load ivory stock for proof copies.",
+        "citations": [
+          {
+            "section": [
+              "Print support",
+              "Paper"
+            ],
+            "topic": "Load ivory stock for proof",
+            "text": "Load ivory stock for proof copies.",
+            "source": "printing.md",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What shade should draft sheets be?",
+          "score": 0.33305901288986206,
+          "margin": 0.03841102123260498,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Completed posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Completed posters wait at desk Cedar.\nLoad ivory stock for proof copies.\nPresent a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Where do I collect a finished wall print?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4844279885292053,
+      "margin": 0.02736300230026245,
+      "idfCoverage": 0.14202712908584322,
+      "reranker": 0.000012756926480506081
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.1",
+          "D1.4",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "desk Cedar"
+    ],
+    "goldSources": [
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Completed posters wait at desk Cedar.",
+        "citations": [
+          {
+            "section": [
+              "Print support",
+              "Pickup"
+            ],
+            "topic": "Completed posters wait at desk",
+            "text": "Completed posters wait at desk Cedar.",
+            "source": "printing.md",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do I collect a finished wall print?",
+          "score": 0.4844279885292053,
+          "margin": 0.02736300230026245,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Completed posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Completed posters wait at desk Cedar.\nLoad ivory stock for proof copies.\nPresent a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Who can remove a stuck item from the spooler?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.33147698640823364,
+      "margin": 0.04926300048828125,
+      "idfCoverage": 0,
+      "reranker": 0.000012241260265000165
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D2.1",
+          "D2.3",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "floor technician"
+    ],
+    "goldSources": [
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Only the floor technician clears stalled jobs.",
+        "citations": [
+          {
+            "section": [
+              "Print support",
+              "Queue reset"
+            ],
+            "topic": "Only the floor technician clears",
+            "text": "Only the floor technician clears stalled jobs.",
+            "source": "printing.md",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who can remove a stuck item from the spooler?",
+          "score": 0.33147698640823364,
+          "margin": 0.04926300048828125,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.\nAsk the duty librarian to release a locked session.\nPresent a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What proves my identity? Also, where can I collect my wall print?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.45159798860549927,
+      "margin": 0.023930996656417847,
+      "idfCoverage": 0.09034908596983628,
+      "reranker": 0.000011114387234556489
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.4",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "library card",
+      "desk Cedar"
+    ],
+    "goldSources": [
+      "accounts.md",
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ],
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Present a library card at the counter.\nCompleted posters wait at desk Cedar.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Identification"
+            ],
+            "topic": "Present a library card at",
+            "text": "Present a library card at the counter.",
+            "source": "accounts.md",
+            "id": "D1.3"
+          },
+          {
+            "section": [
+              "Print support",
+              "Pickup"
+            ],
+            "topic": "Completed posters wait at desk",
+            "text": "Completed posters wait at desk Cedar.",
+            "source": "printing.md",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What proves my identity? Also, where can I collect my wall print?",
+          "score": 0.45159798860549927,
+          "margin": 0.023930996656417847,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "What proves my identity",
+          "score": 0.29147401452064514,
+          "margin": 0.10386700928211212,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "where can I collect my wall print?",
+          "score": 0.47740399837493896,
+          "margin": 0.028021007776260376,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.\nLoad ivory stock for proof copies.\nA failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "How long can a guest stay logged in and who clears a stuck print?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.47689399123191833,
+      "margin": 0.05313199758529663,
+      "idfCoverage": 0.2037985218439803,
+      "reranker": 0.00003795970042119734
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "45 minutes",
+      "floor technician"
+    ],
+    "goldSources": [
+      "accounts.md",
+      "printing.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ],
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Visitor passes expire after 45 minutes.\nOnly the floor technician clears stalled jobs.",
+        "citations": [
+          {
+            "section": [
+              "Kiosk access",
+              "Temporary access"
+            ],
+            "topic": "Visitor passes expire after 45",
+            "text": "Visitor passes expire after 45 minutes.",
+            "source": "accounts.md",
+            "id": "D1.2"
+          },
+          {
+            "section": [
+              "Print support",
+              "Queue reset"
+            ],
+            "topic": "Only the floor technician clears",
+            "text": "Only the floor technician clears stalled jobs.",
+            "source": "printing.md",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long can a guest stay logged in and who clears a stuck print?",
+          "score": 0.47689399123191833,
+          "margin": 0.05313199758529663,
+          "promoted": false,
+          "lexicalMaximum": 0.11499999999999999
+        },
+        {
+          "part": "How long can a guest stay logged in",
+          "score": 0.5177729725837708,
+          "margin": 0.2515689730644226,
+          "promoted": true,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "who clears a stuck print?",
+          "score": 0.6202279925346375,
+          "margin": 0.2244269847869873,
+          "promoted": true,
+          "lexicalMaximum": 0.2683333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.\nVisitor passes expire after 45 minutes.\nAsk the duty librarian to release a locked session.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Visitor passes expire after 45 minutes.\nOnly the floor technician clears stalled jobs.",
+      "citations": [
+        {
+          "id": "D1.2",
+          "source": "accounts.md",
+          "text": "Visitor passes expire after 45 minutes."
+        },
+        {
+          "id": "D2.4",
+          "source": "printing.md",
+          "text": "Only the floor technician clears stalled jobs."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Does a visitor pass work off campus?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.41127100586891174,
+      "margin": 0.15486201643943787,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.07302159070968628
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Does a visitor pass work off campus?",
+          "score": 0.41127100586891174,
+          "margin": 0.15486201643943787,
+          "promoted": false,
+          "lexicalMaximum": 0.1584
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Visitor passes expire after 45 minutes.\nPresent a library card at the counter.\nAsk the duty librarian to release a locked session.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What is the charge to replace a library card?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3732610046863556,
+      "margin": 0.16382300853729248,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.0362970195710659
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the charge to replace a library card?",
+          "score": 0.3732610046863556,
+          "margin": 0.16382300853729248,
+          "promoted": false,
+          "lexicalMaximum": 0.45666666666666667
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Present a library card at the counter.\nUse the blue renewal terminal.\nVisitor passes expire after 45 minutes.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Renewal"
+              ],
+              "topic": "Use the blue renewal terminal.",
+              "text": "Use the blue renewal terminal.",
+              "source": "accounts.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Can I renew at the blue terminal on Sunday?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.6866670250892639,
+      "margin": 0.4152330160140991,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.9958030581474304
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.3",
+          "D1.1",
+          "D2.4",
+          "D2.2",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Can I renew at the blue terminal on Sunday?",
+          "score": 0.6866670250892639,
+          "margin": 0.4152330160140991,
+          "promoted": true,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use the blue renewal terminal.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Renewal"
+              ],
+              "topic": "Use the blue renewal terminal.",
+              "text": "Use the blue renewal terminal.",
+              "source": "accounts.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use the blue renewal terminal.\nVisitor passes expire after 45 minutes.\nAsk the duty librarian to release a locked session.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Renewal"
+              ],
+              "topic": "Use the blue renewal terminal.",
+              "text": "Use the blue renewal terminal.",
+              "source": "accounts.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Use the blue renewal terminal.",
+      "citations": [
+        {
+          "id": "D1.4",
+          "source": "accounts.md",
+          "text": "Use the blue renewal terminal."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What file size does the printer accept?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3077639937400818,
+      "margin": 0.01631799340248108,
+      "idfCoverage": 0,
+      "reranker": 0.000010963238310068846
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What file size does the printer accept?",
+          "score": 0.3077639937400818,
+          "margin": 0.01631799340248108,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Load ivory stock for proof copies.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Load ivory stock for proof copies.\nA failed job earns 3 credits.\nCompleted posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "When do unused print credits expire?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.49312400817871094,
+      "margin": 0.1762860119342804,
+      "idfCoverage": 0.4178285190635939,
+      "reranker": 0.0013227628078311682
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.4",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D2.3",
+          "D1.4",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "When do unused print credits expire?",
+          "score": 0.49312400817871094,
+          "margin": 0.1762860119342804,
+          "promoted": false,
+          "lexicalMaximum": 0.198
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.\nVisitor passes expire after 45 minutes.\nOnly the floor technician clears stalled jobs.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Temporary access"
+              ],
+              "topic": "Visitor passes expire after 45",
+              "text": "Visitor passes expire after 45 minutes.",
+              "source": "accounts.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Does a failed poster earn double credit?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.50108802318573,
+      "margin": 0.21019601821899414,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.1495266556739807
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.2",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Does a failed poster earn double credit?",
+          "score": 0.50108802318573,
+          "margin": 0.21019601821899414,
+          "promoted": true,
+          "lexicalMaximum": 0.522
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A failed job earns 3 credits.\nCompleted posters wait at desk Cedar.\nLoad ivory stock for proof copies.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Paper"
+              ],
+              "topic": "Load ivory stock for proof",
+              "text": "Load ivory stock for proof copies.",
+              "source": "printing.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "A failed job earns 3 credits.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "printing.md",
+          "text": "A failed job earns 3 credits."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "Which email reaches the duty librarian?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3497529923915863,
+      "margin": 0.019391000270843506,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.6702574491500854
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.1",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D1.2",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which email reaches the duty librarian?",
+          "score": 0.3497529923915863,
+          "margin": 0.019391000270843506,
+          "promoted": false,
+          "lexicalMaximum": 0.45666666666666667
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Ask the duty librarian to release a locked session.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Ask the duty librarian to release a locked session.\nPresent a library card at the counter.\nCompleted posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Kiosk access",
+                "Unlocking"
+              ],
+              "topic": "Ask the duty librarian to",
+              "text": "Ask the duty librarian to release a locked session.",
+              "source": "accounts.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Kiosk access",
+                "Identification"
+              ],
+              "topic": "Present a library card at",
+              "text": "Present a library card at the counter.",
+              "source": "accounts.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "question": "What is the target response time for stalled jobs?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3776009976863861,
+      "margin": 0.07807999849319458,
+      "idfCoverage": 0.34302832973581365,
+      "reranker": 0.06476490944623947
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the target response time for stalled jobs?",
+          "score": 0.3776009976863861,
+          "margin": 0.07807999849319458,
+          "promoted": false,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Only the floor technician clears stalled jobs.\nA failed job earns 3 credits.\nCompleted posters wait at desk Cedar.",
+          "citations": [
+            {
+              "section": [
+                "Print support",
+                "Queue reset"
+              ],
+              "topic": "Only the floor technician clears",
+              "text": "Only the floor technician clears stalled jobs.",
+              "source": "printing.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Print support",
+                "Refunds"
+              ],
+              "topic": "A failed job earns 3",
+              "text": "A failed job earns 3 credits.",
+              "source": "printing.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Print support",
+                "Pickup"
+              ],
+              "topic": "Completed posters wait at desk",
+              "text": "Completed posters wait at desk Cedar.",
+              "source": "printing.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

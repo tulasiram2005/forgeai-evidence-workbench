@@ -1,0 +1,2779 @@
+[
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How much can I claim for my ride home after a late shift?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.562279999256134,
+      "margin": 0.17114201188087463,
+      "idfCoverage": 0.11304384093644784,
+      "reranker": 0.00007741427543805912
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D1.2",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "42 euros"
+    ],
+    "goldSources": [
+      "commute.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Taxi ceiling",
+            "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+            "source": "commute.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much can I claim for my ride home after a late shift?",
+          "score": 0.562279999256134,
+          "margin": 0.17114201188087463,
+          "promoted": true,
+          "lexicalMaximum": 0.1057142857142857
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nReceipt window: Upload transport receipts within 9 days of travel.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "commute.pdf",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How much can I claim for my ride home after a late shift? Also, how early should I arrange a substitute?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5119959712028503,
+      "margin": 0.15927496552467346,
+      "idfCoverage": 0.0710384900706327,
+      "reranker": 0.0000714333145879209
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "42 euros",
+      "27 hours"
+    ],
+    "goldSources": [
+      "commute.pdf",
+      "schedule.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ],
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Taxi ceiling",
+            "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+            "source": "commute.pdf",
+            "id": "D1.1"
+          },
+          {
+            "page": 1,
+            "topic": "Cover request",
+            "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+            "source": "schedule.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much can I claim for my ride home after a late shift? Also, how early should I arrange a substitute?",
+          "score": 0.5119959712028503,
+          "margin": 0.15927496552467346,
+          "promoted": true,
+          "lexicalMaximum": 0.06727272727272728
+        },
+        {
+          "part": "How much can I claim for my ride home after a late shift",
+          "score": 0.5566549897193909,
+          "margin": 0.1835399866104126,
+          "promoted": true,
+          "lexicalMaximum": 0.1057142857142857
+        },
+        {
+          "part": "how early should I arrange a substitute?",
+          "score": 0.2861100137233734,
+          "margin": 0.0015980005264282227,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nReceipt window: Upload transport receipts within 9 days of travel.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "Who signed off on the Taxi ceiling rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4636020064353943,
+      "margin": 0.2938140034675598,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.0008415438351221383
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D3.2",
+          "D3.1",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D3.2",
+          "D3.1",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Taxi ceiling rule?",
+          "score": 0.4636020064353943,
+          "margin": 0.2938140034675598,
+          "promoted": false,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nRecord amendments in the office register.\nReceipt window: Upload transport receipts within 9 days of travel.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "leave.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How long do I have to turn in a cab slip?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3130660057067871,
+      "margin": 0.012598991394042969,
+      "idfCoverage": 0,
+      "reranker": 0.00004693855225923471
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D3.2",
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D3.2",
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          3
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "9 days"
+    ],
+    "goldSources": [
+      "commute.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Receipt window",
+            "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+            "source": "commute.pdf",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long do I have to turn in a cab slip?",
+          "score": 0.3130660057067871,
+          "margin": 0.012598991394042969,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Receipt window: Upload transport receipts within 9 days of travel.\nRest interval: Allow 13 hours between consecutive duties.\nTaxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How long do I have to turn in a cab slip? Also, how early should I arrange a substitute?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2677080035209656,
+      "margin": 0.004703998565673828,
+      "idfCoverage": 0,
+      "reranker": 0.00016724926535971463
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          4,
+          3
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          4,
+          3
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4,
+          2
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          3,
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "9 days",
+      "27 hours"
+    ],
+    "goldSources": [
+      "commute.pdf",
+      "schedule.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ],
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Receipt window: Upload transport receipts within 9 days of travel.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Receipt window",
+            "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+            "source": "commute.pdf",
+            "id": "D1.2"
+          },
+          {
+            "page": 1,
+            "topic": "Cover request",
+            "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+            "source": "schedule.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long do I have to turn in a cab slip? Also, how early should I arrange a substitute?",
+          "score": 0.2677080035209656,
+          "margin": 0.004703998565673828,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "How long do I have to turn in a cab slip",
+          "score": 0.2974039912223816,
+          "margin": 0.023927003145217896,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how early should I arrange a substitute?",
+          "score": 0.2861100137233734,
+          "margin": 0.0015980005264282227,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nRest interval: Allow 13 hours between consecutive duties.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "Who signed off on the Receipt window rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4494439959526062,
+      "margin": 0.16141900420188904,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.00012851502106059343
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Receipt window rule?",
+          "score": 0.4494439959526062,
+          "margin": 0.16141900420188904,
+          "promoted": false,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Receipt window: Upload transport receipts within 9 days of travel.\nRecord amendments in the office register.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Receipt window",
+              "text": "Receipt window: Upload transport receipts within 9 days of travel.",
+              "source": "commute.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "leave.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How early should I arrange a substitute?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2861100137233734,
+      "margin": 0.0015980005264282227,
+      "idfCoverage": 0,
+      "reranker": 0.00001648243414820172
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          3
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D2.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "27 hours"
+    ],
+    "goldSources": [
+      "schedule.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Cover request",
+            "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+            "source": "schedule.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How early should I arrange a substitute?",
+          "score": 0.2861100137233734,
+          "margin": 0.0015980005264282227,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.\nRest interval: Allow 13 hours between consecutive duties.\nStudy allowance: Each worker receives 4 days of education leave annually.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How early should I arrange a substitute? Also, how much time off can I take for classes?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3488990068435669,
+      "margin": 0.013963013887405396,
+      "idfCoverage": 0,
+      "reranker": 0.00005096408858662471
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5,
+          3
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          3,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3,
+          2
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "27 hours",
+      "4 days"
+    ],
+    "goldSources": [
+      "schedule.pdf",
+      "leave.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.\nStudy allowance: Each worker receives 4 days of education leave annually.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Cover request",
+            "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+            "source": "schedule.pdf",
+            "id": "D3.1"
+          },
+          {
+            "page": 1,
+            "topic": "Study allowance",
+            "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+            "source": "leave.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How early should I arrange a substitute? Also, how much time off can I take for classes?",
+          "score": 0.3488990068435669,
+          "margin": 0.013963013887405396,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "How early should I arrange a substitute",
+          "score": 0.2875320017337799,
+          "margin": 0.0023860037326812744,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how much time off can I take for classes?",
+          "score": 0.5152729749679565,
+          "margin": 0.09381696581840515,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.\nRest interval: Allow 13 hours between consecutive duties.\nStudy allowance: Each worker receives 4 days of education leave annually.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "Who signed off on the Cover request rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.43341800570487976,
+      "margin": 0.21694301068782806,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.0006410952191799879
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.2",
+          "D3.2",
+          "D1.2",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.2",
+          "D3.2",
+          "D1.2",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.2",
+          "D3.2",
+          "D1.2",
+          "D2.1",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Cover request rule?",
+          "score": 0.43341800570487976,
+          "margin": 0.21694301068782806,
+          "promoted": false,
+          "lexicalMaximum": 0.3333333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.\nRecord amendments in the office register.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "leave.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "What break do I get between shifts?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.32386699318885803,
+      "margin": 0.0896969884634018,
+      "idfCoverage": 0.20312558549596682,
+      "reranker": 0.000020084478819626383
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D1.1",
+          "D3.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D1.1",
+          "D3.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "13 hours"
+    ],
+    "goldSources": [
+      "schedule.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Rest interval: Allow 13 hours between consecutive duties.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Rest interval",
+            "text": "Rest interval: Allow 13 hours between consecutive duties.",
+            "source": "schedule.pdf",
+            "id": "D3.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What break do I get between shifts?",
+          "score": 0.32386699318885803,
+          "margin": 0.0896969884634018,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.\nStudy allowance: Each worker receives 4 days of education leave annually.\nTaxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "What break do I get between shifts? Also, how much time off can I take for classes?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4066680073738098,
+      "margin": 0.01733902096748352,
+      "idfCoverage": 0.0783135141013822,
+      "reranker": 0.00004828629971598275
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.2",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "13 hours",
+      "4 days"
+    ],
+    "goldSources": [
+      "schedule.pdf",
+      "leave.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.2"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Rest interval: Allow 13 hours between consecutive duties.\nStudy allowance: Each worker receives 4 days of education leave annually.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Rest interval",
+            "text": "Rest interval: Allow 13 hours between consecutive duties.",
+            "source": "schedule.pdf",
+            "id": "D3.2"
+          },
+          {
+            "page": 1,
+            "topic": "Study allowance",
+            "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+            "source": "leave.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What break do I get between shifts? Also, how much time off can I take for classes?",
+          "score": 0.4066680073738098,
+          "margin": 0.01733902096748352,
+          "promoted": false,
+          "lexicalMaximum": 0.074
+        },
+        {
+          "part": "What break do I get between shifts",
+          "score": 0.3048039972782135,
+          "margin": 0.080595001578331,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        },
+        {
+          "part": "how much time off can I take for classes?",
+          "score": 0.5152729749679565,
+          "margin": 0.09381696581840515,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.\nStudy allowance: Each worker receives 4 days of education leave annually.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "Who signed off on the Rest interval rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5209810137748718,
+      "margin": 0.3320950120687485,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.15323686599731445
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D2.2",
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Rest interval rule?",
+          "score": 0.5209810137748718,
+          "margin": 0.3320950120687485,
+          "promoted": true,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.\nRecord amendments in the office register.\nStudy allowance: Each worker receives 4 days of education leave annually.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "leave.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How much time off can I take for classes?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5152729749679565,
+      "margin": 0.09381696581840515,
+      "idfCoverage": 0,
+      "reranker": 0.00002056466109934263
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "4 days"
+    ],
+    "goldSources": [
+      "leave.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Study allowance",
+            "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+            "source": "leave.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much time off can I take for classes?",
+          "score": 0.5152729749679565,
+          "margin": 0.09381696581840515,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.\nRest interval: Allow 13 hours between consecutive duties.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "leave.pdf",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "How much time off can I take for classes? Also, how much can I claim for my ride home after a late shift?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.49042999744415283,
+      "margin": 0.07765999436378479,
+      "idfCoverage": 0.06500021983432883,
+      "reranker": 0.00008726934174774215
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          3,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "4 days",
+      "42 euros"
+    ],
+    "goldSources": [
+      "leave.pdf",
+      "commute.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Study allowance: Each worker receives 4 days of education leave annually.\nTaxi ceiling: Night commuters can claim up to 42 euros per journey.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Study allowance",
+            "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+            "source": "leave.pdf",
+            "id": "D2.1"
+          },
+          {
+            "page": 1,
+            "topic": "Taxi ceiling",
+            "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+            "source": "commute.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much time off can I take for classes? Also, how much can I claim for my ride home after a late shift?",
+          "score": 0.49042999744415283,
+          "margin": 0.07765999436378479,
+          "promoted": false,
+          "lexicalMaximum": 0.06166666666666666
+        },
+        {
+          "part": "How much time off can I take for classes",
+          "score": 0.5223230123519897,
+          "margin": 0.10391801595687866,
+          "promoted": true,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how much can I claim for my ride home after a late shift?",
+          "score": 0.562279999256134,
+          "margin": 0.17114201188087463,
+          "promoted": true,
+          "lexicalMaximum": 0.1057142857142857
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.\nStudy allowance: Each worker receives 4 days of education leave annually.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Taxi ceiling",
+              "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+              "source": "commute.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Study allowance: Each worker receives 4 days of education leave annually.\nTaxi ceiling: Night commuters can claim up to 42 euros per journey.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "leave.pdf",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+          "page": 1
+        },
+        {
+          "id": "D1.1",
+          "source": "commute.pdf",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "question": "Who signed off on the Study allowance rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.6077809929847717,
+      "margin": 0.3672419935464859,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.0004045162058901042
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D3.2",
+          "D2.2",
+          "D1.2",
+          "D3.1",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Study allowance rule?",
+          "score": 0.6077809929847717,
+          "margin": 0.3672419935464859,
+          "promoted": true,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Study allowance: Each worker receives 4 days of education leave annually.\nCover request: Ask a supervisor for cover at least 27 hours beforehand.\nRest interval: Allow 13 hours between consecutive duties.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Study allowance",
+              "text": "Study allowance: Each worker receives 4 days of education leave annually.",
+              "source": "leave.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Cover request",
+              "text": "Cover request: Ask a supervisor for cover at least 27 hours beforehand.",
+              "source": "schedule.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Rest interval",
+              "text": "Rest interval: Allow 13 hours between consecutive duties.",
+              "source": "schedule.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

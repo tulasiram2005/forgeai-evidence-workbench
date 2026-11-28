@@ -1,0 +1,3288 @@
+[
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "How quickly must I tell you my bike was stolen?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6270250082015991,
+      "margin": 0.27719300985336304,
+      "idfCoverage": 0,
+      "reranker": 0.00021937405108474195
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D1.3",
+          "D2.4",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D1.3",
+          "D2.4",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D1.3",
+          "D2.2",
+          "D2.4",
+          "D1.2",
+          "D1.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "72 hours"
+    ],
+    "goldSources": [
+      "filing.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "First notice: Report theft within 72 hours.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "First notice",
+            "text": "First notice: Report theft within 72 hours.",
+            "source": "filing.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How quickly must I tell you my bike was stolen?",
+          "score": 0.6270250082015991,
+          "margin": 0.27719300985336304,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.\nInspection location: Bring recovered bicycles to shed Elm.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "First notice: Report theft within 72 hours.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "filing.pdf",
+          "text": "First notice: Report theft within 72 hours.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Who gets my initial message?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.18617400527000427,
+      "margin": 0.005285009741783142,
+      "idfCoverage": 0,
+      "reranker": 0.000009979391506931279
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "intake desk"
+    ],
+    "goldSources": [
+      "filing.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Dispatch channel: Email the intake desk.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Dispatch channel",
+            "text": "Dispatch channel: Email the intake desk.",
+            "source": "filing.pdf",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who gets my initial message?",
+          "score": 0.18617400527000427,
+          "margin": 0.005285009741783142,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.\nDispatch channel: Email the intake desk.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Dispatch channel",
+              "text": "Dispatch channel: Email the intake desk.",
+              "source": "filing.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What paperwork proves I bought it?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5536119937896729,
+      "margin": 0.2419230043888092,
+      "idfCoverage": 0,
+      "reranker": 0.000049566413508728147
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "original receipt"
+    ],
+    "goldSources": [
+      "filing.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Purchase evidence: Supply the original receipt.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Purchase evidence",
+            "text": "Purchase evidence: Supply the original receipt.",
+            "source": "filing.pdf",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What paperwork proves I bought it?",
+          "score": 0.5536119937896729,
+          "margin": 0.2419230043888092,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.\nFile owner: A claims examiner supervises each file.\nFirst notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Purchase evidence: Supply the original receipt.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "filing.pdf",
+          "text": "Purchase evidence: Supply the original receipt.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Who oversees my case?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4285230040550232,
+      "margin": 0.15083101391792297,
+      "idfCoverage": 0,
+      "reranker": 0.00001240186520590214
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "claims examiner"
+    ],
+    "goldSources": [
+      "filing.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "File owner: A claims examiner supervises each file.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "File owner",
+            "text": "File owner: A claims examiner supervises each file.",
+            "source": "filing.pdf",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who oversees my case?",
+          "score": 0.4285230040550232,
+          "margin": 0.15083101391792297,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "File owner: A claims examiner supervises each file.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "File owner: A claims examiner supervises each file.\nFirst notice: Report theft within 72 hours.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Where do I take a bicycle the police found?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5625969767570496,
+      "margin": 0.26013898849487305,
+      "idfCoverage": 0,
+      "reranker": 0.0006325427675619721
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D1.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D1.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.3",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "shed Elm"
+    ],
+    "goldSources": [
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Inspection location",
+            "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+            "source": "inspection.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do I take a bicycle the police found?",
+          "score": 0.5625969767570496,
+          "margin": 0.26013898849487305,
+          "promoted": true,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection location: Bring recovered bicycles to shed Elm.\nFirst notice: Report theft within 72 hours.\nPhotographs: Supply four images of visible damage.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "inspection.pdf",
+          "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Who has to come in person?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3745169937610626,
+      "margin": 0.26103099435567856,
+      "idfCoverage": 0,
+      "reranker": 0.000012076307029929012
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D2.4",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D1.1",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "registered owner"
+    ],
+    "goldSources": [
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Inspection attendance: The registered owner must attend.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Inspection attendance",
+            "text": "Inspection attendance: The registered owner must attend.",
+            "source": "inspection.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who has to come in person?",
+          "score": 0.3745169937610626,
+          "margin": 0.26103099435567856,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection attendance: The registered owner must attend.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection attendance: The registered owner must attend.\nFile owner: A claims examiner supervises each file.\nDispatch channel: Email the intake desk.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 2,
+              "topic": "Dispatch channel",
+              "text": "Dispatch channel: Email the intake desk.",
+              "source": "filing.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What does Harbour pay for one check?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6609500050544739,
+      "margin": 0.4322350025177002,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.9987614154815674
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "28 euros"
+    ],
+    "goldSources": [
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Inspection fee",
+            "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+            "source": "inspection.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What does Harbour pay for one check?",
+          "score": 0.6609500050544739,
+          "margin": 0.4322350025177002,
+          "promoted": true,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.\nInspection attendance: The registered owner must attend.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "inspection.pdf",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "How many pictures should I send showing dents?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5443490147590637,
+      "margin": 0.29300400614738464,
+      "idfCoverage": 0,
+      "reranker": 0.00009435621177544817
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "four"
+    ],
+    "goldSources": [
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Photographs: Supply four images of visible damage.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "Photographs",
+            "text": "Photographs: Supply four images of visible damage.",
+            "source": "inspection.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many pictures should I send showing dents?",
+          "score": 0.5443490147590637,
+          "margin": 0.29300400614738464,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.\nPurchase evidence: Supply the original receipt.\nFirst notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Photographs: Supply four images of visible damage.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "inspection.pdf",
+          "text": "Photographs: Supply four images of visible damage.",
+          "page": 4
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5140339732170105,
+      "margin": 0.12579098343849182,
+      "idfCoverage": 0,
+      "reranker": 0.0000884483742993325
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "original receipt",
+      "shed Elm"
+    ],
+    "goldSources": [
+      "filing.pdf",
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Purchase evidence: Supply the original receipt.\nInspection location: Bring recovered bicycles to shed Elm.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Purchase evidence",
+            "text": "Purchase evidence: Supply the original receipt.",
+            "source": "filing.pdf",
+            "id": "D1.3"
+          },
+          {
+            "page": 1,
+            "topic": "Inspection location",
+            "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+            "source": "inspection.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What proves I purchased the bike? Also, where do I present it for a check?",
+          "score": 0.5140339732170105,
+          "margin": 0.12579098343849182,
+          "promoted": true,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "What proves I purchased the bike",
+          "score": 0.4743199944496155,
+          "margin": 0.1360989809036255,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "where do I present it for a check?",
+          "score": 0.4464769959449768,
+          "margin": 0.11247599124908447,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.\nInspection location: Bring recovered bicycles to shed Elm.\nFirst notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Who manages my case and how many pictures of the dents are needed?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.46443599462509155,
+      "margin": 0.0982770025730133,
+      "idfCoverage": 0,
+      "reranker": 0.00001808402521419339
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4,
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D2.2",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "claims examiner",
+      "four"
+    ],
+    "goldSources": [
+      "filing.pdf",
+      "inspection.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ],
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "File owner: A claims examiner supervises each file.\nPhotographs: Supply four images of visible damage.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "File owner",
+            "text": "File owner: A claims examiner supervises each file.",
+            "source": "filing.pdf",
+            "id": "D1.4"
+          },
+          {
+            "page": 4,
+            "topic": "Photographs",
+            "text": "Photographs: Supply four images of visible damage.",
+            "source": "inspection.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who manages my case and how many pictures of the dents are needed?",
+          "score": 0.46443599462509155,
+          "margin": 0.0982770025730133,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "Who manages my case",
+          "score": 0.4906420111656189,
+          "margin": 0.22112402319908142,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how many pictures of the dents are needed?",
+          "score": 0.5358830094337463,
+          "margin": 0.3097580075263977,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.\nFile owner: A claims examiner supervises each file.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What deductible applies after a theft?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4547179937362671,
+      "margin": 0.10143399238586426,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.0000840680004330352
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D1.4",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What deductible applies after a theft?",
+          "score": 0.4547179937362671,
+          "margin": 0.10143399238586426,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.\nPurchase evidence: Supply the original receipt.\nFile owner: A claims examiner supervises each file.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Is crash damage covered overseas?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.34344300627708435,
+      "margin": 0.0963830053806305,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.00003755957368412055
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is crash damage covered overseas?",
+          "score": 0.34344300627708435,
+          "margin": 0.0963830053806305,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Photographs: Supply four images of visible damage.\nInspection location: Bring recovered bicycles to shed Elm.\nInspection fee: Harbour pays 28 euros per assessment.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Photographs",
+              "text": "Photographs: Supply four images of visible damage.",
+              "source": "inspection.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Can the inspection fee be paid in dollars?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.6772810220718384,
+      "margin": 0.2161010205745697,
+      "idfCoverage": 0.310283057901778,
+      "reranker": 0.9724851250648499
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Can the inspection fee be paid in dollars?",
+          "score": 0.6772810220718384,
+          "margin": 0.2161010205745697,
+          "promoted": true,
+          "lexicalMaximum": 0.4
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.\nInspection attendance: The registered owner must attend.\nInspection location: Bring recovered bicycles to shed Elm.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "inspection.pdf",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Is a scan accepted instead of the original receipt?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5119479894638062,
+      "margin": 0.16761597990989685,
+      "idfCoverage": 0.34302832973581365,
+      "reranker": 0.0529964305460453
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is a scan accepted instead of the original receipt?",
+          "score": 0.5119479894638062,
+          "margin": 0.16761597990989685,
+          "promoted": true,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Purchase evidence: Supply the original receipt.\nInspection attendance: The registered owner must attend.\nFirst notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Purchase evidence: Supply the original receipt.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "filing.pdf",
+          "text": "Purchase evidence: Supply the original receipt.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What is the maximum bicycle payout?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.2904449999332428,
+      "margin": 0.04012700915336609,
+      "idfCoverage": 0,
+      "reranker": 0.000020758467144332826
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the maximum bicycle payout?",
+          "score": 0.2904449999332428,
+          "margin": 0.04012700915336609,
+          "promoted": false,
+          "lexicalMaximum": 0.24666666666666665
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection location: Bring recovered bicycles to shed Elm.\nInspection fee: Harbour pays 28 euros per assessment.\nFirst notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "How long does reimbursement take after inspection?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4747669994831085,
+      "margin": 0.07773399353027344,
+      "idfCoverage": 0.12403777298108491,
+      "reranker": 0.00005620635056402534
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D1.3",
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How long does reimbursement take after inspection?",
+          "score": 0.4747669994831085,
+          "margin": 0.07773399353027344,
+          "promoted": false,
+          "lexicalMaximum": 0.17400000000000002
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Inspection fee: Harbour pays 28 euros per assessment.\nInspection attendance: The registered owner must attend.\nInspection location: Bring recovered bicycles to shed Elm.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Inspection fee",
+              "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+              "source": "inspection.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 2,
+              "topic": "Inspection attendance",
+              "text": "Inspection attendance: The registered owner must attend.",
+              "source": "inspection.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Inspection location",
+              "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+              "source": "inspection.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "Which phone number accepts theft notices?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5632249712944031,
+      "margin": 0.24122998118400574,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.04523192346096039
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D2.2",
+          "D2.3",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which phone number accepts theft notices?",
+          "score": 0.5632249712944031,
+          "margin": 0.24122998118400574,
+          "promoted": true,
+          "lexicalMaximum": 0.34800000000000003
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.\nPurchase evidence: Supply the original receipt.\nDispatch channel: Email the intake desk.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 2,
+              "topic": "Dispatch channel",
+              "text": "Dispatch channel: Email the intake desk.",
+              "source": "filing.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "First notice: Report theft within 72 hours.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "filing.pdf",
+          "text": "First notice: Report theft within 72 hours.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "question": "What appeal deadline applies after denial?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.19125699996948242,
+      "margin": 0.0473099946975708,
+      "idfCoverage": 0,
+      "reranker": 0.000010657054190232884
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What appeal deadline applies after denial?",
+          "score": 0.19125699996948242,
+          "margin": 0.0473099946975708,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First notice: Report theft within 72 hours.\nFile owner: A claims examiner supervises each file.\nPurchase evidence: Supply the original receipt.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First notice",
+              "text": "First notice: Report theft within 72 hours.",
+              "source": "filing.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 4,
+              "topic": "File owner",
+              "text": "File owner: A claims examiner supervises each file.",
+              "source": "filing.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 3,
+              "topic": "Purchase evidence",
+              "text": "Purchase evidence: Supply the original receipt.",
+              "source": "filing.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

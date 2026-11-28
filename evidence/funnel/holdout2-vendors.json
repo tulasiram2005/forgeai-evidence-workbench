@@ -1,0 +1,3487 @@
+[
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "How many thin wedges are supplied under LK71?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.43400299549102783,
+      "margin": 0.021714001893997192,
+      "idfCoverage": 0.13542727273844604,
+      "reranker": 0.07906407862901688
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D3.3",
+          "D3.2",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D3.3",
+          "D3.2",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D3.2",
+          "D1.2",
+          "D3.3",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "16 shims"
+    ],
+    "goldSources": [
+      "lots.csv"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = LK71 · finish = matte · pack = 16 shims",
+        "citations": [
+          {
+            "topic": "LK71 matte",
+            "text": "sku = LK71 · finish = matte · pack = 16 shims",
+            "row": [
+              "LK71",
+              "matte",
+              "16 shims"
+            ],
+            "columns": [
+              "sku",
+              "finish",
+              "pack"
+            ],
+            "source": "lots.csv",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many thin wedges are supplied under LK71?",
+          "score": 0.43400299549102783,
+          "margin": 0.43400299549102783,
+          "promoted": false,
+          "lexicalMaximum": 0.145
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims\nsku = LK83 · finish = gloss · pack = 22 pins\nsku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            },
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "What surface treatment will BD54 have?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.16595600545406342,
+      "margin": 0.03866000473499298,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.0006903401226736605
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D3.1",
+          "D3.3",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D3.1",
+          "D3.3",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D1.1",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "satin"
+    ],
+    "goldSources": [
+      "lots.csv"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+        "citations": [
+          {
+            "topic": "BD54 satin",
+            "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+            "row": [
+              "BD54",
+              "satin",
+              "9 spacers"
+            ],
+            "columns": [
+              "sku",
+              "finish",
+              "pack"
+            ],
+            "source": "lots.csv",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What surface treatment will BD54 have?",
+          "score": 0.16595600545406342,
+          "margin": 0.16595600545406342,
+          "promoted": false,
+          "lexicalMaximum": 0.17400000000000002
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers\nsku = LK83 · finish = gloss · pack = 22 pins\nDispute deadline: Report shortages within 5 business days.",
+          "citations": [
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            },
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "What quantity does LK83 ship in?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5294049978256226,
+      "margin": 0.05934301018714905,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.9489211440086365
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "22 pins"
+    ],
+    "goldSources": [
+      "lots.csv"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+        "citations": [
+          {
+            "topic": "LK83 gloss",
+            "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+            "row": [
+              "LK83",
+              "gloss",
+              "22 pins"
+            ],
+            "columns": [
+              "sku",
+              "finish",
+              "pack"
+            ],
+            "source": "lots.csv",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What quantity does LK83 ship in?",
+          "score": 0.5294049978256226,
+          "margin": 0.5294049978256226,
+          "promoted": true,
+          "lexicalMaximum": 0.29
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+          "citations": [
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK83 · finish = gloss · pack = 22 pins\nsku = LK71 · finish = matte · pack = 16 shims\nsku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            },
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "lots.csv",
+          "text": "sku = LK83 · finish = gloss · pack = 22 pins"
+        }
+      ],
+      "tool": "csv_lookup"
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Where does the driver collect an Osprey order?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5632249712944031,
+      "margin": 0.2183249592781067,
+      "idfCoverage": 0.19083257192430025,
+      "reranker": 0.7252899408340454
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D1.2",
+          "D3.3",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D3.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D3.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D2.3",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "gate Juniper"
+    ],
+    "goldSources": [
+      "osprey.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Collection point: Osprey releases orders at gate Juniper.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Collection point",
+            "text": "Collection point: Osprey releases orders at gate Juniper.",
+            "source": "osprey.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where does the driver collect an Osprey order?",
+          "score": 0.5632249712944031,
+          "margin": 0.2183249592781067,
+          "promoted": true,
+          "lexicalMaximum": 0.37
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Collection point: Osprey releases orders at gate Juniper.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Collection point: Osprey releases orders at gate Juniper.\nSeal colour: Osprey outbound pallets carry amber seals.\nBooking reference: The consignment note must show the purchase order.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            },
+            {
+              "page": 2,
+              "topic": "Booking reference",
+              "text": "Booking reference: The consignment note must show the purchase order.",
+              "source": "curlew.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Collection point: Osprey releases orders at gate Juniper.",
+      "citations": [
+        {
+          "id": "D3.1",
+          "source": "osprey.pdf",
+          "text": "Collection point: Osprey releases orders at gate Juniper.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "How long do I get to flag a short shipment?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4861080050468445,
+      "margin": 0.2702440023422241,
+      "idfCoverage": 0,
+      "reranker": 0.000015585101209580898
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          3
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.2",
+          "D2.3",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.2",
+          "D2.3",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D3.3",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "5 business days"
+    ],
+    "goldSources": [
+      "osprey.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Dispute deadline: Report shortages within 5 business days.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Dispute deadline",
+            "text": "Dispute deadline: Report shortages within 5 business days.",
+            "source": "osprey.pdf",
+            "id": "D3.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long do I get to flag a short shipment?",
+          "score": 0.4861080050468445,
+          "margin": 0.2702440023422241,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Dispute deadline: Report shortages within 5 business days.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Dispute deadline: Report shortages within 5 business days.\nReturn carrier: Curlew nominates Larch Freight.\nsku = LK71 · finish = matte · pack = 16 shims",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            },
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Which hue identifies a pallet leaving Osprey?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5747519731521606,
+      "margin": 0.2696869671344757,
+      "idfCoverage": 0.14096462097217302,
+      "reranker": 0.017794620245695114
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D2.1",
+          "D3.2",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "amber"
+    ],
+    "goldSources": [
+      "osprey.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Seal colour",
+            "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+            "source": "osprey.pdf",
+            "id": "D3.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which hue identifies a pallet leaving Osprey?",
+          "score": 0.5747519731521606,
+          "margin": 0.2696869671344757,
+          "promoted": true,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.\nCollection point: Osprey releases orders at gate Juniper.\nReturn carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+      "citations": [
+        {
+          "id": "D3.3",
+          "source": "osprey.pdf",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Who transports goods going back to Curlew?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6490060091018677,
+      "margin": 0.477509006857872,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.9841421246528625
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.3",
+          "D3.1",
+          "D2.3",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.3",
+          "D3.1",
+          "D2.3",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.3",
+          "D1.2",
+          "D2.2",
+          "D3.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "Larch Freight"
+    ],
+    "goldSources": [
+      "curlew.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Return carrier: Curlew nominates Larch Freight.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Return carrier",
+            "text": "Return carrier: Curlew nominates Larch Freight.",
+            "source": "curlew.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who transports goods going back to Curlew?",
+          "score": 0.6490060091018677,
+          "margin": 0.477509006857872,
+          "promoted": true,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.\nSeal colour: Osprey outbound pallets carry amber seals.\nCollection point: Osprey releases orders at gate Juniper.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Which purchasing reference belongs on the dispatch paperwork?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.39383700489997864,
+      "margin": 0.09114599227905273,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.0007390730897895992
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D3.1",
+          "D1.1",
+          "D2.3",
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D3.1",
+          "D1.1",
+          "D2.3",
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D3.3",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "purchase order"
+    ],
+    "goldSources": [
+      "curlew.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Booking reference: The consignment note must show the purchase order.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Booking reference",
+            "text": "Booking reference: The consignment note must show the purchase order.",
+            "source": "curlew.pdf",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which purchasing reference belongs on the dispatch paperwork?",
+          "score": 0.39383700489997864,
+          "margin": 0.09114599227905273,
+          "promoted": false,
+          "lexicalMaximum": 0.17400000000000002
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Booking reference: The consignment note must show the purchase order.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Booking reference",
+              "text": "Booking reference: The consignment note must show the purchase order.",
+              "source": "curlew.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Booking reference: The consignment note must show the purchase order.\nCollection point: Osprey releases orders at gate Juniper.\nReturn carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Booking reference",
+              "text": "Booking reference: The consignment note must show the purchase order.",
+              "source": "curlew.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.37411001324653625,
+      "margin": 0.03761300444602966,
+      "idfCoverage": 0.10351061997370226,
+      "reranker": 0.0018266200786456466
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D3.2",
+          "D2.3",
+          "D1.1",
+          "D3.3",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "16 shims",
+      "5 business days"
+    ],
+    "goldSources": [
+      "lots.csv",
+      "osprey.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ],
+      [
+        "D3.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = LK71 · finish = matte · pack = 16 shims\nDispute deadline: Report shortages within 5 business days.",
+        "citations": [
+          {
+            "topic": "LK71 matte",
+            "text": "sku = LK71 · finish = matte · pack = 16 shims",
+            "row": [
+              "LK71",
+              "matte",
+              "16 shims"
+            ],
+            "columns": [
+              "sku",
+              "finish",
+              "pack"
+            ],
+            "source": "lots.csv",
+            "id": "D2.1"
+          },
+          {
+            "page": 2,
+            "topic": "Dispute deadline",
+            "text": "Dispute deadline: Report shortages within 5 business days.",
+            "source": "osprey.pdf",
+            "id": "D3.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+          "score": 0.37411001324653625,
+          "margin": 0.37411001324653625,
+          "promoted": false,
+          "lexicalMaximum": 0.12428571428571428
+        },
+        {
+          "part": "How many LK71 wedges should arrive,",
+          "score": 0.38539600372314453,
+          "margin": 0.38539600372314453,
+          "promoted": false,
+          "lexicalMaximum": 0.2175
+        },
+        {
+          "part": "when must I flag missing stock?",
+          "score": 0.3496739864349365,
+          "margin": 0.11721397936344147,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims\nsku = LK83 · finish = gloss · pack = 22 pins\nsku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            },
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Where do I collect from Osprey and who handles a Curlew return?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4900189936161041,
+      "margin": 0.05200299620628357,
+      "idfCoverage": 0.37094101047484784,
+      "reranker": 0.0997479110956192
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D2.3",
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D2.3",
+          "D3.2",
+          "D2.2",
+          "D2.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D1.2",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "gate Juniper",
+      "Larch Freight"
+    ],
+    "goldSources": [
+      "osprey.pdf",
+      "curlew.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Collection point: Osprey releases orders at gate Juniper.\nReturn carrier: Curlew nominates Larch Freight.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Collection point",
+            "text": "Collection point: Osprey releases orders at gate Juniper.",
+            "source": "osprey.pdf",
+            "id": "D3.1"
+          },
+          {
+            "page": 1,
+            "topic": "Return carrier",
+            "text": "Return carrier: Curlew nominates Larch Freight.",
+            "source": "curlew.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do I collect from Osprey and who handles a Curlew return?",
+          "score": 0.4900189936161041,
+          "margin": 0.05200299620628357,
+          "promoted": false,
+          "lexicalMaximum": 0.34800000000000003
+        },
+        {
+          "part": "Where do I collect from Osprey",
+          "score": 0.5510089993476868,
+          "margin": 0.10883700847625732,
+          "promoted": true,
+          "lexicalMaximum": 0.37
+        },
+        {
+          "part": "who handles a Curlew return?",
+          "score": 0.5725089907646179,
+          "margin": 0.42772598564624786,
+          "promoted": true,
+          "lexicalMaximum": 0.58
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.\nCollection point: Osprey releases orders at gate Juniper.\nSeal colour: Osprey outbound pallets carry amber seals.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Collection point: Osprey releases orders at gate Juniper.\nReturn carrier: Curlew nominates Larch Freight.",
+      "citations": [
+        {
+          "id": "D3.1",
+          "source": "osprey.pdf",
+          "text": "Collection point: Osprey releases orders at gate Juniper.",
+          "page": 1
+        },
+        {
+          "id": "D1.1",
+          "source": "curlew.pdf",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2829369902610779,
+      "margin": 0.005855977535247803,
+      "idfCoverage": 0.26293772767542506,
+      "reranker": 0.2017999142408371
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D3.3",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D3.3",
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D3.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D3.3",
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D3.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D3.3",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "satin",
+      "amber"
+    ],
+    "goldSources": [
+      "lots.csv",
+      "osprey.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ],
+      [
+        "D3.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = BD54 · finish = satin · pack = 9 spacers\nSeal colour: Osprey outbound pallets carry amber seals.",
+        "citations": [
+          {
+            "topic": "BD54 satin",
+            "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+            "row": [
+              "BD54",
+              "satin",
+              "9 spacers"
+            ],
+            "columns": [
+              "sku",
+              "finish",
+              "pack"
+            ],
+            "source": "lots.csv",
+            "id": "D2.3"
+          },
+          {
+            "page": 3,
+            "topic": "Seal colour",
+            "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+            "source": "osprey.pdf",
+            "id": "D3.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which finish comes on BD54 and what marks an outbound pallet?",
+          "score": 0.2829369902610779,
+          "margin": 0.2829369902610779,
+          "promoted": false,
+          "lexicalMaximum": 0.29
+        },
+        {
+          "part": "Which finish comes on BD54",
+          "score": 0.32196998596191406,
+          "margin": 0.32196998596191406,
+          "promoted": false,
+          "lexicalMaximum": 0.58
+        },
+        {
+          "part": "what marks an outbound pallet?",
+          "score": 0.4150559902191162,
+          "margin": 0.17419199645519257,
+          "promoted": false,
+          "lexicalMaximum": 0.4933333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers\nSeal colour: Osprey outbound pallets carry amber seals.\nsku = LK83 · finish = gloss · pack = 22 pins",
+          "citations": [
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            },
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            },
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "How much does LK71 cost?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3340660035610199,
+      "margin": 0.036837995052337646,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.025382958352565765
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D3.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How much does LK71 cost?",
+          "score": 0.3340660035610199,
+          "margin": 0.3340660035610199,
+          "promoted": false,
+          "lexicalMaximum": 0.29
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims\nsku = LK83 · finish = gloss · pack = 22 pins\nsku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            },
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Who insures an Osprey consignment?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5143759846687317,
+      "margin": 0.10514497756958008,
+      "idfCoverage": 0.3210390925353058,
+      "reranker": 0.00046113861026242375
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D3.1",
+          "D3.3",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D3.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.3",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D3.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D3.1",
+          "D3.3",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who insures an Osprey consignment?",
+          "score": 0.5143759846687317,
+          "margin": 0.10514497756958008,
+          "promoted": true,
+          "lexicalMaximum": 0.24666666666666665
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.\nCollection point: Osprey releases orders at gate Juniper.\nBooking reference: The consignment note must show the purchase order.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Seal colour",
+              "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+              "source": "osprey.pdf",
+              "id": "D3.3"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Booking reference",
+              "text": "Booking reference: The consignment note must show the purchase order.",
+              "source": "curlew.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "What is the overnight tariff with Larch Freight?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5664269924163818,
+      "margin": 0.3068529963493347,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.25034648180007935
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D2.3",
+          "D3.1",
+          "D1.2",
+          "D2.2",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D2.3",
+          "D3.1",
+          "D1.2",
+          "D2.2",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D2.1",
+          "D3.3",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the overnight tariff with Larch Freight?",
+          "score": 0.5664269924163818,
+          "margin": 0.3068529963493347,
+          "promoted": true,
+          "lexicalMaximum": 0.37
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.\nDispute deadline: Report shortages within 5 business days.\nsku = LK71 · finish = matte · pack = 16 shims",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            },
+            {
+              "topic": "LK71 matte",
+              "text": "sku = LK71 · finish = matte · pack = 16 shims",
+              "row": [
+                "LK71",
+                "matte",
+                "16 shims"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Return carrier: Curlew nominates Larch Freight.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "curlew.pdf",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Is BD55 available?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.21046899259090424,
+      "margin": 0.015184998512268066,
+      "idfCoverage": 0,
+      "reranker": 0.004316708073019981
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D3.1",
+          "D2.3",
+          "D2.1",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D3.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D3.1",
+          "D2.3",
+          "D2.1",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D3.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D3.1",
+          "D3.3",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is BD55 available?",
+          "score": null,
+          "margin": null,
+          "promoted": false,
+          "lexicalMaximum": null
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+          "citations": [
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = LK83 · finish = gloss · pack = 22 pins\nCollection point: Osprey releases orders at gate Juniper.\nsku = BD54 · finish = satin · pack = 9 spacers",
+          "citations": [
+            {
+              "topic": "LK83 gloss",
+              "text": "sku = LK83 · finish = gloss · pack = 22 pins",
+              "row": [
+                "LK83",
+                "gloss",
+                "22 pins"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "topic": "BD54 satin",
+              "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+              "row": [
+                "BD54",
+                "satin",
+                "9 spacers"
+              ],
+              "columns": [
+                "sku",
+                "finish",
+                "pack"
+              ],
+              "source": "lots.csv",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Can Curlew accept refrigerated returns?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.38939398527145386,
+      "margin": 0.23316898941993713,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.27772319316864014
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.2",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D3.3",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D3.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Can Curlew accept refrigerated returns?",
+          "score": 0.38939398527145386,
+          "margin": 0.23316898941993713,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return carrier: Curlew nominates Larch Freight.\nDispute deadline: Report shortages within 5 business days.\nCollection point: Osprey releases orders at gate Juniper.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return carrier",
+              "text": "Return carrier: Curlew nominates Larch Freight.",
+              "source": "curlew.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "question": "Does the shortage deadline include a grace period?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5025830268859863,
+      "margin": 0.25974902510643005,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.23005786538124084
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D3.1",
+          "D3.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D3.3",
+          "D2.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D3.3",
+          "D2.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D2.3",
+          "D3.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Does the shortage deadline include a grace period?",
+          "score": 0.5025830268859863,
+          "margin": 0.25974902510643005,
+          "promoted": true,
+          "lexicalMaximum": 0.34800000000000003
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Dispute deadline: Report shortages within 5 business days.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Dispute deadline: Report shortages within 5 business days.\nCollection point: Osprey releases orders at gate Juniper.\nBooking reference: The consignment note must show the purchase order.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Dispute deadline",
+              "text": "Dispute deadline: Report shortages within 5 business days.",
+              "source": "osprey.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Collection point",
+              "text": "Collection point: Osprey releases orders at gate Juniper.",
+              "source": "osprey.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Booking reference",
+              "text": "Booking reference: The consignment note must show the purchase order.",
+              "source": "curlew.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Dispute deadline: Report shortages within 5 business days.",
+      "citations": [
+        {
+          "id": "D3.2",
+          "source": "osprey.pdf",
+          "text": "Dispute deadline: Report shortages within 5 business days.",
+          "page": 2
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  }
+]

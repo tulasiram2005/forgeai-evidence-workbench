@@ -1,0 +1,3037 @@
+[
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How many units come in one BZ91 box?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6595100164413452,
+      "margin": 0.11298102140426636,
+      "idfCoverage": 0.2581300616997572,
+      "reranker": 0.7243410348892212
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D3.2",
+          "D1.1",
+          "D3.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D3.2",
+          "D1.1",
+          "D3.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D3.2",
+          "D3.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "17 pieces"
+    ],
+    "goldSources": [
+      "parts.csv"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = BZ91 · pack = 17 pieces",
+        "citations": [
+          {
+            "topic": "BZ91 17 pieces",
+            "text": "sku = BZ91 · pack = 17 pieces",
+            "row": [
+              "BZ91",
+              "17 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many units come in one BZ91 box?",
+          "score": 0.6595100164413452,
+          "margin": 0.6595100164413452,
+          "promoted": true,
+          "lexicalMaximum": 0.13777777777777778
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces\nsku = RX32 · pack = 23 pieces\nFreight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "sku = BZ91 · pack = 17 pieces",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "parts.csv",
+          "text": "sku = BZ91 · pack = 17 pieces"
+        }
+      ],
+      "tool": "csv_lookup"
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How many units come in one BZ91 box? Also, how soon will Gannet send my purchase?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5334169864654541,
+      "margin": 0.08909699320793152,
+      "idfCoverage": 0.12475077406122136,
+      "reranker": 0.012689927592873573
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D3.1",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D3.1",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D3.1",
+          "D2.2",
+          "D3.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "17 pieces",
+      "8 days"
+    ],
+    "goldSources": [
+      "parts.csv",
+      "gannet.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = BZ91 · pack = 17 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+        "citations": [
+          {
+            "topic": "BZ91 17 pieces",
+            "text": "sku = BZ91 · pack = 17 pieces",
+            "row": [
+              "BZ91",
+              "17 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.1"
+          },
+          {
+            "page": 1,
+            "topic": "Dispatch lead",
+            "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+            "source": "gannet.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many units come in one BZ91 box? Also, how soon will Gannet send my purchase?",
+          "score": 0.5334169864654541,
+          "margin": 0.5334169864654541,
+          "promoted": true,
+          "lexicalMaximum": 0.06888888888888889
+        },
+        {
+          "part": "How many units come in one BZ91 box",
+          "score": 0.6352120041847229,
+          "margin": 0.6352120041847229,
+          "promoted": true,
+          "lexicalMaximum": 0.13777777777777778
+        },
+        {
+          "part": "how soon will Gannet send my purchase?",
+          "score": 0.5980319976806641,
+          "margin": 0.2521840035915375,
+          "promoted": true,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.\nsku = RX32 · pack = 23 pieces",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "sku = BZ91 · pack = 17 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "parts.csv",
+          "text": "sku = BZ91 · pack = 17 pieces"
+        },
+        {
+          "id": "D1.1",
+          "source": "gannet.pdf",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "Who signed off on the BZ91 rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.18245099484920502,
+      "margin": 0.00029098987579345703,
+      "idfCoverage": 0.20312558549596682,
+      "reranker": 0.01025404967367649
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D2.2",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D2.2",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.2",
+          "D3.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the BZ91 rule?",
+          "score": 0.18245099484920502,
+          "margin": 0.18245099484920502,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces\nRecord amendments in the office register.\nReturn window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "gannet.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How many units arrive if we buy one RX32 box?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6177539825439453,
+      "margin": 0.14535298943519592,
+      "idfCoverage": 0.16585045923175845,
+      "reranker": 0.014143780805170536
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D3.2",
+          "D3.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D3.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "23 pieces"
+    ],
+    "goldSources": [
+      "parts.csv"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = RX32 · pack = 23 pieces",
+        "citations": [
+          {
+            "topic": "RX32 23 pieces",
+            "text": "sku = RX32 · pack = 23 pieces",
+            "row": [
+              "RX32",
+              "23 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many units arrive if we buy one RX32 box?",
+          "score": 0.6177539825439453,
+          "margin": 0.6177539825439453,
+          "promoted": true,
+          "lexicalMaximum": 0.10333333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces\nsku = BZ91 · pack = 17 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            },
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "sku = RX32 · pack = 23 pieces",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "parts.csv",
+          "text": "sku = RX32 · pack = 23 pieces"
+        }
+      ],
+      "tool": "csv_lookup"
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How many units arrive if we buy one RX32 box? Also, how soon will Gannet send my purchase?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.49614399671554565,
+      "margin": 0.036578983068466187,
+      "idfCoverage": 0.09831397087399425,
+      "reranker": 0.06445062160491943
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D3.1",
+          "D2.1",
+          "D3.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "23 pieces",
+      "8 days"
+    ],
+    "goldSources": [
+      "parts.csv",
+      "gannet.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "sku = RX32 · pack = 23 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+        "citations": [
+          {
+            "topic": "RX32 23 pieces",
+            "text": "sku = RX32 · pack = 23 pieces",
+            "row": [
+              "RX32",
+              "23 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.2"
+          },
+          {
+            "page": 1,
+            "topic": "Dispatch lead",
+            "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+            "source": "gannet.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many units arrive if we buy one RX32 box? Also, how soon will Gannet send my purchase?",
+          "score": 0.45956501364707947,
+          "margin": 0.45956501364707947,
+          "promoted": false,
+          "lexicalMaximum": 0.05904761904761904
+        },
+        {
+          "part": "How many units arrive if we buy one RX32 box",
+          "score": 0.6113989949226379,
+          "margin": 0.6113989949226379,
+          "promoted": true,
+          "lexicalMaximum": 0.10333333333333333
+        },
+        {
+          "part": "how soon will Gannet send my purchase?",
+          "score": 0.5980319976806641,
+          "margin": 0.2521840035915375,
+          "promoted": true,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.\nsku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "sku = RX32 · pack = 23 pieces\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "parts.csv",
+          "text": "sku = RX32 · pack = 23 pieces"
+        },
+        {
+          "id": "D1.1",
+          "source": "gannet.pdf",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "Who signed off on the RX32 rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.23256300389766693,
+      "margin": 0.003986001014709473,
+      "idfCoverage": 0.20312558549596682,
+      "reranker": 0.0012290007434785366
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D2.1",
+          "D1.1",
+          "D3.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D3.1",
+          "D2.1",
+          "D1.1",
+          "D3.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the RX32 rule?",
+          "score": 0.22857700288295746,
+          "margin": 0.22857700288295746,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = RX32 · pack = 23 pieces\nRecord amendments in the office register.\nReturn window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "gannet.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How soon will Gannet send my purchase?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5980319976806641,
+      "margin": 0.2521840035915375,
+      "idfCoverage": 0.16049431452356852,
+      "reranker": 0.9623894691467285
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D2.2",
+          "D3.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "8 days"
+    ],
+    "goldSources": [
+      "gannet.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Dispatch lead",
+            "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+            "source": "gannet.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How soon will Gannet send my purchase?",
+          "score": 0.5980319976806641,
+          "margin": 0.2521840035915375,
+          "promoted": true,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.\nReturn window: Tern accepts unopened returns for 19 days.\nFreight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "gannet.pdf",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How soon will Gannet send my purchase? Also, how long may I keep a sealed Tern item before sending it back?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5466449856758118,
+      "margin": 0.03913700580596924,
+      "idfCoverage": 0.05454858997577543,
+      "reranker": 0.5436476469039917
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "8 days",
+      "19 days"
+    ],
+    "goldSources": [
+      "gannet.pdf",
+      "tern.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ],
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.\nReturn window: Tern accepts unopened returns for 19 days.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Dispatch lead",
+            "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+            "source": "gannet.pdf",
+            "id": "D1.1"
+          },
+          {
+            "page": 1,
+            "topic": "Return window",
+            "text": "Return window: Tern accepts unopened returns for 19 days.",
+            "source": "tern.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How soon will Gannet send my purchase? Also, how long may I keep a sealed Tern item before sending it back?",
+          "score": 0.5466449856758118,
+          "margin": 0.03913700580596924,
+          "promoted": false,
+          "lexicalMaximum": 0.05285714285714285
+        },
+        {
+          "part": "How soon will Gannet send my purchase",
+          "score": 0.5845159888267517,
+          "margin": 0.25089597702026367,
+          "promoted": true,
+          "lexicalMaximum": 0.148
+        },
+        {
+          "part": "how long may I keep a sealed Tern item before sending it back?",
+          "score": 0.5401840209960938,
+          "margin": 0.25433000922203064,
+          "promoted": true,
+          "lexicalMaximum": 0.08222222222222221
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.\nReturn window: Tern accepts unopened returns for 19 days.\nFreight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.\nReturn window: Tern accepts unopened returns for 19 days.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "gannet.pdf",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "page": 1
+        },
+        {
+          "id": "D3.1",
+          "source": "tern.pdf",
+          "text": "Return window: Tern accepts unopened returns for 19 days.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "Who signed off on the Dispatch lead rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4305590093135834,
+      "margin": 0.2863910049200058,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.015533612109720707
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D2.2",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Dispatch lead rule?",
+          "score": 0.4305590093135834,
+          "margin": 0.2863910049200058,
+          "promoted": false,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.\nRecord amendments in the office register.\nReturn window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "gannet.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How long may I keep a sealed Tern item before sending it back?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5401840209960938,
+      "margin": 0.25433000922203064,
+      "idfCoverage": 0.07597057021437728,
+      "reranker": 0.7689655423164368
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "19 days"
+    ],
+    "goldSources": [
+      "tern.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Return window: Tern accepts unopened returns for 19 days.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Return window",
+            "text": "Return window: Tern accepts unopened returns for 19 days.",
+            "source": "tern.pdf",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long may I keep a sealed Tern item before sending it back?",
+          "score": 0.5401840209960938,
+          "margin": 0.25433000922203064,
+          "promoted": true,
+          "lexicalMaximum": 0.08222222222222221
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return window: Tern accepts unopened returns for 19 days.\nFreight threshold: Tern pays freight on invoices above 620 euros.\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Return window: Tern accepts unopened returns for 19 days.",
+      "citations": [
+        {
+          "id": "D3.1",
+          "source": "tern.pdf",
+          "text": "Return window: Tern accepts unopened returns for 19 days.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "How long may I keep a sealed Tern item before sending it back? Also, how many units come in one BZ91 box?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.432125985622406,
+      "margin": 0.008774995803833008,
+      "idfCoverage": 0.13784399046952836,
+      "reranker": 0.263345867395401
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D2.2",
+          "D1.1",
+          "D3.2",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D3.2",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.1",
+          "D3.2",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "19 days",
+      "17 pieces"
+    ],
+    "goldSources": [
+      "tern.pdf",
+      "parts.csv"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Return window: Tern accepts unopened returns for 19 days.\nsku = BZ91 · pack = 17 pieces",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Return window",
+            "text": "Return window: Tern accepts unopened returns for 19 days.",
+            "source": "tern.pdf",
+            "id": "D3.1"
+          },
+          {
+            "topic": "BZ91 17 pieces",
+            "text": "sku = BZ91 · pack = 17 pieces",
+            "row": [
+              "BZ91",
+              "17 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long may I keep a sealed Tern item before sending it back? Also, how many units come in one BZ91 box?",
+          "score": 0.432125985622406,
+          "margin": 0.432125985622406,
+          "promoted": false,
+          "lexicalMaximum": 0.051666666666666666
+        },
+        {
+          "part": "How long may I keep a sealed Tern item before sending it back",
+          "score": 0.558830976486206,
+          "margin": 0.27453097701072693,
+          "promoted": true,
+          "lexicalMaximum": 0.08222222222222221
+        },
+        {
+          "part": "how many units come in one BZ91 box?",
+          "score": 0.6595100164413452,
+          "margin": 0.6595100164413452,
+          "promoted": true,
+          "lexicalMaximum": 0.13777777777777778
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "sku = BZ91 · pack = 17 pieces\nReturn window: Tern accepts unopened returns for 19 days.\nFreight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Return window: Tern accepts unopened returns for 19 days.\nsku = BZ91 · pack = 17 pieces",
+      "citations": [
+        {
+          "id": "D3.1",
+          "source": "tern.pdf",
+          "text": "Return window: Tern accepts unopened returns for 19 days.",
+          "page": 1
+        },
+        {
+          "id": "D2.1",
+          "source": "parts.csv",
+          "text": "sku = BZ91 · pack = 17 pieces"
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "Who signed off on the Return window rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.40127798914909363,
+      "margin": 0.2615019828081131,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.002649765694513917
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D3.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D3.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Return window rule?",
+          "score": 0.40127798914909363,
+          "margin": 0.2615019828081131,
+          "promoted": false,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Return window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Return window: Tern accepts unopened returns for 19 days.\nRecord amendments in the office register.\nDispatch lead: Gannet dispatches stocked orders within 8 days.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "page": 2,
+              "topic": "Record amendments in the office",
+              "text": "Record amendments in the office register.",
+              "source": "gannet.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "What invoice amount qualifies for free shipping from Tern?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.7262920141220093,
+      "margin": 0.3893110156059265,
+      "idfCoverage": 0.11143842260561167,
+      "reranker": 0.9307712912559509
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.2",
+          "D3.1",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "620 euros"
+    ],
+    "goldSources": [
+      "tern.pdf"
+    ],
+    "indexed": [
+      [
+        "D3.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Freight threshold",
+            "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+            "source": "tern.pdf",
+            "id": "D3.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What invoice amount qualifies for free shipping from Tern?",
+          "score": 0.7262920141220093,
+          "margin": 0.3893110156059265,
+          "promoted": true,
+          "lexicalMaximum": 0.24666666666666665
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.\nReturn window: Tern accepts unopened returns for 19 days.\nsku = BZ91 · pack = 17 pieces",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            },
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+      "citations": [
+        {
+          "id": "D3.2",
+          "source": "tern.pdf",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+          "page": 2
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "What invoice amount qualifies for free shipping from Tern? Also, how many units come in one BZ91 box?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5899670124053955,
+      "margin": 0.0449870228767395,
+      "idfCoverage": 0.11579979495434209,
+      "reranker": 0.0925726369023323
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D3.1",
+          "D2.2",
+          "D1.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "620 euros",
+      "17 pieces"
+    ],
+    "goldSources": [
+      "tern.pdf",
+      "parts.csv"
+    ],
+    "indexed": [
+      [
+        "D3.2"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Freight threshold: Tern pays freight on invoices above 620 euros.\nsku = BZ91 · pack = 17 pieces",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Freight threshold",
+            "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+            "source": "tern.pdf",
+            "id": "D3.2"
+          },
+          {
+            "topic": "BZ91 17 pieces",
+            "text": "sku = BZ91 · pack = 17 pieces",
+            "row": [
+              "BZ91",
+              "17 pieces"
+            ],
+            "columns": [
+              "sku",
+              "pack"
+            ],
+            "source": "parts.csv",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What invoice amount qualifies for free shipping from Tern? Also, how many units come in one BZ91 box?",
+          "score": 0.544979989528656,
+          "margin": 0.544979989528656,
+          "promoted": true,
+          "lexicalMaximum": 0.06358974358974359
+        },
+        {
+          "part": "What invoice amount qualifies for free shipping from Tern",
+          "score": 0.7251710295677185,
+          "margin": 0.3491790294647217,
+          "promoted": true,
+          "lexicalMaximum": 0.24666666666666665
+        },
+        {
+          "part": "how many units come in one BZ91 box?",
+          "score": 0.6595100164413452,
+          "margin": 0.6595100164413452,
+          "promoted": true,
+          "lexicalMaximum": 0.13777777777777778
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.\nsku = BZ91 · pack = 17 pieces\nReturn window: Tern accepts unopened returns for 19 days.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            },
+            {
+              "topic": "BZ91 17 pieces",
+              "text": "sku = BZ91 · pack = 17 pieces",
+              "row": [
+                "BZ91",
+                "17 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Return window",
+              "text": "Return window: Tern accepts unopened returns for 19 days.",
+              "source": "tern.pdf",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Freight threshold: Tern pays freight on invoices above 620 euros.\nsku = BZ91 · pack = 17 pieces",
+      "citations": [
+        {
+          "id": "D3.2",
+          "source": "tern.pdf",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+          "page": 2
+        },
+        {
+          "id": "D2.1",
+          "source": "parts.csv",
+          "text": "sku = BZ91 · pack = 17 pieces"
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "question": "Who signed off on the Freight threshold rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.46181100606918335,
+      "margin": 0.25661399960517883,
+      "idfCoverage": 0.3376631466319153,
+      "reranker": 0.5330312252044678
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.2",
+          "D2.1",
+          "D2.2",
+          "D3.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Freight threshold rule?",
+          "score": 0.46181100606918335,
+          "margin": 0.25661399960517883,
+          "promoted": false,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Freight threshold: Tern pays freight on invoices above 620 euros.\nDispatch lead: Gannet dispatches stocked orders within 8 days.\nsku = RX32 · pack = 23 pieces",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Freight threshold",
+              "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+              "source": "tern.pdf",
+              "id": "D3.2"
+            },
+            {
+              "page": 1,
+              "topic": "Dispatch lead",
+              "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+              "source": "gannet.pdf",
+              "id": "D1.1"
+            },
+            {
+              "topic": "RX32 23 pieces",
+              "text": "sku = RX32 · pack = 23 pieces",
+              "row": [
+                "RX32",
+                "23 pieces"
+              ],
+              "columns": [
+                "sku",
+                "pack"
+              ],
+              "source": "parts.csv",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]
