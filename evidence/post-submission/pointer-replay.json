@@ -1,0 +1,1843 @@
+{
+  "scope": "Development replay of archived rankings on answerable refusals only. Hybrid always shows three passages where available; lexical may show fewer. No human timing or near-miss safety measured.",
+  "total": 93,
+  "emptyLexical": 67,
+  "summary": {
+    "source": {
+      "lexical": 20,
+      "hybrid": 91,
+      "gained": 71,
+      "lost": 0
+    },
+    "allFacts": {
+      "lexical": 8,
+      "hybrid": 82,
+      "gained": 74,
+      "lost": 0
+    }
+  },
+  "rows": [
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How long should the instrument heat up before adjustment? Also, how frequently should I take measurements?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D3.1",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "What mass do I put on the scale for setup? Also, how frequently should I take measurements?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D2.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How frequently should I take measurements?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D2.1",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How frequently should I take measurements? Also, how cool should the case be before unplugging it?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D3.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "At what displacement must I stop collecting data?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "At what displacement must I stop collecting data? Also, how cool should the case be before unplugging it?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D3.1",
+          "D2.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How cool should the case be before unplugging it?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D3.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How cool should the case be before unplugging it? Also, how long should the instrument heat up before adjustment?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D3.1",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How much can I claim for my ride home after a late shift? Also, how early should I arrange a substitute?",
+      "lexical": {
+        "ids": [
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D3.2"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How long do I have to turn in a cab slip?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D3.2",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How long do I have to turn in a cab slip? Also, how early should I arrange a substitute?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D3.2",
+          "D3.1"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How early should I arrange a substitute?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D3.1",
+          "D3.2",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How early should I arrange a substitute? Also, how much time off can I take for classes?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D3.1",
+          "D3.2",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "What break do I get between shifts?",
+      "lexical": {
+        "ids": [
+          "D3.2"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D3.2",
+          "D2.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "What break do I get between shifts? Also, how much time off can I take for classes?",
+      "lexical": {
+        "ids": [
+          "D3.2"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D3.2",
+          "D2.1",
+          "D3.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which side of the film should face me as I load it?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What implement is safe for sweeping away specks?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D1.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "How bright may the lamp be?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.2",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which way do I rotate the take-up hub?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D2.1",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Who countersigns the image proof?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.2",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What format should the customer receive?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D1.2",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "When may I discard temporary images?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.3",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "How bright can the lamp be, and how long must temporary images survive?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.4",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which way should I turn the hub and how should the archival name begin?",
+      "lexical": {
+        "ids": [
+          "D2.4"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What can I use to dust the film and which format goes to viewers?",
+      "lexical": {
+        "ids": [
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D1.3",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Which identity paper should I bring on day one?",
+      "lexical": {
+        "ids": [
+          "D2.4"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D2.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "What time does the welcome session start?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D1.1",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Who matches me with a workplace mentor?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.1",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where can I leave my car when I join?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.1",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where do I pick up my typing gear?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D1.3",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Who should hear about my missing entry pass?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.1",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "When is the welcome session? Also, where can I get a keyboard?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D1.1",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.1",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D1.1",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How many thin wedges are supplied under LK71?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "What surface treatment will BD54 have?",
+      "lexical": {
+        "ids": [
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D2.2",
+          "D3.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How long do I get to flag a short shipment?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D3.2",
+          "D1.1",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Who transports goods going back to Curlew?",
+      "lexical": {
+        "ids": [
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D3.3",
+          "D3.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Which purchasing reference belongs on the dispatch paperwork?",
+      "lexical": {
+        "ids": [
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D3.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+      "lexical": {
+        "ids": [
+          "D2.3",
+          "D3.3",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D3.3",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who gets my initial message?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who oversees my case?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.1",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who has to come in person?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D1.4",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.1",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who manages my case and how many pictures of the dents are needed?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D1.4",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Who can get me back into a frozen login?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.4",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "How much time does a guest get?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D2.3",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What should I show to prove my identity?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.2",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Which machine extends my pass?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D1.4",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What balance adjustment follows a failed print?",
+      "lexical": {
+        "ids": [
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What shade should draft sheets be?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D2.2",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Where do I collect a finished wall print?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D2.2",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Who can remove a stuck item from the spooler?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D1.1",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What proves my identity? Also, where can I collect my wall print?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.2",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "What holds the glass wedge steady?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How long do we wait for stable light?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D2.4",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How wide should the opening be?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.2",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which colour target do we align against?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.1",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How many recordings do we need per sample?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Who must authorize the measurement set?",
+      "lexical": {
+        "ids": [
+          "D1.3"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.2",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which file type do I hand over?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How wide is the opening? Also, who signs the recordings?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D2.2",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which target colour do I use and how many recordings are needed for one sample?",
+      "lexical": {
+        "ids": [
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D1.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where do the sellers pick up identification?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D1.2",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "When will I learn which space is mine?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.5",
+          "D2.3",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How wide is the regular display table?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.2",
+          "D2.5"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where can I get filler for fragile pots?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.3",
+          "D1.5"
+        ],
+        "source": false,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How long may I show visitors my technique?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.5",
+          "D1.2",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How is a damaged display piece marked?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.2",
+          "D2.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Who takes the sales paperwork at closing?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D2.1",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Which exit should I take with my leftover stock?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D1.3",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How much cash must I leave to use secure storage?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D2.4",
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where do borrowed table covers go afterward?",
+      "lexical": {
+        "ids": [
+          "D1.2"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.5",
+          "D1.2",
+          "D2.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "When does the opening film start?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.1",
+          "D1.5",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "What credential gets me into the room above the auditorium?",
+      "lexical": {
+        "ids": [
+          "D1.3"
+        ],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.3",
+          "D1.5",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where do we store the extra previews?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.3",
+          "D1.5",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How much money must I leave to borrow the subtitle device?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D1.1",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How long can someone arrive past curtain time?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.5",
+          "D2.1",
+          "D1.5"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Whose signoff lets another venue take the film?",
+      "lexical": {
+        "ids": [
+          "D1.5"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.5",
+          "D1.1",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How should I mark a broken film carrier?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D1.1",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where do I leave my end-of-night paperwork?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.5",
+          "D1.3",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where should unpaid ushers announce their arrival?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.5",
+          "D1.3",
+          "D2.2"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "What day is the last chance to name our rowers?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.5",
+          "D1.2"
+        ],
+        "source": false,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Where do officials check the shell on the scale?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.2",
+          "D1.1",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Which colour identifies a substitute on race day?",
+      "lexical": {
+        "ids": [
+          "D2.5"
+        ],
+        "source": true,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.5",
+          "D1.4",
+          "D2.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "How far in advance can I see the running order?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.4",
+          "D1.4",
+          "D1.5"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Who handles a complaint about our assigned water position?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D2.5",
+          "D2.2",
+          "D1.1"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "What signal device comes in the steering kit?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D2.5",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": false
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Which feed shows the line-crossing footage?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.2",
+          "D1.1",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Where should we put the blades after rowing?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.1",
+          "D1.5",
+          "D1.3"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "How many people must initial the record of our finish time?",
+      "lexical": {
+        "ids": [
+          "D1.2",
+          "D1.4"
+        ],
+        "source": true,
+        "allFacts": true
+      },
+      "hybrid": {
+        "ids": [
+          "D1.4",
+          "D1.2",
+          "D2.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "When can the winners pick up their awards?",
+      "lexical": {
+        "ids": [],
+        "source": false,
+        "allFacts": false
+      },
+      "hybrid": {
+        "ids": [
+          "D1.5",
+          "D1.4",
+          "D2.4"
+        ],
+        "source": true,
+        "allFacts": true
+      }
+    }
+  ]
+}
