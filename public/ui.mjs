@@ -259,6 +259,7 @@ byId('chat-form').addEventListener('submit', async event => {
     }
     if(response.citations.some(c=>startingRun.definition.chunks.some(chunk=>chunk.source===c.source))){
       const audit=item('button','Test source dependency','outline');
+      audit.id='source-dependency';
       audit.type='button';
       const output=item('div');
       output.setAttribute('aria-live','polite');
@@ -536,3 +537,35 @@ function showPointers(panel,response){
   }
   panel.append(item('h4','Closest evidence, not confirmed'),list);
 }
+
+byId('remove-step').onclick=async()=>{
+  if(!activeRun)return;
+  selectView('runner');
+  const q=activeRun.evals.find(c=>c.status==='answered');
+  if(!q)return;
+  byId('query').value=q.question;
+  const a=await answer(activeRun.definition,q.question);
+  const receipt=await auditSources(activeRun.definition,q.question,answer,a);
+  const panel=byId('response');
+  panel.replaceChildren(item('h3','Source-removal audit'),item('p',q.question));
+  for(const t of receipt.trials)panel.append(evidenceRow('Without '+t.source,t.response.status+' · '+t.response.text));
+  if(!receipt.trials.length)panel.append(item('p','This question produced no cited source to remove.'));
+};
+byId('policy-step').onclick=()=>{selectView('impact');byId('impact-demo').click();};
+fetch('./runs/submission.json').then(r=>r.json()).then(({summary,fresh,cases})=>{
+  const root=byId('fresh-trust'),strict=fresh.find(r=>r.config==='strict'),control=fresh.find(r=>r.config==='alwaysRefuse');
+  root.replaceChildren(item('p','Fresh suite · '+strict.answerableRecall.count+'/'+strict.answerableRecall.total+' supported answers. '+strict.nearMissFalseAnswers.count+'/'+strict.nearMissFalseAnswers.total+' near-miss false answers.'),
+    item('p','Balanced accuracy: evidence-first '+(100*strict.balancedAccuracy).toFixed(1)+'%, always refuse '+(100*control.balancedAccuracy).toFixed(1)+'%.'));
+  const pooled=summary.find(r=>r.suite==='pooled'),chart=byId('funnel-chart');
+  for(const [label,value] of [['Indexed gold facts',pooled.oracle],['All facts in the top three',pooled.answerable-pooled.outsideHybridTop3],['Correct contextual answer',pooled.losses.passed]]){
+    const bar=item('progress');bar.max=pooled.answerable;bar.value=value;bar.setAttribute('aria-label',label);
+    chart.append(item('p',label+' · '+value+'/'+pooled.answerable),bar);
+  }
+  for(const c of cases){
+    const d=item('details'),title=item('summary',c.question);
+    d.append(title,item('p',c.suite+' / '+c.corpus+' · '+c.stage),
+      item('p',c.oracle===null?'No gold passage expected.':'Gold passage judge: '+(c.oracle?'pass':'fail')+'. Complete hybrid evidence rank: '+(c.rank??'missing')+'.'),
+      item('p','Forced top-one / top-three verdicts: '+c.forced.map(v=>v?'pass':'fail').join(' / ')+'. Final response: '+c.actual+'.'));
+    byId('funnel-cases').append(d);
+  }
+}).catch(()=>{byId('fresh-trust').textContent='Prospective results unavailable.';});

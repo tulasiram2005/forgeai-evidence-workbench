@@ -5,7 +5,13 @@ const browser=await chromium.launch({headless:true});
 try{
 const dir='evidence/ui/'+phase;
 await mkdir(dir,{recursive:true});
-const page=await browser.newPage({bypassCSP:true});
+const page=await browser.newPage();
+const external=[];
+await page.route('**/*',route=>{
+  if(new URL(route.request().url()).origin!==new URL(url).origin){external.push(route.request().url());return route.abort();}
+  return route.continue();
+});
+await page.addInitScript({path:new URL('./node_modules/axe-core/axe.min.js',import.meta.url).pathname});
 await page.goto(url);
 await page.waitForSelector('#score-meter button');
 for(const width of [360,768,1280,1728]){
@@ -23,12 +29,14 @@ for(const width of [360,768,1280,1728]){
 }
 if(phase==='after'){
  const reports=[];
- await page.addScriptTag({content:await readFile(new URL('./node_modules/axe-core/axe.min.js',import.meta.url),'utf8')});
+
  for(const tab of ['evidence','runner','definition','review','impact']){
  await page.locator('#tab-'+tab).click();
  const violations=await page.evaluate(async()=> (await axe.run()).violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)})));
  reports.push({tab,violations});
  }
  await writeFile('evidence/ui/axe.json',JSON.stringify(reports,null,2));
+ await writeFile('evidence/ui/external-requests.json',JSON.stringify(external));
+ if(external.length||reports.some(r=>r.violations.length))throw Error('Accessibility or external request check failed');
 }
 }finally{await browser.close();}

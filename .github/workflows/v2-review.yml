@@ -21,7 +21,6 @@ jobs:
           python3 -m http.server 8437 --bind 127.0.0.1 --directory public >/tmp/forge-http.log 2>&1 &
           node qa/contextual-parity.mjs http://127.0.0.1:8437
           node qa/gate-parity.mjs http://127.0.0.1:8437
-          node qa/browser.mjs before https://forgeai-evidence-workbench.onrender.com
           node qa/browser.mjs after http://127.0.0.1:8437
           CHROME_PATH=$(node --input-type=module -e "import {chromium} from './qa/node_modules/playwright-core/index.mjs';console.log(chromium.executablePath())") qa/node_modules/.bin/lighthouse http://127.0.0.1:8437 --chrome-flags="--headless --no-sandbox" --output=json --output-path=evidence/ui/lighthouse.json --only-categories=performance,accessibility,best-practices --quiet
       - uses: actions/upload-artifact@v4

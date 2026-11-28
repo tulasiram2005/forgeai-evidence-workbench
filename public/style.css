@@ -225,3 +225,14 @@ del {background:#f6dfd2;color:#743a25} ins {background:#dceadc;color:#19452d}
 #score-meter:empty {min-height:113px}
 
 .gate-choice {display:flex;align-items:center;gap:8px}.gate-choice input {width:auto;min-height:0;margin:0}
+
+.trust-panel {padding:clamp(20px,3vw,40px);background:var(--ink,#191d40);color:#fff}
+.trust-panel h2 {color:inherit;margin:0 0 16px}
+.trust-panel strong {color:#e4ee77;font-size:1.2rem}
+.trust-panel p {max-width:48ch;margin:12px 0 0}
+#funnel-chart progress {accent-color:#4147a3;width:100%;height:12px}
+#funnel-chart p {margin:12px 0 4px}
+#funnel-cases details {padding:8px 0;border-bottom:1px solid var(--line)}
+#funnel-cases summary {cursor:pointer}
+.result-card li mark {display:block;background:#f2efcb;color:#191d40;padding:4px}
+.review-path {flex-wrap:wrap}
