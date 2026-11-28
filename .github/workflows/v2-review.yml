@@ -19,6 +19,7 @@ jobs:
       - run: qa/node_modules/.bin/playwright-core install --with-deps chromium
       - run: |
           python3 -m http.server 8437 --bind 127.0.0.1 --directory public >/tmp/forge-http.log 2>&1 &
+          node qa/contextual-parity.mjs http://127.0.0.1:8437
           node qa/gate-parity.mjs http://127.0.0.1:8437
           node qa/browser.mjs before https://forgeai-evidence-workbench.onrender.com
           node qa/browser.mjs after http://127.0.0.1:8437

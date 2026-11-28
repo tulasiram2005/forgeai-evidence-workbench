@@ -175,7 +175,7 @@ export async function connectedAnswer(def,q){
     return {status:'answered',text:d.current.temperature_2m+' °C at '+d.current.time+' UTC',tool:'weather',citations:[{id:'weather',source:url.href,text:String(d.current.temperature_2m)}]};
   }catch{return refusal('Live weather is unavailable.');}
 }
-function makeEvals(chunks,questions,gaps,minimum=20){
+export function makeEvals(chunks,questions,gaps,minimum=20){
   const tests=[];
   function add(kind,question,expected,status='answered'){
     tests.push({id:'E'+String(tests.length+1).padStart(2,'0'),kind,question,status,expected:expected.map(cited)});

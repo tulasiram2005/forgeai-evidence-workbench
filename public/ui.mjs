@@ -1,6 +1,6 @@
 import {auditSources} from './source-audit.mjs';
 import { validateCase, runReview } from './review.mjs';
-import { answer } from './engine.mjs';
+import {browserAnswer as answer} from './browser-answer.mjs';
 
 const byId = id => document.getElementById(id);
 const item = (tag, content, cls) => {
@@ -40,10 +40,10 @@ byId('open-failures').onclick=()=>{
   byId('case-filter').value='fail';byId('case-search').value='';renderCases();
   byId('case-filter').focus();
 };
-fetch('./runs/reference-results.json').then(response=>response.json()).then(data=>{
-  const configs=['V2 contextual, normalized IDs','Always refuse','Always answer with top-1'];
+fetch('./runs/release-results.json').then(response=>response.json()).then(data=>{
+  const configs=['V2 contextual','Always refuse','Always answer with top-1'];
   const table=item('table');
-  table.append(item('caption','Development suites combined'));
+  table.append(item('caption','All suites combined'));
   const heading=item('tr');
   for(const name of ['Configuration','Answerable recall','Refusal recall','Balanced accuracy'])heading.append(item('th',name));
   table.append(heading);
@@ -56,7 +56,7 @@ fetch('./runs/reference-results.json').then(response=>response.json()).then(data
   }
   byId('field-detail').replaceChildren(table,item('p','Class recalls include question-level 95% Wilson intervals. Balanced accuracy weights both classes equally.'));
   byId('field-scores').replaceChildren(...data.filter(r=>r.config===configs[0] && r.suite!=='pooled').map((r,i)=>{
-    const cell=item('div');cell.append(item('strong',r.passed.count+'/'+r.passed.total),item('span','Development suite '+(i+1)));return cell;
+    const cell=item('div');cell.append(item('strong',r.passed.count+'/'+r.passed.total),item('span',(i===3?'Prospective suite ':'Development suite ')+(i+1)));return cell;
   }));
 }).catch(()=>{byId('field-scores').textContent='External results unavailable';});
 
@@ -352,8 +352,8 @@ function compile(brief, documents, options) {
     const worker = new Worker(new URL('./compiler.worker.mjs', import.meta.url), {type:'module'});
     const deadline = setTimeout(() => {
       worker.terminate();
-      reject(new Error('This build exceeded its 45-second budget. Reduce the source set and retry.'));
-    }, 45000);
+      reject(new Error('This build exceeded its 180-second budget. Reduce the source set and retry.'));
+    }, 180000);
     const cleanUp = () => { clearTimeout(deadline); worker.terminate(); };
     worker.onmessage = event => {
       cleanUp();
@@ -380,7 +380,7 @@ byId('build-form').addEventListener('submit', async event => {
     if (!brief) throw new Error('Describe the agent you want to build.');
     button.textContent = 'Evaluating…';
     await new Promise(resolve => setTimeout(resolve, 30));
-    const opts = {};
+    const opts = {contextual:true};
     if(byId('gate-toggle').checked){
       await (await import('./static-encoder.mjs')).loadGateModel();
       opts.gateV2=true;opts.contextual=true;
@@ -437,7 +437,7 @@ byId('review-run').onclick = async () => {
   clearReviewResult();
   const revision = reviewRevision;
   try {
-    const output = await runReview(activeRun.definition,reviewCases);
+    const output = await runReview(activeRun.definition,reviewCases,answer);
     if (revision !== reviewRevision) return;
     receipt=output;
     byId('review-message').textContent=output.passed+' of '+output.total+' reviewer cases passed.';
@@ -475,7 +475,7 @@ async function runImpact(load){
     const worker=new Worker(new URL('./impact.worker.mjs',import.meta.url),{type:'module'});
     impactWorker=worker;
     const fail=message=>{worker.terminate();clearTimeout(impactTimer);byId('impact-status').textContent=message;};
-    impactTimer=setTimeout(()=>fail('Comparison exceeded 45 seconds.'),45000);
+    impactTimer=setTimeout(()=>fail('Comparison exceeded 45 seconds.'),180000);
     worker.onerror=()=>fail('Could not run the comparison.');
     worker.onmessage=({data})=>{
       if(job!==impactJob)return;
