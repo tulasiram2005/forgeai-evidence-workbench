@@ -1,3 +1,4 @@
+import {pilot} from './forecast-pilot.mjs';
 import {auditSources} from './source-audit.mjs';
 import { validateCase, runReview } from './review.mjs';
 import {browserAnswer as answer} from './browser-answer.mjs';
@@ -139,6 +140,8 @@ function render(run, key) {
   const stats = [new Set(definition.chunks.map(chunk => chunk.source)).size + ' sources', iterations.length + (iterations.length === 1 ? ' evaluation round' : ' evaluation rounds'), (definition.tools?.length ?? 0) + ' attached tools'];
   byId('run-meta').replaceChildren(...stats.map(s => item('span', s)));
   byId('score').replaceChildren(document.createTextNode(String(report.passed)), item('small', ' / ' + report.total));
+  const assessment=report.assessment;
+  byId('runner-verdict').textContent=(assessment?.verdict??'DO NOT SHIP')+' for autonomous answering. Evidence-first pilot forecast: '+(pilot.forecast*100).toFixed(1)+'% overall agreement across '+pilot.n+' suites.'+(assessment?.warning?' '+assessment.warning:'');
   byId('score-note').textContent = (report.total-report.passed)+' failed';
   const retained = iterations[report.retainedRound-1] ?? iterations.find(entry => entry.passed === report.passed);
   const released=[...(retained?.results??[]),...(report.testResults??[])];
