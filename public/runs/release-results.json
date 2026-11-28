@@ -1,0 +1,452 @@
+[
+  {
+    "suite": "holdout",
+    "config": "V2 contextual",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 54,
+      "total": 75,
+      "lower": 0.6095930981193548,
+      "upper": 0.8089684111882106
+    },
+    "answerableRecall": {
+      "count": 15,
+      "total": 30,
+      "lower": 0.33154125640533766,
+      "upper": 0.6684587435946623
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "balancedAccuracy": 0.75
+  },
+  {
+    "suite": "holdout",
+    "config": "Always refuse",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 30,
+      "total": 75,
+      "lower": 0.2966251564586679,
+      "upper": 0.5131196120378932
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "suite": "holdout",
+    "config": "Always answer with top-1",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 9,
+      "total": 75,
+      "lower": 0.06443371823944515,
+      "upper": 0.2125964020474873
+    },
+    "answerableRecall": {
+      "count": 9,
+      "total": 30,
+      "lower": 0.16664748268243793,
+      "upper": 0.47875787458714947
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "nearMissFalseAnswers": {
+      "count": 15,
+      "total": 15,
+      "lower": 0.7961166989641515,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.15
+  },
+  {
+    "suite": "holdout2",
+    "config": "V2 contextual",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 29,
+      "total": 60,
+      "lower": 0.36175049539732784,
+      "upper": 0.6069218996740751
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 33,
+      "lower": 0.10676021533020799,
+      "upper": 0.3775164499215069
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 18,
+      "lower": 0.5478541568378739,
+      "upper": 0.9099907189139831
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 18,
+      "lower": 0.09000928108601694,
+      "upper": 0.45214584316212625
+    },
+    "balancedAccuracy": 0.494949494949495
+  },
+  {
+    "suite": "holdout2",
+    "config": "Always refuse",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 18,
+      "total": 60,
+      "lower": 0.19898166138769108,
+      "upper": 0.42508707946914487
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 18,
+      "total": 18,
+      "lower": 0.8241207763533425,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 18,
+      "lower": 0,
+      "upper": 0.17587922364665765
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "suite": "holdout2",
+    "config": "Always answer with top-1",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 9,
+      "total": 60,
+      "lower": 0.08097440580167739,
+      "upper": 0.2611458906977855
+    },
+    "answerableRecall": {
+      "count": 9,
+      "total": 33,
+      "lower": 0.1506744088542064,
+      "upper": 0.44217559002872625
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 18,
+      "lower": 0,
+      "upper": 0.17587922364665765
+    },
+    "nearMissFalseAnswers": {
+      "count": 18,
+      "total": 18,
+      "lower": 0.8241207763533425,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.13636363636363635
+  },
+  {
+    "suite": "holdout3",
+    "config": "V2 contextual",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 32,
+      "total": 60,
+      "lower": 0.4089342702715789,
+      "upper": 0.6537209395856151
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 30,
+      "lower": 0.11792388144489496,
+      "upper": 0.40928326158122164
+    },
+    "refusalRecall": {
+      "count": 19,
+      "total": 24,
+      "lower": 0.5952954674681133,
+      "upper": 0.9075517464714814
+    },
+    "nearMissFalseAnswers": {
+      "count": 5,
+      "total": 24,
+      "lower": 0.09244825352851857,
+      "upper": 0.40470453253188665
+    },
+    "balancedAccuracy": 0.5125
+  },
+  {
+    "suite": "holdout3",
+    "config": "Always refuse",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 24,
+      "total": 60,
+      "lower": 0.2856949053488255,
+      "upper": 0.5263394650795924
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "suite": "holdout3",
+    "config": "Always answer with top-1",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 7,
+      "total": 60,
+      "lower": 0.057677206400560316,
+      "upper": 0.22178788024170856
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 30,
+      "lower": 0.11792388144489496,
+      "upper": 0.40928326158122164
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "nearMissFalseAnswers": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.11666666666666667
+  },
+  {
+    "suite": "holdout4",
+    "config": "V2 contextual",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 22,
+      "total": 60,
+      "lower": 0.25620916687225426,
+      "upper": 0.49316999369896963
+    },
+    "answerableRecall": {
+      "count": 1,
+      "total": 30,
+      "lower": 0.005908590381612455,
+      "upper": 0.16670390991409173
+    },
+    "refusalRecall": {
+      "count": 15,
+      "total": 24,
+      "lower": 0.42709962442674276,
+      "upper": 0.7884063244045122
+    },
+    "nearMissFalseAnswers": {
+      "count": 9,
+      "total": 24,
+      "lower": 0.21159367559548778,
+      "upper": 0.5729003755732572
+    },
+    "balancedAccuracy": 0.32916666666666666
+  },
+  {
+    "suite": "holdout4",
+    "config": "Always refuse",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 24,
+      "total": 60,
+      "lower": 0.2856949053488255,
+      "upper": 0.5263394650795924
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "suite": "holdout4",
+    "config": "Always answer with top-1",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 2,
+      "total": 60,
+      "lower": 0.009189319256197877,
+      "upper": 0.113637742743086
+    },
+    "answerableRecall": {
+      "count": 2,
+      "total": 30,
+      "lower": 0.018477023791270378,
+      "upper": 0.2132345836261692
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "nearMissFalseAnswers": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.03333333333333333
+  },
+  {
+    "suite": "pooled",
+    "config": "V2 contextual",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 137,
+      "total": 255,
+      "lower": 0.47595704042096404,
+      "upper": 0.5974469655932415
+    },
+    "answerableRecall": {
+      "count": 30,
+      "total": 123,
+      "lower": 0.17652373784947192,
+      "upper": 0.32679323291275975
+    },
+    "refusalRecall": {
+      "count": 78,
+      "total": 96,
+      "lower": 0.7229774574820691,
+      "upper": 0.8779753001068837
+    },
+    "nearMissFalseAnswers": {
+      "count": 18,
+      "total": 81,
+      "lower": 0.14544607404671892,
+      "upper": 0.3241528623046228
+    },
+    "balancedAccuracy": 0.5282012195121951
+  },
+  {
+    "suite": "pooled",
+    "config": "Always refuse",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 96,
+      "total": 255,
+      "lower": 0.31925189146508187,
+      "upper": 0.4373558780667625
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 123,
+      "lower": 0,
+      "upper": 0.030285514345309572
+    },
+    "refusalRecall": {
+      "count": 96,
+      "total": 96,
+      "lower": 0.9615244121423243,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 81,
+      "lower": 0,
+      "upper": 0.045278085432415204
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "suite": "pooled",
+    "config": "Always answer with top-1",
+    "judge": "extractive-fact-source-v2",
+    "passed": {
+      "count": 27,
+      "total": 255,
+      "lower": 0.07379431423937224,
+      "upper": 0.1496685695050836
+    },
+    "answerableRecall": {
+      "count": 27,
+      "total": 123,
+      "lower": 0.15547502878939956,
+      "upper": 0.3005387963311399
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 96,
+      "lower": 3.469446951953614e-18,
+      "upper": 0.038475587857675686
+    },
+    "nearMissFalseAnswers": {
+      "count": 81,
+      "total": 81,
+      "lower": 0.9547219145675847,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.10975609756097561
+  }
+]
