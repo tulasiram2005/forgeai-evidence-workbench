@@ -1,0 +1,1092 @@
+{
+  "source": "657482b6d767dbb95ca7cfe94c9d6612257d473a",
+  "judgeVersion": "extractive-fact-source-v2",
+  "configuration": {
+    "chunking": "Sentence or CSV record; 750-character text ceiling",
+    "threshold": 0.52,
+    "splitConjunction": true
+  },
+  "results": [
+    {
+      "question": "Where do the sellers pick up identification?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "counter Moss"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "When will I learn which space is mine?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "07:15"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How wide is the regular display table?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "180 centimeters"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where can I get filler for fragile pots?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "bay Wren"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How long may I show visitors my technique?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "22 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How is a damaged display piece marked?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "silver sticker"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who takes the sales paperwork at closing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "hall steward"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which exit should I take with my leftover stock?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "gate Ash"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How much cash must I leave to use secure storage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "8 euros"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where do borrowed table covers go afterward?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "linen hamper"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "Day-end receipts go to the hall steward."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "When does the locker key deposit expire?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.4",
+            "source": "handover.md",
+            "text": "One locker key requires 8 euros as security."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Who manufactures the standard bench?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "The cited passage does not identify the responsible person.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D2.3",
+            "source": "operations.pdf",
+            "text": "A standard bench spans 180 centimeters.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Does gate Ash charge a vehicle fee?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.3",
+            "source": "handover.md",
+            "text": "Unsold bowls depart through gate Ash."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "What does a replacement vendor badge cost?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Vendor badges are collected at counter Moss.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "operations.pdf",
+            "text": "Vendor badges are collected at counter Moss.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "What is the capacity of the linen hamper?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.5",
+            "source": "handover.md",
+            "text": "Loaned cloths belong in the linen hamper."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Which insurer covers a cracked exhibit?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "How tall is counter Moss?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D2.1",
+            "source": "operations.pdf",
+            "text": "Vendor badges are collected at counter Moss.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "How many visitors can attend a demonstration slot?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Demonstration slots last 22 minutes.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Demonstration slots last 22 minutes.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ],
+  "references": [
+    {
+      "config": "Always refuse",
+      "question": "Where do the sellers pick up identification?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "counter Moss"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Where do the sellers pick up identification?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "counter Moss"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "When will I learn which space is mine?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "07:15"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "When will I learn which space is mine?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "07:15"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How wide is the regular display table?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "180 centimeters"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How wide is the regular display table?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "180 centimeters"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Where can I get filler for fragile pots?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "bay Wren"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Where can I get filler for fragile pots?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "bay Wren"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How long may I show visitors my technique?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "22 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How long may I show visitors my technique?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "22 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How is a damaged display piece marked?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "silver sticker"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How is a damaged display piece marked?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "silver sticker"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "config": "Always refuse",
+      "question": "Who takes the sales paperwork at closing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "hall steward"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Who takes the sales paperwork at closing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "hall steward"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which exit should I take with my leftover stock?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "gate Ash"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which exit should I take with my leftover stock?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "gate Ash"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How much cash must I leave to use secure storage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "8 euros"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How much cash must I leave to use secure storage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "8 euros"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Where do borrowed table covers go afterward?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "linen hamper"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Where do borrowed table covers go afterward?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "linen hamper"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Day-end receipts go to the hall steward.",
+        "citations": [
+          {
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "Day-end receipts go to the hall steward."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "When does the locker key deposit expire?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "When does the locker key deposit expire?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "One locker key requires 8 euros as security.",
+        "citations": [
+          {
+            "id": "D1.4",
+            "source": "handover.md",
+            "text": "One locker key requires 8 euros as security."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Who manufactures the standard bench?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Who manufactures the standard bench?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "A standard bench spans 180 centimeters.",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "operations.pdf",
+            "text": "A standard bench spans 180 centimeters."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Does gate Ash charge a vehicle fee?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Does gate Ash charge a vehicle fee?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Unsold bowls depart through gate Ash.",
+        "citations": [
+          {
+            "id": "D1.3",
+            "source": "handover.md",
+            "text": "Unsold bowls depart through gate Ash."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What does a replacement vendor badge cost?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What does a replacement vendor badge cost?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Vendor badges are collected at counter Moss.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "operations.pdf",
+            "text": "Vendor badges are collected at counter Moss."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What is the capacity of the linen hamper?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What is the capacity of the linen hamper?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Loaned cloths belong in the linen hamper.",
+        "citations": [
+          {
+            "id": "D1.5",
+            "source": "handover.md",
+            "text": "Loaned cloths belong in the linen hamper."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which insurer covers a cracked exhibit?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which insurer covers a cracked exhibit?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How tall is counter Moss?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How tall is counter Moss?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Vendor badges are collected at counter Moss.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "operations.pdf",
+            "text": "Vendor badges are collected at counter Moss."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How many visitors can attend a demonstration slot?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How many visitors can attend a demonstration slot?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Demonstration slots last 22 minutes.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Demonstration slots last 22 minutes."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "answered",
+        "text": "One locker key requires 8 euros as security.",
+        "citations": [
+          {
+            "id": "D1.4",
+            "source": "handover.md",
+            "text": "One locker key requires 8 euros as security."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "A cracked exhibit receives a silver sticker."
+          }
+        ]
+      },
+      "passed": false
+    }
+  ]
+}
