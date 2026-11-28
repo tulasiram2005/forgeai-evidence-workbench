@@ -44,6 +44,11 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='holdout'){
+    const {holdout}=await import('./holdout.mjs');
+    console.log(JSON.stringify(await holdout(args[0],documents),null,2));
+    return;
+  }
   if(command==='impact'){
     const {compareReleases}=await import('./public/impact.mjs');
     const [before,after,suite]=await Promise.all(args.slice(0,3).map(json));
