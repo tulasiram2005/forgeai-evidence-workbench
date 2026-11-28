@@ -1,0 +1,27 @@
+{
+  "scope": "Answer purchasing questions about spare parts, suppliers and the catalogue.",
+  "audience": "Requester and document users",
+  "tone": "Concise and factual",
+  "mustAnswer": [
+    "Dispatch lead",
+    "Record amendments in the office",
+    "BZ91 17 pieces",
+    "RX32 23 pieces",
+    "Return window",
+    "Freight threshold"
+  ],
+  "mustRefuse": [
+    "Answer purchasing questions about spare parts",
+    "suppliers",
+    "the catalogue"
+  ],
+  "groundability": "Partial coverage",
+  "clarifyingQuestions": [
+    "Who will use the agent?",
+    "What tone should it use?",
+    "Which source supports the flagged topics?"
+  ],
+  "assumptions": [
+    "Unanswered intake questions use the displayed audience and tone."
+  ]
+}

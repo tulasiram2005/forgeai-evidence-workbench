@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "systemPrompt": "Answer the requester using the supplied corpus.\nAudience: Requester and document users. Tone: Concise and factual. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.",
+  "requirements": {
+    "scope": "Answer purchasing questions about spare parts, suppliers and the catalogue.",
+    "audience": "Requester and document users",
+    "tone": "Concise and factual",
+    "mustAnswer": [
+      "Dispatch lead",
+      "Record amendments in the office",
+      "BZ91 17 pieces",
+      "RX32 23 pieces",
+      "Return window",
+      "Freight threshold"
+    ],
+    "mustRefuse": [
+      "Answer purchasing questions about spare parts",
+      "suppliers",
+      "the catalogue"
+    ],
+    "groundability": "Partial coverage",
+    "clarifyingQuestions": [
+      "Who will use the agent?",
+      "What tone should it use?",
+      "Which source supports the flagged topics?"
+    ],
+    "assumptions": [
+      "Unanswered intake questions use the displayed audience and tone."
+    ]
+  },
+  "tools": [
+    "csv_lookup"
+  ],
+  "gaps": [
+    "Answer purchasing questions about spare parts",
+    "suppliers",
+    "the catalogue"
+  ],
+  "chunks": [
+    {
+      "page": 1,
+      "topic": "Dispatch lead",
+      "text": "Dispatch lead: Gannet dispatches stocked orders within 8 days.",
+      "source": "gannet.pdf",
+      "id": "D1.1"
+    },
+    {
+      "page": 2,
+      "topic": "Record amendments in the office",
+      "text": "Record amendments in the office register.",
+      "source": "gannet.pdf",
+      "id": "D1.2"
+    },
+    {
+      "topic": "BZ91 17 pieces",
+      "text": "sku = BZ91 · pack = 17 pieces",
+      "row": [
+        "BZ91",
+        "17 pieces"
+      ],
+      "source": "parts.csv",
+      "id": "D2.1"
+    },
+    {
+      "topic": "RX32 23 pieces",
+      "text": "sku = RX32 · pack = 23 pieces",
+      "row": [
+        "RX32",
+        "23 pieces"
+      ],
+      "source": "parts.csv",
+      "id": "D2.2"
+    },
+    {
+      "page": 1,
+      "topic": "Return window",
+      "text": "Return window: Tern accepts unopened returns for 19 days.",
+      "source": "tern.pdf",
+      "id": "D3.1"
+    },
+    {
+      "page": 2,
+      "topic": "Freight threshold",
+      "text": "Freight threshold: Tern pays freight on invoices above 620 euros.",
+      "source": "tern.pdf",
+      "id": "D3.2"
+    }
+  ],
+  "retrieval": {
+    "chunking": "Sentence or CSV record; 750-character text ceiling",
+    "threshold": 0.52,
+    "splitConjunction": true
+  },
+  "outputContract": {
+    "status": [
+      "answered",
+      "clarify",
+      "refused"
+    ],
+    "text": "string",
+    "citations": "Array<{id, source, text}>",
+    "tool": "optional registry ID"
+  }
+}

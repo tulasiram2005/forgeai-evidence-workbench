@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createInterface} from 'node:readline/promises';
 import {connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
+import {fileURLToPath} from 'node:url';
 import {Worker} from 'node:worker_threads';
 
 const [command,...args]=process.argv.slice(2);
@@ -16,9 +17,15 @@ async function documents(folder){
     for(const entry of entries){
       const path=join(dir,entry.name);
       if(entry.isDirectory()){if(!entry.name.startsWith('.')) await walk(path);continue;}
-      if(!entry.isFile()||!['.md','.txt','.csv','.pdf'].includes(extname(path).toLowerCase()))continue;
+      if(!entry.isFile()||!['.md','.txt','.csv','.pdf',...(args.includes('--structured')?['.docx']:[])].includes(extname(path).toLowerCase()))continue;
       const size=(await stat(path)).size; bytes+=size;
       if(docs.length>=32||bytes>16_000_000)throw Error('Input exceeds 32 files or 16 MB.');
+      if(args.includes('--structured') && /\.(pdf|docx)$/i.test(path)){
+        const parsed=JSON.parse(execFileSync('python3',[fileURLToPath(new URL('./read-document.py',import.meta.url)),path],{encoding:'utf8',timeout:20000,maxBuffer:4000000}));
+        if(!parsed.text.trim())throw Error('No readable text in '+entry.name);
+        docs.push({name:relative(folder,path),...parsed});
+        continue;
+      }
       const text=/\.pdf$/i.test(path)?execFileSync('python3',['-c','from pypdf import PdfReader; import sys; print("\\n".join(p.extract_text() or "" for p in PdfReader(sys.argv[1]).pages))',path],{encoding:'utf8',timeout:20000,maxBuffer:1600000}):await readFile(path,'utf8');
       if(!text.trim()) throw Error('No readable text in '+entry.name);
       docs.push({name:relative(folder,path),text});
@@ -46,7 +53,7 @@ async function runtimeAnswer(def,query){
 async function main(){
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation')}),null,2));
     return;
   }
   if(command==='impact'){

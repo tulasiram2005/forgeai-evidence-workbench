@@ -32,7 +32,8 @@ export function indexDocs(docs) {
       const [head,...rows]=csvRows(d.text);
       entries=rows.map(r=>({topic:r.slice(0,2).join(' '),text:r.map((v,i)=>(head[i]||'Value')+' = '+v).join(' · '), row:r}));
     }else {
-      for(const raw of d.text.split(/\r?\n/)){
+      const pages=d.pages ?? [d.text];
+      for(const [pageIndex,page] of pages.entries()) for(const raw of page.split(/\r?\n/)){
         for(const part of raw.split(/(?<=[.!?])\s+(?=[A-Z0-9])/)){
           const text=part.trim().replace(/^[-*#]+\s*/,'');
           if(text.length<8||!terms(text).length||suspicious.test(text)) continue;
@@ -46,7 +47,7 @@ export function indexDocs(docs) {
             const slice=remainder.slice(0,end).trimEnd();
             remainder=remainder.slice(end).trimStart();
             const label=slice.match(/^([^:]{2,90}):/);
-            entries.push({topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
+            entries.push({...(d.pages?{page:pageIndex+1}:{}),topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
           }
         }
       }
@@ -76,7 +77,7 @@ function selectTools(brief,docs) {
   }
   return registry.filter(tool=>allowed.has(tool)&&!denied.has(tool)&&(tool!=='csv_lookup'||docs.some(d=>/\.csv$/i.test(d.name))));
 }
-const cited=c=>({id:c.id,source:c.source,text:c.text});
+const cited=c=>({id:c.id,source:c.source,text:c.text,...(c.page?{page:c.page}:{})});
 const refusal=(text=unknown)=>({status:'refused',text,citations:[]});
 export function rank(chunks,question){
   const qt=terms(question);

@@ -2,10 +2,10 @@ import {readFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import {answer, build} from './public/engine.mjs';
 
-export async function holdout(folder, readDocuments) {
+export async function holdout(folder, readDocuments, options={}) {
   const brief = await readFile(join(folder,'brief.txt'),'utf8');
   const docs = await readDocuments(join(folder,'docs'));
-  const {definition} = build(brief, docs);
+  const {definition} = build(brief, docs, options);
   // Only open reviewer expectations after the agent definition is final.
   const cases = JSON.parse(await readFile(join(folder,'cases.json'),'utf8'));
   const results = cases.map(entry => {

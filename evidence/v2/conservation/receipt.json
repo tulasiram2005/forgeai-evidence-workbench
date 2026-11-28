@@ -1,0 +1,14 @@
+{
+  "compiler": "Deterministic local compiler",
+  "inputs": [
+    {
+      "source": "dispatch-note.txt",
+      "sha256": "c30e7d0492560a000a4cd15e07a09e5fc1a31a3498180c630bc72b50874539ff"
+    },
+    {
+      "source": "material-catalogue.csv",
+      "sha256": "2544eda68534d59868eccb9769517249201f31f10931f9272677a79e9716fbf8"
+    }
+  ],
+  "enrichment": null
+}

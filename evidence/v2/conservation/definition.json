@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "systemPrompt": "Answer the requester using the supplied corpus.\nAudience: Requester and document users. Tone: Concise and factual. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.",
+  "requirements": {
+    "scope": "Build a precise reference assistant for museum conservation technicians. Look up packing material catalogue codes and quantities from the CSV, explain packing and dispatch procedures, and flag unsupported insurance valuation requests. Cite the catalogue or dispatch note for each answer.",
+    "audience": "Requester and document users",
+    "tone": "Concise and factual",
+    "mustAnswer": [
+      "Glassine sleeve packing",
+      "Humidity card placement",
+      "Transit foam spacing",
+      "Dispatch inspection",
+      "Dispatch cutoff",
+      "Linen tape use",
+      "Crate label position",
+      "Seal discrepancy",
+      "MAT101 Acid-free tissue",
+      "MAT102 Glassine sleeves",
+      "MAT103 Linen tape",
+      "MAT104 Blue corner guards",
+      "MAT105 Tyvek wraps",
+      "MAT106 Transit foam",
+      "MAT107 Humidity cards",
+      "MAT108 Archive cartons"
+    ],
+    "mustRefuse": [
+      "insurance valuation"
+    ],
+    "groundability": "Partial coverage",
+    "clarifyingQuestions": [
+      "Who will use the agent?",
+      "What tone should it use?",
+      "Which source supports the flagged topics?"
+    ],
+    "assumptions": [
+      "Unanswered intake questions use the displayed audience and tone."
+    ]
+  },
+  "tools": [
+    "csv_lookup"
+  ],
+  "gaps": [
+    "insurance valuation"
+  ],
+  "chunks": [
+    {
+      "topic": "Glassine sleeve packing",
+      "text": "Glassine sleeve packing: Insert one mounted print into each glassine sleeve.",
+      "source": "dispatch-note.txt",
+      "id": "D1.1"
+    },
+    {
+      "topic": "Humidity card placement",
+      "text": "Humidity card placement: Place one humidity card inside the inner lid of every archive carton.",
+      "source": "dispatch-note.txt",
+      "id": "D1.2"
+    },
+    {
+      "topic": "Transit foam spacing",
+      "text": "Transit foam spacing: Leave a 30 millimeter foam buffer around each framed object.",
+      "source": "dispatch-note.txt",
+      "id": "D1.3"
+    },
+    {
+      "topic": "Dispatch inspection",
+      "text": "Dispatch inspection: Two technicians must initial the condition record before sealing.",
+      "source": "dispatch-note.txt",
+      "id": "D1.4"
+    },
+    {
+      "topic": "Dispatch cutoff",
+      "text": "Dispatch cutoff: Sealed crates must reach the collection bay by 15:30 local time.",
+      "source": "dispatch-note.txt",
+      "id": "D1.5"
+    },
+    {
+      "topic": "Linen tape use",
+      "text": "Linen tape use: Seal only the outer wrapping seams with linen tape.",
+      "source": "dispatch-note.txt",
+      "id": "D1.6"
+    },
+    {
+      "topic": "Crate label position",
+      "text": "Crate label position: Affix the handling label to the upper right face.",
+      "source": "dispatch-note.txt",
+      "id": "D1.7"
+    },
+    {
+      "topic": "Seal discrepancy",
+      "text": "Seal discrepancy: Send the crate to the inspection bench if the numbered seal differs from the manifest.",
+      "source": "dispatch-note.txt",
+      "id": "D1.8"
+    },
+    {
+      "topic": "MAT101 Acid-free tissue",
+      "text": "code = MAT101 · material = Acid-free tissue · pack_quantity = 48 · unit = sheets",
+      "row": [
+        "MAT101",
+        "Acid-free tissue",
+        "48",
+        "sheets"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.1"
+    },
+    {
+      "topic": "MAT102 Glassine sleeves",
+      "text": "code = MAT102 · material = Glassine sleeves · pack_quantity = 24 · unit = sleeves",
+      "row": [
+        "MAT102",
+        "Glassine sleeves",
+        "24",
+        "sleeves"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.2"
+    },
+    {
+      "topic": "MAT103 Linen tape",
+      "text": "code = MAT103 · material = Linen tape · pack_quantity = 12 · unit = rolls",
+      "row": [
+        "MAT103",
+        "Linen tape",
+        "12",
+        "rolls"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.3"
+    },
+    {
+      "topic": "MAT104 Blue corner guards",
+      "text": "code = MAT104 · material = Blue corner guards · pack_quantity = 16 · unit = pieces",
+      "row": [
+        "MAT104",
+        "Blue corner guards",
+        "16",
+        "pieces"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.4"
+    },
+    {
+      "topic": "MAT105 Tyvek wraps",
+      "text": "code = MAT105 · material = Tyvek wraps · pack_quantity = 20 · unit = wraps",
+      "row": [
+        "MAT105",
+        "Tyvek wraps",
+        "20",
+        "wraps"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.5"
+    },
+    {
+      "topic": "MAT106 Transit foam",
+      "text": "code = MAT106 · material = Transit foam · pack_quantity = 6 · unit = panels",
+      "row": [
+        "MAT106",
+        "Transit foam",
+        "6",
+        "panels"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.6"
+    },
+    {
+      "topic": "MAT107 Humidity cards",
+      "text": "code = MAT107 · material = Humidity cards · pack_quantity = 10 · unit = cards",
+      "row": [
+        "MAT107",
+        "Humidity cards",
+        "10",
+        "cards"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.7"
+    },
+    {
+      "topic": "MAT108 Archive cartons",
+      "text": "code = MAT108 · material = Archive cartons · pack_quantity = 8 · unit = cartons",
+      "row": [
+        "MAT108",
+        "Archive cartons",
+        "8",
+        "cartons"
+      ],
+      "source": "material-catalogue.csv",
+      "id": "D2.8"
+    }
+  ],
+  "retrieval": {
+    "chunking": "Sentence or CSV record; 750-character text ceiling",
+    "threshold": 0.52,
+    "splitConjunction": true
+  },
+  "outputContract": {
+    "status": [
+      "answered",
+      "clarify",
+      "refused"
+    ],
+    "text": "string",
+    "citations": "Array<{id, source, text}>",
+    "tool": "optional registry ID"
+  }
+}

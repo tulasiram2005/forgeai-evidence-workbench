@@ -1,0 +1,18 @@
+{
+  "compiler": "Deterministic local compiler",
+  "inputs": [
+    {
+      "source": "gannet.pdf",
+      "sha256": "5322fce019f7fd77132cdae8a1832fc07c6dfc94c93eab520a797b5aeb9435da"
+    },
+    {
+      "source": "parts.csv",
+      "sha256": "e0768c4164512d6c4d783f74a4d773a75007269c987d7fb74b336b011e17f193"
+    },
+    {
+      "source": "tern.pdf",
+      "sha256": "bd46ef35e3bff0f55b13739d8942d82ffb6a86bdb382ccb1a2688c72897b53ce"
+    }
+  ],
+  "enrichment": null
+}
