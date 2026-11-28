@@ -3,7 +3,7 @@ import {resolve,join,relative,dirname,extname} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createInterface} from 'node:readline/promises';
-import {connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
+import {answer,connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
 import {fileURLToPath} from 'node:url';
 import {Worker} from 'node:worker_threads';
 
@@ -47,6 +47,11 @@ async function runBuild(workerData,budgetMs){
   }finally{clearTimeout(timer);await worker.terminate();}
 }
 async function runtimeAnswer(def,query){
+  if(def.retrieval?.gate){
+    const {loadLocalGate,crossScores}=await import('./retrieval/local-gate.mjs');
+    await loadLocalGate();
+    if(def.retrieval.gate.reranker)return answer(def,query,undefined,crossScores(def,[query]));
+  }
   if(def.runtime?.kind==='local-evidence-selector')return (await import('./tournament.mjs')).modelAnswer(def,query);
   return connectedAnswer(def,query);
 }
@@ -71,6 +76,10 @@ async function main(){
       factBased:scores.filter(r=>r.passed).length,flips:scores.filter(r=>r.previous!==r.passed),scores},null,2));
     return;
   }
+  if(command==='diagnose-second'){
+    const {diagnoseSecond}=await import('./retrieval/diagnose-second.mjs');
+    console.log(JSON.stringify(await diagnoseSecond(args[0],documents),null,2));return;
+  }
   if(command==='diagnose'){
     const {diagnose}=await import('./retrieval/diagnose.mjs');
     console.log(JSON.stringify(await diagnose(args[0],documents),null,2));
@@ -78,7 +87,7 @@ async function main(){
   }
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),contextual:args.includes('--contextual')||args.includes('--expand-index'),expandIndex:args.includes('--expand-index')}),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')}),null,2));
     return;
   }
   if(command==='impact'){
@@ -132,7 +141,7 @@ async function main(){
   if(command==='build' || command==='forge'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
-    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),contextual:args.includes('--contextual')||args.includes('--expand-index'),expandIndex:args.includes('--expand-index')};
+    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')};
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}

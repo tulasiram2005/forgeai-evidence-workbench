@@ -223,3 +223,5 @@ del {background:#f6dfd2;color:#743a25} ins {background:#dceadc;color:#19452d}
 @media(max-width:650px){.field-method table{table-layout:fixed}.field-method th{overflow-wrap:anywhere}}
 /* Reserve the opening dossier's four rows while its interactive cells hydrate. */
 #score-meter:empty {min-height:113px}
+
+.gate-choice {display:flex;align-items:center;gap:8px}.gate-choice input {width:auto;min-height:0;margin:0}

@@ -53,6 +53,6 @@
 <div class="two"><div><label for="audience">Audience <small>optional</small></label><input id="audience" maxlength="180" placeholder="e.g. shift leads"></div><div><label for="tone">Tone <small>optional</small></label><input id="tone" maxlength="180" placeholder="e.g. precise and brief"></div></div>
 <label for="files">Source documents</label><input id="files" type="file" multiple accept=".txt,.md,.csv,text/plain,text/markdown,text/csv"><p class="hint">TXT, Markdown or CSV · up to 12 files, 160 KB each</p>
 <details id="paste-block"><summary>Paste a document</summary><label for="doc-name">Document name</label><input id="doc-name" maxlength="90" placeholder="handbook.txt"><label for="doc-text">Source text</label><textarea id="doc-text" rows="4" maxlength="160000" placeholder="Paste the source material here…"></textarea><button type="button" id="add-document" class="outline">Add document +</button></details>
-<ul id="staged-list"></ul><p id="build-error" role="alert"></p><button class="primary" id="compile" type="submit">Compile and evaluate <span aria-hidden="true">↗</span></button>
+<ul id="staged-list"></ul><label class="gate-choice"><input type="checkbox" id="gate-toggle"> Calibrate answerability on these documents</label><p id="build-error" role="alert"></p><button class="primary" id="compile" type="submit">Compile and evaluate <span aria-hidden="true">↗</span></button>
 </form></dialog>
 </body></html>

@@ -376,6 +376,10 @@ byId('build-form').addEventListener('submit', async event => {
     button.textContent = 'Evaluating…';
     await new Promise(resolve => setTimeout(resolve, 30));
     const opts = {};
+    if(byId('gate-toggle').checked){
+      await (await import('./static-encoder.mjs')).loadGateModel();
+      opts.gateV2=true;opts.contextual=true;
+    }
     for (const key of ['audience','tone']) if (byId(key).value.trim()) opts[key] = byId(key).value.trim();
     customRun = await compile(brief, [...staged], opts);
     ++requestToken;

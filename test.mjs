@@ -261,3 +261,20 @@ test('index expansion never becomes answer text, quoted evidence or reference fa
   assert.ok(!JSON.stringify(actual).includes(synthetic));
   assert.equal(factVerdict(def,{status:'answered',must_include_facts:[synthetic],acceptable_sources:['oven.txt']},actual).passed,false);
 });
+
+import {loadLocalGate} from './retrieval/local-gate.mjs';
+import {gateRows} from './public/gate.mjs';
+test('generated-only operating point meets the cap and maximizes supported recall',async()=>{
+  await loadLocalGate();
+  const r=build('Explain kiln and glaze procedures.',docs,{gateV2:true});
+  const c=r.report.calibration;
+  assert.ok(c.negatives>=60);
+  assert.equal(new Set(c.samples.map(s=>s.q)).size,c.samples.length);
+  assert.ok(c.samples.filter(s=>!s.gold).every(s=>!docs.some(d=>d.text.toLowerCase().includes(s.attribute))));
+  assert.ok(c.selected.falseAnswers/c.negatives<=0.1);
+  assert.equal(c.selected.hits,Math.max(...c.curve.filter(p=>p.falseAnswers<=0.1*c.negatives).map(p=>p.hits)));
+  const rows=gateRows(r.definition,'How long should the kiln cool?');
+  assert.ok(rows.length<=3 && rows.length>0);
+  for(const k of ['cosine','margin','coverage','unmatchedRare','typeMatch','heading','score'])assert.ok(Number.isFinite(rows[0][k]));
+  assert.deepEqual(r.definition.retrieval.gate.cut,c.selected.cut);
+});
