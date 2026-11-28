@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What day is the last chance to name our rowers?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Thursday"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where do officials check the shell on the scale?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "pontoon Hazel"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Which colour identifies a substitute on race day?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "violet"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How far in advance can I see the running order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "35 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Who handles a complaint about our assigned water position?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "race secretary"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "What signal device comes in the steering kit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "brass whistle"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which feed shows the line-crossing footage?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "channel 7"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where should we put the blades after rowing?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Marlin"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How many people must initial the record of our finish time?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "two"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "When can the winners pick up their awards?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "noon"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "What fee is charged for a lane objection?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which battery powers the finish camera?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What length is a reserve bib?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who made the brass whistle?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How many boats fit at pontoon Hazel?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How long are timing slips retained?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the race secretary\u2019s mobile number?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How much weight can rack Marlin support?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]
