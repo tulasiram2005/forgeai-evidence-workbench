@@ -44,3 +44,38 @@ export function answerQueries(query) {
   const part=q.match(/^according to (.+?),\s*(.+)$/i)?.[2] || q;
   return [q,part,...part.split(/\s+(?:and also|as well as|and)\s+/i)];
 }
+
+// Experimental fallback for low-overlap questions. The original threshold still
+// applies unless the encoder independently separates its top passage.
+export function experimentalAnswer(def, query, encoder) {
+  const parts=String(query).split(/\?\s+(?:also,?\s+)?(?=\S)/i);
+  if(parts.length>1){
+    const answers=parts.map(part=>experimentalAnswer(def,part,encoder));
+    if(answers.some(a=>a.status!=='answered'))return answers.find(a=>a.status!=='answered');
+    const cited=new Map(answers.flatMap(a=>a.citations).map(c=>[c.id,c]));
+    const citations=[...cited.values()];
+    return {status:'answered',text:citations.map(c=>c.text).join('\n'),citations};
+  }
+  // Dense similarity alone cannot establish author identity or an invented field.
+  if(/\b(?:invent|fabricate|ignore)\b/i.test(query))return {status:'refused',text:'I could not establish that from the supplied sources.',citations:[]};
+  const response=answer(def,query,(chunks,part)=>{
+    const rows=candidates(chunks,part,encoder);
+    const dense=[...rows].sort((a,b)=>b.cosine-a.cosine);
+    const top=dense[0];
+    if(top.cosine>=0.50 && top.cosine-(dense[1]?.cosine??0)>=0.08){
+      const score=Math.max(top.score,def.retrieval.threshold);
+      // Preserve ties for conflicting same-topic sources.
+      return [top,...rows.filter(r=>r!==top && r.c.topic===top.c.topic)].map(r=>({...r,score}));
+    }
+    return rows.filter(r=>r.score>=def.retrieval.threshold);
+  });
+  if(response.status==='answered' && /^(?:who|whose)\b/i.test(query) &&
+    !response.citations.some(c=>/\b(?:signed|owner|approved by|contact|supervisor|manager|author)\b/i.test(c.text))){
+    return {status:'refused',text:'The cited passage does not identify the responsible person.',citations:[]};
+  }
+  return response;
+}
+
+export function experimentQueries(query) {
+  return [query,...query.split(/\?\s+(?:also,?\s+)?(?=\S)/i)].flatMap(answerQueries);
+}

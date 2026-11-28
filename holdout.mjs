@@ -8,8 +8,14 @@ export async function holdout(folder, readDocuments, options={}) {
   const {definition} = build(brief, docs, options);
   // Only open reviewer expectations after the agent definition is final.
   const cases = JSON.parse(await readFile(join(folder,'cases.json'),'utf8'));
+  let runner=answer;
+  if(options.experimentalDense){
+    const {experimentalAnswer,experimentQueries,encode}=await import('./retrieval/hybrid.mjs');
+    const encoder=encode(definition,cases.flatMap(c=>experimentQueries(c.question)));
+    runner=(d,q)=>experimentalAnswer(d,q,encoder);
+  }
   const results = cases.map(entry => {
-    const actual = answer(definition,entry.question);
+    const actual = runner(definition,entry.question);
     const words = s => s.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [];
     const contains = (s,phrase) => (' '+words(s).join(' ')+' ').includes(' '+words(phrase).join(' ')+' ');
     const supported = (entry.facts ?? []).every((fact,i) => contains(actual.text,fact) &&

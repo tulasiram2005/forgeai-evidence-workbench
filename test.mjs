@@ -165,3 +165,17 @@ test('split validation excludes reserved cases from repair targets and exercises
   assert.equal(r.report.judgeControls.filter(c=>c.rejected).length,4);
   assert.equal(r.iterations[r.report.retainedRound-1].passed,r.report.passed);
 });
+
+test('blind reviewer rejects an unsupported number beside a genuine citation',async()=>{
+  const c=run.definition.chunks[0];
+  const r=await runReview(run.definition,[{question:'How long?',status:'answered',facts:['23 hours'],source:c.source}],
+    ()=>({status:'answered',text:'Wait 23 hours',citations:[c]}));
+  assert.equal(r.passed,0);
+  assert.match(r.results[0].issues.join(' '),/does not support phrase/);
+});
+
+test('PDF page provenance survives retrieval',()=>{
+  const text='Pickup time: Arrive at noon.';
+  const def=build('Explain pickup time',[{name:'schedule.pdf',text,pages:['',text]}]).definition;
+  assert.equal(answer(def,'Pickup time').citations[0].page,2);
+});

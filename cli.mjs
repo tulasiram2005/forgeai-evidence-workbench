@@ -53,7 +53,7 @@ async function runtimeAnswer(def,query){
 async function main(){
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation')}),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense')}),null,2));
     return;
   }
   if(command==='impact'){
@@ -151,12 +151,13 @@ async function main(){
       await rename(tmp,target);
     }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));
-  }else if(command==='ask' && args[1]==='--semantic'){
-    const {encode,semanticAnswer,answerQueries}=await import('./retrieval/hybrid.mjs');
+  }else if(command==='ask' && ['--semantic','--experimental-dense'].includes(args[1])){
+    const {encode,semanticAnswer,answerQueries,experimentalAnswer,experimentQueries}=await import('./retrieval/hybrid.mjs');
     const def=await json(args[0]), q=args.slice(2).join(' ');
     if(def.runtime?.kind==='local-evidence-selector')throw Error('Use ask without --semantic to run the tournament prompt.');
-    const encoder=encode(def,answerQueries(q));
-    console.log(JSON.stringify({...semanticAnswer(def,q,encoder),encoder:encoder.model},null,2));
+    const experimental=args[1]==='--experimental-dense';
+    const encoder=encode(def,experimental?experimentQueries(q):answerQueries(q));
+    console.log(JSON.stringify({...(experimental?experimentalAnswer:semanticAnswer)(def,q,encoder),encoder:encoder.model},null,2));
   }else if(command==='ask'){
     const def=await json(args[0]),question=args.slice(1).join(' ');
     const response=await runtimeAnswer(def,question);
