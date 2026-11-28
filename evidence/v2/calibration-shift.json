@@ -1,0 +1,898 @@
+[
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "generated",
+    "question": "What are the details for Record a reading every 7?",
+    "topCosine": 0.693934977054596
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "generated",
+    "question": "What are the details for Pause acquisition when drift exceeds?",
+    "topCosine": 0.8359209895133972
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "generated",
+    "question": "What are the details for Power the chamber for 16?",
+    "topCosine": 0.44262298941612244
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "generated",
+    "question": "What are the details for Place a 34 gram weight?",
+    "topCosine": 0.7292270064353943
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "generated",
+    "question": "What are the details for Disconnect power once the housing?",
+    "topCosine": 0.5301200151443481
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "reviewer paraphrase",
+    "question": "How long should the instrument heat up before adjustment?",
+    "topCosine": 0.6255859732627869
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "reviewer paraphrase",
+    "question": "What mass do I put on the scale for setup?",
+    "topCosine": 0.5316929817199707
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "reviewer paraphrase",
+    "question": "How frequently should I take measurements?",
+    "topCosine": 0.3948900103569031
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "reviewer paraphrase",
+    "question": "At what displacement must I stop collecting data?",
+    "topCosine": 0.3525159955024719
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "group": "reviewer paraphrase",
+    "question": "How cool should the case be before unplugging it?",
+    "topCosine": 0.4328559935092926
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for Dispatch lead?",
+    "topCosine": 0.5555089712142944
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for Record amendments in the office?",
+    "topCosine": 0.8744369745254517
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for BZ91 17 pieces?",
+    "topCosine": 0.6552850008010864
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for RX32 23 pieces?",
+    "topCosine": 0.6678550243377686
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for Return window?",
+    "topCosine": 0.5548819899559021
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "generated",
+    "question": "What are the details for Freight threshold?",
+    "topCosine": 0.6203230023384094
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "reviewer paraphrase",
+    "question": "How many units come in one BZ91 box?",
+    "topCosine": 0.6595100164413452
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "reviewer paraphrase",
+    "question": "How many units arrive if we buy one RX32 box?",
+    "topCosine": 0.6177539825439453
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "reviewer paraphrase",
+    "question": "How soon will Gannet send my purchase?",
+    "topCosine": 0.5980319976806641
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "reviewer paraphrase",
+    "question": "How long may I keep a sealed Tern item before sending it back?",
+    "topCosine": 0.5401840209960938
+  },
+  {
+    "suite": "holdout",
+    "name": "spares",
+    "group": "reviewer paraphrase",
+    "question": "What invoice amount qualifies for free shipping from Tern?",
+    "topCosine": 0.7262920141220093
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Taxi ceiling?",
+    "topCosine": 0.5647100210189819
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Receipt window?",
+    "topCosine": 0.5818840265274048
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Study allowance?",
+    "topCosine": 0.7128720283508301
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Record amendments in the office?",
+    "topCosine": 0.8744369745254517
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Cover request?",
+    "topCosine": 0.5910000205039978
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "generated",
+    "question": "What are the details for Rest interval?",
+    "topCosine": 0.6871569752693176
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "reviewer paraphrase",
+    "question": "How much can I claim for my ride home after a late shift?",
+    "topCosine": 0.562279999256134
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "reviewer paraphrase",
+    "question": "How long do I have to turn in a cab slip?",
+    "topCosine": 0.3130660057067871
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "reviewer paraphrase",
+    "question": "How early should I arrange a substitute?",
+    "topCosine": 0.2861100137233734
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "reviewer paraphrase",
+    "question": "What break do I get between shifts?",
+    "topCosine": 0.32386699318885803
+  },
+  {
+    "suite": "holdout",
+    "name": "staff",
+    "group": "reviewer paraphrase",
+    "question": "How much time off can I take for classes?",
+    "topCosine": 0.5152729749679565
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Prefix each master file with?",
+    "topCosine": 0.6852750182151794
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for A second operator signs the?",
+    "topCosine": 0.3676699995994568
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Export viewing copies as TIFF.?",
+    "topCosine": 0.8334130048751831
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Keep scratch scans for 11?",
+    "topCosine": 0.6301940083503723
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Insert the strip with the?",
+    "topCosine": 0.493351012468338
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Use a sable brush on?",
+    "topCosine": 0.555279016494751
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Cap illumination at 38 lux.?",
+    "topCosine": 0.8237149715423584
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "generated",
+    "question": "What are the details for Turn the spindle clockwise.?",
+    "topCosine": 0.6617100238800049
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "Which side of the film should face me as I load it?",
+    "topCosine": 0.3098430037498474
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "What implement is safe for sweeping away specks?",
+    "topCosine": 0.3813740015029907
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "How bright may the lamp be?",
+    "topCosine": 0.35329699516296387
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "Which way do I rotate the take-up hub?",
+    "topCosine": 0.39102399349212646
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "What goes first in the filename for an archival original?",
+    "topCosine": 0.6098290085792542
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "Who countersigns the image proof?",
+    "topCosine": 0.208514004945755
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "What format should the customer receive?",
+    "topCosine": 0.28146299719810486
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "group": "reviewer paraphrase",
+    "question": "When may I discard temporary images?",
+    "topCosine": 0.49742698669433594
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Identification?",
+    "topCosine": 0.5123770236968994
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Orientation?",
+    "topCosine": 0.5675830245018005
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Buddy assignment?",
+    "topCosine": 0.6111909747123718
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Parking?",
+    "topCosine": 0.5536500215530396
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Keyboard collection?",
+    "topCosine": 0.6985539793968201
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Loan period?",
+    "topCosine": 0.6100599765777588
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Lost access card?",
+    "topCosine": 0.7777060270309448
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "generated",
+    "question": "What are the details for Headset exchange?",
+    "topCosine": 0.6881399750709534
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "Which identity paper should I bring on day one?",
+    "topCosine": 0.3477559983730316
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "What time does the welcome session start?",
+    "topCosine": 0.36028000712394714
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "Who matches me with a workplace mentor?",
+    "topCosine": 0.37318599224090576
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "Where can I leave my car when I join?",
+    "topCosine": 0.3197630047798157
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "Where do I pick up my typing gear?",
+    "topCosine": 0.4813700020313263
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "How long can I keep a screen on loan?",
+    "topCosine": 0.6969370245933533
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "Who should hear about my missing entry pass?",
+    "topCosine": 0.4061090052127838
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "group": "reviewer paraphrase",
+    "question": "What needs to go back with my faulty headphones?",
+    "topCosine": 0.5017709732055664
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for Return carrier?",
+    "topCosine": 0.47742700576782227
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for Booking reference?",
+    "topCosine": 0.5925319790840149
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for LK71 matte?",
+    "topCosine": 0.5405809879302979
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for LK83 gloss?",
+    "topCosine": 0.5622289776802063
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for BD54 satin?",
+    "topCosine": 0.5574569702148438
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for Collection point?",
+    "topCosine": 0.39389899373054504
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for Dispute deadline?",
+    "topCosine": 0.7075570225715637
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "generated",
+    "question": "What are the details for Seal colour?",
+    "topCosine": 0.6008260250091553
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "How many thin wedges are supplied under LK71?",
+    "topCosine": 0.43400299549102783
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "What surface treatment will BD54 have?",
+    "topCosine": 0.16595600545406342
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "What quantity does LK83 ship in?",
+    "topCosine": 0.5294049978256226
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "Where does the driver collect an Osprey order?",
+    "topCosine": 0.5632249712944031
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "How long do I get to flag a short shipment?",
+    "topCosine": 0.4861080050468445
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "Which hue identifies a pallet leaving Osprey?",
+    "topCosine": 0.5747519731521606
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "Who transports goods going back to Curlew?",
+    "topCosine": 0.6490060091018677
+  },
+  {
+    "suite": "holdout2",
+    "name": "vendors",
+    "group": "reviewer paraphrase",
+    "question": "Which purchasing reference belongs on the dispatch paperwork?",
+    "topCosine": 0.39383700489997864
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for First notice?",
+    "topCosine": 0.5020059943199158
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Dispatch channel?",
+    "topCosine": 0.6024489998817444
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Purchase evidence?",
+    "topCosine": 0.7688940167427063
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for File owner?",
+    "topCosine": 0.7131680250167847
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Inspection location?",
+    "topCosine": 0.5975520014762878
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Inspection attendance?",
+    "topCosine": 0.8003399968147278
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Inspection fee?",
+    "topCosine": 0.6788169741630554
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "generated",
+    "question": "What are the details for Photographs?",
+    "topCosine": 0.6188859939575195
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "How quickly must I tell you my bike was stolen?",
+    "topCosine": 0.6270250082015991
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "Who gets my initial message?",
+    "topCosine": 0.18617400527000427
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "What paperwork proves I bought it?",
+    "topCosine": 0.5536109805107117
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "Who oversees my case?",
+    "topCosine": 0.428523987531662
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "Where do I take a bicycle the police found?",
+    "topCosine": 0.5625969767570496
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "Who has to come in person?",
+    "topCosine": 0.3745169937610626
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "What does Harbour pay for one check?",
+    "topCosine": 0.6609510183334351
+  },
+  {
+    "suite": "holdout3",
+    "name": "claims",
+    "group": "reviewer paraphrase",
+    "question": "How many pictures should I send showing dents?",
+    "topCosine": 0.5443490147590637
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Ask the duty librarian to?",
+    "topCosine": 0.4070580005645752
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Visitor passes expire after 45?",
+    "topCosine": 0.5337820053100586
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Present a library card at?",
+    "topCosine": 0.6144580245018005
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Use the blue renewal terminal.?",
+    "topCosine": 0.6487029790878296
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for A failed job earns 3?",
+    "topCosine": 0.6367459893226624
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Load ivory stock for proof?",
+    "topCosine": 0.6863610148429871
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Completed posters wait at desk?",
+    "topCosine": 0.7137069702148438
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "generated",
+    "question": "What are the details for Only the floor technician clears?",
+    "topCosine": 0.5602189898490906
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "Who can get me back into a frozen login?",
+    "topCosine": 0.4493879973888397
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "How much time does a guest get?",
+    "topCosine": 0.3416979908943176
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "What should I show to prove my identity?",
+    "topCosine": 0.2848080098628998
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "Which machine extends my pass?",
+    "topCosine": 0.2882019877433777
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "What balance adjustment follows a failed print?",
+    "topCosine": 0.4759719967842102
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "What shade should draft sheets be?",
+    "topCosine": 0.33305901288986206
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "Where do I collect a finished wall print?",
+    "topCosine": 0.4844279885292053
+  },
+  {
+    "suite": "holdout3",
+    "name": "helpdesk",
+    "group": "reviewer paraphrase",
+    "question": "Who can remove a stuck item from the spooler?",
+    "topCosine": 0.33147698640823364
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Lock the prism into a?",
+    "topCosine": 0.6505740284919739
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Allow the lamp 14 minutes?",
+    "topCosine": 0.5393540263175964
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Set the slit width to?",
+    "topCosine": 0.628508985042572
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Use a green reference card.?",
+    "topCosine": 0.30747801065444946
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Save 6 traces for each?",
+    "topCosine": 0.7285259962081909
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for The shift physicist initials the?",
+    "topCosine": 0.5752769708633423
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Write the final spectrum as?",
+    "topCosine": 0.42679300904273987
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "generated",
+    "question": "What are the details for Retain calibration scraps for 18?",
+    "topCosine": 0.6779590249061584
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "What holds the glass wedge steady?",
+    "topCosine": 0.43059301376342773
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "How long do we wait for stable light?",
+    "topCosine": 0.45899200439453125
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "How wide should the opening be?",
+    "topCosine": 0.2326589971780777
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "Which colour target do we align against?",
+    "topCosine": 0.3218579888343811
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "How many recordings do we need per sample?",
+    "topCosine": 0.355987012386322
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "Who must authorize the measurement set?",
+    "topCosine": 0.18957599997520447
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "Which file type do I hand over?",
+    "topCosine": 0.17298099398612976
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "group": "reviewer paraphrase",
+    "question": "When can old setup scraps be discarded?",
+    "topCosine": 0.5733929872512817
+  }
+]
