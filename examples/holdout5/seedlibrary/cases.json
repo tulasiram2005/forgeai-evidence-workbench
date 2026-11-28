@@ -1,0 +1,162 @@
+[
+  {
+    "question": "How many beans can I expect in a packet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 seeds"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where can a new borrower collect identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "kiosk Fern"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How long do donations sit before being shelved?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "What colour sheet tells me my loan is late?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ochre"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Who can extend my checkout?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "seed librarian"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where should I put the jars I brought in?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shelf Iris"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "What fastening material secures the legume bundles?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cotton ties"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which weekday do holds run out?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Tuesday"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "What must I pay if I lose the metal container?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "When can I start collecting my order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "10:35"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How much does a bean envelope weigh?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is membership transferable to a sibling?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who delivers the ochre paper?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How cold is shelf Iris kept?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Can I renew online after the librarian leaves?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What tax applies to replacement tins?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Where are the cotton ties manufactured?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is there a penalty for an unclaimed reservation?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]

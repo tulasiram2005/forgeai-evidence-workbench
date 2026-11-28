@@ -1,0 +1,162 @@
+[
+  {
+    "question": "Where do visitors collect the handheld guide?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Pearl"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How long will the spring mechanism show take?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How many people can join the upstairs group?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "7 visitors"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Who arranges a closed-door visit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gallery registrar"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "What marking validates my photography stand pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "copper stamp"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "When will we hear the final chime?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16:20"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where should I leave the hearing protection?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "drawer Dove"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "What drawing tool is approved for the movement study?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "graphite pencils"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "What charge replaces a missing visitor booklet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which day should a new helper attend induction?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Friday"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which battery fits the audio wand?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who manufactures the copper stamp?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How many stairs lead to the tower tour?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How much does a tripod permit cost?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who sponsors the winding demonstration?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the registrar\u2019s email address?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the guidebook ISBN?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Are lost ear defenders insured?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]
