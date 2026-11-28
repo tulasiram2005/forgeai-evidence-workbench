@@ -1,0 +1,3481 @@
+[
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Where do the sellers pick up identification?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3932670056819916,
+      "margin": 0.037303000688552856,
+      "idfCoverage": 0,
+      "reranker": 0.000011841963896586094
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D1.5",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.5",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D1.5",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.5",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D1.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "counter Moss"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Vendor badges are collected at counter Moss.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Vendor badges are collected at",
+            "text": "Vendor badges are collected at counter Moss.",
+            "source": "operations.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do the sellers pick up identification?",
+          "score": 0.3932670056819916,
+          "margin": 0.037303000688552856,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.\nDay-end receipts go to the hall steward.\nA cracked exhibit receives a silver sticker.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "When will I learn which space is mine?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.18276700377464294,
+      "margin": 0.06355900317430496,
+      "idfCoverage": 0,
+      "reranker": 0.000010018239663622808
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.5",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.5",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D2.5",
+          "D1.5",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "07:15"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Pitch allocation happens at 07:15.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Pitch allocation happens at 07",
+            "text": "Pitch allocation happens at 07:15.",
+            "source": "operations.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When will I learn which space is mine?",
+          "score": 0.18276700377464294,
+          "margin": 0.06355900317430496,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.\nA standard bench spans 180 centimeters.\nPitch allocation happens at 07:15.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Pitch allocation happens at 07",
+              "text": "Pitch allocation happens at 07:15.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How wide is the regular display table?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4265199899673462,
+      "margin": 0.2553749829530716,
+      "idfCoverage": 0,
+      "reranker": 0.000018434539015288465
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D2.5",
+          "D1.1",
+          "D1.4",
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D2.5",
+          "D1.1",
+          "D1.4",
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "180 centimeters"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A standard bench spans 180 centimeters.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "A standard bench spans 180",
+            "text": "A standard bench spans 180 centimeters.",
+            "source": "operations.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How wide is the regular display table?",
+          "score": 0.4265199899673462,
+          "margin": 0.2553749829530716,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A standard bench spans 180 centimeters.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A standard bench spans 180 centimeters.\nDay-end receipts go to the hall steward.\nDemonstration slots last 22 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Where can I get filler for fragile pots?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3388170003890991,
+      "margin": 0.008542001247406006,
+      "idfCoverage": 0,
+      "reranker": 0.000010772982022899669
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          9
+        ],
+        "allFactsByRank": 9,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.5",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.5",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D2.4",
+          "D1.3",
+          "D1.5",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D1.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "bay Wren"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Packing straw is stored in bay Wren.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Packing straw is stored in",
+            "text": "Packing straw is stored in bay Wren.",
+            "source": "operations.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where can I get filler for fragile pots?",
+          "score": 0.3388170003890991,
+          "margin": 0.008542001247406006,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.\nUnsold bowls depart through gate Ash.\nLoaned cloths belong in the linen hamper.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How long may I show visitors my technique?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4561440050601959,
+      "margin": 0.2715270072221756,
+      "idfCoverage": 0,
+      "reranker": 0.0000142694361784379
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          10
+        ],
+        "allFactsByRank": 10,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D1.5",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D1.5",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "22 minutes"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Demonstration slots last 22 minutes.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Demonstration slots last 22 minutes.",
+            "text": "Demonstration slots last 22 minutes.",
+            "source": "operations.pdf",
+            "id": "D2.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long may I show visitors my technique?",
+          "score": 0.4561440050601959,
+          "margin": 0.2715270072221756,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.\nDay-end receipts go to the hall steward.\nA cracked exhibit receives a silver sticker.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How is a damaged display piece marked?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.37980198860168457,
+      "margin": 0.1672539860010147,
+      "idfCoverage": 0,
+      "reranker": 0.000011837515557999723
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.5",
+          "D1.5",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.5",
+          "D1.5",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D2.3",
+          "D1.5",
+          "D2.4",
+          "D2.2",
+          "D1.2",
+          "D1.3",
+          "D2.5",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "silver sticker"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A cracked exhibit receives a silver sticker.",
+        "citations": [
+          {
+            "section": [
+              "pottery fair stall administration"
+            ],
+            "topic": "A cracked exhibit receives a",
+            "text": "A cracked exhibit receives a silver sticker.",
+            "source": "handover.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How is a damaged display piece marked?",
+          "score": 0.37980198860168457,
+          "margin": 0.1672539860010147,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.\nDay-end receipts go to the hall steward.\nVendor badges are collected at counter Moss.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Who takes the sales paperwork at closing?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3782849907875061,
+      "margin": 0.11081600189208984,
+      "idfCoverage": 0,
+      "reranker": 0.000009781037988432217
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D1.5",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D1.5",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "hall steward"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Day-end receipts go to the hall steward.",
+        "citations": [
+          {
+            "section": [
+              "pottery fair stall administration"
+            ],
+            "topic": "Day-end receipts go to the",
+            "text": "Day-end receipts go to the hall steward.",
+            "source": "handover.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who takes the sales paperwork at closing?",
+          "score": 0.3782849907875061,
+          "margin": 0.11081600189208984,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Day-end receipts go to the hall steward.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Day-end receipts go to the hall steward.\nVendor badges are collected at counter Moss.\nUnsold bowls depart through gate Ash.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Which exit should I take with my leftover stock?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.16942399740219116,
+      "margin": 0.0019779950380325317,
+      "idfCoverage": 0,
+      "reranker": 0.000010816703252203297
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.3",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.5",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.3",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.5",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D2.5",
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D1.5",
+          "D1.1",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "gate Ash"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Unsold bowls depart through gate Ash.",
+        "citations": [
+          {
+            "section": [
+              "pottery fair stall administration"
+            ],
+            "topic": "Unsold bowls depart through gate",
+            "text": "Unsold bowls depart through gate Ash.",
+            "source": "handover.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which exit should I take with my leftover stock?",
+          "score": 0.16942399740219116,
+          "margin": 0.0019779950380325317,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Packing straw is stored in bay Wren.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Packing straw is stored in bay Wren.\nUnsold bowls depart through gate Ash.\nDay-end receipts go to the hall steward.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How much cash must I leave to use secure storage?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3405289947986603,
+      "margin": 0.13407500088214874,
+      "idfCoverage": 0,
+      "reranker": 0.000013660443983098958
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.5",
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.5",
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D2.5",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "8 euros"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "One locker key requires 8 euros as security.",
+        "citations": [
+          {
+            "section": [
+              "pottery fair stall administration"
+            ],
+            "topic": "One locker key requires 8",
+            "text": "One locker key requires 8 euros as security.",
+            "source": "handover.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much cash must I leave to use secure storage?",
+          "score": 0.3405289947986603,
+          "margin": 0.13407500088214874,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "One locker key requires 8 euros as security.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "One locker key requires 8 euros as security.\nPacking straw is stored in bay Wren.\nDay-end receipts go to the hall steward.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Where do borrowed table covers go afterward?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4294619858264923,
+      "margin": 0.06107798218727112,
+      "idfCoverage": 0,
+      "reranker": 0.000012387939932523295
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D2.5",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.2",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D2.5",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.5",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.3",
+          "D1.4",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "linen hamper"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Loaned cloths belong in the linen hamper.",
+        "citations": [
+          {
+            "section": [
+              "pottery fair stall administration"
+            ],
+            "topic": "Loaned cloths belong in the",
+            "text": "Loaned cloths belong in the linen hamper.",
+            "source": "handover.md",
+            "id": "D1.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do borrowed table covers go afterward?",
+          "score": 0.4294619858264923,
+          "margin": 0.06107798218727112,
+          "promoted": false,
+          "lexicalMaximum": 0.20124999999999998
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Loaned cloths belong in the linen hamper.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Loaned cloths belong in the linen hamper.\nDay-end receipts go to the hall steward.\nPacking straw is stored in bay Wren.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Day-end receipts go to the hall steward."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "When does the locker key deposit expire?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.44294100999832153,
+      "margin": 0.22909800708293915,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.002836521714925766
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.2",
+          "D1.5",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.2",
+          "D1.5",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D1.3",
+          "D2.5",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.1",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "When does the locker key deposit expire?",
+          "score": 0.44294100999832153,
+          "margin": 0.22909800708293915,
+          "promoted": false,
+          "lexicalMaximum": 0.422
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "One locker key requires 8 euros as security.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "One locker key requires 8 euros as security.\nPacking straw is stored in bay Wren.\nDemonstration slots last 22 minutes.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "One locker key requires 8 euros as security."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Who manufactures the standard bench?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5992929935455322,
+      "margin": 0.2925869822502136,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.44052234292030334
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.5",
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D1.1",
+          "D2.1",
+          "D2.5",
+          "D1.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.5",
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D1.1",
+          "D2.1",
+          "D2.5",
+          "D1.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D1.2",
+          "D1.5",
+          "D1.1",
+          "D2.4",
+          "D2.2",
+          "D1.4",
+          "D1.3",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who manufactures the standard bench?",
+          "score": 0.5992929935455322,
+          "margin": 0.2925869822502136,
+          "promoted": true,
+          "lexicalMaximum": 0.58
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A standard bench spans 180 centimeters.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A standard bench spans 180 centimeters.\nLoaned cloths belong in the linen hamper.\nDay-end receipts go to the hall steward.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "A standard bench spans 180 centimeters.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Does gate Ash charge a vehicle fee?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3004840016365051,
+      "margin": 0.03481799364089966,
+      "idfCoverage": 0.34669185961435073,
+      "reranker": 0.00328668300062418
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D1.1",
+          "D1.5",
+          "D2.4",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D1.1",
+          "D1.5",
+          "D2.4",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5",
+          "D1.1",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Does gate Ash charge a vehicle fee?",
+          "score": 0.3004840016365051,
+          "margin": 0.03481799364089966,
+          "promoted": false,
+          "lexicalMaximum": 0.3168
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Unsold bowls depart through gate Ash.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Unsold bowls depart through gate Ash.\nDay-end receipts go to the hall steward.\nOne locker key requires 8 euros as security.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Unsold bowls depart through gate Ash."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "What does a replacement vendor badge cost?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.6060870289802551,
+      "margin": 0.3111560344696045,
+      "idfCoverage": 0.2096958523010004,
+      "reranker": 0.0009903513127937913
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.5",
+          "D1.3",
+          "D1.5",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.5",
+          "D1.3",
+          "D1.5",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.4",
+          "D2.5",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.4",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What does a replacement vendor badge cost?",
+          "score": 0.6060870289802551,
+          "margin": 0.3111560344696045,
+          "promoted": true,
+          "lexicalMaximum": 0.45666666666666667
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.\nA cracked exhibit receives a silver sticker.\nOne locker key requires 8 euros as security.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Vendor badges are collected at counter Moss.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Vendor badges are collected at counter Moss.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "What is the capacity of the linen hamper?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4817200005054474,
+      "margin": 0.14243999123573303,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.9702544212341309
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.5",
+          "D2.3",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D1.2",
+          "D2.5",
+          "D1.1",
+          "D1.3",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.5",
+          "D2.3",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D1.2",
+          "D2.5",
+          "D1.1",
+          "D1.3",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.5",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D2.5",
+          "D1.2",
+          "D1.3",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the capacity of the linen hamper?",
+          "score": 0.4817200005054474,
+          "margin": 0.14243999123573303,
+          "promoted": false,
+          "lexicalMaximum": 0.4933333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Loaned cloths belong in the linen hamper.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Loaned cloths belong in the linen hamper.\nA standard bench spans 180 centimeters.\nPacking straw is stored in bay Wren.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Loaned cloths belong in the",
+              "text": "Loaned cloths belong in the linen hamper.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Packing straw is stored in",
+              "text": "Packing straw is stored in bay Wren.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.5",
+          "source": "handover.md",
+          "text": "Loaned cloths belong in the linen hamper."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "Which insurer covers a cracked exhibit?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.48516300320625305,
+      "margin": 0.17868000268936157,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.9982609152793884
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.5",
+          "D1.3",
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.5",
+          "D1.3",
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.5",
+          "D1.4",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which insurer covers a cracked exhibit?",
+          "score": 0.48516300320625305,
+          "margin": 0.17868000268936157,
+          "promoted": false,
+          "lexicalMaximum": 0.6088888888888888
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A cracked exhibit receives a silver sticker.\nDay-end receipts go to the hall steward.\nOne locker key requires 8 euros as security.",
+          "citations": [
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "One locker key requires 8",
+              "text": "One locker key requires 8 euros as security.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "A cracked exhibit receives a silver sticker.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "A cracked exhibit receives a silver sticker."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How tall is counter Moss?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3304159939289093,
+      "margin": 0.09266199171543121,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.06267800182104111
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D2.4",
+          "D1.5",
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D2.4",
+          "D1.5",
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.4",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D2.5",
+          "D1.2",
+          "D1.3",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How tall is counter Moss?",
+          "score": 0.3304159939289093,
+          "margin": 0.09266199171543121,
+          "promoted": false,
+          "lexicalMaximum": 0.4933333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Vendor badges are collected at counter Moss.\nA standard bench spans 180 centimeters.\nUnsold bowls depart through gate Ash.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Vendor badges are collected at",
+              "text": "Vendor badges are collected at counter Moss.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "A standard bench spans 180",
+              "text": "A standard bench spans 180 centimeters.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Unsold bowls depart through gate",
+              "text": "Unsold bowls depart through gate Ash.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Vendor badges are collected at counter Moss.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "ceramics",
+    "question": "How many visitors can attend a demonstration slot?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5693910121917725,
+      "margin": 0.2189280092716217,
+      "idfCoverage": 0.16597284344183957,
+      "reranker": 0.6475483179092407
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.2",
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D1.1",
+          "D2.1",
+          "D1.3",
+          "D2.4",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How many visitors can attend a demonstration slot?",
+          "score": 0.5693910121917725,
+          "margin": 0.2189280092716217,
+          "promoted": true,
+          "lexicalMaximum": 0.3376
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Demonstration slots last 22 minutes.\nA cracked exhibit receives a silver sticker.\nDay-end receipts go to the hall steward.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Demonstration slots last 22 minutes.",
+              "text": "Demonstration slots last 22 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "A cracked exhibit receives a",
+              "text": "A cracked exhibit receives a silver sticker.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "pottery fair stall administration"
+              ],
+              "topic": "Day-end receipts go to the",
+              "text": "Day-end receipts go to the hall steward.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Demonstration slots last 22 minutes.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Demonstration slots last 22 minutes.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  }
+]

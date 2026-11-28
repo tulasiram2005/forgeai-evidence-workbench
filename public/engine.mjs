@@ -1,3 +1,6 @@
+import {overlap as questionOverlap} from './verdict.mjs';
+import {calibrateGate,gateRows} from './gate.mjs';
+import {validationIds,judgeControls,splitCases,splitScore} from './validation.mjs';
 // Shared by the browser and CLI. No network, persistence or ambient tool access.
 const stop = new Set('a an the and or to of in is are on for what which how does do about can i me tell please with by at as that it from my our your we should when where who must policy rules rule explain describe need assistant answer questions give help staff team according required apply applies details compare summarize requirement requirements both source sources document documents covers cover says say'.split(' '));
 const terms = s => [...new Set(String(s).toLowerCase().match(/[\p{L}\p{N}]+/gu)?.map(t=>t.length>4?t.replace(/(?:ing|s)$/,''):t).filter(t=>!stop.has(t)) || [])];
@@ -20,7 +23,7 @@ function csvRows(input) {
   if(value || row.length) {row.push(value.trim());rows.push(row);}
   return rows.filter(r=>r.some(Boolean));
 }
-export function indexDocs(docs) {
+export function indexDocs(docs, opts={}) {
   if(!Array.isArray(docs)||!docs.length||docs.length>limits.files) throw Error('Supply 1–32 documents.');
   if(docs.some(d=>!d || typeof d.name!=='string'||typeof d.text!=='string') || new Set(docs.map(d=>d.name)).size!==docs.length) throw Error('Each source needs a unique filename and text.');
   if(docs.reduce((n,d)=>n+d.text.length,0)>limits.chars) throw Error('Corpus exceeds 400,000 characters.');
@@ -29,9 +32,17 @@ export function indexDocs(docs) {
     let entries=[];
     if(/\.csv$/i.test(d.name)){
       const [head,...rows]=csvRows(d.text);
-      entries=rows.map(r=>({topic:r.slice(0,2).join(' '),text:r.map((v,i)=>(head[i]||'Value')+' = '+v).join(' · '), row:r}));
+      entries=rows.map(r=>({topic:r.slice(0,2).join(' '),text:r.map((v,i)=>(head[i]||'Value')+' = '+v).join(' · '), row:r,...(opts.contextual?{columns:head}:{})}));
     }else {
-      for(const raw of d.text.split(/\r?\n/)){
+      const headings=[];
+      const pages=d.pages ?? [d.text];
+      for(const [pageIndex,page] of pages.entries()) for(const raw of page.split(/\r?\n/)){
+        const heading=opts.contextual && /\.md$/i.test(d.name) && raw.match(/^ {0,3}(#{1,6})\s+(.+?)\s*#*$/);
+        if(heading){
+          headings.length=heading[1].length-1;
+          if(!suspicious.test(heading[2]))headings.push(heading[2]);
+          continue;
+        }
         for(const part of raw.split(/(?<=[.!?])\s+(?=[A-Z0-9])/)){
           const text=part.trim().replace(/^[-*#]+\s*/,'');
           if(text.length<8||!terms(text).length||suspicious.test(text)) continue;
@@ -45,7 +56,7 @@ export function indexDocs(docs) {
             const slice=remainder.slice(0,end).trimEnd();
             remainder=remainder.slice(end).trimStart();
             const label=slice.match(/^([^:]{2,90}):/);
-            entries.push({topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
+            entries.push({...(headings.some(Boolean)?{section:headings.filter(Boolean)}:{}),...(d.pages?{page:pageIndex+1}:{}),topic:label?.[1]||slice.split(/\s+/).slice(0,5).join(' '),text:slice});
           }
         }
       }
@@ -75,7 +86,7 @@ function selectTools(brief,docs) {
   }
   return registry.filter(tool=>allowed.has(tool)&&!denied.has(tool)&&(tool!=='csv_lookup'||docs.some(d=>/\.csv$/i.test(d.name))));
 }
-const cited=c=>({id:c.id,source:c.source,text:c.text});
+const cited=c=>({id:c.id,source:c.source,text:c.text,...(c.page?{page:c.page}:{})});
 const refusal=(text=unknown)=>({status:'refused',text,citations:[]});
 export function rank(chunks,question){
   const qt=terms(question);
@@ -87,9 +98,33 @@ export function rank(chunks,question){
     return {c,score,matched};
   }).sort((a,b)=>b.score-a.score || b.matched-a.matched);
 }
-export function answer(def,q,ranker=rank){
+export function withPointers(response,chunks,question){
+  if(response.status!=='refused')return response;
+  const pointers=[];
+  for(const {c,matched} of rank(chunks,question)){
+    if(!matched)continue;
+    const sentences=c.text.match(/[^.!?]+(?:[.!?]+|$)/g)??[c.text];
+    const highlighted=rank(sentences.map(text=>({text:text.trim(),topic:c.topic})),question)[0].c.text;
+    pointers.push({label:'closest evidence, not confirmed',...cited(c),highlighted});
+    if(pointers.length===3)break;
+  }
+  return {...response,pointers};
+}
+export function answer(def,q,ranker=rank,rerank){
+  return withPointers(answerCore(def,q,ranker,rerank),def.chunks,q);
+}
+function answerCore(def,q,ranker,rerank){
   q=String(q).trim().slice(0,2000);
-  if(!q || suspicious.test(q)) return refusal();
+  const gate=def.retrieval.gate;
+  if(gate?.reranker && !rerank)throw Error('This agent requires the pinned CLI reranker.');
+  if(gate && /\?\s+(?=\S)/.test(q)){
+    const results=q.split(/\?\s+(?:also,?\s+)?(?=\S)/i).map(part=>answer(def,part,ranker,rerank));
+    const missing=results.find(r=>r.status!=='answered');
+    if(missing)return missing;
+    const citations=[...new Map(results.flatMap(r=>r.citations).map(c=>[c.id,c])).values()];
+    return {status:'answered',text:results.map(r=>r.text).join('\n'),citations};
+  }
+  if(!q || suspicious.test(q) || (gate && /\b(?:invent|fabricate)\b/i.test(q))) return refusal();
   if(def.gaps?.some(g=>terms(g).length && terms(g).every(t=>terms(q).includes(t)))) return refusal();
   if(def.tools.includes('current_date')&&/^(?:what is |what.s )?(?:the current date|today.s date)\??$/i.test(q))
     return {status:'answered',text:new Date().toISOString().slice(0,10)+' UTC',citations:[],tool:'current_date'};
@@ -102,7 +137,7 @@ export function answer(def,q,ranker=rank){
   if(!terms(q).length || /^(which one|what about it)\??$/i.test(q)) return {status:'clarify',text:'Which topic or record do you mean?',citations:[]};
   // A known record alone cannot establish a separately requested attribute.
   const field=q.match(/^(?:what|which) (?:is|are) (?:the )?(.+?) (?:for|of) (.+)/i);
-  if(field){
+  if(field && !gate){
     const keys=terms(field[1]).filter(t=>!['detail','information','guidance','procedure','policy','rule'].includes(t));
     if(keys.length && !def.chunks.some(c=>overlap(keys,terms(c.text))>0))return refusal();
   }
@@ -116,9 +151,9 @@ export function answer(def,q,ranker=rank){
   const parts=def.retrieval.splitConjunction?q.split(/\s+(?:and also|as well as|and)\s+/i):[q];
   let hits=[];
   for(const part of parts){
-    const ranked=ranker(candidates,part);
+    const ranked=gate?gateRows(def,part,candidates,rerank):ranker(candidates,part);
     const best=ranked[0];
-    if(!best || best.score<def.retrieval.threshold) return refusal();
+    if(!best || best.score<(gate?.cut??def.retrieval.threshold)) return refusal();
     const alternatives=ranked.filter(r=>r.score===best.score && r.c.topic.toLowerCase()===best.c.topic.toLowerCase());
     if(new Set(alternatives.map(r=>r.c.text)).size>1){
       const citations=alternatives.map(r=>cited(r.c));
@@ -142,7 +177,7 @@ export async function connectedAnswer(def,q){
     return {status:'answered',text:d.current.temperature_2m+' °C at '+d.current.time+' UTC',tool:'weather',citations:[{id:'weather',source:url.href,text:String(d.current.temperature_2m)}]};
   }catch{return refusal('Live weather is unavailable.');}
 }
-function makeEvals(chunks,questions,gaps){
+export function makeEvals(chunks,questions,gaps,minimum=20){
   const tests=[];
   function add(kind,question,expected,status='answered'){
     tests.push({id:'E'+String(tests.length+1).padStart(2,'0'),kind,question,status,expected:expected.map(cited)});
@@ -155,7 +190,7 @@ function makeEvals(chunks,questions,gaps){
   }
   for(const x of questions||[]){
     const c=sample.find(c=>c.topic.toLowerCase()===String(x.topic).toLowerCase());
-    if(c && typeof x.question==='string') add('paraphrase',x.question,[c]);
+    if(c && typeof x.question==='string') add(minimum>=60 && questionOverlap(x.question,c.text)<=.4?'paraphrase-hard':'paraphrase',x.question,[c]);
   }
   const other=sample.find(c=>c.source!==sample[0].source);
   if(other) for(const a of sample.filter(c=>c.source!==other.source).slice(0,4))
@@ -184,6 +219,16 @@ function makeEvals(chunks,questions,gaps){
     if(tests.length>=20)break;
     const c=sample[tests.length%sample.length];
     add('paraphrase',prompt+' '+c.topic+'?',[c]);
+  }
+  if(minimum>20){
+    const prompts=['Describe','Summarize','Explain','Give the details for','What does the source say about','Which passage explains','What is documented about','Tell me about','What information covers','What should I know about','What guidance covers','Please outline','What are the instructions for','What is the policy for','How does the document describe','Give the source wording for','Where can I read about','What is specified for','What is stated about','What do the records say about'];
+    for(const suffix of ['', ' according to the supplied document',' in the source material']){
+      for(const prompt of prompts)for(const c of sample){
+        if(tests.length>=minimum)return tests;
+        const question=prompt+' '+c.topic+suffix+'?';
+        if(!tests.some(t=>t.question===question))add('paraphrase',question,[c]);
+      }
+    }
   }
   return tests;
 }
@@ -218,7 +263,8 @@ export function summarizeEvidence(cases, results) {
       if (result.actual.status === 'refused') refusals.matched++;
     }
   }
-  return {citationPrecision:precision, evidenceRecall:recall, requiredRefusals:refusals};
+  const refusalPrecision={matched:refusals.matched,total:results.filter(r=>r.actual.status==='refused').length};
+  return {citationPrecision:precision, evidenceRecall:recall, requiredRefusals:refusals, refusalPrecision};
 }
 
 function requestedTopics(brief){
@@ -246,7 +292,7 @@ function support(chunks,topic){
   if(!tokens.length)return false;
   return chunks.some(c=>overlap(tokens,terms(c.text+' '+c.source))/tokens.length>=0.64);
 }
-export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs)){
+export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs,opts)){
   if(typeof brief!=='string'||!brief.trim()||brief.length>6000)throw Error('Supply a brief of 1–6,000 characters.');
   const model=opts.enrichment||{};
   const labels=[...new Set(chunks.map(c=>c.topic))];
@@ -256,31 +302,79 @@ export function inspectRequirements(brief,docs,opts={},chunks=indexDocs(docs)){
   return requirements;
 }
 export function build(brief,docs,opts={}){
-  const chunks=indexDocs(docs), model=opts.enrichment||{};
+  if(opts.gateV2)opts={...opts,contextual:true};
+  const chunks=indexDocs(docs,opts), model=opts.enrichment||{};
   const requirements=opts.approvedRequirements??inspectRequirements(brief,docs,opts,chunks);
   const gaps=requirements.mustRefuse;
   let definition={version:1,systemPrompt:[model.prompt||'Answer the requester using the supplied corpus.', 'Audience: '+requirements.audience+'. Tone: '+requirements.tone+'. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.'].join('\n'),requirements,tools:selectTools(brief,docs),gaps,chunks,retrieval:{chunking:'Sentence or CSV record; 750-character text ceiling',threshold:0.52,splitConjunction:false},outputContract:{status:['answered','clarify','refused'],text:'string',citations:'Array<{id, source, text}>',tool:'optional registry ID'}};
-  const evals=makeEvals(chunks,model.questions,gaps), iterations=[];
+  let calibration;
+  if(opts.gateV2){
+    calibration=calibrateGate(definition,opts.rerank);
+    definition.retrieval.gate={version:2,cut:calibration.selected.cut,reranker:calibration.reranker};
+  }
+  const evals=makeEvals(chunks,model.questions,gaps,opts.release?60:20), iterations=[];
+  if(opts.release){
+    const parts=splitCases(evals);
+    const commitment=opts.commitTest?.(parts.test);
+    const development=[...parts.tune,...parts.validate];
+    const runner=opts.prepareRunner?.(definition,development)??answer;
+    const retained=[];
+    for(const splitConjunction of [false,true]){
+      const candidate={...definition,retrieval:{...definition.retrieval,splitConjunction}};
+      const results=evaluate(candidate,development,runner);
+      const tune=splitScore(results.slice(0,parts.tune.length));
+      const validate=splitScore(results.slice(parts.tune.length));
+      const previous=retained.at(-1);
+      const accepted=!previous || tune.passed>previous.tune.passed && validate.passed>=previous.validate.passed;
+      iterations.push({round:iterations.length+1,passed:tune.passed+validate.passed,total:development.length,
+        tuning:tune.passed,validation:validate.passed,accepted,configuration:candidate.retrieval,results,
+        addressed:[],change:splitConjunction?'Evaluate conjunction splitting':'Initial configuration'});
+      if(accepted)retained.push({candidate,tune,validate,results,round:iterations.length});
+    }
+    const best=retained.at(-1);
+    const final=evaluate(best.candidate,parts.test,opts.prepareRunner?.(best.candidate,parts.test)??answer);
+    const released=[...best.results,...final];
+    const controls=judgeControls(best.candidate,development,evaluate);
+    if(controls.some(c=>!c.rejected))throw Error('Judge control breach');
+    return {requirements,definition:best.candidate,evals,iterations,report:{model:opts.model||'Deterministic local compiler',
+      retainedRound:best.round,validationIds:parts.validate.map(c=>c.id),testIds:parts.test.map(c=>c.id),commitment,
+      splits:{tune:best.tune,validate:best.validate,test:splitScore(final)},testResults:final,
+      passed:released.filter(r=>r.passed).length,total:released.length,stop:'Frozen test scored once after selection',
+      failures:released.filter(r=>!r.passed),judgeControls:controls,metrics:summarizeEvidence(evals,released),limitations:['Generated paraphrases can share source vocabulary and templates.']}};
+  }
+  const held=opts.splitValidation ? validationIds(evals) : new Set();
+  let acceptedTuning=-1, acceptedHeld=-1, retainedRound=1;
   let previous=-1, best=definition, bestCount=-1, addressed=[],change='Initial definition',stop='Iteration limit reached';
   for(let round=1;round<=3;round++){
-    const results=evaluate(definition,evals), passed=results.filter(r=>r.passed).length;
+    const results=evaluate(definition,evals,opts.rerank?(d,q)=>answer(d,q,rank,opts.rerank):answer), passed=results.filter(r=>r.passed).length;
     iterations.push({round,passed,total:results.length,change,addressed,before:previous<0?null:previous,after:passed,configuration:{...definition.retrieval},results});
-    if(passed>bestCount){best=definition;bestCount=passed;}
+    const tuningResults=results.filter(r=>!held.has(r.id));
+    const tuning=tuningResults.filter(r=>r.passed).length;
+    const validation=passed-tuning;
+    if(opts.splitValidation){
+      const accepted=tuning>acceptedTuning && validation>=acceptedHeld-1;
+      Object.assign(iterations.at(-1),{tuning,validation,accepted});
+      if(!accepted){stop='Candidate failed split acceptance';break;}
+      acceptedTuning=tuning; acceptedHeld=validation;
+    }
+    if(opts.splitValidation || passed>bestCount){best=definition;bestCount=passed;retainedRound=round;}
     if(passed===results.length){stop='All generated checks passed';break;}
-    if(passed<=previous){stop='No improvement; retained best definition';break;}
+    if(!opts.splitValidation && passed<=previous){stop='No improvement; retained best definition';break;}
     previous=passed;
-    const fails=results.filter(r=>!r.passed);
+    const fails=tuningResults.filter(r=>!r.passed);
     const cross=fails.filter(r=>r.kind==='cross-source');
     const wrong=fails.filter(r=>r.category==='wrong refusal');
     if(cross.length&&!definition.retrieval.splitConjunction){
       addressed=cross.map(r=>r.id);change='Retrieve each conjunct separately for cross-source questions';
       definition={...definition,retrieval:{...definition.retrieval,splitConjunction:true}};
-    }else if(wrong.length && definition.retrieval.threshold>0.44){
+    }else if(!opts.gateV2 && wrong.length && definition.retrieval.threshold>0.44){
       addressed=wrong.map(r=>r.id);change='Lower minimum term coverage to recover refused evidence';
       definition={...definition,retrieval:{...definition.retrieval,threshold:0.44}};
     }else{stop='No targeted repair available';break;}
   }
-  const released=evaluate(best,evals);
+  const released=evaluate(best,evals,opts.rerank?(d,q)=>answer(d,q,rank,opts.rerank):answer);
   const failures=released.filter(r=>!r.passed);
-  return {requirements,definition:best,evals,iterations,report:{passed:bestCount,total:evals.length,stop,failures,metrics:summarizeEvidence(evals,released),model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
+  const controls=judgeControls(best,evals,evaluate);
+  if(controls.some(c=>!c.rejected))throw Error('Evaluation judge accepted a broken control.');
+  return {requirements,definition:best,evals,iterations,report:{...(calibration?{calibration}:{}),retainedRound,judgeControls:controls,...(opts.splitValidation?{validationIds:[...held]}:{}),passed:bestCount,total:evals.length,stop,failures,metrics:summarizeEvidence(evals,released),model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
 }

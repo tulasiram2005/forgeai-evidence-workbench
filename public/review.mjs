@@ -36,7 +36,14 @@ export async function runReview(definition, cases, runner=answer) {
     for (const fact of entry.facts) {
       if (!containsPhrase(actual.text, fact)) issues.push('Missing phrase: '+fact);
     }
-    if (entry.source && !actual.citations.some(c => c.source === entry.source)) issues.push('Missing source: '+entry.source);
+    if (entry.source) {
+      const evidence=actual.citations.filter(c=>c.source===entry.source && definition.chunks.some(
+        passage=>passage.id===c.id && passage.source===c.source && passage.text===c.text));
+      if(!evidence.length) issues.push('Missing source: '+entry.source);
+      else for(const fact of entry.facts) {
+        if(!evidence.some(c=>containsPhrase(c.text,fact)))issues.push('Source does not support phrase: '+fact);
+      }
+    }
     results.push({passed:issues.length === 0, issues, actual});
   }
   return {version:1, definitionSha256:Array.from(new Uint8Array(hash), b => b.toString(16).padStart(2,'0')).join(''),

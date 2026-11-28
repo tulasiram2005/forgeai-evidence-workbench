@@ -1,0 +1,68 @@
+{
+  "retainedRound": 2,
+  "judgeControls": [
+    {
+      "name": "Always refuses",
+      "caseId": "E01",
+      "rejected": true
+    },
+    {
+      "name": "Always answers",
+      "caseId": "E21",
+      "rejected": true
+    },
+    {
+      "name": "Fabricated number",
+      "caseId": "E01",
+      "rejected": true
+    },
+    {
+      "name": "Wrong source",
+      "caseId": "E01",
+      "rejected": true
+    }
+  ],
+  "validationIds": [
+    "E02",
+    "E05",
+    "E09",
+    "E12",
+    "E15",
+    "E19",
+    "E22",
+    "E26",
+    "E29"
+  ],
+  "passed": 30,
+  "total": 30,
+  "stop": "All generated checks passed",
+  "failures": [],
+  "metrics": {
+    "citationPrecision": {
+      "matched": 24,
+      "total": 24
+    },
+    "evidenceRecall": {
+      "matched": 24,
+      "total": 24
+    },
+    "requiredRefusals": {
+      "matched": 8,
+      "total": 8
+    },
+    "refusalPrecision": {
+      "matched": 8,
+      "total": 8
+    }
+  },
+  "model": "Deterministic local compiler",
+  "limitations": [
+    "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",
+    "A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes."
+  ],
+  "budget": {
+    "limitMs": 180000,
+    "elapsedMs": 27,
+    "scope": "model generation, compilation and optimization after intake"
+  }
+}

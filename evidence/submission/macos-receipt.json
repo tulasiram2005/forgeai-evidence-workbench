@@ -1,0 +1,92 @@
+{
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "osVersion": "27.2.1",
+  "node": "v22.19.0",
+  "command": "node cli.mjs forge --brief /tmp/forge-submit-work/inputs/bookbinding/brief.txt --docs /tmp/forge-submit-work/inputs/bookbinding/docs --out /tmp/forge-submit-work/offline-final",
+  "networkScope": "Node fetch restricted to localhost by preload; HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1. No OS-wide network disconnect was applied. Local llama.cpp supplied generation.",
+  "backend": "llama.cpp",
+  "degradation": "ollama: fetch failed. Selected llama.cpp.",
+  "budget": {
+    "limitMs": 180000,
+    "elapsedMs": 3682,
+    "scope": "model generation, compilation and optimization after intake"
+  },
+  "assessment": {
+    "verdict": "DO NOT SHIP",
+    "easy": {
+      "passed": 26,
+      "total": 56
+    },
+    "hard": {
+      "passed": 0,
+      "total": 4
+    },
+    "warning": null,
+    "forecast": 0.46799999999999997,
+    "n": 5,
+    "scope": "overall case pass, including correct refusals and clarifications"
+  },
+  "hardCases": [
+    {
+      "id": "E07",
+      "kind": "paraphrase-hard",
+      "question": "How long does it take to complete the bookbinding procedures?",
+      "status": "answered",
+      "expected": [
+        {
+          "id": "D4.1",
+          "source": "schedule.pdf",
+          "text": "Press release: Allow 14 minutes.",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "kind": "paraphrase-hard",
+      "question": "What is the job title of the person who approves the owner's request?",
+      "status": "answered",
+      "expected": [
+        {
+          "id": "D1.1",
+          "source": "approval.docx",
+          "text": "Approval owner: bindery lead."
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "kind": "paraphrase-hard",
+      "question": "Where should the bookbinding materials be picked up?",
+      "status": "answered",
+      "expected": [
+        {
+          "id": "D3.1",
+          "source": "location.md",
+          "text": "Bookbinding pickup: Use the east counter."
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "kind": "paraphrase-hard",
+      "question": "How long should the press release be allowed to be printed?",
+      "status": "answered",
+      "expected": [
+        {
+          "id": "D4.1",
+          "source": "schedule.pdf",
+          "text": "Press release: Allow 14 minutes.",
+          "page": 1
+        }
+      ]
+    }
+  ],
+  "testCommitment": {
+    "sha256": "ac1f9eea20244b7ac3477985c89277ddbeee6b80c91abeef63608e48952e1d9a",
+    "commit": "3d5634cdb9e407d2c8ff84859c5d5b853c33dff3",
+    "file": "test-slice.json",
+    "bundle": "split.bundle"
+  }
+}

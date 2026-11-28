@@ -1,0 +1,1575 @@
+[
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How long do I get to try things on?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How long do I get to try things on?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How long do I get to try things on?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How long do I get to try things on?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Where do I pick up a cover for the outfit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "room Alder"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Where do I pick up a cover for the outfit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "room Alder"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Where do I pick up a cover for the outfit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "room Alder"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Where do I pick up a cover for the outfit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "room Alder"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How much security money do I leave for the waist ribbon?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "12 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How much security money do I leave for the waist ribbon?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "12 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How much security money do I leave for the waist ribbon?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "12 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How much security money do I leave for the waist ribbon?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "12 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Who signs off before a hem is changed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "wardrobe master"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Who signs off before a hem is changed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "wardrobe master"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Who signs off before a hem is changed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "wardrobe master"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Who signs off before a hem is changed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "wardrobe master"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How many headwear containers can sit on top of one another?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Hat boxes stack four high.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Hat boxes stack four high.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How many headwear containers can sit on top of one another?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How many headwear containers can sit on top of one another?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How many headwear containers can sit on top of one another?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "When may I first drop off what I borrowed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "08:45"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "When may I first drop off what I borrowed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "08:45"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "When may I first drop off what I borrowed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "08:45"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "When may I first drop off what I borrowed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "08:45"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How do staff mark delicate trim?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "lilac tag"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How do staff mark delicate trim?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "lilac tag"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How do staff mark delicate trim?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "lilac tag"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How do staff mark delicate trim?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "lilac tag"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Where should I put the stage footwear?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Swift"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Where should I put the stage footwear?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Swift"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Where should I put the stage footwear?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Swift"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Where should I put the stage footwear?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Swift"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How long are the laundry records retained?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "13 weeks"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How long are the laundry records retained?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "13 weeks"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How long are the laundry records retained?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "13 weeks"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How long are the laundry records retained?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "13 weeks"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Which day is my last chance to collect the costume?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Saturday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Final collection happens on Saturday.",
+      "citations": [
+        {
+          "id": "D1.5",
+          "source": "handover.md",
+          "text": "Final collection happens on Saturday."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Which day is my last chance to collect the costume?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Saturday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Which day is my last chance to collect the costume?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Saturday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Which day is my last chance to collect the costume?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Saturday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Is the sash deposit refundable in cash?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "A loan sash needs a deposit of 12 euros.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "A loan sash needs a deposit of 12 euros.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Is the sash deposit refundable in cash?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "A loan sash needs a deposit of 12 euros.",
+          "page": 1,
+          "highlighted": "A loan sash needs a deposit of 12 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Is the sash deposit refundable in cash?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Is the sash deposit refundable in cash?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "A loan sash needs a deposit of 12 euros.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "A loan sash needs a deposit of 12 euros."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "What detergent is approved for fragile lace?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Fragile lace receives a lilac tag.",
+          "highlighted": "Fragile lace receives a lilac tag."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "What detergent is approved for fragile lace?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Fragile lace receives a lilac tag.",
+          "highlighted": "Fragile lace receives a lilac tag."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "What detergent is approved for fragile lace?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "What detergent is approved for fragile lace?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Fragile lace receives a lilac tag.",
+      "citations": [
+        {
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Fragile lace receives a lilac tag."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Does the return hatch have a door code?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45.",
+          "highlighted": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Does the return hatch have a door code?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45.",
+          "highlighted": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Does the return hatch have a door code?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Does the return hatch have a door code?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How heavy is a hat box?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Hat boxes stack four high.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Hat boxes stack four high.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How heavy is a hat box?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Hat boxes stack four high.",
+          "page": 1,
+          "highlighted": "Hat boxes stack four high."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How heavy is a hat box?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How heavy is a hat box?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Hat boxes stack four high.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Hat boxes stack four high."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Who made rack Swift?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Boot pairs belong on rack Swift.",
+          "highlighted": "Boot pairs belong on rack Swift."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Who made rack Swift?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Boot pairs belong on rack Swift.",
+          "highlighted": "Boot pairs belong on rack Swift."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Who made rack Swift?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Who made rack Swift?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Boot pairs belong on rack Swift.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Boot pairs belong on rack Swift."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "What is the price of an alteration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Alteration consent belongs to the wardrobe master.",
+          "page": 1,
+          "highlighted": "Alteration consent belongs to the wardrobe master."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "What is the price of an alteration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Alteration consent belongs to the wardrobe master.",
+          "page": 1,
+          "highlighted": "Alteration consent belongs to the wardrobe master."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "What is the price of an alteration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "What is the price of an alteration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Alteration consent belongs to the wardrobe master.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Alteration consent belongs to the wardrobe master."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Can fitting appointments be transferred?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Fitting appointments run for 28 minutes.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Fitting appointments run for 28 minutes.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Can fitting appointments be transferred?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Fitting appointments run for 28 minutes.",
+          "page": 1,
+          "highlighted": "Fitting appointments run for 28 minutes."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Can fitting appointments be transferred?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Can fitting appointments be transferred?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Fitting appointments run for 28 minutes.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Fitting appointments run for 28 minutes."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "How many garment bags are in stock?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Garment bags are collected in room Alder.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Garment bags are collected in room Alder.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "How many garment bags are in stock?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Garment bags are collected in room Alder.",
+          "page": 1,
+          "highlighted": "Garment bags are collected in room Alder."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "How many garment bags are in stock?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "How many garment bags are in stock?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Garment bags are collected in room Alder.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Garment bags are collected in room Alder."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "contextual",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "strict",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysRefuse",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "costumestore",
+    "config": "alwaysAnswer",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "The return hatch opens at 08:45.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The return hatch opens at 08:45."
+        }
+      ]
+    },
+    "passed": false
+  }
+]

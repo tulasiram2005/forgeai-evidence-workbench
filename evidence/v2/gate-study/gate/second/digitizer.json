@@ -1,0 +1,1093 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": false,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 2.666759476152837,
+      "hits": 1,
+      "falseAnswers": 3
+    },
+    "curve": [
+      {
+        "cut": 3.817380486828858,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.817380486828858,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.762126940526147,
+        "hits": 0,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.6679032290064804,
+        "hits": 0,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.666759476152837,
+        "hits": 1,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.5761129039078163,
+        "hits": 1,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.5753067532769762,
+        "hits": 1,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.557621480044671,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.554793699449374,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.5055951137073125,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 2.503785172187875,
+        "hits": 1,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 2.503356741664998,
+        "hits": 1,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 2.5018762639016243,
+        "hits": 1,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 2.4916784663822193,
+        "hits": 1,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.487274988071535,
+        "hits": 2,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.4814185656839696,
+        "hits": 2,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 2.4668900533602693,
+        "hits": 2,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 2.4563767678518165,
+        "hits": 2,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 2.453636296778126,
+        "hits": 2,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.3939424612405524,
+        "hits": 3,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.3882497035604557,
+        "hits": 4,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.3861222838607787,
+        "hits": 4,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 2.386122034642586,
+        "hits": 4,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 2.3738747286045223,
+        "hits": 4,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 2.3619819507173587,
+        "hits": 4,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.2869417796856926,
+        "hits": 4,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 2.2840125286395567,
+        "hits": 4,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.276670749968811,
+        "hits": 4,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 2.2753546374084417,
+        "hits": 4,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 2.261294615537157,
+        "hits": 4,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 2.2489813735695643,
+        "hits": 4,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 2.223984634575986,
+        "hits": 4,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.214608907834953,
+        "hits": 4,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 2.1796746556534843,
+        "hits": 4,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 2.1725903235438837,
+        "hits": 5,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 2.1452395025700017,
+        "hits": 5,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 2.142060269220235,
+        "hits": 5,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 2.112740234786046,
+        "hits": 6,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 2.10875885966898,
+        "hits": 6,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 2.066488718734584,
+        "hits": 6,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 2.0660920472659696,
+        "hits": 6,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 2.0480423326085098,
+        "hits": 6,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 2.0431791800830643,
+        "hits": 6,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 2.0353087994467245,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 2.026939217480725,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.9680323723302606,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.9666421335857731,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.950947282597386,
+        "hits": 6,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.9507955578229528,
+        "hits": 7,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.9469958973300983,
+        "hits": 7,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.898645322596211,
+        "hits": 7,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.8838154055923402,
+        "hits": 7,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.8796760587826766,
+        "hits": 7,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.8526332282211573,
+        "hits": 7,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.7498812833308428,
+        "hits": 7,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.6516305956599036,
+        "hits": 7,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.6233226365886397,
+        "hits": 7,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.5950553570980797,
+        "hits": 7,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.5592853556207864,
+        "hits": 7,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.5486196471694351,
+        "hits": 7,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.5482353762031804,
+        "hits": 8,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.5454685088656237,
+        "hits": 8,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 1.5155872006481983,
+        "hits": 8,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 1.4779922920683133,
+        "hits": 8,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 1.4625261542868473,
+        "hits": 8,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 1.3928754897039421,
+        "hits": 8,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 1.2149319696178045,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 1.2110861715182943,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.923836586787828,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Prefix each master file with?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 2.1725903235438837
+      },
+      {
+        "q": "What is documented about A second operator signs the?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 2.112740234786046
+      },
+      {
+        "q": "What is documented about Export viewing copies as TIFF.?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 2.487274988071535
+      },
+      {
+        "q": "What is documented about Keep scratch scans for 11?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 2.3882497035604557
+      },
+      {
+        "q": "What is documented about Insert the strip with the?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 1.5482353762031804
+      },
+      {
+        "q": "What is documented about Use a sable brush on?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 1.9507955578229528
+      },
+      {
+        "q": "What is documented about Cap illumination at 38 lux.?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 2.666759476152837
+      },
+      {
+        "q": "What is documented about Turn the spindle clockwise.?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 2.3939424612405524
+      },
+      {
+        "q": "What is the deductible for Prefix each master file with?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 2.2869417796856926
+      },
+      {
+        "q": "What is the commission for A second operator signs the?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 2.5055951137073125
+      },
+      {
+        "q": "What is the royalty for Export viewing copies as TIFF.?",
+        "attribute": "royalty",
+        "topId": "D1.3",
+        "score": 2.6679032290064804
+      },
+      {
+        "q": "What is the deduction for Keep scratch scans for 11?",
+        "attribute": "deduction",
+        "topId": "D1.4",
+        "score": 2.4814185656839696
+      },
+      {
+        "q": "What is the amortization for Insert the strip with the?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 1.5486196471694351
+      },
+      {
+        "q": "What is the depreciation for Use a sable brush on?",
+        "attribute": "depreciation",
+        "topId": "D2.2",
+        "score": 2.066488718734584
+      },
+      {
+        "q": "What is the waiver for Cap illumination at 38 lux.?",
+        "attribute": "waiver",
+        "topId": "D2.3",
+        "score": 2.817380486828858
+      },
+      {
+        "q": "What is the surcharge for Turn the spindle clockwise.?",
+        "attribute": "surcharge",
+        "topId": "D2.4",
+        "score": 2.762126940526147
+      },
+      {
+        "q": "What is the deactivation date for Prefix each master file with?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 1.9469958973300983
+      },
+      {
+        "q": "What is the issuer for A second operator signs the?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 2.557621480044671
+      },
+      {
+        "q": "What is the invoice number for Export viewing copies as TIFF.?",
+        "attribute": "invoice number",
+        "topId": "D1.3",
+        "score": 2.503356741664998
+      },
+      {
+        "q": "What is the indemnity for Keep scratch scans for 11?",
+        "attribute": "indemnity",
+        "topId": "D1.4",
+        "score": 2.214608907834953
+      },
+      {
+        "q": "What is the exchange rate for Insert the strip with the?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 1.5592853556207864
+      },
+      {
+        "q": "What is the deposit for Use a sable brush on?",
+        "attribute": "deposit",
+        "topId": "D2.2",
+        "score": 2.554793699449374
+      },
+      {
+        "q": "What is the franchise fee for Cap illumination at 38 lux.?",
+        "attribute": "franchise fee",
+        "topId": "D2.3",
+        "score": 2.026939217480725
+      },
+      {
+        "q": "What is the restocking fee for Prefix each master file with?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 1.6233226365886397
+      },
+      {
+        "q": "What is the tax rate for A second operator signs the?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 2.0353087994467245
+      },
+      {
+        "q": "What is the grace period for Export viewing copies as TIFF.?",
+        "attribute": "grace period",
+        "topId": "D1.3",
+        "score": 2.453636296778126
+      },
+      {
+        "q": "What is the renewal period for Keep scratch scans for 11?",
+        "attribute": "renewal period",
+        "topId": "D1.4",
+        "score": 2.3619819507173587
+      },
+      {
+        "q": "What is the expiry date for Insert the strip with the?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 1.2149319696178045
+      },
+      {
+        "q": "What is the interest rate for Use a sable brush on?",
+        "attribute": "interest rate",
+        "topId": "D2.2",
+        "score": 1.7498812833308428
+      },
+      {
+        "q": "What is the vendor address for Cap illumination at 38 lux.?",
+        "attribute": "vendor address",
+        "topId": "D2.3",
+        "score": 2.4668900533602693
+      },
+      {
+        "q": "What is the insurance premium for Turn the spindle clockwise.?",
+        "attribute": "insurance premium",
+        "topId": "D2.4",
+        "score": 2.2753546374084417
+      },
+      {
+        "q": "What is the license number for Prefix each master file with?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 2.261294615537157
+      },
+      {
+        "q": "What is the emission rating for A second operator signs the?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 2.0431791800830643
+      },
+      {
+        "q": "What is the seismic rating for Export viewing copies as TIFF.?",
+        "attribute": "seismic rating",
+        "topId": "D1.3",
+        "score": 2.5753067532769762
+      },
+      {
+        "q": "What is the customs duty for Keep scratch scans for 11?",
+        "attribute": "customs duty",
+        "topId": "D1.4",
+        "score": 1.9680323723302606
+      },
+      {
+        "q": "What is the auction value for Insert the strip with the?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.3928754897039421
+      },
+      {
+        "q": "What is the rental fee for Use a sable brush on?",
+        "attribute": "rental fee",
+        "topId": "D2.2",
+        "score": 1.5950553570980797
+      },
+      {
+        "q": "What is the failure probability for Cap illumination at 38 lux.?",
+        "attribute": "failure probability",
+        "topId": "D2.3",
+        "score": 2.5018762639016243
+      },
+      {
+        "q": "What is the audit interval for Prefix each master file with?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 1.5454685088656237
+      },
+      {
+        "q": "What is the embargo date for A second operator signs the?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 1.8526332282211573
+      },
+      {
+        "q": "What is the transfer fee for Export viewing copies as TIFF.?",
+        "attribute": "transfer fee",
+        "topId": "D1.3",
+        "score": 2.1796746556534843
+      },
+      {
+        "q": "What is the storage charge for Keep scratch scans for 11?",
+        "attribute": "storage charge",
+        "topId": "D1.4",
+        "score": 2.3738747286045223
+      },
+      {
+        "q": "What is the design patent for Insert the strip with the?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 1.4625261542868473
+      },
+      {
+        "q": "What is the payroll code for Use a sable brush on?",
+        "attribute": "payroll code",
+        "topId": "D2.2",
+        "score": 1.4779922920683133
+      },
+      {
+        "q": "What is the dispatch postcode for Cap illumination at 38 lux.?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.3",
+        "score": 2.2840125286395567
+      },
+      {
+        "q": "What is the tariff band for Turn the spindle clockwise.?",
+        "attribute": "tariff band",
+        "topId": "D2.4",
+        "score": 2.2489813735695643
+      },
+      {
+        "q": "What is the export permit for Prefix each master file with?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.9666421335857731
+      },
+      {
+        "q": "What is the approval stamp for A second operator signs the?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 1.8838154055923402
+      },
+      {
+        "q": "What is the shelf life for Export viewing copies as TIFF.?",
+        "attribute": "shelf life",
+        "topId": "D1.3",
+        "score": 2.503785172187875
+      },
+      {
+        "q": "What is the solubility for Keep scratch scans for 11?",
+        "attribute": "solubility",
+        "topId": "D1.4",
+        "score": 2.223984634575986
+      },
+      {
+        "q": "What is the heat capacity for Insert the strip with the?",
+        "attribute": "heat capacity",
+        "topId": "D2.1",
+        "score": 1.5155872006481983
+      },
+      {
+        "q": "What is the torque limit for Use a sable brush on?",
+        "attribute": "torque limit",
+        "topId": "D2.2",
+        "score": 1.950947282597386
+      },
+      {
+        "q": "What is the duty cycle for Cap illumination at 38 lux.?",
+        "attribute": "duty cycle",
+        "topId": "D2.3",
+        "score": 2.5761129039078163
+      },
+      {
+        "q": "What is the proof load for Prefix each master file with?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 2.0480423326085098
+      },
+      {
+        "q": "What is the retirement date for A second operator signs the?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 2.1452395025700017
+      },
+      {
+        "q": "What is the discount rate for Export viewing copies as TIFF.?",
+        "attribute": "discount rate",
+        "topId": "D1.3",
+        "score": 2.4916784663822193
+      },
+      {
+        "q": "What is the replacement value for Keep scratch scans for 11?",
+        "attribute": "replacement value",
+        "topId": "D1.4",
+        "score": 2.3861222838607787
+      },
+      {
+        "q": "What is the billing currency for Insert the strip with the?",
+        "attribute": "billing currency",
+        "topId": "D2.1",
+        "score": 1.2110861715182943
+      },
+      {
+        "q": "What is the vat code for Use a sable brush on?",
+        "attribute": "vat code",
+        "topId": "D2.2",
+        "score": 2.0660920472659696
+      },
+      {
+        "q": "What is the escrow fee for Cap illumination at 38 lux.?",
+        "attribute": "escrow fee",
+        "topId": "D2.3",
+        "score": 2.10875885966898
+      },
+      {
+        "q": "What is the ballot count for Turn the spindle clockwise.?",
+        "attribute": "ballot count",
+        "topId": "D2.4",
+        "score": 2.276670749968811
+      },
+      {
+        "q": "What is the bond maturity for Prefix each master file with?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 1.898645322596211
+      },
+      {
+        "q": "What is the trademark number for A second operator signs the?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 1.8796760587826766
+      },
+      {
+        "q": "What is the insurance limit for Export viewing copies as TIFF.?",
+        "attribute": "insurance limit",
+        "topId": "D1.3",
+        "score": 2.4563767678518165
+      },
+      {
+        "q": "What is the review quorum for Keep scratch scans for 11?",
+        "attribute": "review quorum",
+        "topId": "D1.4",
+        "score": 2.142060269220235
+      },
+      {
+        "q": "What is the franchise territory for Insert the strip with the?",
+        "attribute": "franchise territory",
+        "topId": "D2.1",
+        "score": 0.923836586787828
+      },
+      {
+        "q": "What is the bank routing code for Use a sable brush on?",
+        "attribute": "bank routing code",
+        "topId": "D2.2",
+        "score": 1.6516305956599036
+      },
+      {
+        "q": "What is the capital allowance for Cap illumination at 38 lux.?",
+        "attribute": "capital allowance",
+        "topId": "D2.3",
+        "score": 2.386122034642586
+      }
+    ]
+  },
+  "passed": 9,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 6,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 11,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "Which side of the film should face me as I load it?",
+      "status": "answered",
+      "facts": [
+        "upward"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What implement is safe for sweeping away specks?",
+      "status": "answered",
+      "facts": [
+        "sable brush"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How bright may the lamp be?",
+      "status": "answered",
+      "facts": [
+        "38 lux"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which way do I rotate the take-up hub?",
+      "status": "answered",
+      "facts": [
+        "clockwise"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What goes first in the filename for an archival original?",
+      "status": "answered",
+      "facts": [
+        "accession code"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who countersigns the image proof?",
+      "status": "answered",
+      "facts": [
+        "second operator"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What format should the customer receive?",
+      "status": "answered",
+      "facts": [
+        "TIFF"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "When may I discard temporary images?",
+      "status": "answered",
+      "facts": [
+        "11 days"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "How bright can the lamp be, and how long must temporary images survive?",
+      "status": "answered",
+      "facts": [
+        "38 lux",
+        "11 days"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which way should I turn the hub and how should the archival name begin?",
+      "status": "answered",
+      "facts": [
+        "clockwise",
+        "accession code"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "What can I use to dust the film and which format goes to viewers?",
+      "status": "answered",
+      "facts": [
+        "sable brush",
+        "TIFF"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "What solvent removes sticky residue?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Which TIFF compression setting is required?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Is infrared illumination allowed?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What humidity should film storage maintain?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Which accession code applies to a duplicate?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What happens if the contact sheet is unsigned?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "How should I do that?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

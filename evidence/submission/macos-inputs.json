@@ -1,0 +1,60 @@
+{
+  "compiler": "qwen2.5:1.5b",
+  "inputs": [
+    {
+      "source": "approval.docx",
+      "sha256": "9b1f491cc5bde88bf0471bd6233a0f2ca8618b9d2614b8162c9d2f516cac4c37"
+    },
+    {
+      "source": "inventory.csv",
+      "sha256": "8003b80675f559c6d56954035e0317d3a22ca18ffd85ca71b19f3caa445d9de3"
+    },
+    {
+      "source": "location.md",
+      "sha256": "01310cdbf4cb28fd2c70dadafaef002df02d3d21c8640255afd173863c05fc28"
+    },
+    {
+      "source": "schedule.pdf",
+      "sha256": "f37e9f5efe006e7c76f7333bfbb6b79d232735a93034b4924031f9edeef57d71"
+    }
+  ],
+  "enrichment": {
+    "audience": "general audience",
+    "tone": "informative",
+    "prompt": "Explain the bookbinding procedures and provide the inventory record for the bookbinding kit with a quantity of 14 units.",
+    "topics": [
+      "bookbinding procedures",
+      "inventory records"
+    ],
+    "questions": [
+      {
+        "topic": "Approval owner",
+        "question": "Who is the approval owner for the bookbinding procedures?"
+      },
+      {
+        "topic": "R12 bookbinding kit",
+        "question": "What is the code for the bookbinding kit with a quantity of 14 units?"
+      },
+      {
+        "topic": "Dispatch",
+        "question": "Where is the bookbinding pickup located?"
+      },
+      {
+        "topic": "Press release",
+        "question": "How long does it take to complete the bookbinding procedures?"
+      },
+      {
+        "topic": "Approval owner",
+        "question": "What is the job title of the person who approves the owner's request?"
+      },
+      {
+        "topic": "Bookbinding pickup",
+        "question": "Where should the bookbinding materials be picked up?"
+      },
+      {
+        "topic": "Press release",
+        "question": "How long should the press release be allowed to be printed?"
+      }
+    ]
+  }
+}

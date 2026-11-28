@@ -1,0 +1,9 @@
+{
+  "out": "/tmp/forge-submit-work/offline-final",
+  "passed": 26,
+  "total": 60,
+  "stop": "Frozen test scored once after selection",
+  "tools": [
+    "csv_lookup"
+  ]
+}

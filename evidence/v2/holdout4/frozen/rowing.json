@@ -1,0 +1,1098 @@
+{
+  "source": "657482b6d767dbb95ca7cfe94c9d6612257d473a",
+  "judgeVersion": "extractive-fact-source-v2",
+  "configuration": {
+    "chunking": "Sentence or CSV record; 750-character text ceiling",
+    "threshold": 0.52,
+    "splitConjunction": true
+  },
+  "results": [
+    {
+      "question": "What day is the last chance to name our rowers?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "Thursday"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where do officials check the shell on the scale?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "pontoon Hazel"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which colour identifies a substitute on race day?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "violet"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "How far in advance can I see the running order?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "35 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who handles a complaint about our assigned water position?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "race secretary"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What signal device comes in the steering kit?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "brass whistle"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which feed shows the line-crossing footage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "channel 7"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where should we put the blades after rowing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "rack Marlin"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How many people must initial the record of our finish time?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "two"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "The finish camera uses channel 7."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "When can the winners pick up their awards?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "noon"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What fee is charged for a lane objection?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "Which battery powers the finish camera?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "The finish camera uses channel 7."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "What length is a reserve bib?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "A reserve bib is violet.",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "operations.pdf",
+            "text": "A reserve bib is violet.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "Who made the brass whistle?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "The cited passage does not identify the responsible person.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "How many boats fit at pontoon Hazel?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Boat weigh-in occurs at pontoon Hazel.",
+        "citations": [
+          {
+            "id": "D2.2",
+            "source": "operations.pdf",
+            "text": "Boat weigh-in occurs at pontoon Hazel.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "How long are timing slips retained?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.4",
+            "source": "handover.md",
+            "text": "Timing slips need two initials."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the race secretary’s mobile number?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "How much weight can rack Marlin support?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": [],
+        "pointers": [
+          {
+            "label": "related, not confirmed",
+            "id": "D1.3",
+            "source": "handover.md",
+            "text": "Oar storage uses rack Marlin."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ],
+  "references": [
+    {
+      "config": "Always refuse",
+      "question": "What day is the last chance to name our rowers?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "Thursday"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What day is the last chance to name our rowers?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "Thursday"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Where do officials check the shell on the scale?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "pontoon Hazel"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Where do officials check the shell on the scale?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "pontoon Hazel"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which colour identifies a substitute on race day?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "violet"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which colour identifies a substitute on race day?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "violet"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How far in advance can I see the running order?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "35 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How far in advance can I see the running order?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "35 minutes"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Who handles a complaint about our assigned water position?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "race secretary"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Who handles a complaint about our assigned water position?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "race secretary"
+      ],
+      "sources": [
+        "operations.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What signal device comes in the steering kit?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "brass whistle"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What signal device comes in the steering kit?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "brass whistle"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which feed shows the line-crossing footage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "channel 7"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which feed shows the line-crossing footage?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "channel 7"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Where should we put the blades after rowing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "rack Marlin"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Where should we put the blades after rowing?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "rack Marlin"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How many people must initial the record of our finish time?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "two"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How many people must initial the record of our finish time?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "two"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "The finish camera uses channel 7.",
+        "citations": [
+          {
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "The finish camera uses channel 7."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "When can the winners pick up their awards?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "noon"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "When can the winners pick up their awards?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "noon"
+      ],
+      "sources": [
+        "handover.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What fee is charged for a lane objection?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What fee is charged for a lane objection?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which battery powers the finish camera?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which battery powers the finish camera?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "The finish camera uses channel 7.",
+        "citations": [
+          {
+            "id": "D1.2",
+            "source": "handover.md",
+            "text": "The finish camera uses channel 7."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What length is a reserve bib?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What length is a reserve bib?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "A reserve bib is violet.",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "operations.pdf",
+            "text": "A reserve bib is violet."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Who made the brass whistle?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Who made the brass whistle?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How many boats fit at pontoon Hazel?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How many boats fit at pontoon Hazel?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Boat weigh-in occurs at pontoon Hazel.",
+        "citations": [
+          {
+            "id": "D2.2",
+            "source": "operations.pdf",
+            "text": "Boat weigh-in occurs at pontoon Hazel."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How long are timing slips retained?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How long are timing slips retained?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Timing slips need two initials.",
+        "citations": [
+          {
+            "id": "D1.4",
+            "source": "handover.md",
+            "text": "Timing slips need two initials."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What is the race secretary’s mobile number?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What is the race secretary’s mobile number?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "id": "D2.5",
+            "source": "operations.pdf",
+            "text": "Lane objections go to the race secretary."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "How much weight can rack Marlin support?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "How much weight can rack Marlin support?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Oar storage uses rack Marlin.",
+        "citations": [
+          {
+            "id": "D1.3",
+            "source": "handover.md",
+            "text": "Oar storage uses rack Marlin."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "config": "Always refuse",
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "Insufficient evidence.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "config": "Always answer with top-1",
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "handover.md",
+            "text": "Coxswain packs include a brass whistle."
+          }
+        ]
+      },
+      "passed": false
+    }
+  ]
+}

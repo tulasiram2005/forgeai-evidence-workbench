@@ -1,0 +1,1085 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": false,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 3.3417388922409286,
+      "hits": 0,
+      "falseAnswers": 0
+    },
+    "curve": [
+      {
+        "cut": 3.3417388922409286,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.3417388922409286,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.3389524136919637,
+        "hits": 0,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.2941280397568002,
+        "hits": 0,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.188048846021068,
+        "hits": 0,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.1250390383312467,
+        "hits": 0,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.10166114865949,
+        "hits": 0,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.056959846070836,
+        "hits": 0,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 1.9594420023475159,
+        "hits": 0,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 1.9301307838827706,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 1.9169456065240051,
+        "hits": 1,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 1.9109499641909558,
+        "hits": 1,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 1.9041163881376606,
+        "hits": 1,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 1.8963178089774877,
+        "hits": 1,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 1.838343726534313,
+        "hits": 1,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 1.8284656020833265,
+        "hits": 1,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 1.8251895609853628,
+        "hits": 1,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 1.8214136951688282,
+        "hits": 2,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 1.7927930824437424,
+        "hits": 2,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 1.7653780471550136,
+        "hits": 3,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 1.7581872826850249,
+        "hits": 3,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 1.7373135048197932,
+        "hits": 3,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 1.7164136023781251,
+        "hits": 4,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 1.7091812078097826,
+        "hits": 4,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 1.7037902492413377,
+        "hits": 4,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 1.6703180447192774,
+        "hits": 4,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 1.666569613385967,
+        "hits": 4,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 1.6595852994841722,
+        "hits": 4,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 1.6577034463507532,
+        "hits": 4,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 1.644585870049863,
+        "hits": 4,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 1.638437238099295,
+        "hits": 4,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 1.6126077868722155,
+        "hits": 4,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 1.5820649295163494,
+        "hits": 4,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.5759385014443728,
+        "hits": 4,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.5346101161972698,
+        "hits": 5,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.48037275781189,
+        "hits": 6,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.4676366264118035,
+        "hits": 6,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.4598548292967424,
+        "hits": 6,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 1.448444446174565,
+        "hits": 6,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 1.4040078449047855,
+        "hits": 6,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 1.3653794383760915,
+        "hits": 6,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 1.3644452031176144,
+        "hits": 6,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 1.3376349628685202,
+        "hits": 6,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 1.3253406727626922,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.3125122125231417,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.2920034689901936,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.289268026596073,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.2846408971207475,
+        "hits": 6,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.2815427832321158,
+        "hits": 6,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.263168895257605,
+        "hits": 7,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.261492257697069,
+        "hits": 7,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.252482014196711,
+        "hits": 7,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.2440265766516632,
+        "hits": 7,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.1988528329931736,
+        "hits": 7,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.1897330808316593,
+        "hits": 8,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.1750078864421574,
+        "hits": 8,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.1733622029546054,
+        "hits": 8,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.1470833810823085,
+        "hits": 8,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.1247343697850585,
+        "hits": 8,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.1189568003471817,
+        "hits": 8,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.11468394534284,
+        "hits": 8,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.1121167055120849,
+        "hits": 8,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 1.0765294719830958,
+        "hits": 8,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 1.0429844305932996,
+        "hits": 8,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 0.9242866688719766,
+        "hits": 8,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 0.9181211171375343,
+        "hits": 8,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 0.9007912315734736,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 0.7663954820130625,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.7007157489869518,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about First notice?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 1.1897330808316593
+      },
+      {
+        "q": "What is documented about Dispatch channel?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 1.7164136023781251
+      },
+      {
+        "q": "What is documented about Purchase evidence?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 1.9301307838827706
+      },
+      {
+        "q": "What is documented about File owner?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 1.7653780471550136
+      },
+      {
+        "q": "What is documented about Inspection location?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 1.263168895257605
+      },
+      {
+        "q": "What is documented about Inspection attendance?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 1.8214136951688282
+      },
+      {
+        "q": "What is documented about Inspection fee?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 1.48037275781189
+      },
+      {
+        "q": "What is documented about Photographs?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 1.5346101161972698
+      },
+      {
+        "q": "What is the deductible for First notice?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 1.1247343697850585
+      },
+      {
+        "q": "What is the commission for Dispatch channel?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 2.3417388922409286
+      },
+      {
+        "q": "What is the royalty for Purchase evidence?",
+        "attribute": "royalty",
+        "topId": "D1.3",
+        "score": 2.056959846070836
+      },
+      {
+        "q": "What is the deduction for File owner?",
+        "attribute": "deduction",
+        "topId": "D1.4",
+        "score": 1.8963178089774877
+      },
+      {
+        "q": "What is the amortization for Inspection location?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 1.261492257697069
+      },
+      {
+        "q": "What is the depreciation for Inspection attendance?",
+        "attribute": "depreciation",
+        "topId": "D2.2",
+        "score": 1.9041163881376606
+      },
+      {
+        "q": "What is the waiver for Inspection fee?",
+        "attribute": "waiver",
+        "topId": "D2.3",
+        "score": 1.9594420023475159
+      },
+      {
+        "q": "What is the surcharge for Photographs?",
+        "attribute": "surcharge",
+        "topId": "D2.4",
+        "score": 1.1470833810823085
+      },
+      {
+        "q": "What is the deactivation date for First notice?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 1.0765294719830958
+      },
+      {
+        "q": "What is the issuer for Dispatch channel?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 2.188048846021068
+      },
+      {
+        "q": "What is the invoice number for Purchase evidence?",
+        "attribute": "invoice number",
+        "topId": "D1.3",
+        "score": 1.8251895609853628
+      },
+      {
+        "q": "What is the indemnity for File owner?",
+        "attribute": "indemnity",
+        "topId": "D1.4",
+        "score": 1.3253406727626922
+      },
+      {
+        "q": "What is the exchange rate for Inspection location?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 1.1750078864421574
+      },
+      {
+        "q": "What is the deposit for Inspection attendance?",
+        "attribute": "deposit",
+        "topId": "D2.2",
+        "score": 2.1250390383312467
+      },
+      {
+        "q": "What is the franchise fee for Inspection fee?",
+        "attribute": "franchise fee",
+        "topId": "D2.3",
+        "score": 2.2941280397568002
+      },
+      {
+        "q": "What is the restocking fee for First notice?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 1.0429844305932996
+      },
+      {
+        "q": "What is the tax rate for Dispatch channel?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 1.8284656020833265
+      },
+      {
+        "q": "What is the grace period for Purchase evidence?",
+        "attribute": "grace period",
+        "topId": "D1.3",
+        "score": 1.7091812078097826
+      },
+      {
+        "q": "What is the renewal period for File owner?",
+        "attribute": "renewal period",
+        "topId": "D1.4",
+        "score": 1.4598548292967424
+      },
+      {
+        "q": "What is the expiry date for Inspection location?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 0.7663954820130625
+      },
+      {
+        "q": "What is the interest rate for Inspection attendance?",
+        "attribute": "interest rate",
+        "topId": "D2.2",
+        "score": 1.838343726534313
+      },
+      {
+        "q": "What is the vendor address for Inspection fee?",
+        "attribute": "vendor address",
+        "topId": "D2.3",
+        "score": 1.6595852994841722
+      },
+      {
+        "q": "What is the insurance premium for Photographs?",
+        "attribute": "insurance premium",
+        "topId": "D2.4",
+        "score": 1.2846408971207475
+      },
+      {
+        "q": "What is the license number for First notice?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 1.448444446174565
+      },
+      {
+        "q": "What is the emission rating for Dispatch channel?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 1.9109499641909558
+      },
+      {
+        "q": "What is the seismic rating for Purchase evidence?",
+        "attribute": "seismic rating",
+        "topId": "D1.3",
+        "score": 1.6126077868722155
+      },
+      {
+        "q": "What is the customs duty for File owner?",
+        "attribute": "customs duty",
+        "topId": "D1.4",
+        "score": 1.11468394534284
+      },
+      {
+        "q": "What is the auction value for Inspection location?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.3125122125231417
+      },
+      {
+        "q": "What is the rental fee for Inspection attendance?",
+        "attribute": "rental fee",
+        "topId": "D2.3",
+        "score": 1.7927930824437424
+      },
+      {
+        "q": "What is the failure probability for Inspection fee?",
+        "attribute": "failure probability",
+        "topId": "D2.3",
+        "score": 1.7373135048197932
+      },
+      {
+        "q": "What is the audit interval for First notice?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 1.6703180447192774
+      },
+      {
+        "q": "What is the embargo date for Dispatch channel?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 1.3376349628685202
+      },
+      {
+        "q": "What is the transfer fee for Purchase evidence?",
+        "attribute": "transfer fee",
+        "topId": "D1.3",
+        "score": 1.2815427832321158
+      },
+      {
+        "q": "What is the storage charge for File owner?",
+        "attribute": "storage charge",
+        "topId": "D1.4",
+        "score": 1.4040078449047855
+      },
+      {
+        "q": "What is the design patent for Inspection location?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 1.252482014196711
+      },
+      {
+        "q": "What is the payroll code for Inspection attendance?",
+        "attribute": "payroll code",
+        "topId": "D2.2",
+        "score": 1.289268026596073
+      },
+      {
+        "q": "What is the dispatch postcode for Inspection fee?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.3",
+        "score": 1.666569613385967
+      },
+      {
+        "q": "What is the tariff band for Photographs?",
+        "attribute": "tariff band",
+        "topId": "D2.4",
+        "score": 1.1988528329931736
+      },
+      {
+        "q": "What is the export permit for First notice?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.1121167055120849
+      },
+      {
+        "q": "What is the approval stamp for Dispatch channel?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 1.6577034463507532
+      },
+      {
+        "q": "What is the shelf life for Purchase evidence?",
+        "attribute": "shelf life",
+        "topId": "D1.3",
+        "score": 1.7581872826850249
+      },
+      {
+        "q": "What is the solubility for File owner?",
+        "attribute": "solubility",
+        "topId": "D1.4",
+        "score": 1.1733622029546054
+      },
+      {
+        "q": "What is the heat capacity for Inspection location?",
+        "attribute": "heat capacity",
+        "topId": "D2.1",
+        "score": 1.4676366264118035
+      },
+      {
+        "q": "What is the torque limit for Inspection attendance?",
+        "attribute": "torque limit",
+        "topId": "D2.2",
+        "score": 1.3653794383760915
+      },
+      {
+        "q": "What is the duty cycle for Inspection fee?",
+        "attribute": "duty cycle",
+        "topId": "D2.3",
+        "score": 1.7037902492413377
+      },
+      {
+        "q": "What is the proof load for First notice?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 1.2920034689901936
+      },
+      {
+        "q": "What is the retirement date for Dispatch channel?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 1.5759385014443728
+      },
+      {
+        "q": "What is the discount rate for Purchase evidence?",
+        "attribute": "discount rate",
+        "topId": "D1.3",
+        "score": 1.9169456065240051
+      },
+      {
+        "q": "What is the replacement value for File owner?",
+        "attribute": "replacement value",
+        "topId": "D1.4",
+        "score": 1.2440265766516632
+      },
+      {
+        "q": "What is the billing currency for Inspection location?",
+        "attribute": "billing currency",
+        "topId": "D2.3",
+        "score": 1.3644452031176144
+      },
+      {
+        "q": "What is the vat code for Inspection attendance?",
+        "attribute": "vat code",
+        "topId": "D2.2",
+        "score": 1.638437238099295
+      },
+      {
+        "q": "What is the escrow fee for Inspection fee?",
+        "attribute": "escrow fee",
+        "topId": "D2.3",
+        "score": 2.3389524136919637
+      },
+      {
+        "q": "What is the ballot count for Photographs?",
+        "attribute": "ballot count",
+        "topId": "D2.4",
+        "score": 0.9242866688719766
+      },
+      {
+        "q": "What is the bond maturity for First notice?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 0.7007157489869518
+      },
+      {
+        "q": "What is the trademark number for Dispatch channel?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 1.5820649295163494
+      },
+      {
+        "q": "What is the insurance limit for Purchase evidence?",
+        "attribute": "insurance limit",
+        "topId": "D1.3",
+        "score": 1.644585870049863
+      },
+      {
+        "q": "What is the review quorum for File owner?",
+        "attribute": "review quorum",
+        "topId": "D1.4",
+        "score": 0.9007912315734736
+      },
+      {
+        "q": "What is the franchise territory for Inspection location?",
+        "attribute": "franchise territory",
+        "topId": "D2.1",
+        "score": 0.9181211171375343
+      },
+      {
+        "q": "What is the bank routing code for Inspection attendance?",
+        "attribute": "bank routing code",
+        "topId": "D2.2",
+        "score": 1.1189568003471817
+      },
+      {
+        "q": "What is the capital allowance for Inspection fee?",
+        "attribute": "capital allowance",
+        "topId": "D2.3",
+        "score": 2.10166114865949
+      }
+    ]
+  },
+  "passed": 10,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 2
+    },
+    "near miss": {
+      "passed": 8,
+      "total": 8
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "falseRefusals": {
+    "count": 10,
+    "total": 10
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 8
+  },
+  "results": [
+    {
+      "question": "How quickly must I tell you my bike was stolen?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "72 hours"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who gets my initial message?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "intake desk"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What paperwork proves I bought it?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "original receipt"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who oversees my case?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "claims examiner"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where do I take a bicycle the police found?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "shed Elm"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who has to come in person?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "registered owner"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What does Harbour pay for one check?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "28 euros"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How many pictures should I send showing dents?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "four"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "original receipt",
+        "shed Elm"
+      ],
+      "sources": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who manages my case and how many pictures of the dents are needed?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "claims examiner",
+        "four"
+      ],
+      "sources": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What deductible applies after a theft?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Is crash damage covered overseas?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Can the inspection fee be paid in dollars?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Is a scan accepted instead of the original receipt?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the maximum bicycle payout?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "How long does reimbursement take after inspection?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which phone number accepts theft notices?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What appeal deadline applies after denial?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "topic": "payroll appeals",
+    "verdict": "partial",
+    "missing": [
+      "appeals"
+    ],
+    "lexical": 0.37,
+    "dense": 0.34551799297332764,
+    "supportingPassage": {
+      "id": "D2.6",
+      "source": "shift-handbook.txt",
+      "text": "Shift swap record: Keep the roster portal confirmation until the following payroll cycle closes."
+    }
+  },
+  {
+    "topic": "travel reimbursement evidence",
+    "verdict": "supported",
+    "missing": [],
+    "lexical": 1,
+    "dense": 0.870930016040802,
+    "supportingPassage": {
+      "id": "D1.2",
+      "source": "expense-notice.txt",
+      "text": "Travel reimbursement evidence: Attach the itemized receipt and approved trip reference."
+    }
+  },
+  {
+    "topic": "travel reimbursement insurance premium",
+    "verdict": "partial",
+    "missing": [
+      "insurance",
+      "premium"
+    ],
+    "lexical": 0.45666666666666667,
+    "dense": 0.4957979917526245,
+    "supportingPassage": {
+      "id": "D1.1",
+      "source": "expense-notice.txt",
+      "text": "Travel reimbursement deadline: File travel reimbursement within 14 calendar days after return."
+    }
+  }
+]

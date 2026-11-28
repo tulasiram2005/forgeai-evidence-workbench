@@ -1,0 +1,162 @@
+[
+  {
+    "question": "When does the opening film start?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18:25"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "What credential gets me into the room above the auditorium?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "striped pass"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where do we store the extra previews?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cabinet Birch"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How much money must I leave to borrow the subtitle device?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "14 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How long can someone arrive past curtain time?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Whose signoff lets another venue take the film?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "projection chief"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How should I mark a broken film carrier?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "orange tag"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where do I leave my end-of-night paperwork?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "tray Finch"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How many film rolls fit in a shipping box?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 reels"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where should unpaid ushers announce their arrival?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "side foyer"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How long is the striped pass valid?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is there a late fee for returning a caption receiver?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the replacement price for an orange tag?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which phone number reaches the projection chief?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How heavy is an empty return crate?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How wide is the projection booth door?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the combination for cabinet Birch?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which courier collects the completed shift reports?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]

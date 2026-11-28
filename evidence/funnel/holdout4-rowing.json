@@ -1,0 +1,3489 @@
+[
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "What day is the last chance to name our rowers?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5604429841041565,
+      "margin": 0.05301696062088013,
+      "idfCoverage": 0,
+      "reranker": 0.000021428899344755337
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.4",
+          "D1.5",
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D2.1",
+          "D2.5",
+          "D2.2",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.4",
+          "D1.5",
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D2.1",
+          "D2.5",
+          "D2.2",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.5",
+          "D1.1",
+          "D2.2",
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "Thursday"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Crew declarations close on Thursday.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Crew declarations close on Thursday.",
+            "text": "Crew declarations close on Thursday.",
+            "source": "operations.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What day is the last chance to name our rowers?",
+          "score": 0.5604429841041565,
+          "margin": 0.05301696062088013,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.\nPrize collection opens at noon.\nThe finish camera uses channel 7.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Prize collection opens at noon.",
+              "text": "Prize collection opens at noon.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Where do officials check the shell on the scale?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.18768499791622162,
+      "margin": 0.05459599196910858,
+      "idfCoverage": 0,
+      "reranker": 0.000010435672265884932
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D1.2",
+          "D2.5",
+          "D1.4",
+          "D2.4",
+          "D1.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D1.2",
+          "D2.5",
+          "D1.4",
+          "D2.4",
+          "D1.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.4",
+          "D1.1",
+          "D1.5",
+          "D1.3",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "pontoon Hazel"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Boat weigh-in occurs at pontoon Hazel.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Boat weigh-in occurs at pontoon",
+            "text": "Boat weigh-in occurs at pontoon Hazel.",
+            "source": "operations.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do officials check the shell on the scale?",
+          "score": 0.18768499791622162,
+          "margin": 0.05459599196910858,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Boat weigh-in occurs at pontoon Hazel.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Boat weigh-in occurs at pontoon Hazel.\nCoxswain packs include a brass whistle.\nA reserve bib is violet.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "A reserve bib is violet.",
+              "text": "A reserve bib is violet.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Which colour identifies a substitute on race day?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3508630096912384,
+      "margin": 0.022424012422561646,
+      "idfCoverage": 0,
+      "reranker": 0.00002982281512231566
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          9
+        ],
+        "allFactsByRank": 9,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.5",
+          "D2.4",
+          "D1.3",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "violet"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A reserve bib is violet.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "A reserve bib is violet.",
+            "text": "A reserve bib is violet.",
+            "source": "operations.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which colour identifies a substitute on race day?",
+          "score": 0.3508630096912384,
+          "margin": 0.022424012422561646,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.\nTiming slips need two initials.\nA reserve bib is violet.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "A reserve bib is violet.",
+              "text": "A reserve bib is violet.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Lane objections go to the race secretary.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "How far in advance can I see the running order?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4802840054035187,
+      "margin": 0.1765100061893463,
+      "idfCoverage": 0,
+      "reranker": 0.00001336894365522312
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          9
+        ],
+        "allFactsByRank": 9,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.5",
+          "D2.5",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.5",
+          "D2.5",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.5",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D1.5",
+          "D1.1",
+          "D1.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "35 minutes"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Start lists appear 35 minutes before launch.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Start lists appear 35 minutes",
+            "text": "Start lists appear 35 minutes before launch.",
+            "source": "operations.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How far in advance can I see the running order?",
+          "score": 0.4802840054035187,
+          "margin": 0.1765100061893463,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Start lists appear 35 minutes before launch.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Start lists appear 35 minutes",
+              "text": "Start lists appear 35 minutes before launch.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Start lists appear 35 minutes before launch.\nTiming slips need two initials.\nPrize collection opens at noon.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Start lists appear 35 minutes",
+              "text": "Start lists appear 35 minutes before launch.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Prize collection opens at noon.",
+              "text": "Prize collection opens at noon.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Who handles a complaint about our assigned water position?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.31747299432754517,
+      "margin": 0.014981001615524292,
+      "idfCoverage": 0,
+      "reranker": 0.000015603423889842816
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          10
+        ],
+        "allFactsByRank": 10,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.3",
+          "D1.5",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "race secretary"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Lane objections go to the race secretary.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Lane objections go to the",
+            "text": "Lane objections go to the race secretary.",
+            "source": "operations.pdf",
+            "id": "D2.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who handles a complaint about our assigned water position?",
+          "score": 0.31747299432754517,
+          "margin": 0.014981001615524292,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.\nBoat weigh-in occurs at pontoon Hazel.\nCoxswain packs include a brass whistle.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "What signal device comes in the steering kit?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.20786499977111816,
+      "margin": 0.062369003891944885,
+      "idfCoverage": 0,
+      "reranker": 0.000011392363376216963
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.5",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.5",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D1.5",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.3",
+          "D1.4",
+          "D2.5",
+          "D1.3",
+          "D2.1",
+          "D1.2",
+          "D2.4",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "brass whistle"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Coxswain packs include a brass whistle.",
+        "citations": [
+          {
+            "section": [
+              "rowing club regatta logistics"
+            ],
+            "topic": "Coxswain packs include a brass",
+            "text": "Coxswain packs include a brass whistle.",
+            "source": "handover.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What signal device comes in the steering kit?",
+          "score": 0.20786499977111816,
+          "margin": 0.062369003891944885,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.\nLane objections go to the race secretary.\nOar storage uses rack Marlin.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Which feed shows the line-crossing footage?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.43704599142074585,
+      "margin": 0.2032189965248108,
+      "idfCoverage": 0,
+      "reranker": 0.000011749832992791198
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.5",
+          "D2.3",
+          "D1.5",
+          "D1.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.5",
+          "D2.3",
+          "D1.5",
+          "D1.3",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D2.5",
+          "D1.4",
+          "D1.5",
+          "D2.3",
+          "D2.4",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "channel 7"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "The finish camera uses channel 7.",
+        "citations": [
+          {
+            "section": [
+              "rowing club regatta logistics"
+            ],
+            "topic": "The finish camera uses channel",
+            "text": "The finish camera uses channel 7.",
+            "source": "handover.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which feed shows the line-crossing footage?",
+          "score": 0.43704599142074585,
+          "margin": 0.2032189965248108,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.\nCoxswain packs include a brass whistle.\nTiming slips need two initials.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Where should we put the blades after rowing?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4223400056362152,
+      "margin": 0.006642013788223267,
+      "idfCoverage": 0.10568270317784978,
+      "reranker": 0.000016276559108518995
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          10
+        ],
+        "allFactsByRank": 10,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D1.1",
+          "D1.4",
+          "D2.3",
+          "D1.5",
+          "D2.4",
+          "D1.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "rack Marlin"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Oar storage uses rack Marlin.",
+        "citations": [
+          {
+            "section": [
+              "rowing club regatta logistics"
+            ],
+            "topic": "Oar storage uses rack Marlin.",
+            "text": "Oar storage uses rack Marlin.",
+            "source": "handover.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where should we put the blades after rowing?",
+          "score": 0.4223400056362152,
+          "margin": 0.006642013788223267,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Coxswain packs include a brass whistle.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Coxswain packs include a brass whistle.\nPrize collection opens at noon.\nOar storage uses rack Marlin.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Prize collection opens at noon.",
+              "text": "Prize collection opens at noon.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "How many people must initial the record of our finish time?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.36741000413894653,
+      "margin": 0.06654000282287598,
+      "idfCoverage": 0.10210443791941522,
+      "reranker": 0.000023324069843511097
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D1.5",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D1.5",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.5",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "two"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Timing slips need two initials.",
+        "citations": [
+          {
+            "section": [
+              "rowing club regatta logistics"
+            ],
+            "topic": "Timing slips need two initials.",
+            "text": "Timing slips need two initials.",
+            "source": "handover.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many people must initial the record of our finish time?",
+          "score": 0.36741000413894653,
+          "margin": 0.06654000282287598,
+          "promoted": false,
+          "lexicalMaximum": 0.13416666666666666
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.\nThe finish camera uses channel 7.\nStart lists appear 35 minutes before launch.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Start lists appear 35 minutes",
+              "text": "Start lists appear 35 minutes before launch.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "The finish camera uses channel 7."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "When can the winners pick up their awards?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3838289976119995,
+      "margin": 0.20913900434970856,
+      "idfCoverage": 0,
+      "reranker": 0.000010715080861700699
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.5",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.3",
+          "D2.5",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D2.1",
+          "D1.1",
+          "D2.5",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "noon"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Prize collection opens at noon.",
+        "citations": [
+          {
+            "section": [
+              "rowing club regatta logistics"
+            ],
+            "topic": "Prize collection opens at noon.",
+            "text": "Prize collection opens at noon.",
+            "source": "handover.md",
+            "id": "D1.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When can the winners pick up their awards?",
+          "score": 0.3838289976119995,
+          "margin": 0.20913900434970856,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Prize collection opens at noon.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Prize collection opens at noon.",
+              "text": "Prize collection opens at noon.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Prize collection opens at noon.\nTiming slips need two initials.\nStart lists appear 35 minutes before launch.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Prize collection opens at noon.",
+              "text": "Prize collection opens at noon.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Start lists appear 35 minutes",
+              "text": "Start lists appear 35 minutes before launch.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "What fee is charged for a lane objection?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5214290022850037,
+      "margin": 0.3437820076942444,
+      "idfCoverage": 0.2096958523010004,
+      "reranker": 0.00046603751252405345
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D1.5",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D1.5",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D1.5",
+          "D2.4",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What fee is charged for a lane objection?",
+          "score": 0.5214290022850037,
+          "margin": 0.3437820076942444,
+          "promoted": true,
+          "lexicalMaximum": 0.45666666666666667
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.\nTiming slips need two initials.\nCoxswain packs include a brass whistle.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Lane objections go to the race secretary.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Lane objections go to the race secretary.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Which battery powers the finish camera?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.2284339964389801,
+      "margin": 0.12671999633312225,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.26013636589050293
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.3",
+          "D1.5",
+          "D2.4",
+          "D1.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.3",
+          "D1.5",
+          "D2.4",
+          "D1.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D1.3",
+          "D1.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which battery powers the finish camera?",
+          "score": 0.2284339964389801,
+          "margin": 0.12671999633312225,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "The finish camera uses channel 7.\nA reserve bib is violet.\nBoat weigh-in occurs at pontoon Hazel.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "A reserve bib is violet.",
+              "text": "A reserve bib is violet.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "The finish camera uses channel 7."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "What length is a reserve bib?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5562660098075867,
+      "margin": 0.3167930096387863,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.9982802867889404
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.5",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.5",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.4",
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What length is a reserve bib?",
+          "score": 0.5562660098075867,
+          "margin": 0.3167930096387863,
+          "promoted": true,
+          "lexicalMaximum": 0.6088888888888888
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A reserve bib is violet.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A reserve bib is violet.",
+              "text": "A reserve bib is violet.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A reserve bib is violet.\nOar storage uses rack Marlin.\nTiming slips need two initials.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "A reserve bib is violet.",
+              "text": "A reserve bib is violet.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "A reserve bib is violet.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "A reserve bib is violet.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "Who made the brass whistle?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3719260096549988,
+      "margin": 0.20605100691318512,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.9870518445968628
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.5",
+          "D1.2",
+          "D2.4",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.5",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.5",
+          "D1.2",
+          "D2.4",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.3",
+          "D1.4",
+          "D2.5",
+          "D2.2",
+          "D1.3",
+          "D2.1",
+          "D1.5",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who made the brass whistle?",
+          "score": 0.3719260096549988,
+          "margin": 0.20605100691318512,
+          "promoted": false,
+          "lexicalMaximum": 0.5366666666666666
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Coxswain packs include a brass whistle.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Coxswain packs include a brass whistle.\nBoat weigh-in occurs at pontoon Hazel.\nLane objections go to the race secretary.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Coxswain packs include a brass whistle."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "How many boats fit at pontoon Hazel?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.722262978553772,
+      "margin": 0.3131229877471924,
+      "idfCoverage": 0.34669185961435073,
+      "reranker": 0.998913049697876
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.5",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D1.5",
+          "D1.2",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D1.5",
+          "D1.4",
+          "D2.1",
+          "D1.2",
+          "D2.3",
+          "D2.5",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How many boats fit at pontoon Hazel?",
+          "score": 0.722262978553772,
+          "margin": 0.3131229877471924,
+          "promoted": true,
+          "lexicalMaximum": 0.522
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Boat weigh-in occurs at pontoon Hazel.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Boat weigh-in occurs at pontoon Hazel.\nOar storage uses rack Marlin.\nCoxswain packs include a brass whistle.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Coxswain packs include a brass",
+              "text": "Coxswain packs include a brass whistle.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Boat weigh-in occurs at pontoon Hazel.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Boat weigh-in occurs at pontoon Hazel.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "How long are timing slips retained?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.34962600469589233,
+      "margin": 0.10036000609397888,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.921773374080658
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.5",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.5",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D1.5",
+          "D2.2",
+          "D2.3",
+          "D2.5",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How long are timing slips retained?",
+          "score": 0.34962600469589233,
+          "margin": 0.10036000609397888,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Timing slips need two initials.\nStart lists appear 35 minutes before launch.\nCrew declarations close on Thursday.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Start lists appear 35 minutes",
+              "text": "Start lists appear 35 minutes before launch.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Crew declarations close on Thursday.",
+              "text": "Crew declarations close on Thursday.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "Timing slips need two initials."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "What is the race secretary’s mobile number?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5032849907875061,
+      "margin": 0.18660497665405273,
+      "idfCoverage": 0.34669185961435073,
+      "reranker": 0.006328808143734932
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D1.2",
+          "D1.5",
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D2.3",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D1.4",
+          "D1.2",
+          "D1.5",
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D2.3",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.5",
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D1.1",
+          "D2.4",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the race secretary’s mobile number?",
+          "score": 0.5032849907875061,
+          "margin": 0.18660497665405273,
+          "promoted": true,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lane objections go to the race secretary.\nTiming slips need two initials.\nThe finish camera uses channel 7.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Lane objections go to the",
+              "text": "Lane objections go to the race secretary.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Timing slips need two initials.",
+              "text": "Timing slips need two initials.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Lane objections go to the race secretary.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Lane objections go to the race secretary.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "rowing",
+    "question": "How much weight can rack Marlin support?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4895780086517334,
+      "margin": 0.27822600305080414,
+      "idfCoverage": 0.34669185961435073,
+      "reranker": 0.004554293118417263
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D1.5",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D2.5",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D1.5",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D2.5",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D2.3",
+          "D1.1",
+          "D2.1",
+          "D1.5",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How much weight can rack Marlin support?",
+          "score": 0.4895780086517334,
+          "margin": 0.27822600305080414,
+          "promoted": false,
+          "lexicalMaximum": 0.3376
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Oar storage uses rack Marlin.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Oar storage uses rack Marlin.\nBoat weigh-in occurs at pontoon Hazel.\nThe finish camera uses channel 7.",
+          "citations": [
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "Oar storage uses rack Marlin.",
+              "text": "Oar storage uses rack Marlin.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "Boat weigh-in occurs at pontoon",
+              "text": "Boat weigh-in occurs at pontoon Hazel.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "rowing club regatta logistics"
+              ],
+              "topic": "The finish camera uses channel",
+              "text": "The finish camera uses channel 7.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Oar storage uses rack Marlin."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  }
+]

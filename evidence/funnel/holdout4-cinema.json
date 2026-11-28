@@ -1,0 +1,3510 @@
+[
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "When does the opening film start?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.48261401057243347,
+      "margin": 0.08764201402664185,
+      "idfCoverage": 0,
+      "reranker": 0.000013379339179664385
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.5",
+          "D1.3",
+          "D2.5",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.5",
+          "D1.3",
+          "D2.5",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.5",
+          "D1.5",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "18:25"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "First reel begins at 18:25.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "First reel begins at 18",
+            "text": "First reel begins at 18:25.",
+            "source": "operations.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When does the opening film start?",
+          "score": 0.48261401057243347,
+          "margin": 0.08764201402664185,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "First reel begins at 18:25.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First reel begins at 18",
+              "text": "First reel begins at 18:25.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "First reel begins at 18:25.\nVolunteer check-in takes place at the side foyer.\nCompleted shift reports go into tray Finch.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "First reel begins at 18",
+              "text": "First reel begins at 18:25.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "What credential gets me into the room above the auditorium?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4216949939727783,
+      "margin": 0.13507398962974548,
+      "idfCoverage": 0,
+      "reranker": 0.0000242107234953437
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D2.5",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D1.5",
+          "D2.2",
+          "D1.1",
+          "D2.5",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "striped pass"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Projection booth access requires a striped pass.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Projection booth access requires a",
+            "text": "Projection booth access requires a striped pass.",
+            "source": "operations.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What credential gets me into the room above the auditorium?",
+          "score": 0.4216949939727783,
+          "margin": 0.13507398962974548,
+          "promoted": false,
+          "lexicalMaximum": 0.132
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Completed shift reports go into tray Finch.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Completed shift reports go into tray Finch.\nVolunteer check-in takes place at the side foyer.\nProjection booth access requires a striped pass.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Completed shift reports go into tray Finch."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Where do we store the extra previews?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.32273998856544495,
+      "margin": 0.010703980922698975,
+      "idfCoverage": 0,
+      "reranker": 0.000012296907698328141
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.5",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D2.2",
+          "D2.5",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.5",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D2.2",
+          "D2.5",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.5",
+          "D1.4",
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "cabinet Birch"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Spare trailers are kept in cabinet Birch.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Spare trailers are kept in",
+            "text": "Spare trailers are kept in cabinet Birch.",
+            "source": "operations.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do we store the extra previews?",
+          "score": 0.32273998856544495,
+          "margin": 0.010703980922698975,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Spare trailers are kept in cabinet Birch.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Spare trailers are kept in cabinet Birch.\nVolunteer check-in takes place at the side foyer.\nCompleted shift reports go into tray Finch.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How much money must I leave to borrow the subtitle device?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.43850699067115784,
+      "margin": 0.2656159847974777,
+      "idfCoverage": 0,
+      "reranker": 0.000012614907973329537
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          9
+        ],
+        "allFactsByRank": 9,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D1.4",
+          "D2.5",
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.5",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "14 euros"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Caption receiver deposits cost 14 euros.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Caption receiver deposits cost 14",
+            "text": "Caption receiver deposits cost 14 euros.",
+            "source": "operations.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How much money must I leave to borrow the subtitle device?",
+          "score": 0.43850699067115784,
+          "margin": 0.2656159847974777,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Caption receiver deposits cost 14 euros.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Caption receiver deposits cost 14 euros.\nReel transfer approval belongs to the projection chief.\nA return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How long can someone arrive past curtain time?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.33275601267814636,
+      "margin": 0.05911201238632202,
+      "idfCoverage": 0,
+      "reranker": 0.00005284442886477336
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          10
+        ],
+        "allFactsByRank": 10,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.1",
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.1",
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.5",
+          "D2.1",
+          "D1.5",
+          "D1.4",
+          "D1.3",
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "9 minutes"
+    ],
+    "goldSources": [
+      "operations.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Late admission closes after 9 minutes.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Late admission closes after 9",
+            "text": "Late admission closes after 9 minutes.",
+            "source": "operations.pdf",
+            "id": "D2.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long can someone arrive past curtain time?",
+          "score": 0.33275601267814636,
+          "margin": 0.05911201238632202,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Late admission closes after 9 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Late admission closes after 9",
+              "text": "Late admission closes after 9 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Late admission closes after 9 minutes.\nFirst reel begins at 18:25.\nVolunteer check-in takes place at the side foyer.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Late admission closes after 9",
+              "text": "Late admission closes after 9 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "page": 1,
+              "topic": "First reel begins at 18",
+              "text": "First reel begins at 18:25.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Whose signoff lets another venue take the film?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.49208199977874756,
+      "margin": 0.16343998908996582,
+      "idfCoverage": 0,
+      "reranker": 0.000013129537364875432
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.1",
+          "D1.3",
+          "D2.4",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.1",
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "projection chief"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Reel transfer approval belongs to the projection chief.",
+        "citations": [
+          {
+            "section": [
+              "cinema screening operations"
+            ],
+            "topic": "Reel transfer approval belongs to",
+            "text": "Reel transfer approval belongs to the projection chief.",
+            "source": "handover.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Whose signoff lets another venue take the film?",
+          "score": 0.49208199977874756,
+          "margin": 0.16343998908996582,
+          "promoted": false,
+          "lexicalMaximum": 0.11499999999999999
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.\nReel transfer approval belongs to the projection chief.\nCompleted shift reports go into tray Finch.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.5",
+          "source": "handover.md",
+          "text": "Volunteer check-in takes place at the side foyer."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How should I mark a broken film carrier?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.471780002117157,
+      "margin": 0.0581589937210083,
+      "idfCoverage": 0,
+      "reranker": 0.00001159588009613799
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D1.5",
+          "D2.2",
+          "D2.4",
+          "D2.3",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D1.5",
+          "D2.2",
+          "D2.4",
+          "D2.3",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.5",
+          "D1.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "orange tag"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Damaged spools receive an orange tag.",
+        "citations": [
+          {
+            "section": [
+              "cinema screening operations"
+            ],
+            "topic": "Damaged spools receive an orange",
+            "text": "Damaged spools receive an orange tag.",
+            "source": "handover.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How should I mark a broken film carrier?",
+          "score": 0.471780002117157,
+          "margin": 0.0581589937210083,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Damaged spools receive an orange tag.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Damaged spools receive an orange",
+              "text": "Damaged spools receive an orange tag.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Damaged spools receive an orange tag.\nReel transfer approval belongs to the projection chief.\nA return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Damaged spools receive an orange",
+              "text": "Damaged spools receive an orange tag.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Where do I leave my end-of-night paperwork?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.22463500499725342,
+      "margin": 0.03715699911117554,
+      "idfCoverage": 0,
+      "reranker": 0.000011558341611817013
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.3",
+          "D2.5",
+          "D2.4",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.3",
+          "D2.5",
+          "D2.4",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D2.5",
+          "D2.3",
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "tray Finch"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Completed shift reports go into tray Finch.",
+        "citations": [
+          {
+            "section": [
+              "cinema screening operations"
+            ],
+            "topic": "Completed shift reports go into",
+            "text": "Completed shift reports go into tray Finch.",
+            "source": "handover.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do I leave my end-of-night paperwork?",
+          "score": 0.22463500499725342,
+          "margin": 0.03715699911117554,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.\nCompleted shift reports go into tray Finch.\nSpare trailers are kept in cabinet Birch.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How many film rolls fit in a shipping box?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5514780282974243,
+      "margin": 0.24675703048706055,
+      "idfCoverage": 0,
+      "reranker": 0.00001594756577105727
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D1.3",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.4",
+          "D2.5",
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D1.5"
+        ]
+      }
+    },
+    "goldFacts": [
+      "6 reels"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A return crate accommodates 6 reels.",
+        "citations": [
+          {
+            "section": [
+              "cinema screening operations"
+            ],
+            "topic": "A return crate accommodates 6",
+            "text": "A return crate accommodates 6 reels.",
+            "source": "handover.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many film rolls fit in a shipping box?",
+          "score": 0.5514780282974243,
+          "margin": 0.24675703048706055,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A return crate accommodates 6 reels.\nReel transfer approval belongs to the projection chief.\nVolunteer check-in takes place at the side foyer.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "A return crate accommodates 6 reels.",
+      "citations": [
+        {
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A return crate accommodates 6 reels."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Where should unpaid ushers announce their arrival?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.32304099202156067,
+      "margin": 0.05012199282646179,
+      "idfCoverage": 0,
+      "reranker": 0.000010766521882032976
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.5",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.3",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.5",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.5",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D2.5",
+          "D1.3",
+          "D1.1",
+          "D2.3",
+          "D2.4",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "side foyer"
+    ],
+    "goldSources": [
+      "handover.md"
+    ],
+    "indexed": [
+      [
+        "D1.5"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Volunteer check-in takes place at the side foyer.",
+        "citations": [
+          {
+            "section": [
+              "cinema screening operations"
+            ],
+            "topic": "Volunteer check-in takes place at",
+            "text": "Volunteer check-in takes place at the side foyer.",
+            "source": "handover.md",
+            "id": "D1.5"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where should unpaid ushers announce their arrival?",
+          "score": 0.32304099202156067,
+          "margin": 0.05012199282646179,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Volunteer check-in takes place at the side foyer.\nCompleted shift reports go into tray Finch.\nProjection booth access requires a striped pass.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How long is the striped pass valid?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.47817298769950867,
+      "margin": 0.2434609830379486,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.008619189262390137
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.5",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D1.3",
+          "D1.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.5",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.5",
+          "D1.4",
+          "D2.3",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How long is the striped pass valid?",
+          "score": 0.47817298769950867,
+          "margin": 0.2434609830379486,
+          "promoted": false,
+          "lexicalMaximum": 0.37
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Projection booth access requires a striped pass.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Projection booth access requires a striped pass.\nFirst reel begins at 18:25.\nLate admission closes after 9 minutes.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "First reel begins at 18",
+              "text": "First reel begins at 18:25.",
+              "source": "operations.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Late admission closes after 9",
+              "text": "Late admission closes after 9 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Projection booth access requires a striped pass.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Is there a late fee for returning a caption receiver?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.544884979724884,
+      "margin": 0.2904209792613983,
+      "idfCoverage": 0.29547284462931167,
+      "reranker": 0.11554480344057083
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D2.5",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.5",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.5",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D1.5",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D2.5",
+          "D1.4",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D1.5",
+          "D1.2",
+          "D2.2",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is there a late fee for returning a caption receiver?",
+          "score": 0.544884979724884,
+          "margin": 0.2904209792613983,
+          "promoted": true,
+          "lexicalMaximum": 0.2813333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Caption receiver deposits cost 14 euros.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Caption receiver deposits cost 14 euros.\nLate admission closes after 9 minutes.\nA return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Late admission closes after 9",
+              "text": "Late admission closes after 9 minutes.",
+              "source": "operations.pdf",
+              "id": "D2.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Caption receiver deposits cost 14 euros.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Caption receiver deposits cost 14 euros.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "What is the replacement price for an orange tag?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4374360144138336,
+      "margin": 0.20831501483917236,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.008603492751717567
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.3",
+          "D2.5",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D2.3",
+          "D2.5",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D1.5",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the replacement price for an orange tag?",
+          "score": 0.4374360144138336,
+          "margin": 0.20831501483917236,
+          "promoted": false,
+          "lexicalMaximum": 0.40249999999999997
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Damaged spools receive an orange tag.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Damaged spools receive an orange",
+              "text": "Damaged spools receive an orange tag.",
+              "source": "handover.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Damaged spools receive an orange tag.\nCaption receiver deposits cost 14 euros.\nA return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Damaged spools receive an orange",
+              "text": "Damaged spools receive an orange tag.",
+              "source": "handover.md",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Damaged spools receive an orange tag."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Which phone number reaches the projection chief?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.43181198835372925,
+      "margin": 0.1096859872341156,
+      "idfCoverage": 0.32926202738338733,
+      "reranker": 0.0011298744939267635
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.5",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.5",
+          "D1.4",
+          "D2.4",
+          "D2.5",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.5",
+          "D1.2",
+          "D2.3",
+          "D2.5",
+          "D1.4",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which phone number reaches the projection chief?",
+          "score": 0.43181198835372925,
+          "margin": 0.1096859872341156,
+          "promoted": false,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Reel transfer approval belongs to the projection chief.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Reel transfer approval belongs to the projection chief.\nProjection booth access requires a striped pass.\nCompleted shift reports go into tray Finch.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Reel transfer approval belongs to the projection chief."
+        },
+        {
+          "label": "related, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Projection booth access requires a striped pass.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How heavy is an empty return crate?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3588840067386627,
+      "margin": 0.14984700083732605,
+      "idfCoverage": 0.4432092669439675,
+      "reranker": 0.8470963835716248
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D1.5",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D2.5",
+          "D2.1",
+          "D2.2",
+          "D1.5",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.1",
+          "D1.1",
+          "D2.5",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D1.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How heavy is an empty return crate?",
+          "score": 0.3588840067386627,
+          "margin": 0.14984700083732605,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A return crate accommodates 6 reels.\nSpare trailers are kept in cabinet Birch.\nCaption receiver deposits cost 14 euros.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A return crate accommodates 6 reels."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "How wide is the projection booth door?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4319309890270233,
+      "margin": 0.20791998505592346,
+      "idfCoverage": 0.4240768408781415,
+      "reranker": 0.04515371099114418
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.5",
+          "D1.4",
+          "D1.3",
+          "D1.1",
+          "D2.5",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.5",
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D2.5",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.5",
+          "D1.4",
+          "D2.1",
+          "D2.5",
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How wide is the projection booth door?",
+          "score": 0.4319309890270233,
+          "margin": 0.20791998505592346,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Projection booth access requires a striped pass.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Projection booth access requires a striped pass.\nVolunteer check-in takes place at the side foyer.\nA return crate accommodates 6 reels.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Volunteer check-in takes place at",
+              "text": "Volunteer check-in takes place at the side foyer.",
+              "source": "handover.md",
+              "id": "D1.5"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Projection booth access requires a striped pass.",
+          "page": 1
+        },
+        {
+          "label": "related, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Reel transfer approval belongs to the projection chief."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "What is the combination for cabinet Birch?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5280060172080994,
+      "margin": 0.4123380184173584,
+      "idfCoverage": 0.6141995857364115,
+      "reranker": 0.5885633230209351
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.3",
+          "D1.5",
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.3",
+          "D1.5",
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.3",
+          "D1.5",
+          "D2.1",
+          "D2.5",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the combination for cabinet Birch?",
+          "score": 0.5280060172080994,
+          "margin": 0.4123380184173584,
+          "promoted": true,
+          "lexicalMaximum": 0.4933333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Spare trailers are kept in cabinet Birch.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Spare trailers are kept in cabinet Birch.\nA return crate accommodates 6 reels.\nCaption receiver deposits cost 14 euros.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Spare trailers are kept in",
+              "text": "Spare trailers are kept in cabinet Birch.",
+              "source": "operations.pdf",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "A return crate accommodates 6",
+              "text": "A return crate accommodates 6 reels.",
+              "source": "handover.md",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Caption receiver deposits cost 14",
+              "text": "Caption receiver deposits cost 14 euros.",
+              "source": "operations.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "related, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "Spare trailers are kept in cabinet Birch.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout4",
+    "name": "cinema",
+    "question": "Which courier collects the completed shift reports?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.46080100536346436,
+      "margin": 0.19381901621818542,
+      "idfCoverage": 0.5442136368838503,
+      "reranker": 0.9916728138923645
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.5",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D1.5",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.5"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D1.5",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.5"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.5",
+          "D1.2",
+          "D2.3",
+          "D2.4",
+          "D2.5"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which courier collects the completed shift reports?",
+          "score": 0.46080100536346436,
+          "margin": 0.19381901621818542,
+          "promoted": false,
+          "lexicalMaximum": 0.5376
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Completed shift reports go into tray Finch.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Completed shift reports go into tray Finch.\nReel transfer approval belongs to the projection chief.\nProjection booth access requires a striped pass.",
+          "citations": [
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Completed shift reports go into",
+              "text": "Completed shift reports go into tray Finch.",
+              "source": "handover.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "cinema screening operations"
+              ],
+              "topic": "Reel transfer approval belongs to",
+              "text": "Reel transfer approval belongs to the projection chief.",
+              "source": "handover.md",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Projection booth access requires a",
+              "text": "Projection booth access requires a striped pass.",
+              "source": "operations.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Completed shift reports go into tray Finch.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Completed shift reports go into tray Finch."
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  }
+]

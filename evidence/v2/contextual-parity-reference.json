@@ -1,0 +1,437 @@
+[
+  {
+    "fixture": "examples/holdout/dispatch",
+    "brief": "Use the inventory catalogue and the receiving manual to help dispatchers with kit contents and delivery handling. Cite the source.",
+    "documents": [
+      {
+        "name": "kits.csv",
+        "text": "sku,pack\nNX47,11 seals\nNX48,19 clips\n"
+      },
+      {
+        "name": "receiving.md",
+        "text": "# Receiving\n## Cold arrivals\nKeep the parcel at 6 degrees until inspection.\n## Damaged cartons\nSend photographs to the depot supervisor before unloading.\n"
+      }
+    ],
+    "split": {
+      "tune": {
+        "passed": 36,
+        "total": 36,
+        "lower": 0.9035813714055363,
+        "upper": 1
+      },
+      "validate": {
+        "passed": 12,
+        "total": 12,
+        "lower": 0.7575059933447592,
+        "upper": 1
+      },
+      "test": {
+        "passed": 12,
+        "total": 12,
+        "lower": 0.7575059933447592,
+        "upper": 1
+      }
+    },
+    "questions": [
+      {
+        "question": "How many seals come in an NX47 kit?",
+        "expected": {
+          "status": "answered",
+          "text": "sku = NX47 · pack = 11 seals",
+          "citations": [
+            {
+              "id": "D1.1",
+              "source": "kits.csv",
+              "text": "sku = NX47 · pack = 11 seals"
+            }
+          ],
+          "tool": "csv_lookup"
+        }
+      },
+      {
+        "question": "How many clips will one NX48 kit contain?",
+        "expected": {
+          "status": "answered",
+          "text": "sku = NX48 · pack = 19 clips",
+          "citations": [
+            {
+              "id": "D1.2",
+              "source": "kits.csv",
+              "text": "sku = NX48 · pack = 19 clips"
+            }
+          ],
+          "tool": "csv_lookup"
+        }
+      },
+      {
+        "question": "How many clips come in the NX49 kit?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.2",
+              "source": "kits.csv",
+              "text": "sku = NX48 · pack = 19 clips"
+            }
+          ]
+        }
+      },
+      {
+        "question": "What is the warranty period for NX47?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.1",
+              "source": "kits.csv",
+              "text": "sku = NX47 · pack = 11 seals"
+            }
+          ]
+        }
+      },
+      {
+        "question": "At what temperature should a cold delivery wait?",
+        "expected": {
+          "status": "answered",
+          "text": "Keep the parcel at 6 degrees until inspection.",
+          "citations": [
+            {
+              "id": "D2.1",
+              "source": "receiving.md",
+              "text": "Keep the parcel at 6 degrees until inspection."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Who receives the pictures of damaged boxes?",
+        "expected": {
+          "status": "answered",
+          "text": "Send photographs to the depot supervisor before unloading.",
+          "citations": [
+            {
+              "id": "D2.2",
+              "source": "receiving.md",
+              "text": "Send photographs to the depot supervisor before unloading."
+            }
+          ]
+        }
+      },
+      {
+        "question": "How many seals come in an NX47 kit? Also, at what temperature should a cold delivery wait?",
+        "expected": {
+          "status": "answered",
+          "text": "sku = NX47 · pack = 11 seals\nKeep the parcel at 6 degrees until inspection.",
+          "citations": [
+            {
+              "id": "D1.1",
+              "source": "kits.csv",
+              "text": "sku = NX47 · pack = 11 seals"
+            },
+            {
+              "id": "D2.1",
+              "source": "receiving.md",
+              "text": "Keep the parcel at 6 degrees until inspection."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Which one?",
+        "expected": {
+          "status": "clarify",
+          "text": "Which topic or record do you mean?",
+          "citations": []
+        }
+      }
+    ]
+  },
+  {
+    "fixture": "examples/holdout3/optics",
+    "brief": "Explain optical bench setup and trace records.",
+    "documents": [
+      {
+        "name": "alignment.md",
+        "text": "# Optical bench\n## Seating\nLock the prism into a brass cradle.\n## Baseline\nAllow the lamp 14 minutes to stabilize.\n## Aperture\nSet the slit width to 2 millimeters.\n## Alignment\nUse a green reference card.\n"
+      },
+      {
+        "name": "traces.md",
+        "text": "# Trace handling\n## Capture\nSave 6 traces for each specimen.\n## Approval\nThe shift physicist initials the trace bundle.\n## Export\nWrite the final spectrum as TSV.\n## Disposal\nRetain calibration scraps for 18 days.\n"
+      }
+    ],
+    "split": {
+      "tune": {
+        "passed": 36,
+        "total": 36,
+        "lower": 0.9035813714055363,
+        "upper": 1
+      },
+      "validate": {
+        "passed": 12,
+        "total": 12,
+        "lower": 0.7575059933447592,
+        "upper": 1
+      },
+      "test": {
+        "passed": 12,
+        "total": 12,
+        "lower": 0.7575059933447592,
+        "upper": 1
+      }
+    },
+    "questions": [
+      {
+        "question": "What holds the glass wedge steady?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "How long do we wait for stable light?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "How wide should the opening be?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "Which colour target do we align against?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "How many recordings do we need per sample?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "Who must authorize the measurement set?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.3",
+              "source": "alignment.md",
+              "text": "Set the slit width to 2 millimeters."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Which file type do I hand over?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "When can old setup scraps be discarded?",
+        "expected": {
+          "status": "answered",
+          "text": "Retain calibration scraps for 18 days.",
+          "citations": [
+            {
+              "id": "D2.4",
+              "source": "traces.md",
+              "text": "Retain calibration scraps for 18 days."
+            }
+          ]
+        }
+      },
+      {
+        "question": "How wide is the opening? Also, who signs the recordings?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "Which target colour do I use and how many recordings are needed for one sample?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.4",
+              "source": "alignment.md",
+              "text": "Use a green reference card."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Which solvent cleans the prism?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.1",
+              "source": "alignment.md",
+              "text": "Lock the prism into a brass cradle."
+            }
+          ]
+        }
+      },
+      {
+        "question": "What voltage should power the lamp?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.2",
+              "source": "alignment.md",
+              "text": "Allow the lamp 14 minutes to stabilize."
+            }
+          ]
+        }
+      },
+      {
+        "question": "What is the replacement price of a reference card?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.4",
+              "source": "alignment.md",
+              "text": "Use a green reference card."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Which TSV delimiter escape convention is required?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D2.3",
+              "source": "traces.md",
+              "text": "Write the final spectrum as TSV."
+            }
+          ]
+        }
+      },
+      {
+        "question": "What is the maximum acquisition temperature?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": []
+        }
+      },
+      {
+        "question": "Who can override the shift physicist?",
+        "expected": {
+          "status": "refused",
+          "text": "The cited passage does not identify the responsible person.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D2.2",
+              "source": "traces.md",
+              "text": "The shift physicist initials the trace bundle."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Is an aluminium cradle approved?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D1.1",
+              "source": "alignment.md",
+              "text": "Lock the prism into a brass cradle."
+            }
+          ]
+        }
+      },
+      {
+        "question": "How many backup copies of the final spectrum are required?",
+        "expected": {
+          "status": "refused",
+          "text": "I could not establish that from the supplied sources.",
+          "citations": [],
+          "pointers": [
+            {
+              "label": "related, not confirmed",
+              "id": "D2.3",
+              "source": "traces.md",
+              "text": "Write the final spectrum as TSV."
+            }
+          ]
+        }
+      },
+      {
+        "question": "Which one?",
+        "expected": {
+          "status": "clarify",
+          "text": "Which topic or record do you mean?",
+          "citations": []
+        }
+      },
+      {
+        "question": "What about it?",
+        "expected": {
+          "status": "clarify",
+          "text": "Which topic or record do you mean?",
+          "citations": []
+        }
+      }
+    ]
+  }
+]

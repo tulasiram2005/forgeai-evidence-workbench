@@ -1,0 +1,180 @@
+{
+  "method": "All facts must be covered in their named sources. Whole-question diagnostic rankings are ungated. Gate component traces include candidate subqueries. Final verdict uses the archived response. AUROC uses stratified question bootstrap percentile intervals; shared corpora limit independence.",
+  "summary": [
+    {
+      "suite": "holdout",
+      "answerable": 30,
+      "oracle": 30,
+      "nearMiss": 15,
+      "falseAnswers": 0,
+      "losses": {
+        "passed": 15,
+        "retrieval": 4,
+        "gate": 11
+      },
+      "outsideHybridTop3": 4,
+      "signals": {
+        "cosine": {
+          "auc": 0.6177777777777778,
+          "lower": 0.44222222222222224,
+          "upper": 0.78
+        },
+        "margin": {
+          "auc": 0.2733333333333333,
+          "lower": 0.10222222222222223,
+          "upper": 0.4577777777777778
+        },
+        "idfCoverage": {
+          "auc": 0.006666666666666667,
+          "lower": 0,
+          "upper": 0.02666666666666667
+        },
+        "reranker": {
+          "auc": 0.5111111111111111,
+          "lower": 0.31333333333333335,
+          "upper": 0.6955555555555556
+        }
+      }
+    },
+    {
+      "suite": "holdout2",
+      "answerable": 33,
+      "oracle": 33,
+      "nearMiss": 18,
+      "falseAnswers": 4,
+      "losses": {
+        "gate": 23,
+        "passed": 7,
+        "retrieval": 3
+      },
+      "outsideHybridTop3": 3,
+      "signals": {
+        "cosine": {
+          "auc": 0.5471380471380471,
+          "lower": 0.367003367003367,
+          "upper": 0.7171717171717171
+        },
+        "margin": {
+          "auc": 0.40235690235690236,
+          "lower": 0.23737373737373738,
+          "upper": 0.5841750841750841
+        },
+        "idfCoverage": {
+          "auc": 0.2112794612794613,
+          "lower": 0.09006734006734007,
+          "upper": 0.3569023569023569
+        },
+        "reranker": {
+          "auc": 0.33164983164983164,
+          "lower": 0.1919191919191919,
+          "upper": 0.4898989898989899
+        }
+      }
+    },
+    {
+      "suite": "holdout3",
+      "answerable": 30,
+      "oracle": 30,
+      "nearMiss": 24,
+      "falseAnswers": 5,
+      "losses": {
+        "passed": 7,
+        "gate": 22,
+        "retrieval": 1
+      },
+      "outsideHybridTop3": 1,
+      "signals": {
+        "cosine": {
+          "auc": 0.5430555555555555,
+          "lower": 0.3875,
+          "upper": 0.6819444444444445
+        },
+        "margin": {
+          "auc": 0.5208333333333334,
+          "lower": 0.3680555555555556,
+          "upper": 0.6652777777777777
+        },
+        "idfCoverage": {
+          "auc": 0.1361111111111111,
+          "lower": 0.041666666666666664,
+          "upper": 0.23333333333333334
+        },
+        "reranker": {
+          "auc": 0.2361111111111111,
+          "lower": 0.10555555555555556,
+          "upper": 0.37916666666666665
+        }
+      }
+    },
+    {
+      "suite": "holdout4",
+      "answerable": 30,
+      "oracle": 30,
+      "nearMiss": 24,
+      "falseAnswers": 9,
+      "losses": {
+        "gate": 26,
+        "retrieval": 3,
+        "passed": 1
+      },
+      "outsideHybridTop3": 3,
+      "signals": {
+        "cosine": {
+          "auc": 0.2625,
+          "lower": 0.1375,
+          "upper": 0.40694444444444444
+        },
+        "margin": {
+          "auc": 0.18611111111111112,
+          "lower": 0.08472222222222223,
+          "upper": 0.30972222222222223
+        },
+        "idfCoverage": {
+          "auc": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        "reranker": {
+          "auc": 0,
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    {
+      "suite": "pooled",
+      "answerable": 123,
+      "oracle": 123,
+      "nearMiss": 81,
+      "falseAnswers": 18,
+      "losses": {
+        "passed": 30,
+        "retrieval": 11,
+        "gate": 82
+      },
+      "outsideHybridTop3": 11,
+      "signals": {
+        "cosine": {
+          "auc": 0.4952825454180468,
+          "lower": 0.4112215196226036,
+          "upper": 0.5761818729298404
+        },
+        "margin": {
+          "auc": 0.35129980929438925,
+          "lower": 0.28184281842818426,
+          "upper": 0.42848539596507074
+        },
+        "idfCoverage": {
+          "auc": 0.08787513801063937,
+          "lower": 0.047676402689952824,
+          "upper": 0.13359429890595204
+        },
+        "reranker": {
+          "auc": 0.24480578139114725,
+          "lower": 0.17795844625112917,
+          "upper": 0.3206865401987353
+        }
+      }
+    }
+  ]
+}

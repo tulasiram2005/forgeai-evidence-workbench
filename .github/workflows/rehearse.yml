@@ -1,0 +1,42 @@
+name: CPU rehearsal
+on:
+  workflow_dispatch:
+  push:
+    branches: [v2]
+    paths: ['.github/workflows/rehearse.yml']
+permissions:
+  contents: read
+jobs:
+  rehearse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-pdf.txt -r retrieval/requirements.txt reportlab
+          python -c "from huggingface_hub import snapshot_download; snapshot_download('sentence-transformers/all-MiniLM-L6-v2', revision='c9745ed1d9f207416be6d2e6f8de32d1f16199bf',ignore_patterns=['onnx/*','openvino/*','*.h5','*.msgpack','*.ot','pytorch_model.bin'])"
+      - run: |
+          curl --fail --location --retry 3 https://github.com/ollama/ollama/releases/download/v0.13.5/ollama-linux-amd64.tgz -o /tmp/forge-ollama.tgz
+          mkdir /tmp/forge-ollama
+          tar -xzf /tmp/forge-ollama.tgz -C /tmp/forge-ollama
+          export PATH=/tmp/forge-ollama/bin:$PATH
+          ollama serve >/tmp/ollama.log 2>&1 &
+          pid=$!
+          for attempt in {1..30}; do if curl -fsS http://localhost:11434/api/tags; then break; fi; sleep 1; done
+          ollama pull qwen2.5:1.5b
+          kill "$pid"
+          scripts/rehearse.sh /tmp/receipts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: clean-rehearsal
+          path: /tmp/receipts

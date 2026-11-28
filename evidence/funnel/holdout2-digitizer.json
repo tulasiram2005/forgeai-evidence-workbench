@@ -1,0 +1,3403 @@
+[
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Which side of the film should face me as I load it?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3098430037498474,
+      "margin": 0.0589900016784668,
+      "idfCoverage": 0,
+      "reranker": 0.000013076155482849572
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D1.4",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D1.2",
+          "D1.4",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.2",
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "upward"
+    ],
+    "goldSources": [
+      "scanner.md"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Insert the strip with the emulsion facing upward.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Feed direction"
+            ],
+            "topic": "Insert the strip with the",
+            "text": "Insert the strip with the emulsion facing upward.",
+            "source": "scanner.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which side of the film should face me as I load it?",
+          "score": 0.3098430037498474,
+          "margin": 0.0589900016784668,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Insert the strip with the emulsion facing upward.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Feed direction"
+              ],
+              "topic": "Insert the strip with the",
+              "text": "Insert the strip with the emulsion facing upward.",
+              "source": "scanner.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Insert the strip with the emulsion facing upward.\nTurn the spindle clockwise.\nCap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Feed direction"
+              ],
+              "topic": "Insert the strip with the",
+              "text": "Insert the strip with the emulsion facing upward.",
+              "source": "scanner.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Rewind"
+              ],
+              "topic": "Turn the spindle clockwise.",
+              "text": "Turn the spindle clockwise.",
+              "source": "scanner.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What implement is safe for sweeping away specks?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3813740015029907,
+      "margin": 0.02033299207687378,
+      "idfCoverage": 0,
+      "reranker": 0.000015595211152685806
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D1.2",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D1.2",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "sable brush"
+    ],
+    "goldSources": [
+      "scanner.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Use a sable brush on loose dust.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Cleaning"
+            ],
+            "topic": "Use a sable brush on",
+            "text": "Use a sable brush on loose dust.",
+            "source": "scanner.md",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What implement is safe for sweeping away specks?",
+          "score": 0.3813740015029907,
+          "margin": 0.02033299207687378,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.\nKeep scratch scans for 11 days.\nCap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "How bright may the lamp be?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.35329699516296387,
+      "margin": 0.3584009953774512,
+      "idfCoverage": 0,
+      "reranker": 0.00001037464608089067
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D2.4",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "38 lux"
+    ],
+    "goldSources": [
+      "scanner.md"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Cap illumination at 38 lux.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Exposure"
+            ],
+            "topic": "Cap illumination at 38 lux.",
+            "text": "Cap illumination at 38 lux.",
+            "source": "scanner.md",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How bright may the lamp be?",
+          "score": 0.35329699516296387,
+          "margin": 0.3584009953774512,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.\nA second operator signs the contact sheet.\nExport viewing copies as TIFF.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Which way do I rotate the take-up hub?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.39102399349212646,
+      "margin": 0.0987519919872284,
+      "idfCoverage": 0,
+      "reranker": 0.0015131097752600908
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D1.1",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D1.1",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D1.1",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "clockwise"
+    ],
+    "goldSources": [
+      "scanner.md"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Turn the spindle clockwise.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Rewind"
+            ],
+            "topic": "Turn the spindle clockwise.",
+            "text": "Turn the spindle clockwise.",
+            "source": "scanner.md",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which way do I rotate the take-up hub?",
+          "score": 0.39102399349212646,
+          "margin": 0.0987519919872284,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Turn the spindle clockwise.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Rewind"
+              ],
+              "topic": "Turn the spindle clockwise.",
+              "text": "Turn the spindle clockwise.",
+              "source": "scanner.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Turn the spindle clockwise.\nInsert the strip with the emulsion facing upward.\nUse a sable brush on loose dust.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Rewind"
+              ],
+              "topic": "Turn the spindle clockwise.",
+              "text": "Turn the spindle clockwise.",
+              "source": "scanner.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Feed direction"
+              ],
+              "topic": "Insert the strip with the",
+              "text": "Insert the strip with the emulsion facing upward.",
+              "source": "scanner.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What goes first in the filename for an archival original?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6098290085792542,
+      "margin": 0.2189750075340271,
+      "idfCoverage": 0,
+      "reranker": 0.000012354681530268863
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.4",
+          "D2.2",
+          "D1.3",
+          "D2.1",
+          "D2.3",
+          "D1.2",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "accession code"
+    ],
+    "goldSources": [
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Prefix each master file with the accession code.",
+        "citations": [
+          {
+            "section": [
+              "Archive desk",
+              "Naming"
+            ],
+            "topic": "Prefix each master file with",
+            "text": "Prefix each master file with the accession code.",
+            "source": "records.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What goes first in the filename for an archival original?",
+          "score": 0.6098290085792542,
+          "margin": 0.2189750075340271,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.\nExport viewing copies as TIFF.\nA second operator signs the contact sheet.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Prefix each master file with the accession code.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "records.md",
+          "text": "Prefix each master file with the accession code."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Who countersigns the image proof?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.208514004945755,
+      "margin": 0.027395009994506836,
+      "idfCoverage": 0,
+      "reranker": 0.000010993852811225224
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.4",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.4",
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "second operator"
+    ],
+    "goldSources": [
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "A second operator signs the contact sheet.",
+        "citations": [
+          {
+            "section": [
+              "Archive desk",
+              "Review"
+            ],
+            "topic": "A second operator signs the",
+            "text": "A second operator signs the contact sheet.",
+            "source": "records.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who countersigns the image proof?",
+          "score": 0.208514004945755,
+          "margin": 0.027395009994506836,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.\nA second operator signs the contact sheet.\nExport viewing copies as TIFF.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What format should the customer receive?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.28146299719810486,
+      "margin": 0.005704998970031738,
+      "idfCoverage": 0,
+      "reranker": 0.000010488342013559304
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D2.3",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "TIFF"
+    ],
+    "goldSources": [
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Export viewing copies as TIFF.",
+        "citations": [
+          {
+            "section": [
+              "Archive desk",
+              "Delivery"
+            ],
+            "topic": "Export viewing copies as TIFF.",
+            "text": "Export viewing copies as TIFF.",
+            "source": "records.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What format should the customer receive?",
+          "score": 0.28146299719810486,
+          "margin": 0.005704998970031738,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Export viewing copies as TIFF.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Export viewing copies as TIFF.\nA second operator signs the contact sheet.\nCap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "When may I discard temporary images?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.49742698669433594,
+      "margin": 0.23100998997688293,
+      "idfCoverage": 0,
+      "reranker": 0.000011961253221670631
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "11 days"
+    ],
+    "goldSources": [
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Keep scratch scans for 11 days.",
+        "citations": [
+          {
+            "section": [
+              "Archive desk",
+              "Retention"
+            ],
+            "topic": "Keep scratch scans for 11",
+            "text": "Keep scratch scans for 11 days.",
+            "source": "records.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When may I discard temporary images?",
+          "score": 0.49742698669433594,
+          "margin": 0.23100998997688293,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Keep scratch scans for 11 days.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Keep scratch scans for 11 days.\nExport viewing copies as TIFF.\nA second operator signs the contact sheet.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "How bright can the lamp be, and how long must temporary images survive?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.38696199655532837,
+      "margin": 0.21751999855041504,
+      "idfCoverage": 0,
+      "reranker": 0.00002049947579507716
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7,
+          4
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.3",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "38 lux",
+      "11 days"
+    ],
+    "goldSources": [
+      "scanner.md",
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ],
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Cap illumination at 38 lux.\nKeep scratch scans for 11 days.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Exposure"
+            ],
+            "topic": "Cap illumination at 38 lux.",
+            "text": "Cap illumination at 38 lux.",
+            "source": "scanner.md",
+            "id": "D2.3"
+          },
+          {
+            "section": [
+              "Archive desk",
+              "Retention"
+            ],
+            "topic": "Keep scratch scans for 11",
+            "text": "Keep scratch scans for 11 days.",
+            "source": "records.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How bright can the lamp be, and how long must temporary images survive?",
+          "score": 0.38696199655532837,
+          "margin": 0.21751999855041504,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "How bright can the lamp be,",
+          "score": 0.34272000193595886,
+          "margin": 0.3494770019315183,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how long must temporary images survive?",
+          "score": 0.41639798879623413,
+          "margin": 0.1918109953403473,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.\nKeep scratch scans for 11 days.\nExport viewing copies as TIFF.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Which way should I turn the hub and how should the archival name begin?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.485166996717453,
+      "margin": 0.11902600526809692,
+      "idfCoverage": 0.13542727273844604,
+      "reranker": 0.2136433720588684
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          5,
+          1
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "clockwise",
+      "accession code"
+    ],
+    "goldSources": [
+      "scanner.md",
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Turn the spindle clockwise.\nPrefix each master file with the accession code.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Rewind"
+            ],
+            "topic": "Turn the spindle clockwise.",
+            "text": "Turn the spindle clockwise.",
+            "source": "scanner.md",
+            "id": "D2.4"
+          },
+          {
+            "section": [
+              "Archive desk",
+              "Naming"
+            ],
+            "topic": "Prefix each master file with",
+            "text": "Prefix each master file with the accession code.",
+            "source": "records.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which way should I turn the hub and how should the archival name begin?",
+          "score": 0.485166996717453,
+          "margin": 0.11902600526809692,
+          "promoted": false,
+          "lexicalMaximum": 0.13777777777777778
+        },
+        {
+          "part": "Which way should I turn the hub",
+          "score": 0.37328800559043884,
+          "margin": 0.10947099328041077,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        },
+        {
+          "part": "how should the archival name begin?",
+          "score": 0.5399829745292664,
+          "margin": 0.13485297560691833,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.\nA second operator signs the contact sheet.\nKeep scratch scans for 11 days.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What can I use to dust the film and which format goes to viewers?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3940249979496002,
+      "margin": 0.08018401265144348,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.04752219095826149
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "sable brush",
+      "TIFF"
+    ],
+    "goldSources": [
+      "scanner.md",
+      "records.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ],
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Use a sable brush on loose dust.\nExport viewing copies as TIFF.",
+        "citations": [
+          {
+            "section": [
+              "Operating guide",
+              "Cleaning"
+            ],
+            "topic": "Use a sable brush on",
+            "text": "Use a sable brush on loose dust.",
+            "source": "scanner.md",
+            "id": "D2.2"
+          },
+          {
+            "section": [
+              "Archive desk",
+              "Delivery"
+            ],
+            "topic": "Export viewing copies as TIFF.",
+            "text": "Export viewing copies as TIFF.",
+            "source": "records.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What can I use to dust the film and which format goes to viewers?",
+          "score": 0.3940249979496002,
+          "margin": 0.08018401265144348,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        },
+        {
+          "part": "What can I use to dust the film",
+          "score": 0.555184006690979,
+          "margin": 0.33235400915145874,
+          "promoted": true,
+          "lexicalMaximum": 0.5511111111111111
+        },
+        {
+          "part": "which format goes to viewers?",
+          "score": 0.2624810039997101,
+          "margin": 0.06326501071453094,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.\nExport viewing copies as TIFF.\nCap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What solvent removes sticky residue?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.37316399812698364,
+      "margin": 0.18717999756336212,
+      "idfCoverage": 0,
+      "reranker": 0.000012873516425315756
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D1.4",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What solvent removes sticky residue?",
+          "score": 0.37316399812698364,
+          "margin": 0.18717999756336212,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use a sable brush on loose dust.\nKeep scratch scans for 11 days.\nInsert the strip with the emulsion facing upward.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Feed direction"
+              ],
+              "topic": "Insert the strip with the",
+              "text": "Insert the strip with the emulsion facing upward.",
+              "source": "scanner.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Which TIFF compression setting is required?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3790769875049591,
+      "margin": 0.14578399062156677,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.000273746729362756
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.4",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which TIFF compression setting is required?",
+          "score": 0.3790769875049591,
+          "margin": 0.14578399062156677,
+          "promoted": false,
+          "lexicalMaximum": 0.2683333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Export viewing copies as TIFF.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Export viewing copies as TIFF.\nCap illumination at 38 lux.\nInsert the strip with the emulsion facing upward.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Feed direction"
+              ],
+              "topic": "Insert the strip with the",
+              "text": "Insert the strip with the emulsion facing upward.",
+              "source": "scanner.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Is infrared illumination allowed?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.42089399695396423,
+      "margin": 0.3865019977092743,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.0004301394510548562
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is infrared illumination allowed?",
+          "score": 0.42089399695396423,
+          "margin": 0.3865019977092743,
+          "promoted": false,
+          "lexicalMaximum": 0.2683333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Cap illumination at 38 lux.\nExport viewing copies as TIFF.\nA second operator signs the contact sheet.",
+          "citations": [
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What humidity should film storage maintain?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.2923530042171478,
+      "margin": 0.014647990465164185,
+      "idfCoverage": 0,
+      "reranker": 0.000011718610949174035
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.3",
+          "D2.2",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.3",
+          "D2.2",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What humidity should film storage maintain?",
+          "score": 0.2923530042171478,
+          "margin": 0.014647990465164185,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Keep scratch scans for 11 days.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Keep scratch scans for 11 days.\nCap illumination at 38 lux.\nUse a sable brush on loose dust.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Exposure"
+              ],
+              "topic": "Cap illumination at 38 lux.",
+              "text": "Cap illumination at 38 lux.",
+              "source": "scanner.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Operating guide",
+                "Cleaning"
+              ],
+              "topic": "Use a sable brush on",
+              "text": "Use a sable brush on loose dust.",
+              "source": "scanner.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "Which accession code applies to a duplicate?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4991089999675751,
+      "margin": 0.35642899572849274,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.7250180244445801
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.3",
+          "D2.2",
+          "D2.1",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.4",
+          "D2.2",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which accession code applies to a duplicate?",
+          "score": 0.4991089999675751,
+          "margin": 0.35642899572849274,
+          "promoted": false,
+          "lexicalMaximum": 0.37
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Prefix each master file with the accession code.\nExport viewing copies as TIFF.\nA second operator signs the contact sheet.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Naming"
+              ],
+              "topic": "Prefix each master file with",
+              "text": "Prefix each master file with the accession code.",
+              "source": "records.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "digitizer",
+    "question": "What happens if the contact sheet is unsigned?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3364410102367401,
+      "margin": 0.23163501173257828,
+      "idfCoverage": 0.34302832973581365,
+      "reranker": 0.00429947767406702
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What happens if the contact sheet is unsigned?",
+          "score": 0.3364410102367401,
+          "margin": 0.23163501173257828,
+          "promoted": false,
+          "lexicalMaximum": 0.296
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "A second operator signs the contact sheet.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "A second operator signs the contact sheet.\nExport viewing copies as TIFF.\nKeep scratch scans for 11 days.",
+          "citations": [
+            {
+              "section": [
+                "Archive desk",
+                "Review"
+              ],
+              "topic": "A second operator signs the",
+              "text": "A second operator signs the contact sheet.",
+              "source": "records.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Delivery"
+              ],
+              "topic": "Export viewing copies as TIFF.",
+              "text": "Export viewing copies as TIFF.",
+              "source": "records.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Archive desk",
+                "Retention"
+              ],
+              "topic": "Keep scratch scans for 11",
+              "text": "Keep scratch scans for 11 days.",
+              "source": "records.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

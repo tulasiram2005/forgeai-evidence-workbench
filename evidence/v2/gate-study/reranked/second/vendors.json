@@ -1,0 +1,1093 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": true,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 2.9642210887543565,
+      "hits": 1,
+      "falseAnswers": 0
+    },
+    "curve": [
+      {
+        "cut": 3.9642210887543565,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.9642210887543565,
+        "hits": 1,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.648508118277218,
+        "hits": 1,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.643060151871714,
+        "hits": 1,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.61918931288105,
+        "hits": 1,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.5808989012245114,
+        "hits": 1,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.5534273566289007,
+        "hits": 1,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.5273437815676876,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.46335084330992,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.4533758490740074,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 2.4423442599657554,
+        "hits": 1,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 2.4407079437908115,
+        "hits": 1,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 2.4051645601009772,
+        "hits": 2,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 2.389398019580188,
+        "hits": 2,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 2.368652705670422,
+        "hits": 2,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.3288568658839486,
+        "hits": 2,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 2.305823867418802,
+        "hits": 2,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 2.2471211542403458,
+        "hits": 2,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 2.231693914731227,
+        "hits": 2,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.212774935938123,
+        "hits": 3,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.2071528146680577,
+        "hits": 3,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 2.1987321960464987,
+        "hits": 3,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 2.1935222079665984,
+        "hits": 3,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 2.187697519341329,
+        "hits": 3,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.1514155543767908,
+        "hits": 3,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 2.1307055446963443,
+        "hits": 3,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.113677414120685,
+        "hits": 3,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 2.0683884430012496,
+        "hits": 3,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 2.0658912476869986,
+        "hits": 3,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 2.0613595596123737,
+        "hits": 3,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 2.050394565225157,
+        "hits": 3,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.045401231379457,
+        "hits": 4,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.0196953554161983,
+        "hits": 4,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.9995061670052363,
+        "hits": 5,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.9626563552314227,
+        "hits": 5,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.8931866825411854,
+        "hits": 5,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.8839556174761996,
+        "hits": 6,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.8714968531149265,
+        "hits": 6,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 1.8381971545601592,
+        "hits": 6,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 1.821000723257135,
+        "hits": 6,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 1.804564569989106,
+        "hits": 6,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 1.7897385395450318,
+        "hits": 6,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 1.7615854388832102,
+        "hits": 6,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 1.7590340970517415,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.7068995828685944,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.679638093625328,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.6158522594917322,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.5932923412409805,
+        "hits": 6,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.559661841039184,
+        "hits": 6,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.4820128628757139,
+        "hits": 6,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.4295855749238058,
+        "hits": 6,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.3698568497722003,
+        "hits": 6,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.210472288904321,
+        "hits": 6,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.2005871792714726,
+        "hits": 6,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.1936400505580056,
+        "hits": 6,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.190147977344423,
+        "hits": 6,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.169097218409077,
+        "hits": 6,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.1320444683447557,
+        "hits": 6,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.004755719219114,
+        "hits": 7,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 0.9812609724768608,
+        "hits": 7,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 0.9604365082592878,
+        "hits": 8,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 0.9520617206745686,
+        "hits": 8,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 0.9441914403878406,
+        "hits": 8,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 0.8670705380854389,
+        "hits": 8,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 0.7456826330242672,
+        "hits": 8,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 0.6637322973999797,
+        "hits": 8,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 0.4891897238705076,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 0.33547689820806176,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.3183401000368194,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Return carrier?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 0.9604365082592878
+      },
+      {
+        "q": "What is documented about Booking reference?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 2.212774935938123
+      },
+      {
+        "q": "What is documented about LK71 matte?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 2.045401231379457
+      },
+      {
+        "q": "What is documented about LK83 gloss?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 2.4051645601009772
+      },
+      {
+        "q": "What is documented about BD54 satin?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 1.8839556174761996
+      },
+      {
+        "q": "What is documented about Collection point?",
+        "gold": "D3.1",
+        "topId": "D3.1",
+        "score": 1.004755719219114
+      },
+      {
+        "q": "What is documented about Dispute deadline?",
+        "gold": "D3.2",
+        "topId": "D3.2",
+        "score": 2.9642210887543565
+      },
+      {
+        "q": "What is documented about Seal colour?",
+        "gold": "D3.3",
+        "topId": "D3.3",
+        "score": 1.9995061670052363
+      },
+      {
+        "q": "What is the deductible for Return carrier?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 1.169097218409077
+      },
+      {
+        "q": "What is the commission for Booking reference?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 2.648508118277218
+      },
+      {
+        "q": "What is the royalty for LK71 matte?",
+        "attribute": "royalty",
+        "topId": "D2.1",
+        "score": 2.2471211542403458
+      },
+      {
+        "q": "What is the deduction for LK83 gloss?",
+        "attribute": "deduction",
+        "topId": "D2.2",
+        "score": 2.643060151871714
+      },
+      {
+        "q": "What is the amortization for BD54 satin?",
+        "attribute": "amortization",
+        "topId": "D2.3",
+        "score": 2.1935222079665984
+      },
+      {
+        "q": "What is the depreciation for Collection point?",
+        "attribute": "depreciation",
+        "topId": "D3.1",
+        "score": 1.190147977344423
+      },
+      {
+        "q": "What is the waiver for Dispute deadline?",
+        "attribute": "waiver",
+        "topId": "D3.2",
+        "score": 2.5534273566289007
+      },
+      {
+        "q": "What is the surcharge for Seal colour?",
+        "attribute": "surcharge",
+        "topId": "D3.3",
+        "score": 2.1987321960464987
+      },
+      {
+        "q": "What is the deactivation date for Return carrier?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 0.7456826330242672
+      },
+      {
+        "q": "What is the issuer for Booking reference?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 2.5273437815676876
+      },
+      {
+        "q": "What is the invoice number for LK71 matte?",
+        "attribute": "invoice number",
+        "topId": "D2.1",
+        "score": 2.3288568658839486
+      },
+      {
+        "q": "What is the indemnity for LK83 gloss?",
+        "attribute": "indemnity",
+        "topId": "D2.2",
+        "score": 2.4407079437908115
+      },
+      {
+        "q": "What is the exchange rate for BD54 satin?",
+        "attribute": "exchange rate",
+        "topId": "D2.3",
+        "score": 2.050394565225157
+      },
+      {
+        "q": "What is the deposit for Collection point?",
+        "attribute": "deposit",
+        "topId": "D3.1",
+        "score": 1.210472288904321
+      },
+      {
+        "q": "What is the franchise fee for Dispute deadline?",
+        "attribute": "franchise fee",
+        "topId": "D3.2",
+        "score": 2.2071528146680577
+      },
+      {
+        "q": "What is the restocking fee for Return carrier?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 0.6637322973999797
+      },
+      {
+        "q": "What is the tax rate for Booking reference?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 1.804564569989106
+      },
+      {
+        "q": "What is the grace period for LK71 matte?",
+        "attribute": "grace period",
+        "topId": "D2.1",
+        "score": 1.7615854388832102
+      },
+      {
+        "q": "What is the renewal period for LK83 gloss?",
+        "attribute": "renewal period",
+        "topId": "D2.2",
+        "score": 2.0683884430012496
+      },
+      {
+        "q": "What is the expiry date for BD54 satin?",
+        "attribute": "expiry date",
+        "topId": "D2.3",
+        "score": 1.6158522594917322
+      },
+      {
+        "q": "What is the interest rate for Collection point?",
+        "attribute": "interest rate",
+        "topId": "D3.1",
+        "score": 0.8670705380854389
+      },
+      {
+        "q": "What is the vendor address for Dispute deadline?",
+        "attribute": "vendor address",
+        "topId": "D3.2",
+        "score": 2.4423442599657554
+      },
+      {
+        "q": "What is the insurance premium for Seal colour?",
+        "attribute": "insurance premium",
+        "topId": "D3.3",
+        "score": 1.559661841039184
+      },
+      {
+        "q": "What is the license number for Return carrier?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 1.1320444683447557
+      },
+      {
+        "q": "What is the emission rating for Booking reference?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 1.8714968531149265
+      },
+      {
+        "q": "What is the seismic rating for LK71 matte?",
+        "attribute": "seismic rating",
+        "topId": "D2.1",
+        "score": 1.8931866825411854
+      },
+      {
+        "q": "What is the customs duty for LK83 gloss?",
+        "attribute": "customs duty",
+        "topId": "D2.2",
+        "score": 2.305823867418802
+      },
+      {
+        "q": "What is the auction value for BD54 satin?",
+        "attribute": "auction value",
+        "topId": "D2.3",
+        "score": 2.187697519341329
+      },
+      {
+        "q": "What is the rental fee for Collection point?",
+        "attribute": "rental fee",
+        "topId": "D3.1",
+        "score": 0.4891897238705076
+      },
+      {
+        "q": "What is the failure probability for Dispute deadline?",
+        "attribute": "failure probability",
+        "topId": "D3.2",
+        "score": 2.4533758490740074
+      },
+      {
+        "q": "What is the audit interval for Return carrier?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 0.3183401000368194
+      },
+      {
+        "q": "What is the embargo date for Booking reference?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 1.5932923412409805
+      },
+      {
+        "q": "What is the transfer fee for LK71 matte?",
+        "attribute": "transfer fee",
+        "topId": "D2.1",
+        "score": 1.7897385395450318
+      },
+      {
+        "q": "What is the storage charge for LK83 gloss?",
+        "attribute": "storage charge",
+        "topId": "D2.2",
+        "score": 2.5808989012245114
+      },
+      {
+        "q": "What is the design patent for BD54 satin?",
+        "attribute": "design patent",
+        "topId": "D2.3",
+        "score": 2.0613595596123737
+      },
+      {
+        "q": "What is the payroll code for Collection point?",
+        "attribute": "payroll code",
+        "topId": "D3.1",
+        "score": 0.9520617206745686
+      },
+      {
+        "q": "What is the dispatch postcode for Dispute deadline?",
+        "attribute": "dispatch postcode",
+        "topId": "D3.2",
+        "score": 2.1307055446963443
+      },
+      {
+        "q": "What is the tariff band for Seal colour?",
+        "attribute": "tariff band",
+        "topId": "D3.3",
+        "score": 1.4295855749238058
+      },
+      {
+        "q": "What is the export permit for Return carrier?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.4820128628757139
+      },
+      {
+        "q": "What is the approval stamp for Booking reference?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 1.9626563552314227
+      },
+      {
+        "q": "What is the shelf life for LK71 matte?",
+        "attribute": "shelf life",
+        "topId": "D2.1",
+        "score": 2.0658912476869986
+      },
+      {
+        "q": "What is the solubility for LK83 gloss?",
+        "attribute": "solubility",
+        "topId": "D2.2",
+        "score": 2.61918931288105
+      },
+      {
+        "q": "What is the heat capacity for BD54 satin?",
+        "attribute": "heat capacity",
+        "topId": "D2.3",
+        "score": 2.113677414120685
+      },
+      {
+        "q": "What is the torque limit for Collection point?",
+        "attribute": "torque limit",
+        "topId": "D3.1",
+        "score": 0.9441914403878406
+      },
+      {
+        "q": "What is the duty cycle for Dispute deadline?",
+        "attribute": "duty cycle",
+        "topId": "D3.2",
+        "score": 2.389398019580188
+      },
+      {
+        "q": "What is the proof load for Return carrier?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 1.2005871792714726
+      },
+      {
+        "q": "What is the retirement date for Booking reference?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 1.821000723257135
+      },
+      {
+        "q": "What is the discount rate for LK71 matte?",
+        "attribute": "discount rate",
+        "topId": "D2.1",
+        "score": 1.679638093625328
+      },
+      {
+        "q": "What is the replacement value for LK83 gloss?",
+        "attribute": "replacement value",
+        "topId": "D2.2",
+        "score": 2.46335084330992
+      },
+      {
+        "q": "What is the billing currency for BD54 satin?",
+        "attribute": "billing currency",
+        "topId": "D2.3",
+        "score": 2.1514155543767908
+      },
+      {
+        "q": "What is the vat code for Collection point?",
+        "attribute": "vat code",
+        "topId": "D3.1",
+        "score": 1.1936400505580056
+      },
+      {
+        "q": "What is the escrow fee for Dispute deadline?",
+        "attribute": "escrow fee",
+        "topId": "D3.2",
+        "score": 2.231693914731227
+      },
+      {
+        "q": "What is the ballot count for Seal colour?",
+        "attribute": "ballot count",
+        "topId": "D3.3",
+        "score": 1.3698568497722003
+      },
+      {
+        "q": "What is the bond maturity for Return carrier?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 0.33547689820806176
+      },
+      {
+        "q": "What is the trademark number for Booking reference?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 1.7590340970517415
+      },
+      {
+        "q": "What is the insurance limit for LK71 matte?",
+        "attribute": "insurance limit",
+        "topId": "D2.1",
+        "score": 2.0196953554161983
+      },
+      {
+        "q": "What is the review quorum for LK83 gloss?",
+        "attribute": "review quorum",
+        "topId": "D2.2",
+        "score": 1.8381971545601592
+      },
+      {
+        "q": "What is the franchise territory for BD54 satin?",
+        "attribute": "franchise territory",
+        "topId": "D2.3",
+        "score": 1.7068995828685944
+      },
+      {
+        "q": "What is the bank routing code for Collection point?",
+        "attribute": "bank routing code",
+        "topId": "D3.1",
+        "score": 0.9812609724768608
+      },
+      {
+        "q": "What is the capital allowance for Dispute deadline?",
+        "attribute": "capital allowance",
+        "topId": "D3.2",
+        "score": 2.368652705670422
+      }
+    ]
+  },
+  "passed": 8,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 6,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 11,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "How many thin wedges are supplied under LK71?",
+      "status": "answered",
+      "facts": [
+        "16 shims"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What surface treatment will BD54 have?",
+      "status": "answered",
+      "facts": [
+        "satin"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What quantity does LK83 ship in?",
+      "status": "answered",
+      "facts": [
+        "22 pins"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where does the driver collect an Osprey order?",
+      "status": "answered",
+      "facts": [
+        "gate Juniper"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How long do I get to flag a short shipment?",
+      "status": "answered",
+      "facts": [
+        "5 business days"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which hue identifies a pallet leaving Osprey?",
+      "status": "answered",
+      "facts": [
+        "amber"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who transports goods going back to Curlew?",
+      "status": "answered",
+      "facts": [
+        "Larch Freight"
+      ],
+      "sources": [
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which purchasing reference belongs on the dispatch paperwork?",
+      "status": "answered",
+      "facts": [
+        "purchase order"
+      ],
+      "sources": [
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+      "status": "answered",
+      "facts": [
+        "16 shims",
+        "5 business days"
+      ],
+      "sources": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Where do I collect from Osprey and who handles a Curlew return?",
+      "status": "answered",
+      "facts": [
+        "gate Juniper",
+        "Larch Freight"
+      ],
+      "sources": [
+        "osprey.pdf",
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+      "status": "answered",
+      "facts": [
+        "satin",
+        "amber"
+      ],
+      "sources": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "How much does LK71 cost?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Who insures an Osprey consignment?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What is the overnight tariff with Larch Freight?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Is BD55 available?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Can Curlew accept refrigerated returns?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Does the shortage deadline include a grace period?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "How many of those?",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    }
+  ]
+}

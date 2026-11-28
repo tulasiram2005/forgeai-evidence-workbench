@@ -1,0 +1,336 @@
+{
+  "passed": 7,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 4,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 11,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 2,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "Which identity paper should I bring on day one?",
+      "status": "answered",
+      "facts": [
+        "passport"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What time does the welcome session start?",
+      "status": "answered",
+      "facts": [
+        "09:40"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who matches me with a workplace mentor?",
+      "status": "answered",
+      "facts": [
+        "roster coordinator"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where can I leave my car when I join?",
+      "status": "answered",
+      "facts": [
+        "lot C"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where do I pick up my typing gear?",
+      "status": "answered",
+      "facts": [
+        "room Willow"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How long can I keep a screen on loan?",
+      "status": "answered",
+      "facts": [
+        "12 weeks"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who should hear about my missing entry pass?",
+      "status": "answered",
+      "facts": [
+        "security desk"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What needs to go back with my faulty headphones?",
+      "status": "answered",
+      "facts": [
+        "original packaging"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "When is the welcome session? Also, where can I get a keyboard?",
+      "status": "answered",
+      "facts": [
+        "09:40",
+        "room Willow"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+      "status": "answered",
+      "facts": [
+        "lot C",
+        "security desk"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+      "status": "answered",
+      "facts": [
+        "passport",
+        "12 weeks"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "Can I claim a parking subsidy?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What fee applies to a lost access card?",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Lost access card: Notify the security desk.",
+        "citations": [
+          {
+            "id": "D2.6",
+            "source": "equipment.pdf",
+            "text": "Lost access card: Notify the security desk."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "Is a driving licence enough for induction?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "How much is the monitor deposit?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Can my buddy approve a promotion?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Does the headset exchange come with postage?",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Headset exchange: Bring the original packaging.",
+        "citations": [
+          {
+            "id": "D2.8",
+            "source": "equipment.pdf",
+            "text": "Headset exchange: Bring the original packaging."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Where is that?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

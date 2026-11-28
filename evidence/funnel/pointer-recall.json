@@ -1,0 +1,1290 @@
+{
+  "denominator": 93,
+  "old": 20,
+  "correctAt3": 20,
+  "rows": [
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How long should the instrument heat up before adjustment? Also, how frequently should I take measurements?",
+      "gold": [
+        "setup.md",
+        "sampling.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "highlighted": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "What mass do I put on the scale for setup? Also, how frequently should I take measurements?",
+      "gold": [
+        "setup.md",
+        "sampling.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How frequently should I take measurements?",
+      "gold": [
+        "sampling.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How frequently should I take measurements? Also, how cool should the case be before unplugging it?",
+      "gold": [
+        "sampling.md",
+        "shutdown.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "highlighted": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "At what displacement must I stop collecting data?",
+      "gold": [
+        "sampling.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "At what displacement must I stop collecting data? Also, how cool should the case be before unplugging it?",
+      "gold": [
+        "sampling.md",
+        "shutdown.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "highlighted": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How cool should the case be before unplugging it?",
+      "gold": [
+        "shutdown.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "highlighted": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "bench",
+      "question": "How cool should the case be before unplugging it? Also, how long should the instrument heat up before adjustment?",
+      "gold": [
+        "shutdown.md",
+        "setup.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "highlighted": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How much can I claim for my ride home after a late shift? Also, how early should I arrange a substitute?",
+      "gold": [
+        "commute.pdf",
+        "schedule.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "commute.pdf",
+          "text": "Taxi ceiling: Night commuters can claim up to 42 euros per journey.",
+          "page": 1,
+          "highlighted": "Taxi ceiling: Night commuters can claim up to 42 euros per journey."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How long do I have to turn in a cab slip?",
+      "gold": [
+        "commute.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How long do I have to turn in a cab slip? Also, how early should I arrange a substitute?",
+      "gold": [
+        "commute.pdf",
+        "schedule.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How early should I arrange a substitute?",
+      "gold": [
+        "schedule.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "How early should I arrange a substitute? Also, how much time off can I take for classes?",
+      "gold": [
+        "schedule.pdf",
+        "leave.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "What break do I get between shifts?",
+      "gold": [
+        "schedule.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D3.2",
+          "source": "schedule.pdf",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.",
+          "page": 2,
+          "highlighted": "Rest interval: Allow 13 hours between consecutive duties."
+        }
+      ]
+    },
+    {
+      "suite": "holdout",
+      "name": "staff",
+      "question": "What break do I get between shifts? Also, how much time off can I take for classes?",
+      "gold": [
+        "schedule.pdf",
+        "leave.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D3.2",
+          "source": "schedule.pdf",
+          "text": "Rest interval: Allow 13 hours between consecutive duties.",
+          "page": 2,
+          "highlighted": "Rest interval: Allow 13 hours between consecutive duties."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which side of the film should face me as I load it?",
+      "gold": [
+        "scanner.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What implement is safe for sweeping away specks?",
+      "gold": [
+        "scanner.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "How bright may the lamp be?",
+      "gold": [
+        "scanner.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which way do I rotate the take-up hub?",
+      "gold": [
+        "scanner.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Who countersigns the image proof?",
+      "gold": [
+        "records.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What format should the customer receive?",
+      "gold": [
+        "records.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "When may I discard temporary images?",
+      "gold": [
+        "records.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "How bright can the lamp be, and how long must temporary images survive?",
+      "gold": [
+        "scanner.md",
+        "records.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "Which way should I turn the hub and how should the archival name begin?",
+      "gold": [
+        "scanner.md",
+        "records.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "scanner.md",
+          "text": "Turn the spindle clockwise.",
+          "highlighted": "Turn the spindle clockwise."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "digitizer",
+      "question": "What can I use to dust the film and which format goes to viewers?",
+      "gold": [
+        "scanner.md",
+        "records.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "scanner.md",
+          "text": "Use a sable brush on loose dust.",
+          "highlighted": "Use a sable brush on loose dust."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Which identity paper should I bring on day one?",
+      "gold": [
+        "arrival.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "equipment.pdf",
+          "text": "Headset exchange: Bring the original packaging.",
+          "page": 4,
+          "highlighted": "Headset exchange: Bring the original packaging."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "What time does the welcome session start?",
+      "gold": [
+        "arrival.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Who matches me with a workplace mentor?",
+      "gold": [
+        "arrival.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where can I leave my car when I join?",
+      "gold": [
+        "arrival.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where do I pick up my typing gear?",
+      "gold": [
+        "equipment.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Who should hear about my missing entry pass?",
+      "gold": [
+        "equipment.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "When is the welcome session? Also, where can I get a keyboard?",
+      "gold": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "equipment.pdf",
+          "text": "Keyboard collection: Collect peripherals from room Willow.",
+          "page": 1,
+          "highlighted": "Keyboard collection: Collect peripherals from room Willow."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+      "gold": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "onboarding",
+      "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+      "gold": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How many thin wedges are supplied under LK71?",
+      "gold": [
+        "lots.csv"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "lots.csv",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "highlighted": "sku = LK71 · finish = matte · pack = 16 shims"
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "What surface treatment will BD54 have?",
+      "gold": [
+        "lots.csv"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "lots.csv",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+          "highlighted": "sku = BD54 · finish = satin · pack = 9 spacers"
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How long do I get to flag a short shipment?",
+      "gold": [
+        "osprey.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Who transports goods going back to Curlew?",
+      "gold": [
+        "curlew.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "curlew.pdf",
+          "text": "Return carrier: Curlew nominates Larch Freight.",
+          "page": 1,
+          "highlighted": "Return carrier: Curlew nominates Larch Freight."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Which purchasing reference belongs on the dispatch paperwork?",
+      "gold": [
+        "curlew.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "curlew.pdf",
+          "text": "Booking reference: The consignment note must show the purchase order.",
+          "page": 2,
+          "highlighted": "Booking reference: The consignment note must show the purchase order."
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+      "gold": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "lots.csv",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "highlighted": "sku = LK71 · finish = matte · pack = 16 shims"
+        }
+      ]
+    },
+    {
+      "suite": "holdout2",
+      "name": "vendors",
+      "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+      "gold": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "lots.csv",
+          "text": "sku = BD54 · finish = satin · pack = 9 spacers",
+          "highlighted": "sku = BD54 · finish = satin · pack = 9 spacers"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D3.3",
+          "source": "osprey.pdf",
+          "text": "Seal colour: Osprey outbound pallets carry amber seals.",
+          "page": 3,
+          "highlighted": "Seal colour: Osprey outbound pallets carry amber seals."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "lots.csv",
+          "text": "sku = LK71 · finish = matte · pack = 16 shims",
+          "highlighted": "sku = LK71 · finish = matte · pack = 16 shims"
+        }
+      ]
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who gets my initial message?",
+      "gold": [
+        "filing.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who oversees my case?",
+      "gold": [
+        "filing.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who has to come in person?",
+      "gold": [
+        "inspection.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+      "gold": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "claims",
+      "question": "Who manages my case and how many pictures of the dents are needed?",
+      "gold": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Who can get me back into a frozen login?",
+      "gold": [
+        "accounts.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "How much time does a guest get?",
+      "gold": [
+        "accounts.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What should I show to prove my identity?",
+      "gold": [
+        "accounts.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Which machine extends my pass?",
+      "gold": [
+        "accounts.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What balance adjustment follows a failed print?",
+      "gold": [
+        "printing.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "printing.md",
+          "text": "A failed job earns 3 credits.",
+          "highlighted": "A failed job earns 3 credits."
+        }
+      ]
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What shade should draft sheets be?",
+      "gold": [
+        "printing.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Where do I collect a finished wall print?",
+      "gold": [
+        "printing.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "Who can remove a stuck item from the spooler?",
+      "gold": [
+        "printing.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "helpdesk",
+      "question": "What proves my identity? Also, where can I collect my wall print?",
+      "gold": [
+        "accounts.md",
+        "printing.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "What holds the glass wedge steady?",
+      "gold": [
+        "alignment.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How long do we wait for stable light?",
+      "gold": [
+        "alignment.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How wide should the opening be?",
+      "gold": [
+        "alignment.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which colour target do we align against?",
+      "gold": [
+        "alignment.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How many recordings do we need per sample?",
+      "gold": [
+        "traces.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Who must authorize the measurement set?",
+      "gold": [
+        "traces.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "alignment.md",
+          "text": "Set the slit width to 2 millimeters.",
+          "highlighted": "Set the slit width to 2 millimeters."
+        }
+      ]
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which file type do I hand over?",
+      "gold": [
+        "traces.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "How wide is the opening? Also, who signs the recordings?",
+      "gold": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout3",
+      "name": "optics",
+      "question": "Which target colour do I use and how many recordings are needed for one sample?",
+      "gold": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "alignment.md",
+          "text": "Use a green reference card.",
+          "highlighted": "Use a green reference card."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where do the sellers pick up identification?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "When will I learn which space is mine?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How wide is the regular display table?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where can I get filler for fragile pots?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How long may I show visitors my technique?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How is a damaged display piece marked?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Who takes the sales paperwork at closing?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Which exit should I take with my leftover stock?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "How much cash must I leave to use secure storage?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "ceramics",
+      "question": "Where do borrowed table covers go afterward?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Day-end receipts go to the hall steward.",
+          "highlighted": "Day-end receipts go to the hall steward."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "When does the opening film start?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "What credential gets me into the room above the auditorium?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Completed shift reports go into tray Finch.",
+          "highlighted": "Completed shift reports go into tray Finch."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where do we store the extra previews?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How much money must I leave to borrow the subtitle device?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How long can someone arrive past curtain time?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Whose signoff lets another venue take the film?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.5",
+          "source": "handover.md",
+          "text": "Volunteer check-in takes place at the side foyer.",
+          "highlighted": "Volunteer check-in takes place at the side foyer."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "How should I mark a broken film carrier?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where do I leave my end-of-night paperwork?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "cinema",
+      "question": "Where should unpaid ushers announce their arrival?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "What day is the last chance to name our rowers?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Where do officials check the shell on the scale?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Which colour identifies a substitute on race day?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Lane objections go to the race secretary.",
+          "page": 1,
+          "highlighted": "Lane objections go to the race secretary."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "How far in advance can I see the running order?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Who handles a complaint about our assigned water position?",
+      "gold": [
+        "operations.pdf"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "What signal device comes in the steering kit?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Which feed shows the line-crossing footage?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "Where should we put the blades after rowing?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "How many people must initial the record of our finish time?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": true,
+      "correct": true,
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "The finish camera uses channel 7.",
+          "highlighted": "The finish camera uses channel 7."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "Timing slips need two initials.",
+          "highlighted": "Timing slips need two initials."
+        }
+      ]
+    },
+    {
+      "suite": "holdout4",
+      "name": "rowing",
+      "question": "When can the winners pick up their awards?",
+      "gold": [
+        "handover.md"
+      ],
+      "previous": false,
+      "correct": false,
+      "pointers": []
+    }
+  ]
+}

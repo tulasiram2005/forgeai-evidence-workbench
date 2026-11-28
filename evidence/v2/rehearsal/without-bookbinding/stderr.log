@@ -1,0 +1,3 @@
+DEGRADED: local model unavailable or explicitly disabled. Using deterministic templates.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 41313.31it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 16610.79it/s]

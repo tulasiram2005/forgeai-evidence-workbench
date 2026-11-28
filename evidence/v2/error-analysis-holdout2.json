@@ -1,0 +1,845 @@
+{
+  "definition": "Answered failures prioritize wrong filename, then missing supported facts. For nonanswers, missing gold from the union of observed top-three dense candidates is a retrieval miss. A short circuit before ranking, or refusal with gold present, is a gate outcome.",
+  "counts": {
+    "onboarding": {
+      "refused by a gate": 7,
+      "retrieval miss": 2
+    },
+    "vendors": {
+      "refused by a gate": 6,
+      "retrieval miss": 1
+    },
+    "digitizer": {
+      "refused by a gate": 8,
+      "retrieval miss": 2
+    }
+  },
+  "records": [
+    {
+      "corpus": "onboarding",
+      "question": "Which identity paper should I bring on day one?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "passport",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which identity paper should I bring on day one?",
+          "ids": [
+            "D1.1",
+            "D2.3",
+            "D2.4"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "What time does the welcome session start?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "09:40",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "What time does the welcome session start?",
+          "ids": [
+            "D1.2",
+            "D1.1",
+            "D1.4"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Who matches me with a workplace mentor?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "roster coordinator",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Who matches me with a workplace mentor?",
+          "ids": [
+            "D1.3",
+            "D2.1",
+            "D2.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Where can I leave my car when I join?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "lot C",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.4"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Where can I leave my car when I join?",
+          "ids": [
+            "D1.4",
+            "D1.1",
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Where do I pick up my typing gear?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "room Willow",
+          "source": "equipment.pdf",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Where do I pick up my typing gear?",
+          "ids": [
+            "D2.1",
+            "D1.3",
+            "D1.4"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Who should hear about my missing entry pass?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "security desk",
+          "source": "equipment.pdf",
+          "ids": [
+            "D2.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Who should hear about my missing entry pass?",
+          "ids": [
+            "D2.3",
+            "D1.1",
+            "D2.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "When is the welcome session? Also, where can I get a keyboard?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "09:40",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.2"
+          ]
+        },
+        {
+          "fact": "room Willow",
+          "source": "equipment.pdf",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "When is the welcome session",
+          "ids": [
+            "D1.1",
+            "D1.2",
+            "D2.3"
+          ]
+        },
+        {
+          "query": "where can I get a keyboard?",
+          "ids": [
+            "D2.1",
+            "D2.3",
+            "D2.4"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+      "classification": "retrieval miss",
+      "gold": [
+        {
+          "fact": "lot C",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.4"
+          ]
+        },
+        {
+          "fact": "security desk",
+          "source": "equipment.pdf",
+          "ids": [
+            "D2.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Where should my vehicle go,",
+          "ids": [
+            "D1.4",
+            "D1.1",
+            "D2.4"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "onboarding",
+      "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+      "classification": "retrieval miss",
+      "gold": [
+        {
+          "fact": "passport",
+          "source": "arrival.pdf",
+          "ids": [
+            "D1.1"
+          ]
+        },
+        {
+          "fact": "12 weeks",
+          "source": "equipment.pdf",
+          "ids": [
+            "D2.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which identity paper is accepted",
+          "ids": [
+            "D1.1",
+            "D2.3",
+            "D1.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "How many thin wedges are supplied under LK71?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "16 shims",
+          "source": "lots.csv",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "How many thin wedges are supplied under LK71?",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "What surface treatment will BD54 have?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "satin",
+          "source": "lots.csv",
+          "ids": [
+            "D2.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "What surface treatment will BD54 have?",
+          "ids": [
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "How long do I get to flag a short shipment?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "5 business days",
+          "source": "osprey.pdf",
+          "ids": [
+            "D3.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "How long do I get to flag a short shipment?",
+          "ids": [
+            "D3.2",
+            "D1.1",
+            "D2.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "Who transports goods going back to Curlew?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "Larch Freight",
+          "source": "curlew.pdf",
+          "ids": [
+            "D1.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Who transports goods going back to Curlew?",
+          "ids": [
+            "D1.1",
+            "D3.3",
+            "D3.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "The cited passage does not identify the responsible person.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "Which purchasing reference belongs on the dispatch paperwork?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "purchase order",
+          "source": "curlew.pdf",
+          "ids": [
+            "D1.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which purchasing reference belongs on the dispatch paperwork?",
+          "ids": [
+            "D1.2",
+            "D3.1",
+            "D1.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+      "classification": "retrieval miss",
+      "gold": [
+        {
+          "fact": "16 shims",
+          "source": "lots.csv",
+          "ids": [
+            "D2.1"
+          ]
+        },
+        {
+          "fact": "5 business days",
+          "source": "osprey.pdf",
+          "ids": [
+            "D3.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "How many LK71 wedges should arrive,",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "vendors",
+      "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "satin",
+          "source": "lots.csv",
+          "ids": [
+            "D2.3"
+          ]
+        },
+        {
+          "fact": "amber",
+          "source": "osprey.pdf",
+          "ids": [
+            "D3.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which finish comes on BD54",
+          "ids": [
+            "D2.3"
+          ]
+        },
+        {
+          "query": "what marks an outbound pallet?",
+          "ids": [
+            "D3.3",
+            "D1.1",
+            "D3.1"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "Which side of the film should face me as I load it?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "upward",
+          "source": "scanner.md",
+          "ids": [
+            "D2.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which side of the film should face me as I load it?",
+          "ids": [
+            "D2.1",
+            "D2.4",
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "What implement is safe for sweeping away specks?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "sable brush",
+          "source": "scanner.md",
+          "ids": [
+            "D2.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "What implement is safe for sweeping away specks?",
+          "ids": [
+            "D2.2",
+            "D1.4",
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "How bright may the lamp be?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "38 lux",
+          "source": "scanner.md",
+          "ids": [
+            "D2.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "How bright may the lamp be?",
+          "ids": [
+            "D2.3",
+            "D1.2",
+            "D1.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "Which way do I rotate the take-up hub?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "clockwise",
+          "source": "scanner.md",
+          "ids": [
+            "D2.4"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which way do I rotate the take-up hub?",
+          "ids": [
+            "D2.4",
+            "D2.1",
+            "D2.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "Who countersigns the image proof?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "second operator",
+          "source": "records.md",
+          "ids": [
+            "D1.2"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Who countersigns the image proof?",
+          "ids": [
+            "D2.3",
+            "D1.2",
+            "D1.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "What format should the customer receive?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "TIFF",
+          "source": "records.md",
+          "ids": [
+            "D1.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "What format should the customer receive?",
+          "ids": [
+            "D1.3",
+            "D1.2",
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "When may I discard temporary images?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "11 days",
+          "source": "records.md",
+          "ids": [
+            "D1.4"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "When may I discard temporary images?",
+          "ids": [
+            "D1.4",
+            "D1.3",
+            "D1.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "How bright can the lamp be, and how long must temporary images survive?",
+      "classification": "retrieval miss",
+      "gold": [
+        {
+          "fact": "38 lux",
+          "source": "scanner.md",
+          "ids": [
+            "D2.3"
+          ]
+        },
+        {
+          "fact": "11 days",
+          "source": "records.md",
+          "ids": [
+            "D1.4"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "How bright can the lamp be,",
+          "ids": [
+            "D2.3",
+            "D1.2",
+            "D1.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "Which way should I turn the hub and how should the archival name begin?",
+      "classification": "retrieval miss",
+      "gold": [
+        {
+          "fact": "clockwise",
+          "source": "scanner.md",
+          "ids": [
+            "D2.4"
+          ]
+        },
+        {
+          "fact": "accession code",
+          "source": "records.md",
+          "ids": [
+            "D1.1"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "Which way should I turn the hub",
+          "ids": [
+            "D2.4",
+            "D2.1",
+            "D2.2"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "corpus": "digitizer",
+      "question": "What can I use to dust the film and which format goes to viewers?",
+      "classification": "refused by a gate",
+      "gold": [
+        {
+          "fact": "sable brush",
+          "source": "scanner.md",
+          "ids": [
+            "D2.2"
+          ]
+        },
+        {
+          "fact": "TIFF",
+          "source": "records.md",
+          "ids": [
+            "D1.3"
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "query": "What can I use to dust the film",
+          "ids": [
+            "D2.2",
+            "D1.4",
+            "D2.4"
+          ]
+        },
+        {
+          "query": "which format goes to viewers?",
+          "ids": [
+            "D1.3",
+            "D1.2",
+            "D2.3"
+          ]
+        }
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    }
+  ]
+}

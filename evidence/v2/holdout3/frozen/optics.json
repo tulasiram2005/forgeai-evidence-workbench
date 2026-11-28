@@ -1,0 +1,322 @@
+{
+  "passed": 11,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 1,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 2
+    },
+    "near miss": {
+      "passed": 8,
+      "total": 8
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "falseRefusals": {
+    "count": 9,
+    "total": 10
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 8
+  },
+  "results": [
+    {
+      "question": "What holds the glass wedge steady?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "brass cradle"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How long do we wait for stable light?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "14 minutes"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How wide should the opening be?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "2 millimeters"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which colour target do we align against?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "green"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How many recordings do we need per sample?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "6 traces"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who must authorize the measurement set?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "shift physicist"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which file type do I hand over?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "TSV"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "When can old setup scraps be discarded?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "18 days"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Retain calibration scraps for 18 days.",
+        "citations": [
+          {
+            "id": "D2.4",
+            "source": "traces.md",
+            "text": "Retain calibration scraps for 18 days."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "How wide is the opening? Also, who signs the recordings?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "2 millimeters",
+        "shift physicist"
+      ],
+      "sources": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which target colour do I use and how many recordings are needed for one sample?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "green",
+        "6 traces"
+      ],
+      "sources": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which solvent cleans the prism?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What voltage should power the lamp?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the replacement price of a reference card?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which TSV delimiter escape convention is required?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the maximum acquisition temperature?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Who can override the shift physicist?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "The cited passage does not identify the responsible person.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Is an aluminium cradle approved?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "How many backup copies of the final spectrum are required?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,31 +1,19 @@
+import {strictAnswer} from './public/evidence-first.mjs';
+import {ollamaPort} from './model.mjs';
 import {readFile,readdir,writeFile,mkdir,mkdtemp,rename,rm,stat} from 'node:fs/promises';
 import {resolve,join,relative,dirname,extname} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createInterface} from 'node:readline/promises';
-import {connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
+import {answer,connectedAnswer,evaluate,inspectRequirements} from './public/engine.mjs';
+import {fileURLToPath} from 'node:url';
 import {Worker} from 'node:worker_threads';
 
 const [command,...args]=process.argv.slice(2);
 const flag=k=>args.includes(k)?args[args.indexOf(k)+1]:undefined;
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
-async function documents(folder){
-  const docs=[];let bytes=0;
-  async function walk(dir){
-    const entries=(await readdir(dir,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name));
-    for(const entry of entries){
-      const path=join(dir,entry.name);
-      if(entry.isDirectory()){if(!entry.name.startsWith('.')) await walk(path);continue;}
-      if(!entry.isFile()||!['.md','.txt','.csv','.pdf'].includes(extname(path).toLowerCase()))continue;
-      const size=(await stat(path)).size; bytes+=size;
-      if(docs.length>=32||bytes>16_000_000)throw Error('Input exceeds 32 files or 16 MB.');
-      const text=/\.pdf$/i.test(path)?execFileSync('python3',['-c','from pypdf import PdfReader; import sys; print("\\n".join(p.extract_text() or "" for p in PdfReader(sys.argv[1]).pages))',path],{encoding:'utf8',timeout:20000,maxBuffer:1600000}):await readFile(path,'utf8');
-      if(!text.trim()) throw Error('No readable text in '+entry.name);
-      docs.push({name:relative(folder,path),text});
-    }
-  }
-  await walk(folder);return docs;
-}
+import {readDocuments} from './documents.mjs';
+const documents=folder=>readDocuments(folder,command==='forge'||args.includes('--structured'));
 async function runBuild(workerData,budgetMs){
   if(!Number.isInteger(budgetMs)||budgetMs<1||budgetMs>1800000)throw Error('Budget must be 1–1,800,000 milliseconds.');
   const worker=new Worker(new URL('./build-worker.mjs',import.meta.url),{workerData});
@@ -40,10 +28,54 @@ async function runBuild(workerData,budgetMs){
   }finally{clearTimeout(timer);await worker.terminate();}
 }
 async function runtimeAnswer(def,query){
+  if(def.runtime?.kind==='evidence-first')return strictAnswer(def,query);
+  if(def.retrieval?.gate){
+    const {loadLocalGate,crossScores}=await import('./retrieval/local-gate.mjs');
+    await loadLocalGate();
+    if(def.retrieval.gate.reranker)return answer(def,query,undefined,crossScores(def,[query]));
+  }
+  if(def.runtime?.kind==='contextual-minilm'){
+    const {prepareRunner}=await import('./retrieval/release-runner.mjs');
+    return prepareRunner(def,[{question:query}])(def,query);
+  }
   if(def.runtime?.kind==='local-evidence-selector')return (await import('./tournament.mjs')).modelAnswer(def,query);
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='scope'){
+    const {scopeReview}=await import('./scope-review.mjs');
+    const def=await json(args[0]),topics=args.slice(1).filter(a=>a!=='--semantic');
+    if(!topics.length || topics.length>64 || topics.some(t=>!t.trim()||t.length>300))throw Error('Supply 1–64 topics of up to 300 characters.');
+    const encoder=args.includes('--semantic')?(await import('./retrieval/hybrid.mjs')).encode(def,topics):null;
+    console.log(JSON.stringify(scopeReview(def,topics,encoder),null,2));return;
+  }
+  if(command==='rescore'){
+    const {factVerdict}=await import('./fact-judge.mjs');
+    const [def,cases]=await Promise.all(args.slice(0,2).map(json));
+    const scores=[];
+    for(const entry of cases){
+      const actual=await runtimeAnswer(def,entry.question);
+      const old=evaluate(def,[entry],()=>actual)[0].passed;
+      scores.push({id:entry.id,previous:old,...factVerdict(def,entry,actual)});
+    }
+    console.log(JSON.stringify({total:scores.length,original:scores.filter(r=>r.previous).length,
+      factBased:scores.filter(r=>r.passed).length,flips:scores.filter(r=>r.previous!==r.passed),scores},null,2));
+    return;
+  }
+  if(command==='diagnose-second'){
+    const {diagnoseSecond}=await import('./retrieval/diagnose-second.mjs');
+    console.log(JSON.stringify(await diagnoseSecond(args[0],documents),null,2));return;
+  }
+  if(command==='diagnose'){
+    const {diagnose}=await import('./retrieval/diagnose.mjs');
+    console.log(JSON.stringify(await diagnose(args[0],documents),null,2));
+    return;
+  }
+  if(command==='holdout'){
+    const {holdout}=await import('./holdout.mjs');
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),staticContext:args.includes('--static-context'),experimentalDense:args.includes('--experimental-dense'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')}),null,2));
+    return;
+  }
   if(command==='impact'){
     const {compareReleases}=await import('./public/impact.mjs');
     const [before,after,suite]=await Promise.all(args.slice(0,3).map(json));
@@ -92,10 +124,14 @@ async function main(){
     if(!result.definition)process.exitCode=2;
     return;
   }
-  if(command==='build'){
+  if(command==='build' || command==='forge'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
-    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={};
+    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')};
+    if(command==='forge'){
+      Object.assign(opts,{evidenceFirst:!opts.gateV2 && !opts.expandIndex && !args.includes('--contextual-review'),autoDetect:!args.includes('--model'),release:true,contextual:true,splitValidation:true});
+      for(const old of ['--structured','--split-validation','--contextual'])if(args.includes(old))console.error('Deprecated '+old+' is already enabled.');
+    }
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
@@ -111,25 +147,56 @@ async function main(){
       opts.approvedRequirements=draft;
     }
     const budgetMs=Number(flag('--budget-ms')??180000);
-    const model=args.includes('--model')?(process.env.FORGE_MODEL||'qwen2.5:1.5b'):null;
-    const start=performance.now();
-    const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
-    run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
-    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
+    const requested=process.env.FORGE_MODEL||'qwen2.5:1.5b';
+    const disabled=args.includes('--no-llm')||args.includes('--deterministic');
+    if(disabled&&(args.includes('--model')||opts.expandIndex))throw Error('Explicit model generation conflicts with --no-llm or --deterministic.');
+    const model=!disabled&&(command==='forge'||args.includes('--model'))?requested:null;
+    if(command==='forge')console.error(model?'Checking local model generation: '+model:'DEGRADED: model disabled; deterministic templates.');
+    if(opts.expandIndex)console.error('Generating ranking metadata with the local model.');
     const target=resolve(out);await mkdir(dirname(target),{recursive:true});const tmp=await mkdtemp(join(dirname(target),'.forge-'));
     try{
+      opts.commitPath=join(tmp,'test-slice.json');
+    const start=performance.now();
+    const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
+    if(run.report.degraded)console.error('DEGRADED: '+run.report.degraded);
+    if(run.report.generationBackend)console.error('Local model: '+run.report.model+' ('+run.report.generationBackend+')');
+    if(opts.release && !opts.gateV2)run.definition.runtime={kind:opts.evidenceFirst?'evidence-first':'contextual-minilm'};
+    run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
+    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
       for(const [name,value] of Object.entries({...run,receipt})){
         await writeFile(join(tmp,name+'.json'),JSON.stringify(value,null,2)+'\n');
       }
+      const lines=['# Build review','',run.report.model,'', '## Evaluation rounds','',
+        ...run.iterations.map(r=>'- Round '+r.round+' · '+r.passed+'/'+r.total+(r.accepted===undefined?'':' · tuning '+r.tuning+'/'+(r.total-run.report.validationIds.length)+' · validation '+r.validation+'/'+run.report.validationIds.length+' · '+(r.accepted?'accepted':'rejected'))),
+        '', 'Released round '+run.report.retainedRound+'. '+run.report.stop+'.','','## Judge controls','',
+        ...run.report.judgeControls.map(c=>'- '+c.name+' · '+(c.rejected?'rejected':'accepted')),
+        '', '## Results by class','',
+        ...Object.entries(Object.groupBy(run.iterations[run.report.retainedRound-1].results,r=>r.kind)).map(([kind,rows])=>'- '+kind+' · '+rows.filter(r=>r.passed).length+'/'+rows.length),
+        '', '## Refusal quality','',
+        ...['refusalPrecision','requiredRefusals'].map(key=>{const m=run.report.metrics[key];return '- '+(key==='refusalPrecision'?'Precision':'Recall')+' · '+(m.total?m.matched+'/'+m.total:'No eligible cases');}),
+        '', '## Remaining failures','',...run.report.failures.map(r=>'- '+r.id+' · '+r.category+' · '+r.question),
+        ...(run.report.failures.length?[]:['All generated checks passed.']), '', '## Limits','',...run.report.limitations,''];
+      if(run.report.splits)lines.push('## Frozen split scores','',...Object.entries(run.report.splits).map(([name,m])=>name+' '+m.passed+'/'+m.total+' (95% Wilson '+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)'),'','Test slice SHA-256 '+run.report.commitment.sha256,'');
+      if(run.report.assessment){
+        const a=run.report.assessment;
+        lines.push('## Release verdict','',a.verdict+' for autonomous answering.','',
+          'Easy tier '+a.easy.passed+'/'+a.easy.total+'. Hard model paraphrases '+(a.hard.total?a.hard.passed+'/'+a.hard.total:'unmeasured')+'.',
+          ...(a.warning?[a.warning]:[]),'','Evidence-first forecast for overall case pass '+(100*a.forecast).toFixed(1)+'%, retrospective pilot n='+a.n+'. Includes correct refusals and clarifications.','');
+      }
+      await writeFile(join(tmp,'FINAL.md'),lines.join('\n'));
       await rename(tmp,target);
-    }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));
-  }else if(command==='ask' && args[1]==='--semantic'){
-    const {encode,semanticAnswer,answerQueries}=await import('./retrieval/hybrid.mjs');
+    }finally{await rm(tmp,{recursive:true,force:true});}
+  }else if(command==='ask' && args[1]==='--compose'){
+    const {compose}=await import('./compose.mjs');
+    console.log(JSON.stringify(await compose(await json(args[0]),args.slice(2).join(' ')),null,2));
+  }else if(command==='ask' && ['--semantic','--experimental-dense','--contextual'].includes(args[1])){
+    const {encode,semanticAnswer,answerQueries,experimentalAnswer,experimentQueries}=await import('./retrieval/hybrid.mjs');
     const def=await json(args[0]), q=args.slice(2).join(' ');
     if(def.runtime?.kind==='local-evidence-selector')throw Error('Use ask without --semantic to run the tournament prompt.');
-    const encoder=encode(def,answerQueries(q));
-    console.log(JSON.stringify({...semanticAnswer(def,q,encoder),encoder:encoder.model},null,2));
+    const experimental=args[1]!=='--semantic';
+    const encoder=encode(def,experimental?experimentQueries(q):answerQueries(q),args[1]==='--contextual');
+    console.log(JSON.stringify({...(experimental?experimentalAnswer:semanticAnswer)(def,q,encoder),encoder:encoder.model},null,2));
   }else if(command==='ask'){
     const def=await json(args[0]),question=args.slice(1).join(' ');
     const response=await runtimeAnswer(def,question);

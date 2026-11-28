@@ -1,0 +1,28 @@
+{
+  "splits": {
+    "tune": {
+      "passed": 36,
+      "total": 36,
+      "lower": 0.9035813714055363,
+      "upper": 1
+    },
+    "validate": {
+      "passed": 12,
+      "total": 12,
+      "lower": 0.7575059933447592,
+      "upper": 1
+    },
+    "test": {
+      "passed": 12,
+      "total": 12,
+      "lower": 0.7575059933447592,
+      "upper": 1
+    }
+  },
+  "commitment": {
+    "sha256": "29ff010710f3014c744fa5fd1a88b16824fe6edcbf16b31df3d8286451afc495",
+    "commit": "94b9d70d2b987f4360e471f8637a2dd01dd7b7af",
+    "file": "test-slice.json",
+    "bundle": "split.bundle"
+  }
+}

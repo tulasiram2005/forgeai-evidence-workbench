@@ -1,0 +1,1655 @@
+[
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "How many beans can I expect in a packet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 seeds"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Bean envelopes hold 18 seeds.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "How many beans can I expect in a packet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 seeds"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "Returned packets dry for 11 days.",
+          "page": 1,
+          "highlighted": "Returned packets dry for 11 days."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Bean lots use cotton ties.",
+          "highlighted": "Bean lots use cotton ties."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1,
+          "highlighted": "Bean envelopes hold 18 seeds."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "How many beans can I expect in a packet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 seeds"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "How many beans can I expect in a packet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 seeds"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Returned packets dry for 11 days.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "Returned packets dry for 11 days."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Where can a new borrower collect identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "kiosk Fern"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Where can a new borrower collect identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "kiosk Fern"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Where can a new borrower collect identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "kiosk Fern"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Where can a new borrower collect identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "kiosk Fern"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "How long do donations sit before being shelved?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "How long do donations sit before being shelved?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "How long do donations sit before being shelved?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "How long do donations sit before being shelved?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "What colour sheet tells me my loan is late?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ochre"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "What colour sheet tells me my loan is late?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ochre"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "What colour sheet tells me my loan is late?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ochre"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "What colour sheet tells me my loan is late?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ochre"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Who can extend my checkout?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "seed librarian"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Who can extend my checkout?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "seed librarian"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Who can extend my checkout?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "seed librarian"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Who can extend my checkout?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "seed librarian"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Where should I put the jars I brought in?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shelf Iris"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Where should I put the jars I brought in?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shelf Iris"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Where should I put the jars I brought in?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shelf Iris"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Where should I put the jars I brought in?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shelf Iris"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "What fastening material secures the legume bundles?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cotton ties"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "What fastening material secures the legume bundles?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cotton ties"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "What fastening material secures the legume bundles?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cotton ties"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "What fastening material secures the legume bundles?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "cotton ties"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Which weekday do holds run out?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Tuesday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1,
+          "highlighted": "Bean envelopes hold 18 seeds."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Which weekday do holds run out?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Tuesday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1,
+          "highlighted": "Bean envelopes hold 18 seeds."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Which weekday do holds run out?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Tuesday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Which weekday do holds run out?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Tuesday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Bean envelopes hold 18 seeds.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "What must I pay if I lose the metal container?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "What must I pay if I lose the metal container?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "What must I pay if I lose the metal container?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "What must I pay if I lose the metal container?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "When can I start collecting my order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "10:35"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "When can I start collecting my order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "10:35"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "When can I start collecting my order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "10:35"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "When can I start collecting my order?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "10:35"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "How much does a bean envelope weigh?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Bean envelopes hold 18 seeds.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "How much does a bean envelope weigh?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds.",
+          "page": 1,
+          "highlighted": "Bean envelopes hold 18 seeds."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Bean lots use cotton ties.",
+          "highlighted": "Bean lots use cotton ties."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "How much does a bean envelope weigh?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "How much does a bean envelope weigh?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Bean envelopes hold 18 seeds.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Bean envelopes hold 18 seeds."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Is membership transferable to a sibling?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Membership cards come from kiosk Fern.",
+          "page": 1,
+          "highlighted": "Membership cards come from kiosk Fern."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Is membership transferable to a sibling?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Membership cards come from kiosk Fern.",
+          "page": 1,
+          "highlighted": "Membership cards come from kiosk Fern."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Is membership transferable to a sibling?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Is membership transferable to a sibling?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Membership cards come from kiosk Fern.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "Membership cards come from kiosk Fern."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Who delivers the ochre paper?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Overdue notices are printed on ochre paper.",
+          "page": 1,
+          "highlighted": "Overdue notices are printed on ochre paper."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Who delivers the ochre paper?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Overdue notices are printed on ochre paper.",
+          "page": 1,
+          "highlighted": "Overdue notices are printed on ochre paper."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Who delivers the ochre paper?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Who delivers the ochre paper?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Overdue notices are printed on ochre paper.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Overdue notices are printed on ochre paper."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "How cold is shelf Iris kept?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "How cold is shelf Iris kept?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris.",
+          "highlighted": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "How cold is shelf Iris kept?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "How cold is shelf Iris kept?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Can I renew online after the librarian leaves?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Borrowing renewals require the seed librarian.",
+          "page": 1,
+          "highlighted": "Borrowing renewals require the seed librarian."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Can I renew online after the librarian leaves?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Borrowing renewals require the seed librarian.",
+          "page": 1,
+          "highlighted": "Borrowing renewals require the seed librarian."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Can I renew online after the librarian leaves?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Can I renew online after the librarian leaves?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Borrowing renewals require the seed librarian.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Borrowing renewals require the seed librarian."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "What tax applies to replacement tins?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A replacement tin costs 6 euros.",
+          "highlighted": "A replacement tin costs 6 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "What tax applies to replacement tins?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A replacement tin costs 6 euros.",
+          "highlighted": "A replacement tin costs 6 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "What tax applies to replacement tins?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "What tax applies to replacement tins?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "A replacement tin costs 6 euros.",
+      "citations": [
+        {
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A replacement tin costs 6 euros."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Where are the cotton ties manufactured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Bean lots use cotton ties.",
+      "citations": [
+        {
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Bean lots use cotton ties."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Where are the cotton ties manufactured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Bean lots use cotton ties.",
+          "highlighted": "Bean lots use cotton ties."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Where are the cotton ties manufactured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Where are the cotton ties manufactured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Bean lots use cotton ties.",
+      "citations": [
+        {
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Bean lots use cotton ties."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Is there a penalty for an unclaimed reservation?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Unclaimed reservations lapse on Tuesday.",
+          "highlighted": "Unclaimed reservations lapse on Tuesday."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Is there a penalty for an unclaimed reservation?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Unclaimed reservations lapse on Tuesday.",
+          "highlighted": "Unclaimed reservations lapse on Tuesday."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Is there a penalty for an unclaimed reservation?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Is there a penalty for an unclaimed reservation?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Unclaimed reservations lapse on Tuesday.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Unclaimed reservations lapse on Tuesday."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "contextual",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "strict",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysRefuse",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "seedlibrary",
+    "config": "alwaysAnswer",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "Donation containers go on shelf Iris.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Donation containers go on shelf Iris."
+        }
+      ]
+    },
+    "passed": false
+  }
+]

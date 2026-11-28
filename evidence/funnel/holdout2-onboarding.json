@@ -1,0 +1,3179 @@
+[
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Which identity paper should I bring on day one?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3477559983730316,
+      "margin": 0.14049500226974487,
+      "idfCoverage": 0,
+      "reranker": 0.000024247347027994692
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.3",
+          "D2.4",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.4",
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D2.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "passport"
+    ],
+    "goldSources": [
+      "arrival.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Identification: Present a passport at reception.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Identification",
+            "text": "Identification: Present a passport at reception.",
+            "source": "arrival.pdf",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which identity paper should I bring on day one?",
+          "score": 0.3477559983730316,
+          "margin": 0.14049500226974487,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Identification: Present a passport at reception.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Identification: Present a passport at reception.\nHeadset exchange: Bring the original packaging.\nLost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 4,
+              "topic": "Headset exchange",
+              "text": "Headset exchange: Bring the original packaging.",
+              "source": "equipment.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "What time does the welcome session start?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.36028000712394714,
+      "margin": 0.12008500099182129,
+      "idfCoverage": 0,
+      "reranker": 0.000021293088138918392
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D2.4",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "09:40"
+    ],
+    "goldSources": [
+      "arrival.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Orientation: Induction begins at 09:40.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Orientation",
+            "text": "Orientation: Induction begins at 09:40.",
+            "source": "arrival.pdf",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What time does the welcome session start?",
+          "score": 0.36028000712394714,
+          "margin": 0.12008500099182129,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Orientation: Induction begins at 09:40.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Orientation",
+              "text": "Orientation: Induction begins at 09:40.",
+              "source": "arrival.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Orientation: Induction begins at 09:40.\nIdentification: Present a passport at reception.\nParking: New starters use lot C.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Orientation",
+              "text": "Orientation: Induction begins at 09:40.",
+              "source": "arrival.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Who matches me with a workplace mentor?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.37318599224090576,
+      "margin": 0.24407298862934113,
+      "idfCoverage": 0,
+      "reranker": 0.000013988868886372074
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D2.3",
+          "D1.1",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "roster coordinator"
+    ],
+    "goldSources": [
+      "arrival.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Buddy assignment",
+            "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+            "source": "arrival.pdf",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who matches me with a workplace mentor?",
+          "score": 0.37318599224090576,
+          "margin": 0.24407298862934113,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Buddy assignment",
+              "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+              "source": "arrival.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Buddy assignment: The roster coordinator pairs incoming workers.\nKeyboard collection: Collect peripherals from room Willow.\nLoan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Buddy assignment",
+              "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+              "source": "arrival.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Where can I leave my car when I join?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3197630047798157,
+      "margin": 0.10794501006603241,
+      "idfCoverage": 0,
+      "reranker": 0.000011339013326505665
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "lot C"
+    ],
+    "goldSources": [
+      "arrival.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Parking: New starters use lot C.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "Parking",
+            "text": "Parking: New starters use lot C.",
+            "source": "arrival.pdf",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where can I leave my car when I join?",
+          "score": 0.3197630047798157,
+          "margin": 0.10794501006603241,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Parking: New starters use lot C.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Parking: New starters use lot C.\nIdentification: Present a passport at reception.\nLost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Where do I pick up my typing gear?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4813700020313263,
+      "margin": 0.2522760033607483,
+      "idfCoverage": 0,
+      "reranker": 0.000010878731700358912
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "room Willow"
+    ],
+    "goldSources": [
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Keyboard collection: Collect peripherals from room Willow.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Keyboard collection",
+            "text": "Keyboard collection: Collect peripherals from room Willow.",
+            "source": "equipment.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where do I pick up my typing gear?",
+          "score": 0.4813700020313263,
+          "margin": 0.2522760033607483,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Keyboard collection: Collect peripherals from room Willow.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Keyboard collection: Collect peripherals from room Willow.\nBuddy assignment: The roster coordinator pairs incoming workers.\nParking: New starters use lot C.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 3,
+              "topic": "Buddy assignment",
+              "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+              "source": "arrival.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "How long can I keep a screen on loan?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6969370245933533,
+      "margin": 0.5674450248479843,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.3189269006252289
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D1.1",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "12 weeks"
+    ],
+    "goldSources": [
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Loan period: Return borrowed monitors after 12 weeks.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Loan period",
+            "text": "Loan period: Return borrowed monitors after 12 weeks.",
+            "source": "equipment.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long can I keep a screen on loan?",
+          "score": 0.6969370245933533,
+          "margin": 0.5674450248479843,
+          "promoted": true,
+          "lexicalMaximum": 0.2175
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.\nLost access card: Notify the security desk.\nKeyboard collection: Collect peripherals from room Willow.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Loan period: Return borrowed monitors after 12 weeks.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "equipment.pdf",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.",
+          "page": 2
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Who should hear about my missing entry pass?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4061090052127838,
+      "margin": 0.2027440071105957,
+      "idfCoverage": 0,
+      "reranker": 0.00001060708655131748
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D2.1",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D2.3",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "security desk"
+    ],
+    "goldSources": [
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Lost access card: Notify the security desk.",
+        "citations": [
+          {
+            "page": 3,
+            "topic": "Lost access card",
+            "text": "Lost access card: Notify the security desk.",
+            "source": "equipment.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who should hear about my missing entry pass?",
+          "score": 0.4061090052127838,
+          "margin": 0.2027440071105957,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.\nIdentification: Present a passport at reception.\nLoan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "What needs to go back with my faulty headphones?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5017709732055664,
+      "margin": 0.26777297258377075,
+      "idfCoverage": 0,
+      "reranker": 0.000012028835953969974
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          8
+        ],
+        "allFactsByRank": 8,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "original packaging"
+    ],
+    "goldSources": [
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Headset exchange: Bring the original packaging.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "Headset exchange",
+            "text": "Headset exchange: Bring the original packaging.",
+            "source": "equipment.pdf",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What needs to go back with my faulty headphones?",
+          "score": 0.5017709732055664,
+          "margin": 0.26777297258377075,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Headset exchange: Bring the original packaging.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Headset exchange",
+              "text": "Headset exchange: Bring the original packaging.",
+              "source": "equipment.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Headset exchange: Bring the original packaging.\nKeyboard collection: Collect peripherals from room Willow.\nLoan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Headset exchange",
+              "text": "Headset exchange: Bring the original packaging.",
+              "source": "equipment.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Headset exchange: Bring the original packaging.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "equipment.pdf",
+          "text": "Headset exchange: Bring the original packaging.",
+          "page": 4
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "When is the welcome session? Also, where can I get a keyboard?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4200429916381836,
+      "margin": 0.17125998437404633,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.000023359976694337092
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.3",
+          "D1.2",
+          "D2.2",
+          "D1.4",
+          "D2.4",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.3",
+          "D1.2",
+          "D2.2",
+          "D1.4",
+          "D2.4",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.3",
+          "D1.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "09:40",
+      "room Willow"
+    ],
+    "goldSources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Orientation: Induction begins at 09:40.\nKeyboard collection: Collect peripherals from room Willow.",
+        "citations": [
+          {
+            "page": 2,
+            "topic": "Orientation",
+            "text": "Orientation: Induction begins at 09:40.",
+            "source": "arrival.pdf",
+            "id": "D1.2"
+          },
+          {
+            "page": 1,
+            "topic": "Keyboard collection",
+            "text": "Keyboard collection: Collect peripherals from room Willow.",
+            "source": "equipment.pdf",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When is the welcome session? Also, where can I get a keyboard?",
+          "score": 0.4200429916381836,
+          "margin": 0.17125998437404633,
+          "promoted": false,
+          "lexicalMaximum": 0.17400000000000002
+        },
+        {
+          "part": "When is the welcome session",
+          "score": 0.26981601119041443,
+          "margin": 0.00599101185798645,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "where can I get a keyboard?",
+          "score": 0.583050012588501,
+          "margin": 0.3817320168018341,
+          "promoted": true,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Keyboard collection: Collect peripherals from room Willow.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Keyboard collection: Collect peripherals from room Willow.\nIdentification: Present a passport at reception.\nLost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.33988499641418457,
+      "margin": 0.059580981731414795,
+      "idfCoverage": 0,
+      "reranker": 0.000011467411241028458
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4,
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "lot C",
+      "security desk"
+    ],
+    "goldSources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ],
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Parking: New starters use lot C.\nLost access card: Notify the security desk.",
+        "citations": [
+          {
+            "page": 4,
+            "topic": "Parking",
+            "text": "Parking: New starters use lot C.",
+            "source": "arrival.pdf",
+            "id": "D1.4"
+          },
+          {
+            "page": 3,
+            "topic": "Lost access card",
+            "text": "Lost access card: Notify the security desk.",
+            "source": "equipment.pdf",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+          "score": 0.33988499641418457,
+          "margin": 0.059580981731414795,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "Where should my vehicle go,",
+          "score": 0.24932999908924103,
+          "margin": 0.11026899516582489,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "who do I tell if my entry pass disappears?",
+          "score": 0.39380401372909546,
+          "margin": 0.12935900688171387,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.\nIdentification: Present a passport at reception.\nParking: New starters use lot C.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.33734801411628723,
+      "margin": 0.11333301663398743,
+      "idfCoverage": 0,
+      "reranker": 0.000010669185940059833
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D2.3",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "passport",
+      "12 weeks"
+    ],
+    "goldSources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ],
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Identification: Present a passport at reception.\nLoan period: Return borrowed monitors after 12 weeks.",
+        "citations": [
+          {
+            "page": 1,
+            "topic": "Identification",
+            "text": "Identification: Present a passport at reception.",
+            "source": "arrival.pdf",
+            "id": "D1.1"
+          },
+          {
+            "page": 2,
+            "topic": "Loan period",
+            "text": "Loan period: Return borrowed monitors after 12 weeks.",
+            "source": "equipment.pdf",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which identity paper is accepted and what is the screen borrowing limit?",
+          "score": 0.33734801411628723,
+          "margin": 0.11333301663398743,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "Which identity paper is accepted",
+          "score": 0.3226200044155121,
+          "margin": 0.1332160085439682,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "what is the screen borrowing limit?",
+          "score": 0.5354509949684143,
+          "margin": 0.3718869984149933,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.\nIdentification: Present a passport at reception.\nLost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Can I claim a parking subsidy?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3518570065498352,
+      "margin": 0.2545180097222328,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.000027532118110684678
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D2.4",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Can I claim a parking subsidy?",
+          "score": 0.3518570065498352,
+          "margin": 0.2545180097222328,
+          "promoted": false,
+          "lexicalMaximum": 0.3333333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Parking: New starters use lot C.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Parking: New starters use lot C.\nLoan period: Return borrowed monitors after 12 weeks.\nLost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "What fee applies to a lost access card?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5794879794120789,
+      "margin": 0.38202597200870514,
+      "idfCoverage": 0.540188705267852,
+      "reranker": 0.9716671109199524
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.1",
+          "D2.4",
+          "D1.4",
+          "D1.3",
+          "D1.2",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What fee applies to a lost access card?",
+          "score": 0.5794879794120789,
+          "margin": 0.38202597200870514,
+          "promoted": true,
+          "lexicalMaximum": 0.6
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lost access card: Notify the security desk.\nLoan period: Return borrowed monitors after 12 weeks.\nIdentification: Present a passport at reception.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Lost access card: Notify the security desk.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "equipment.pdf",
+          "text": "Lost access card: Notify the security desk.",
+          "page": 3
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Is a driving licence enough for induction?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.22059200704097748,
+      "margin": 0.00329001247882843,
+      "idfCoverage": 0.20702123994740448,
+      "reranker": 0.00014079418906476349
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.4",
+          "D2.4",
+          "D1.1",
+          "D2.3",
+          "D1.3",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is a driving licence enough for induction?",
+          "score": 0.22059200704097748,
+          "margin": 0.00329001247882843,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Orientation: Induction begins at 09:40.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Orientation",
+              "text": "Orientation: Induction begins at 09:40.",
+              "source": "arrival.pdf",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Orientation: Induction begins at 09:40.\nParking: New starters use lot C.\nIdentification: Present a passport at reception.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Orientation",
+              "text": "Orientation: Induction begins at 09:40.",
+              "source": "arrival.pdf",
+              "id": "D1.2"
+            },
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "How much is the monitor deposit?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.34953001141548157,
+      "margin": 0.14110401272773743,
+      "idfCoverage": 0,
+      "reranker": 0.0000155556572281057
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D1.3",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.1",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How much is the monitor deposit?",
+          "score": 0.34953001141548157,
+          "margin": 0.14110401272773743,
+          "promoted": false,
+          "lexicalMaximum": 0.24666666666666665
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Loan period: Return borrowed monitors after 12 weeks.\nLost access card: Notify the security desk.\nKeyboard collection: Collect peripherals from room Willow.",
+          "citations": [
+            {
+              "page": 2,
+              "topic": "Loan period",
+              "text": "Loan period: Return borrowed monitors after 12 weeks.",
+              "source": "equipment.pdf",
+              "id": "D2.2"
+            },
+            {
+              "page": 3,
+              "topic": "Lost access card",
+              "text": "Lost access card: Notify the security desk.",
+              "source": "equipment.pdf",
+              "id": "D2.3"
+            },
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Can my buddy approve a promotion?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.2321459949016571,
+      "margin": 0.12727299332618713,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.0000822787478682585
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.2",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.2",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.3",
+          "D2.3",
+          "D1.2",
+          "D2.4",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Can my buddy approve a promotion?",
+          "score": 0.2321459949016571,
+          "margin": 0.12727299332618713,
+          "promoted": false,
+          "lexicalMaximum": 0.29
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Buddy assignment",
+              "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+              "source": "arrival.pdf",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Buddy assignment: The roster coordinator pairs incoming workers.\nParking: New starters use lot C.\nIdentification: Present a passport at reception.",
+          "citations": [
+            {
+              "page": 3,
+              "topic": "Buddy assignment",
+              "text": "Buddy assignment: The roster coordinator pairs incoming workers.",
+              "source": "arrival.pdf",
+              "id": "D1.3"
+            },
+            {
+              "page": 4,
+              "topic": "Parking",
+              "text": "Parking: New starters use lot C.",
+              "source": "arrival.pdf",
+              "id": "D1.4"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout2",
+    "name": "onboarding",
+    "question": "Does the headset exchange come with postage?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.6364870071411133,
+      "margin": 0.3521610200405121,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.9768344759941101
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D2.3",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.3",
+          "D1.4",
+          "D2.1",
+          "D1.3",
+          "D2.2"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Does the headset exchange come with postage?",
+          "score": 0.6364870071411133,
+          "margin": 0.3521610200405121,
+          "promoted": true,
+          "lexicalMaximum": 0.5
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.44,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Headset exchange: Bring the original packaging.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Headset exchange",
+              "text": "Headset exchange: Bring the original packaging.",
+              "source": "equipment.pdf",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Headset exchange: Bring the original packaging.\nIdentification: Present a passport at reception.\nKeyboard collection: Collect peripherals from room Willow.",
+          "citations": [
+            {
+              "page": 4,
+              "topic": "Headset exchange",
+              "text": "Headset exchange: Bring the original packaging.",
+              "source": "equipment.pdf",
+              "id": "D2.4"
+            },
+            {
+              "page": 1,
+              "topic": "Identification",
+              "text": "Identification: Present a passport at reception.",
+              "source": "arrival.pdf",
+              "id": "D1.1"
+            },
+            {
+              "page": 1,
+              "topic": "Keyboard collection",
+              "text": "Keyboard collection: Collect peripherals from room Willow.",
+              "source": "equipment.pdf",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Headset exchange: Bring the original packaging.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "equipment.pdf",
+          "text": "Headset exchange: Bring the original packaging.",
+          "page": 4
+        }
+      ]
+    },
+    "passed": false,
+    "loss": null
+  }
+]

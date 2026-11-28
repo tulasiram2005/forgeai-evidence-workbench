@@ -191,3 +191,48 @@ dialog h2 {font-size:43px;margin-bottom:10px}
 #impact-results details summary {font-weight:600;overflow-wrap:anywhere}
 #impact-results details p {margin-top:8px}
 @media(max-width:650px){.tabs{overflow-x:auto;justify-content:flex-start;gap:14px}.tabs button{white-space:nowrap}}
+
+/* Proof sheet: the marks in the evaluation map carry the strongest contrast. */
+:root {--ink:#242c28;--blue:#205c48;--signal:#f4c59c;--paper:#f6f5ef;--muted:#505c54;--line:#c3c9be}
+.kicker,.run-picker label,.dark-label,.tag {text-transform:none;letter-spacing:normal}
+.score-panel {background:#283930}
+.dark-label,.score small,#score-note,.map-key {color:#e1e9df}
+.map-pass,.map-key i {background:#d1dccd;color:#21372c}
+.map-fail,.map-key span+span i {background:#f3c09d;color:#3b281c}
+.map-fail {border-bottom:3px solid #8d4327}
+.pass {background:#e0ebe2;color:#274c36}
+.primary:hover {background:#164734}
+.review-path {display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
+.review-path button {background:none;color:var(--blue);font-weight:600;padding:4px 0;text-decoration:underline;text-underline-offset:4px}
+.field-strip {display:flex;align-items:center;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.field-strip h2 {font:600 16px var(--sans)}
+.field-strip>div {display:flex;flex-wrap:wrap;gap:24px}
+.field-strip>div>div {display:grid;gap:2px}
+.field-strip strong {font:600 20px var(--mono);font-variant-numeric:tabular-nums}
+.field-strip span,.field-strip a {font-size:12px;color:var(--muted)}
+.field-strip a {margin-left:auto}
+.result-card>.quote {margin-block:16px}
+.result-card>.outline {margin-block:8px 16px}
+del {background:#f6dfd2;color:#743a25} ins {background:#dceadc;color:#19452d}
+@media(max-width:650px){.field-strip{display:grid;gap:8px}.field-strip>div{justify-content:space-between}.field-strip a{margin:0}.tabs{display:flex;flex-wrap:wrap;gap:0 16px}.tabs button{padding:10px 0}}
+.field-method {padding:8px 0;color:var(--muted);font-size:13px}
+.field-method summary {width:fit-content;color:var(--blue);font-weight:600}
+.field-method table {width:100%;border-collapse:collapse;text-align:left;margin:12px 0;font-variant-numeric:tabular-nums}
+.field-method caption {text-align:left;margin-bottom:8px}
+.field-method th,.field-method td {border-bottom:1px solid var(--line);padding:8px 4px}
+@media(max-width:650px){.field-method table{table-layout:fixed}.field-method th{overflow-wrap:anywhere}}
+/* Reserve the opening dossier's four rows while its interactive cells hydrate. */
+#score-meter:empty {min-height:113px}
+
+.gate-choice {display:flex;align-items:center;gap:8px}.gate-choice input {width:auto;min-height:0;margin:0}
+
+.trust-panel {padding:clamp(20px,3vw,40px);background:var(--ink,#191d40);color:#fff}
+.trust-panel h2 {color:inherit;margin:0 0 16px}
+.trust-panel strong {color:#e4ee77;font-size:1.2rem}
+.trust-panel p {max-width:48ch;margin:12px 0 0}
+#funnel-chart progress {accent-color:#4147a3;width:100%;height:12px}
+#funnel-chart p {margin:12px 0 4px}
+#funnel-cases details {padding:8px 0;border-bottom:1px solid var(--line)}
+#funnel-cases summary {cursor:pointer}
+.result-card li mark {display:block;background:#f2efcb;color:#191d40;padding:4px}
+.review-path {flex-wrap:wrap}

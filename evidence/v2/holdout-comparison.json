@@ -1,0 +1,634 @@
+[
+  {
+    "group": "first",
+    "mode": "lexical",
+    "passed": {
+      "count": 35,
+      "total": 75
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30
+    },
+    "refusalRecall": {
+      "count": 26,
+      "total": 30
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 15
+    },
+    "folders": [
+      {
+        "name": "staff",
+        "passed": {
+          "count": 9,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 4,
+          "total": 5
+        }
+      },
+      {
+        "name": "spares",
+        "passed": {
+          "count": 13,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "bench",
+        "passed": {
+          "count": 13,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      }
+    ]
+  },
+  {
+    "group": "first",
+    "mode": "frozen",
+    "passed": {
+      "count": 54,
+      "total": 75
+    },
+    "answerableRecall": {
+      "count": 15,
+      "total": 30
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15
+    },
+    "folders": [
+      {
+        "name": "staff",
+        "passed": {
+          "count": 16,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 3,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "spares",
+        "passed": {
+          "count": 23,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "bench",
+        "passed": {
+          "count": 15,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      }
+    ]
+  },
+  {
+    "group": "first",
+    "mode": "normalized",
+    "passed": {
+      "count": 54,
+      "total": 75
+    },
+    "answerableRecall": {
+      "count": 15,
+      "total": 30
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15
+    },
+    "folders": [
+      {
+        "name": "staff",
+        "passed": {
+          "count": 16,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 3,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "spares",
+        "passed": {
+          "count": 23,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "bench",
+        "passed": {
+          "count": 15,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      }
+    ]
+  },
+  {
+    "group": "first",
+    "mode": "expanded",
+    "passed": {
+      "count": 49,
+      "total": 75
+    },
+    "answerableRecall": {
+      "count": 10,
+      "total": 30
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15
+    },
+    "folders": [
+      {
+        "name": "staff",
+        "passed": {
+          "count": 13,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "spares",
+        "passed": {
+          "count": 21,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 8,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      },
+      {
+        "name": "bench",
+        "passed": {
+          "count": 15,
+          "total": 25
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 10
+        },
+        "refusalRecall": {
+          "count": 10,
+          "total": 10
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 5
+        }
+      }
+    ]
+  },
+  {
+    "group": "second",
+    "mode": "lexical",
+    "passed": {
+      "count": 24,
+      "total": 60
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33
+    },
+    "refusalRecall": {
+      "count": 16,
+      "total": 18
+    },
+    "nearMissFalseAnswers": {
+      "count": 2,
+      "total": 18
+    },
+    "folders": [
+      {
+        "name": "onboarding",
+        "passed": {
+          "count": 7,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "vendors",
+        "passed": {
+          "count": 8,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 6
+        }
+      },
+      {
+        "name": "digitizer",
+        "passed": {
+          "count": 9,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 0,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 6
+        }
+      }
+    ]
+  },
+  {
+    "group": "second",
+    "mode": "frozen",
+    "passed": {
+      "count": 29,
+      "total": 60
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 33
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 18
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 18
+    },
+    "folders": [
+      {
+        "name": "onboarding",
+        "passed": {
+          "count": 9,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "vendors",
+        "passed": {
+          "count": 10,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 4,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "digitizer",
+        "passed": {
+          "count": 10,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 1,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 6
+        }
+      }
+    ]
+  },
+  {
+    "group": "second",
+    "mode": "normalized",
+    "passed": {
+      "count": 29,
+      "total": 60
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 33
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 18
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 18
+    },
+    "folders": [
+      {
+        "name": "onboarding",
+        "passed": {
+          "count": 9,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "vendors",
+        "passed": {
+          "count": 10,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 4,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "digitizer",
+        "passed": {
+          "count": 10,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 1,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 6
+        }
+      }
+    ]
+  },
+  {
+    "group": "second",
+    "mode": "expanded",
+    "passed": {
+      "count": 27,
+      "total": 60
+    },
+    "answerableRecall": {
+      "count": 4,
+      "total": 33
+    },
+    "refusalRecall": {
+      "count": 15,
+      "total": 18
+    },
+    "nearMissFalseAnswers": {
+      "count": 3,
+      "total": 18
+    },
+    "folders": [
+      {
+        "name": "onboarding",
+        "passed": {
+          "count": 8,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 1,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 4,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 2,
+          "total": 6
+        }
+      },
+      {
+        "name": "vendors",
+        "passed": {
+          "count": 10,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 2,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 6,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 0,
+          "total": 6
+        }
+      },
+      {
+        "name": "digitizer",
+        "passed": {
+          "count": 9,
+          "total": 20
+        },
+        "answerableRecall": {
+          "count": 1,
+          "total": 11
+        },
+        "refusalRecall": {
+          "count": 5,
+          "total": 6
+        },
+        "nearMissFalseAnswers": {
+          "count": 1,
+          "total": 6
+        }
+      }
+    ]
+  }
+]

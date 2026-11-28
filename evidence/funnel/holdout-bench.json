@@ -1,0 +1,2854 @@
+[
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How long should the instrument heat up before adjustment?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6255859732627869,
+      "margin": 0.2648499608039856,
+      "idfCoverage": 0.13069432345543777,
+      "reranker": 0.00004463793084141798
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "16 minutes"
+    ],
+    "goldSources": [
+      "setup.md"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Power the chamber for 16 minutes before calibration.",
+        "citations": [
+          {
+            "section": [
+              "Warmup interval"
+            ],
+            "topic": "Power the chamber for 16",
+            "text": "Power the chamber for 16 minutes before calibration.",
+            "source": "setup.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long should the instrument heat up before adjustment?",
+          "score": 0.6255859732627869,
+          "margin": 0.2648499608039856,
+          "promoted": true,
+          "lexicalMaximum": 0.12333333333333332
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Power the chamber for 16 minutes before calibration.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "setup.md",
+          "text": "Power the chamber for 16 minutes before calibration."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How long should the instrument heat up before adjustment? Also, how frequently should I take measurements?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.6405479907989502,
+      "margin": 0.34807997941970825,
+      "idfCoverage": 0.07708557860594306,
+      "reranker": 0.00005483010318130255
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "16 minutes",
+      "7 seconds"
+    ],
+    "goldSources": [
+      "setup.md",
+      "sampling.md"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Power the chamber for 16 minutes before calibration.\nRecord a reading every 7 seconds.",
+        "citations": [
+          {
+            "section": [
+              "Warmup interval"
+            ],
+            "topic": "Power the chamber for 16",
+            "text": "Power the chamber for 16 minutes before calibration.",
+            "source": "setup.md",
+            "id": "D2.1"
+          },
+          {
+            "section": [
+              "Sampling interval"
+            ],
+            "topic": "Record a reading every 7",
+            "text": "Record a reading every 7 seconds.",
+            "source": "sampling.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long should the instrument heat up before adjustment? Also, how frequently should I take measurements?",
+          "score": 0.6405479907989502,
+          "margin": 0.34807997941970825,
+          "promoted": true,
+          "lexicalMaximum": 0.074
+        },
+        {
+          "part": "How long should the instrument heat up before adjustment",
+          "score": 0.6228240132331848,
+          "margin": 0.2794390022754669,
+          "promoted": true,
+          "lexicalMaximum": 0.12333333333333332
+        },
+        {
+          "part": "how frequently should I take measurements?",
+          "score": 0.3948900103569031,
+          "margin": 0.02695000171661377,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "Who signed off on the Warmup interval rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.35240599513053894,
+      "margin": 0.08325600624084473,
+      "idfCoverage": 0.31164195489381813,
+      "reranker": 0.000010031356396211777
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Warmup interval rule?",
+          "score": 0.35240599513053894,
+          "margin": 0.08325600624084473,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "What mass do I put on the scale for setup?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5316929817199707,
+      "margin": 0.28200098872184753,
+      "idfCoverage": 0,
+      "reranker": 0.000013199994100432377
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "34 gram"
+    ],
+    "goldSources": [
+      "setup.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Place a 34 gram weight on the balance.",
+        "citations": [
+          {
+            "section": [
+              "Reference load"
+            ],
+            "topic": "Place a 34 gram weight",
+            "text": "Place a 34 gram weight on the balance.",
+            "source": "setup.md",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What mass do I put on the scale for setup?",
+          "score": 0.5316929817199707,
+          "margin": 0.28200098872184753,
+          "promoted": true,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.\nPower the chamber for 16 minutes before calibration.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Place a 34 gram weight on the balance.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "setup.md",
+          "text": "Place a 34 gram weight on the balance."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "What mass do I put on the scale for setup? Also, how frequently should I take measurements?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4242900013923645,
+      "margin": 0.06443500518798828,
+      "idfCoverage": 0,
+      "reranker": 0.000013664795915246941
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "34 gram",
+      "7 seconds"
+    ],
+    "goldSources": [
+      "setup.md",
+      "sampling.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ],
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Place a 34 gram weight on the balance.\nRecord a reading every 7 seconds.",
+        "citations": [
+          {
+            "section": [
+              "Reference load"
+            ],
+            "topic": "Place a 34 gram weight",
+            "text": "Place a 34 gram weight on the balance.",
+            "source": "setup.md",
+            "id": "D2.2"
+          },
+          {
+            "section": [
+              "Sampling interval"
+            ],
+            "topic": "Record a reading every 7",
+            "text": "Record a reading every 7 seconds.",
+            "source": "sampling.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What mass do I put on the scale for setup? Also, how frequently should I take measurements?",
+          "score": 0.4242900013923645,
+          "margin": 0.06443500518798828,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "What mass do I put on the scale for setup",
+          "score": 0.5274999737739563,
+          "margin": 0.2815679758787155,
+          "promoted": true,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how frequently should I take measurements?",
+          "score": 0.3948900103569031,
+          "margin": 0.02695000171661377,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.\nPower the chamber for 16 minutes before calibration.\nRecord a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "Who signed off on the Reference load rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.35385599732398987,
+      "margin": 0.1778319925069809,
+      "idfCoverage": 0.3338416051550784,
+      "reranker": 0.000009887191481539048
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D3.1",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D3.1",
+          "D2.1",
+          "D1.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Reference load rule?",
+          "score": 0.35385599732398987,
+          "margin": 0.1778319925069809,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Place a 34 gram weight on the balance.\nPause acquisition when drift exceeds 3 millimeters.\nDisconnect power once the housing falls below 31 degrees.",
+          "citations": [
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How frequently should I take measurements?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3948900103569031,
+      "margin": 0.02695000171661377,
+      "idfCoverage": 0,
+      "reranker": 0.000014904273484717123
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.2",
+          "D3.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D2.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "7 seconds"
+    ],
+    "goldSources": [
+      "sampling.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Record a reading every 7 seconds.",
+        "citations": [
+          {
+            "section": [
+              "Sampling interval"
+            ],
+            "topic": "Record a reading every 7",
+            "text": "Record a reading every 7 seconds.",
+            "source": "sampling.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How frequently should I take measurements?",
+          "score": 0.3948900103569031,
+          "margin": 0.02695000171661377,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.\nPower the chamber for 16 minutes before calibration.\nPlace a 34 gram weight on the balance.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How frequently should I take measurements? Also, how cool should the case be before unplugging it?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.41159701347351074,
+      "margin": 0.0869540274143219,
+      "idfCoverage": 0,
+      "reranker": 0.00001649375553824939
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3,
+          2
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          3,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          3,
+          2
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          3,
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "7 seconds",
+      "31 degrees"
+    ],
+    "goldSources": [
+      "sampling.md",
+      "shutdown.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ],
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Record a reading every 7 seconds.\nDisconnect power once the housing falls below 31 degrees.",
+        "citations": [
+          {
+            "section": [
+              "Sampling interval"
+            ],
+            "topic": "Record a reading every 7",
+            "text": "Record a reading every 7 seconds.",
+            "source": "sampling.md",
+            "id": "D1.1"
+          },
+          {
+            "section": [
+              "Cooling threshold"
+            ],
+            "topic": "Disconnect power once the housing",
+            "text": "Disconnect power once the housing falls below 31 degrees.",
+            "source": "shutdown.md",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How frequently should I take measurements? Also, how cool should the case be before unplugging it?",
+          "score": 0.41159701347351074,
+          "margin": 0.0869540274143219,
+          "promoted": false,
+          "lexicalMaximum": 0.08222222222222221
+        },
+        {
+          "part": "How frequently should I take measurements",
+          "score": 0.42997899651527405,
+          "margin": 0.029713988304138184,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how cool should the case be before unplugging it?",
+          "score": 0.4328559935092926,
+          "margin": 0.15721899271011353,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nRecord a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "Who signed off on the Sampling interval rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3703019917011261,
+      "margin": 0.11035898327827454,
+      "idfCoverage": 0.31164195489381813,
+      "reranker": 0.00001002261706162244
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D3.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D2.1",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Sampling interval rule?",
+          "score": 0.3703019917011261,
+          "margin": 0.11035898327827454,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.\nPause acquisition when drift exceeds 3 millimeters.\nPower the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "At what displacement must I stop collecting data?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3525159955024719,
+      "margin": 0.07397499680519104,
+      "idfCoverage": 0,
+      "reranker": 0.000010956580808851868
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.2",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "3 millimeters"
+    ],
+    "goldSources": [
+      "sampling.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Pause acquisition when drift exceeds 3 millimeters.",
+        "citations": [
+          {
+            "section": [
+              "Drift limit"
+            ],
+            "topic": "Pause acquisition when drift exceeds",
+            "text": "Pause acquisition when drift exceeds 3 millimeters.",
+            "source": "sampling.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "At what displacement must I stop collecting data?",
+          "score": 0.3525159955024719,
+          "margin": 0.07397499680519104,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Record a reading every 7 seconds.\nPause acquisition when drift exceeds 3 millimeters.\nPlace a 34 gram weight on the balance.",
+          "citations": [
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Reference load"
+              ],
+              "topic": "Place a 34 gram weight",
+              "text": "Place a 34 gram weight on the balance.",
+              "source": "setup.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "At what displacement must I stop collecting data? Also, how cool should the case be before unplugging it?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3680799901485443,
+      "margin": 0.08192098140716553,
+      "idfCoverage": 0,
+      "reranker": 0.000018301690943189897
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          3,
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2,
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D3.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "3 millimeters",
+      "31 degrees"
+    ],
+    "goldSources": [
+      "sampling.md",
+      "shutdown.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ],
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Pause acquisition when drift exceeds 3 millimeters.\nDisconnect power once the housing falls below 31 degrees.",
+        "citations": [
+          {
+            "section": [
+              "Drift limit"
+            ],
+            "topic": "Pause acquisition when drift exceeds",
+            "text": "Pause acquisition when drift exceeds 3 millimeters.",
+            "source": "sampling.md",
+            "id": "D1.2"
+          },
+          {
+            "section": [
+              "Cooling threshold"
+            ],
+            "topic": "Disconnect power once the housing",
+            "text": "Disconnect power once the housing falls below 31 degrees.",
+            "source": "shutdown.md",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "At what displacement must I stop collecting data? Also, how cool should the case be before unplugging it?",
+          "score": 0.3680799901485443,
+          "margin": 0.08192098140716553,
+          "promoted": false,
+          "lexicalMaximum": 0.074
+        },
+        {
+          "part": "At what displacement must I stop collecting data",
+          "score": 0.32747501134872437,
+          "margin": 0.045220017433166504,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "how cool should the case be before unplugging it?",
+          "score": 0.4328559935092926,
+          "margin": 0.15721899271011353,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Disconnect power once the housing falls below 31 degrees.",
+          "citations": [
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Disconnect power once the housing falls below 31 degrees.\nPower the chamber for 16 minutes before calibration.\nRecord a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "retrieval"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "Who signed off on the Drift limit rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.5614519715309143,
+      "margin": 0.4437449723482132,
+      "idfCoverage": 0.3338416051550784,
+      "reranker": 0.00004017406899947673
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D3.1",
+          "D2.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D2.2",
+          "D3.1",
+          "D1.1",
+          "D2.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Drift limit rule?",
+          "score": 0.5614519715309143,
+          "margin": 0.4437449723482132,
+          "promoted": true,
+          "lexicalMaximum": 0.20124999999999998
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Pause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Pause acquisition when drift exceeds 3 millimeters.\nRecord a reading every 7 seconds.\nDisconnect power once the housing falls below 31 degrees.",
+          "citations": [
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How cool should the case be before unplugging it?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.4328559935092926,
+      "margin": 0.15721899271011353,
+      "idfCoverage": 0,
+      "reranker": 0.000013634453353006393
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D3.1",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.1",
+          "D1.2",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          3
+        ],
+        "top": [
+          "D2.1",
+          "D1.2",
+          "D3.1",
+          "D2.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "31 degrees"
+    ],
+    "goldSources": [
+      "shutdown.md"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Disconnect power once the housing falls below 31 degrees.",
+        "citations": [
+          {
+            "section": [
+              "Cooling threshold"
+            ],
+            "topic": "Disconnect power once the housing",
+            "text": "Disconnect power once the housing falls below 31 degrees.",
+            "source": "shutdown.md",
+            "id": "D3.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How cool should the case be before unplugging it?",
+          "score": 0.4328559935092926,
+          "margin": 0.15721899271011353,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nRecord a reading every 7 seconds.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Sampling interval"
+              ],
+              "topic": "Record a reading every 7",
+              "text": "Record a reading every 7 seconds.",
+              "source": "sampling.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "How cool should the case be before unplugging it? Also, how long should the instrument heat up before adjustment?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.44828400015830994,
+      "margin": 0.02813899517059326,
+      "idfCoverage": 0.06991597206136348,
+      "reranker": 0.00005405127376434393
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5,
+          1
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          3,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D3.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          4,
+          1
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          3,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D3.1",
+          "D1.2"
+        ]
+      }
+    },
+    "goldFacts": [
+      "31 degrees",
+      "16 minutes"
+    ],
+    "goldSources": [
+      "shutdown.md",
+      "setup.md"
+    ],
+    "indexed": [
+      [
+        "D3.1"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Disconnect power once the housing falls below 31 degrees.\nPower the chamber for 16 minutes before calibration.",
+        "citations": [
+          {
+            "section": [
+              "Cooling threshold"
+            ],
+            "topic": "Disconnect power once the housing",
+            "text": "Disconnect power once the housing falls below 31 degrees.",
+            "source": "shutdown.md",
+            "id": "D3.1"
+          },
+          {
+            "section": [
+              "Warmup interval"
+            ],
+            "topic": "Power the chamber for 16",
+            "text": "Power the chamber for 16 minutes before calibration.",
+            "source": "setup.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How cool should the case be before unplugging it? Also, how long should the instrument heat up before adjustment?",
+          "score": 0.44828400015830994,
+          "margin": 0.02813899517059326,
+          "promoted": false,
+          "lexicalMaximum": 0.06727272727272728
+        },
+        {
+          "part": "How cool should the case be before unplugging it",
+          "score": 0.4357059895992279,
+          "margin": 0.15577000379562378,
+          "promoted": false,
+          "lexicalMaximum": 0.148
+        },
+        {
+          "part": "how long should the instrument heat up before adjustment?",
+          "score": 0.6255859732627869,
+          "margin": 0.2648499608039856,
+          "promoted": true,
+          "lexicalMaximum": 0.12333333333333332
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Power the chamber for 16 minutes before calibration.\nDisconnect power once the housing falls below 31 degrees.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout",
+    "name": "bench",
+    "question": "Who signed off on the Cooling threshold rule?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.4921320080757141,
+      "margin": 0.2553590089082718,
+      "idfCoverage": 0.3338416051550784,
+      "reranker": 0.000010170588211622089
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D2.1",
+          "D2.2",
+          "D3.1"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D3.1",
+          "D2.1",
+          "D1.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who signed off on the Cooling threshold rule?",
+          "score": 0.4921320080757141,
+          "margin": 0.2553590089082718,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Disconnect power once the housing falls below 31 degrees.",
+          "citations": [
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Disconnect power once the housing falls below 31 degrees.\nPower the chamber for 16 minutes before calibration.\nPause acquisition when drift exceeds 3 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Cooling threshold"
+              ],
+              "topic": "Disconnect power once the housing",
+              "text": "Disconnect power once the housing falls below 31 degrees.",
+              "source": "shutdown.md",
+              "id": "D3.1"
+            },
+            {
+              "section": [
+                "Warmup interval"
+              ],
+              "topic": "Power the chamber for 16",
+              "text": "Power the chamber for 16 minutes before calibration.",
+              "source": "setup.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Drift limit"
+              ],
+              "topic": "Pause acquisition when drift exceeds",
+              "text": "Pause acquisition when drift exceeds 3 millimeters.",
+              "source": "sampling.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

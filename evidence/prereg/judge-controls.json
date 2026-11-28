@@ -1,0 +1,10 @@
+{
+  "scope": "Apply separately to each suite, including future frozen suites. Score overall exact case passes; thresholds are proportions.",
+  "alwaysRefuse": {"ceiling": "refused share + 0.02"},
+  "alwaysAnswerTop1": {"ceiling": "answered share + 0.02"},
+  "fabricateNumber": {"ceiling": 0},
+  "citeWrongSource": {"ceiling": 0},
+  "copyQuestion": {"ceiling": 0},
+  "oracle": {"floor": 0.95},
+  "referenceRetriever": "Stable lexical ranking over structured original passages, first rank even when all scores are zero."
+}

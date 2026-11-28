@@ -1,0 +1,1643 @@
+[
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Where do visitors collect the handheld guide?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Pearl"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "A lost guidebook costs 9 euros.",
+      "citations": [
+        {
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Where do visitors collect the handheld guide?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Pearl"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors.",
+          "page": 1,
+          "highlighted": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Where do visitors collect the handheld guide?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Pearl"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Where do visitors collect the handheld guide?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Pearl"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The tower tour admits 7 visitors.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "How long will the spring mechanism show take?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Mechanism sketches must use graphite pencils.",
+          "highlighted": "Mechanism sketches must use graphite pencils."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "How long will the spring mechanism show take?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Mechanism sketches must use graphite pencils.",
+          "highlighted": "Mechanism sketches must use graphite pencils."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "How long will the spring mechanism show take?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "How long will the spring mechanism show take?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Mechanism sketches must use graphite pencils.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Mechanism sketches must use graphite pencils."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "How many people can join the upstairs group?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "7 visitors"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "How many people can join the upstairs group?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "7 visitors"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "How many people can join the upstairs group?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "7 visitors"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "How many people can join the upstairs group?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "7 visitors"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Who arranges a closed-door visit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gallery registrar"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Who arranges a closed-door visit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gallery registrar"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Who arranges a closed-door visit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gallery registrar"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Who arranges a closed-door visit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gallery registrar"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What marking validates my photography stand pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "copper stamp"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What marking validates my photography stand pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "copper stamp"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What marking validates my photography stand pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "copper stamp"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What marking validates my photography stand pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "copper stamp"
+    ],
+    "sources": [
+      "operations.pdf"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "When will we hear the final chime?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16:20"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "When will we hear the final chime?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16:20"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "When will we hear the final chime?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16:20"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "When will we hear the final chime?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "16:20"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Where should I leave the hearing protection?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "drawer Dove"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Where should I leave the hearing protection?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "drawer Dove"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Where should I leave the hearing protection?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "drawer Dove"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Where should I leave the hearing protection?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "drawer Dove"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What drawing tool is approved for the movement study?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "graphite pencils"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Mechanism sketches must use graphite pencils.",
+      "citations": [
+        {
+          "id": "D1.3",
+          "source": "handover.md",
+          "text": "Mechanism sketches must use graphite pencils."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What drawing tool is approved for the movement study?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "graphite pencils"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What drawing tool is approved for the movement study?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "graphite pencils"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What drawing tool is approved for the movement study?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "graphite pencils"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What charge replaces a missing visitor booklet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors.",
+          "page": 1,
+          "highlighted": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What charge replaces a missing visitor booklet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors.",
+          "page": 1,
+          "highlighted": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What charge replaces a missing visitor booklet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What charge replaces a missing visitor booklet?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "9 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The tower tour admits 7 visitors.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Which day should a new helper attend induction?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Friday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Which day should a new helper attend induction?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Friday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Which day should a new helper attend induction?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Friday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Which day should a new helper attend induction?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Friday"
+    ],
+    "sources": [
+      "handover.md"
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Which battery fits the audio wand?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Audio wands are issued at desk Pearl.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Audio wands are issued at desk Pearl.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Which battery fits the audio wand?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Audio wands are issued at desk Pearl.",
+          "page": 1,
+          "highlighted": "Audio wands are issued at desk Pearl."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Which battery fits the audio wand?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Which battery fits the audio wand?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Audio wands are issued at desk Pearl.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "operations.pdf",
+          "text": "Audio wands are issued at desk Pearl."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Who manufactures the copper stamp?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp.",
+          "page": 1,
+          "highlighted": "Tripod permits use a copper stamp."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Who manufactures the copper stamp?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp.",
+          "page": 1,
+          "highlighted": "Tripod permits use a copper stamp."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Who manufactures the copper stamp?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Who manufactures the copper stamp?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Tripod permits use a copper stamp.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "How many stairs lead to the tower tour?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "The tower tour admits 7 visitors.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "How many stairs lead to the tower tour?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors.",
+          "page": 1,
+          "highlighted": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "How many stairs lead to the tower tour?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "How many stairs lead to the tower tour?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "The tower tour admits 7 visitors.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "operations.pdf",
+          "text": "The tower tour admits 7 visitors."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "How much does a tripod permit cost?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Tripod permits use a copper stamp.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp.",
+          "page": 1
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "How much does a tripod permit cost?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp.",
+          "page": 1,
+          "highlighted": "Tripod permits use a copper stamp."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros.",
+          "highlighted": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "How much does a tripod permit cost?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "How much does a tripod permit cost?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Tripod permits use a copper stamp.",
+      "citations": [
+        {
+          "id": "D2.5",
+          "source": "operations.pdf",
+          "text": "Tripod permits use a copper stamp."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Who sponsors the winding demonstration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "A winding demonstration lasts 16 minutes.",
+          "page": 1,
+          "highlighted": "A winding demonstration lasts 16 minutes."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Who sponsors the winding demonstration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "A winding demonstration lasts 16 minutes.",
+          "page": 1,
+          "highlighted": "A winding demonstration lasts 16 minutes."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Who sponsors the winding demonstration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Who sponsors the winding demonstration?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "A winding demonstration lasts 16 minutes.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "operations.pdf",
+          "text": "A winding demonstration lasts 16 minutes."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What is the registrar’s email address?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Private viewing requests go to the gallery registrar.",
+          "page": 1,
+          "highlighted": "Private viewing requests go to the gallery registrar."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What is the registrar’s email address?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Private viewing requests go to the gallery registrar.",
+          "page": 1,
+          "highlighted": "Private viewing requests go to the gallery registrar."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What is the registrar’s email address?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What is the registrar’s email address?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Private viewing requests go to the gallery registrar.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "operations.pdf",
+          "text": "Private viewing requests go to the gallery registrar."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What is the guidebook ISBN?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros.",
+          "highlighted": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What is the guidebook ISBN?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros.",
+          "highlighted": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What is the guidebook ISBN?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What is the guidebook ISBN?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "A lost guidebook costs 9 euros.",
+      "citations": [
+        {
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Are lost ear defenders insured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Borrowed ear defenders return to drawer Dove.",
+          "highlighted": "Borrowed ear defenders return to drawer Dove."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros.",
+          "highlighted": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Are lost ear defenders insured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Borrowed ear defenders return to drawer Dove.",
+          "highlighted": "Borrowed ear defenders return to drawer Dove."
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D1.4",
+          "source": "handover.md",
+          "text": "A lost guidebook costs 9 euros.",
+          "highlighted": "A lost guidebook costs 9 euros."
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Are lost ear defenders insured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Are lost ear defenders insured?",
+    "kind": "near miss",
+    "status": "refused",
+    "actual": {
+      "status": "answered",
+      "text": "Borrowed ear defenders return to drawer Dove.",
+      "citations": [
+        {
+          "id": "D1.2",
+          "source": "handover.md",
+          "text": "Borrowed ear defenders return to drawer Dove."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "contextual",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "strict",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "clarify",
+      "text": "Which topic or record do you mean?",
+      "citations": []
+    },
+    "passed": true
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysRefuse",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "refused",
+      "text": "Insufficient evidence.",
+      "citations": []
+    },
+    "passed": false
+  },
+  {
+    "name": "clockmuseum",
+    "config": "alwaysAnswer",
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify",
+    "actual": {
+      "status": "answered",
+      "text": "The last bell rings at 16:20.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "The last bell rings at 16:20."
+        }
+      ]
+    },
+    "passed": false
+  }
+]

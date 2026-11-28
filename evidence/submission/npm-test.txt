@@ -1,0 +1,206 @@
+
+> forgeai-evidence-workbench@1.0.0 test
+> node --test test.mjs && node retrieval/judge-stress.mjs holdout holdout2 holdout3 holdout4 > /dev/null
+
+TAP version 13
+# Subtest: unseen folder compiles, freezes expected text and joins two sources
+ok 1 - unseen folder compiles, freezes expected text and joins two sources
+  ---
+  duration_ms: 0.936292
+  type: 'test'
+  ...
+# Subtest: missing sources, embedded instructions and unrelated topics
+ok 2 - missing sources, embedded instructions and unrelated topics
+  ---
+  duration_ms: 0.792125
+  type: 'test'
+  ...
+# Subtest: tools have constrained inputs and CSV preserves quoted cells
+ok 3 - tools have constrained inputs and CSV preserves quoted cells
+  ---
+  duration_ms: 0.857083
+  type: 'test'
+  ...
+# Subtest: small and malformed corpora fail predictably
+ok 4 - small and malformed corpora fail predictably
+  ---
+  duration_ms: 0.086042
+  type: 'test'
+  ...
+# Subtest: unknown fields do not inherit the score of a familiar record
+ok 5 - unknown fields do not inherit the score of a familiar record
+  ---
+  duration_ms: 0.06525
+  type: 'test'
+  ...
+# Subtest: tiny sources produce distinct questions
+ok 6 - tiny sources produce distinct questions
+  ---
+  duration_ms: 0.552583
+  type: 'test'
+  ...
+# Subtest: local model outputs must satisfy the question budget and reference real labels
+ok 7 - local model outputs must satisfy the question budget and reference real labels
+  ---
+  duration_ms: 0.282292
+  type: 'test'
+  ...
+# Subtest: evidence counts distinguish extra citations, missing answers and required refusals
+ok 8 - evidence counts distinguish extra citations, missing answers and required refusals
+  ---
+  duration_ms: 0.118792
+  type: 'test'
+  ...
+# Subtest: source-qualified queries resolve conflicting notices independently of file order
+ok 9 - source-qualified queries resolve conflicting notices independently of file order
+  ---
+  duration_ms: 1.353833
+  type: 'test'
+  ...
+# Subtest: capability denials override earlier grants and keep coordinated prohibitions together
+ok 10 - capability denials override earlier grants and keep coordinated prohibitions together
+  ---
+  duration_ms: 1.465875
+  type: 'test'
+  ...
+# Subtest: reviewer cases bind to a definition and distinguish wrong numbers and sources
+ok 11 - reviewer cases bind to a definition and distinguish wrong numbers and sources
+  ---
+  duration_ms: 4.521166
+  type: 'test'
+  ...
+# Subtest: long prose keeps whole words at passage boundaries and preserves CSV records
+ok 12 - long prose keeps whole words at passage boundaries and preserves CSV records
+  ---
+  duration_ms: 2.403917
+  type: 'test'
+  ...
+# Subtest: optional dense ranking preserves refusals and source conflict handling
+ok 13 - optional dense ranking preserves refusals and source conflict handling
+  ---
+  duration_ms: 0.707375
+  type: 'test'
+  ...
+# Subtest: sparse corpus still produces the minimum suite when every fallback field exists
+ok 14 - sparse corpus still produces the minimum suite when every fallback field exists
+  ---
+  duration_ms: 0.680375
+  type: 'test'
+  ...
+# Subtest: a one-millisecond tournament budget returns a partial report without a winner
+ok 15 - a one-millisecond tournament budget returns a partial report without a winner
+  ---
+  duration_ms: 0.50825
+  type: 'test'
+  ...
+# Subtest: withholding a source changes only the trial and exposes duplicate support
+ok 16 - withholding a source changes only the trial and exposes duplicate support
+  ---
+  duration_ms: 0.857958
+  type: 'test'
+  ...
+# Subtest: revision comparison distinguishes a changed deadline, a lost answer, and unaffected text
+ok 17 - revision comparison distinguishes a changed deadline, a lost answer, and unaffected text
+  ---
+  duration_ms: 6.124834
+  type: 'test'
+  ...
+# Subtest: identical answers retain provenance changes but ignore passage renumbering
+ok 18 - identical answers retain provenance changes but ignore passage renumbering
+  ---
+  duration_ms: 0.770542
+  type: 'test'
+  ...
+# Subtest: split validation excludes reserved cases from repair targets and exercises the judge
+ok 19 - split validation excludes reserved cases from repair targets and exercises the judge
+  ---
+  duration_ms: 0.629833
+  type: 'test'
+  ...
+# Subtest: blind reviewer rejects an unsupported number beside a genuine citation
+ok 20 - blind reviewer rejects an unsupported number beside a genuine citation
+  ---
+  duration_ms: 0.338708
+  type: 'test'
+  ...
+# Subtest: PDF page provenance survives retrieval
+ok 21 - PDF page provenance survives retrieval
+  ---
+  duration_ms: 0.300208
+  type: 'test'
+  ...
+# Subtest: composed evidence rejects changed units, numbers, identities and missing citations
+ok 22 - composed evidence rejects changed units, numbers, identities and missing citations
+  ---
+  duration_ms: 0.321709
+  type: 'test'
+  ...
+# Subtest: alternative fact judge accepts alternate sources while preserving numeric boundaries
+ok 23 - alternative fact judge accepts alternate sources while preserving numeric boundaries
+  ---
+  duration_ms: 0.212042
+  type: 'test'
+  ...
+# Subtest: coverage inspection distinguishes three overlapping unsupported attributes
+ok 24 - coverage inspection distinguishes three overlapping unsupported attributes
+  ---
+  duration_ms: 0.134208
+  type: 'test'
+  ...
+# Subtest: contextual intake binds markdown hierarchy to verbatim passages and resets sibling headings
+ok 25 - contextual intake binds markdown hierarchy to verbatim passages and resets sibling headings
+  ---
+  duration_ms: 0.154375
+  type: 'test'
+  ...
+# Subtest: CSV contextual embedding can expand column labels while citations retain original headings
+ok 26 - CSV contextual embedding can expand column labels while citations retain original headings
+  ---
+  duration_ms: 0.051459
+  type: 'test'
+  ...
+# Subtest: contextual ranker requires the exact identifier even for near-identical codes
+ok 27 - contextual ranker requires the exact identifier even for near-identical codes
+  ---
+  duration_ms: 0.912916
+  type: 'test'
+  ...
+# Subtest: record equivalence uses whole identifiers in both query and source
+ok 28 - record equivalence uses whole identifiers in both query and source
+  ---
+  duration_ms: 1.008208
+  type: 'test'
+  ...
+# Subtest: index expansion never becomes answer text, quoted evidence or reference facts
+ok 29 - index expansion never becomes answer text, quoted evidence or reference facts
+  ---
+  duration_ms: 0.272
+  type: 'test'
+  ...
+# Subtest: generated-only operating point meets the cap and maximizes supported recall
+ok 30 - generated-only operating point meets the cap and maximizes supported recall
+  ---
+  duration_ms: 15.162459
+  type: 'test'
+  ...
+# Subtest: hard-tier warning requires measured low recall and a saturated easy tier
+ok 31 - hard-tier warning requires measured low recall and a saturated easy tier
+  ---
+  duration_ms: 0.350166
+  type: 'test'
+  ...
+# Subtest: evidence-first separates pointers from the answer and refuses unsupported attributes
+ok 32 - evidence-first separates pointers from the answer and refuses unsupported attributes
+  ---
+  duration_ms: 1.371375
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 89.742792

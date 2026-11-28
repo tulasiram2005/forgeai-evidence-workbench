@@ -1,0 +1,26 @@
+[
+  {
+    "name": "clockmuseum",
+    "configuration": {
+      "chunking": "Sentence or CSV record; 750-character text ceiling",
+      "threshold": 0.52,
+      "splitConjunction": true
+    }
+  },
+  {
+    "name": "costumestore",
+    "configuration": {
+      "chunking": "Sentence or CSV record; 750-character text ceiling",
+      "threshold": 0.52,
+      "splitConjunction": true
+    }
+  },
+  {
+    "name": "seedlibrary",
+    "configuration": {
+      "chunking": "Sentence or CSV record; 750-character text ceiling",
+      "threshold": 0.52,
+      "splitConjunction": true
+    }
+  }
+]

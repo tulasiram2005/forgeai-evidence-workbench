@@ -1,0 +1,162 @@
+[
+  {
+    "question": "Where do the sellers pick up identification?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "counter Moss"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "When will I learn which space is mine?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "07:15"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How wide is the regular display table?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "180 centimeters"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where can I get filler for fragile pots?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "bay Wren"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How long may I show visitors my technique?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "22 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How is a damaged display piece marked?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "silver sticker"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Who takes the sales paperwork at closing?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "hall steward"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which exit should I take with my leftover stock?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "gate Ash"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How much cash must I leave to use secure storage?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "8 euros"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where do borrowed table covers go afterward?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "linen hamper"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "When does the locker key deposit expire?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who manufactures the standard bench?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Does gate Ash charge a vehicle fee?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What does a replacement vendor badge cost?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the capacity of the linen hamper?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which insurer covers a cracked exhibit?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How tall is counter Moss?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How many visitors can attend a demonstration slot?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]

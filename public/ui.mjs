@@ -1,6 +1,7 @@
+import {pilot} from './forecast-pilot.mjs';
 import {auditSources} from './source-audit.mjs';
 import { validateCase, runReview } from './review.mjs';
-import { answer } from './engine.mjs';
+import {browserAnswer as answer} from './browser-answer.mjs';
 
 const byId = id => document.getElementById(id);
 const item = (tag, content, cls) => {
@@ -10,7 +11,7 @@ const item = (tag, content, cls) => {
   return element;
 };
 const format = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-const titles = { shore: 'North Pier shore desk', conservation: 'Conservation dispatch' };
+const titles = { shore: 'North Pier shore desk', spares:'Ship-spares desk', conservation: 'Conservation dispatch' };
 const pretty = value => String(value ?? '').replaceAll('_', ' ');
 let activeRun;
 let currentKey = 'shore';
@@ -29,6 +30,37 @@ for (const tab of document.querySelectorAll('[data-view]')) {
   tab.addEventListener('click', () => selectView(tab.dataset.view));
 }
 
+byId('start-query').onclick=()=>{
+  if(!activeRun)return;
+  selectView('runner');
+  byId('query').value=activeRun.evals.find(c=>c.status==='answered')?.question ?? '';
+  byId('query').focus();
+};
+byId('open-failures').onclick=()=>{
+  selectView('evidence');
+  byId('case-filter').value='fail';byId('case-search').value='';renderCases();
+  byId('case-filter').focus();
+};
+fetch('./runs/release-results.json').then(response=>response.json()).then(data=>{
+  const configs=['V2 contextual','Always refuse','Always answer with top-1'];
+  const table=item('table');
+  table.append(item('caption','All suites combined'));
+  const heading=item('tr');
+  for(const name of ['Configuration','Answerable recall','Refusal recall','Balanced accuracy'])heading.append(item('th',name));
+  table.append(heading);
+  const interval=m=>m.count+'/'+m.total+' ('+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)';
+  for(const config of configs){
+    const r=data.find(row=>row.suite==='pooled' && row.config===config);
+    const line=item('tr');
+    line.append(item('th',config),item('td',interval(r.answerableRecall)),item('td',interval(r.refusalRecall)),item('td',(100*r.balancedAccuracy).toFixed(1)+'%'));
+    table.append(line);
+  }
+  byId('field-detail').replaceChildren(table,item('p','Class recalls include question-level 95% Wilson intervals. Balanced accuracy weights both classes equally.'));
+  byId('field-scores').replaceChildren(...data.filter(r=>r.config===configs[0] && r.suite!=='pooled').map((r,i)=>{
+    const cell=item('div');cell.append(item('strong',r.passed.count+'/'+r.passed.total),item('span',(i===3?'Prospective suite ':'Development suite ')+(i+1)));return cell;
+  }));
+}).catch(()=>{byId('field-scores').textContent='External results unavailable';});
+
 function evidenceRow(label, value) {
   const row = item('p');
   row.append(item('strong', label + ' '), document.createTextNode(format(value) || '—'));
@@ -40,8 +72,8 @@ function renderCases() {
   const list = byId('cases');
   list.replaceChildren();
   const filter = byId('case-filter').value;
-  const retained = activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
-  const results = retained?.results ?? [];
+  const retained = activeRun.iterations[activeRun.report.retainedRound-1] ?? activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
+  const results = [...(retained?.results ?? []),...(activeRun.report.testResults??[])];
   const definitions = new Map(activeRun.evals.map(entry => [entry.id, entry]));
   const search = byId('case-search').value.trim().toLowerCase();
   const sorted = [...results].sort((a,b) => Number(a.passed)-Number(b.passed));
@@ -70,11 +102,16 @@ function renderCases() {
     if (observed !== undefined) {
       if (observed.status) response.append(item('strong',pretty(observed.status)));
       response.append(item('p',format(observed?.text ?? observed)));
+      showPointers(response,observed);
       for (const cite of observed.citations ?? []) response.append(item('small',cite.source+' · '+cite.id));
     }
     comparison.append(reference,response);
     body.append(comparison);
     if (result.reason) body.append(evidenceRow('Judgment', result.reason));
+    body.append(evidenceRow('Round history', activeRun.iterations.map(r=>{
+      const observed=r.results.find(x=>x.id===result.id);
+      return 'R'+r.round+' '+(!observed?'unrecorded':observed.passed?'pass':'fail');
+    }).join(' / ')));
     if (definition.sources) body.append(evidenceRow('Expected sources', definition.sources));
     details.append(summary, body);
     list.append(details);
@@ -103,10 +140,12 @@ function render(run, key) {
   const stats = [new Set(definition.chunks.map(chunk => chunk.source)).size + ' sources', iterations.length + (iterations.length === 1 ? ' evaluation round' : ' evaluation rounds'), (definition.tools?.length ?? 0) + ' attached tools'];
   byId('run-meta').replaceChildren(...stats.map(s => item('span', s)));
   byId('score').replaceChildren(document.createTextNode(String(report.passed)), item('small', ' / ' + report.total));
-  const percent = report.total ? Math.round(100 * report.passed / report.total) : 0;
-  byId('score-note').textContent = percent + '% of cases passed';
-  const retained = iterations.find(entry => entry.passed === report.passed);
-  byId('score-meter').replaceChildren(...(retained?.results ?? []).map(result => {
+  const assessment=report.assessment;
+  byId('runner-verdict').textContent=(assessment?.verdict??'DO NOT SHIP')+' for autonomous answering. Evidence-first pilot forecast: '+(pilot.forecast*100).toFixed(1)+'% overall agreement across '+pilot.n+' suites.'+(assessment?.warning?' '+assessment.warning:'');
+  byId('score-note').textContent = (report.total-report.passed)+' failed';
+  const retained = iterations[report.retainedRound-1] ?? iterations.find(entry => entry.passed === report.passed);
+  const released=[...(retained?.results??[]),...(report.testResults??[])];
+  byId('score-meter').replaceChildren(...released.map(result => {
     const button = item('button',result.id,result.passed ? 'map-pass' : 'map-fail');
     const label = result.id+' · '+(result.passed?'Passed':'Failed')+' · '+result.question;
     button.title = label;
@@ -129,13 +168,22 @@ function render(run, key) {
     node.append(item('strong', 'Round ' + (i + 1) + ' · ' + entry.passed + '/' + entry.total), item('p', typeof change === 'object' ? format(change) : pretty(change || 'Initial evaluation')));
     return node;
   }));
+  const classes=new Map();
+  for(const r of released){
+    const score=classes.get(r.kind)??{passed:0,total:0};
+    score.total++;score.passed+=Number(r.passed);classes.set(r.kind,score);
+  }
   byId('stop').replaceChildren(item('p', 'Stopped · ' + pretty(report.stop)), item('p', 'Compiler · ' + (report.model || 'Local')));
+  for(const [name,m] of Object.entries(report.splits??{}))byId('stop').append(evidenceRow(name,m.passed+'/'+m.total+' (95% Wilson '+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)'));
+  for(const [kind,score] of classes)byId('stop').append(evidenceRow(pretty(kind),score.passed+'/'+score.total));
   if (report.metrics) {
     for (const [key,label] of [['citationPrecision','Cited passages matching expectations'],['evidenceRecall','Expected passages recovered'],['requiredRefusals','Required refusals observed']]) {
       const metric = report.metrics[key];
       if (metric) byId('stop').append(item('p', label + ' · ' + (metric.total ? metric.matched + '/' + metric.total : 'N/A')));
     }
   }
+  if(retained?.tuning!==undefined)byId('stop').append(evidenceRow('Tuning',retained.tuning+'/'+(report.total-report.validationIds.length)),evidenceRow('Validation',retained.validation+'/'+report.validationIds.length));
+  if(report.judgeControls)byId('stop').append(evidenceRow('Broken controls rejected',report.judgeControls.filter(c=>c.rejected).length+'/'+report.judgeControls.length));
   if (report.limitations?.length) byId('stop').append(item('p', report.limitations[0]));
   byId('case-search').value = '';
   byId('case-filter').value = 'all';
@@ -203,6 +251,7 @@ byId('chat-form').addEventListener('submit', async event => {
     if (activeRun !== startingRun) return;
     const panel = item('div', undefined, 'result-card');
     panel.append(item('div', pretty(response.status), 'kicker'), item('h3', 'Agent response'), item('p', response.text));
+    showPointers(panel,response);
     for (const citation of response.citations ?? []) {
       const quote = item('div', undefined, 'quote');
       quote.append(item('strong', citation.source + (citation.id ? ' · ' + citation.id : '')), item('span', citation.text));
@@ -210,6 +259,7 @@ byId('chat-form').addEventListener('submit', async event => {
     }
     if(response.citations.some(c=>startingRun.definition.chunks.some(chunk=>chunk.source===c.source))){
       const audit=item('button','Test source dependency','outline');
+      audit.id='source-dependency';
       audit.type='button';
       const output=item('div');
       output.setAttribute('aria-live','polite');
@@ -308,8 +358,8 @@ function compile(brief, documents, options) {
     const worker = new Worker(new URL('./compiler.worker.mjs', import.meta.url), {type:'module'});
     const deadline = setTimeout(() => {
       worker.terminate();
-      reject(new Error('This build exceeded its 45-second budget. Reduce the source set and retry.'));
-    }, 45000);
+      reject(new Error('This build exceeded its 180-second budget. Reduce the source set and retry.'));
+    }, 180000);
     const cleanUp = () => { clearTimeout(deadline); worker.terminate(); };
     worker.onmessage = event => {
       cleanUp();
@@ -336,7 +386,11 @@ byId('build-form').addEventListener('submit', async event => {
     if (!brief) throw new Error('Describe the agent you want to build.');
     button.textContent = 'Evaluating…';
     await new Promise(resolve => setTimeout(resolve, 30));
-    const opts = {};
+    const opts = {contextual:true};
+    if(byId('gate-toggle').checked){
+      await (await import('./static-encoder.mjs')).loadGateModel();
+      opts.gateV2=true;opts.contextual=true;
+    }
     for (const key of ['audience','tone']) if (byId(key).value.trim()) opts[key] = byId(key).value.trim();
     customRun = await compile(brief, [...staged], opts);
     ++requestToken;
@@ -389,7 +443,7 @@ byId('review-run').onclick = async () => {
   clearReviewResult();
   const revision = reviewRevision;
   try {
-    const output = await runReview(activeRun.definition,reviewCases);
+    const output = await runReview(activeRun.definition,reviewCases,answer);
     if (revision !== reviewRevision) return;
     receipt=output;
     byId('review-message').textContent=output.passed+' of '+output.total+' reviewer cases passed.';
@@ -427,7 +481,7 @@ async function runImpact(load){
     const worker=new Worker(new URL('./impact.worker.mjs',import.meta.url),{type:'module'});
     impactWorker=worker;
     const fail=message=>{worker.terminate();clearTimeout(impactTimer);byId('impact-status').textContent=message;};
-    impactTimer=setTimeout(()=>fail('Comparison exceeded 45 seconds.'),45000);
+    impactTimer=setTimeout(()=>fail('Comparison exceeded 45 seconds.'),180000);
     worker.onerror=()=>fail('Could not run the comparison.');
     worker.onmessage=({data})=>{
       if(job!==impactJob)return;
@@ -441,7 +495,17 @@ async function runImpact(load){
         const row=item('details',undefined,'result-card');
         row.append(item('summary',c.id+' · '+c.change+' · '+c.question));
         for(const [label,res] of [['Before',c.before],['After',c.after]]){
-          row.append(evidenceRow(label+' ('+res.status+')',res.text));
+          const line=item('p');
+          line.append(item('strong',label+' · '+res.status+' '));
+          const other=label==='Before'?c.after.text:c.before.text;
+          const words=res.text.split(/(\s+)/),peer=other.split(/(\s+)/);
+          let first=0,last=0;
+          while(first<words.length && words[first]===peer[first])first++;
+          while(last<Math.min(words.length,peer.length)-first && words.at(-1-last)===peer.at(-1-last))last++;
+          line.append(document.createTextNode(words.slice(0,first).join('')),
+            item(label==='Before'?'del':'ins',words.slice(first,words.length-last).join('')),
+            document.createTextNode(words.slice(words.length-last).join('')));
+          row.append(line);
           for(const cite of res.citations)row.append(evidenceRow('Source',cite.source+' · '+cite.id));
         }
         result.append(row);
@@ -462,3 +526,48 @@ byId('impact-demo').onclick=()=>runImpact(async()=>{
 });
 byId('impact-download').onclick=()=>download(impactReport,'forgeai-impact.json');
 loadRun('shore');
+
+function showPointers(panel,response){
+  if(response.status!=='refused'||!response.pointers?.length)return;
+  const list=item('ul');
+  for(const p of response.pointers){
+    const li=item('li'),mark=item('mark',p.highlighted??p.text);
+    li.append(item('small',p.source+' · '+p.id),mark);
+    list.append(li);
+  }
+  panel.append(item('h4','Closest evidence, not confirmed'),list);
+}
+
+byId('remove-step').onclick=async()=>{
+  if(!activeRun)return;
+  selectView('runner');
+  const q=activeRun.evals.find(c=>c.status==='answered');
+  if(!q)return;
+  byId('query').value=q.question;
+  const a=await answer(activeRun.definition,q.question);
+  const receipt=await auditSources(activeRun.definition,q.question,answer,a);
+  const panel=byId('response');
+  panel.replaceChildren(item('h3','Source-removal audit'),item('p',q.question));
+  for(const t of receipt.trials)panel.append(evidenceRow('Without '+t.source,t.response.status+' · '+t.response.text));
+  if(!receipt.trials.length)panel.append(item('p','This question produced no cited source to remove.'));
+};
+byId('policy-step').onclick=()=>{selectView('impact');byId('impact-demo').click();};
+fetch('./runs/submission.json').then(r=>r.json()).then(({summary,fresh,cases})=>{
+  const root=byId('fresh-trust'),strict=fresh.find(r=>r.config==='strict'),control=fresh.find(r=>r.config==='alwaysRefuse');
+  root.replaceChildren(item('p','Fresh suite · '+strict.answerableRecall.count+'/'+strict.answerableRecall.total+' supported answers. '+strict.nearMissFalseAnswers.count+'/'+strict.nearMissFalseAnswers.total+' near-miss false answers.'),
+    item('p','Balanced accuracy: evidence-first '+(100*strict.balancedAccuracy).toFixed(1)+'%, always refuse '+(100*control.balancedAccuracy).toFixed(1)+'%.'));
+  const development=summary.find(r=>r.suite==='holdout4');
+  root.append(item('p','Earlier contextual build · development suite 4: '+development.losses.passed+'/'+development.answerable+' supported answers.'));
+  const pooled=summary.find(r=>r.suite==='pooled'),chart=byId('funnel-chart');
+  for(const [label,value] of [['Indexed gold facts',pooled.oracle],['All facts in the top three',pooled.answerable-pooled.outsideHybridTop3],['Correct contextual answer',pooled.losses.passed]]){
+    const bar=item('progress');bar.max=pooled.answerable;bar.value=value;bar.setAttribute('aria-label',label);
+    chart.append(item('p',label+' · '+value+'/'+pooled.answerable),bar);
+  }
+  for(const c of cases){
+    const d=item('details'),title=item('summary',c.question);
+    d.append(title,item('p',c.suite+' / '+c.corpus+' · '+c.stage),
+      item('p',c.oracle===null?'No gold passage expected.':'Gold passage judge: '+(c.oracle?'pass':'fail')+'. Complete hybrid evidence rank: '+(c.rank??'missing')+'.'),
+      item('p','Forced top-one / top-three verdicts: '+c.forced.map(v=>v?'pass':'fail').join(' / ')+'. Final response: '+c.actual+'.'));
+    byId('funnel-cases').append(d);
+  }
+}).catch(()=>{byId('fresh-trust').textContent='Prospective results unavailable.';});

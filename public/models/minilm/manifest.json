@@ -1,0 +1,16 @@
+{
+  "parts": [
+    "model-0.bin",
+    "model-1.bin",
+    "model-2.bin",
+    "model-3.bin",
+    "model-4.bin",
+    "model-5.bin",
+    "model-6.bin",
+    "model-7.bin",
+    "model-8.bin",
+    "model-9.bin",
+    "model-10.bin"
+  ],
+  "sha256": "2d7ab1cfb15fc57f0f51ed8bf446ea4e4eebda45fe787fed5b1347f4ce3c6a30"
+}

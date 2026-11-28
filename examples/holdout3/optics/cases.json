@@ -1,0 +1,166 @@
+[
+  {
+    "question": "What holds the glass wedge steady?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "brass cradle"
+    ],
+    "sources": [
+      "alignment.md"
+    ]
+  },
+  {
+    "question": "How long do we wait for stable light?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "14 minutes"
+    ],
+    "sources": [
+      "alignment.md"
+    ]
+  },
+  {
+    "question": "How wide should the opening be?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "2 millimeters"
+    ],
+    "sources": [
+      "alignment.md"
+    ]
+  },
+  {
+    "question": "Which colour target do we align against?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "green"
+    ],
+    "sources": [
+      "alignment.md"
+    ]
+  },
+  {
+    "question": "How many recordings do we need per sample?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "6 traces"
+    ],
+    "sources": [
+      "traces.md"
+    ]
+  },
+  {
+    "question": "Who must authorize the measurement set?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shift physicist"
+    ],
+    "sources": [
+      "traces.md"
+    ]
+  },
+  {
+    "question": "Which file type do I hand over?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "TSV"
+    ],
+    "sources": [
+      "traces.md"
+    ]
+  },
+  {
+    "question": "When can old setup scraps be discarded?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "18 days"
+    ],
+    "sources": [
+      "traces.md"
+    ]
+  },
+  {
+    "question": "How wide is the opening? Also, who signs the recordings?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "2 millimeters",
+      "shift physicist"
+    ],
+    "sources": [
+      "alignment.md",
+      "traces.md"
+    ]
+  },
+  {
+    "question": "Which target colour do I use and how many recordings are needed for one sample?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "green",
+      "6 traces"
+    ],
+    "sources": [
+      "alignment.md",
+      "traces.md"
+    ]
+  },
+  {
+    "question": "Which solvent cleans the prism?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What voltage should power the lamp?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the replacement price of a reference card?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which TSV delimiter escape convention is required?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the maximum acquisition temperature?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who can override the shift physicist?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is an aluminium cradle approved?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How many backup copies of the final spectrum are required?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]

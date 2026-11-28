@@ -1,0 +1,162 @@
+[
+  {
+    "question": "How long do I get to try things on?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 minutes"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Where do I pick up a cover for the outfit?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "room Alder"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How much security money do I leave for the waist ribbon?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "12 euros"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "Who signs off before a hem is changed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "wardrobe master"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "How many headwear containers can sit on top of one another?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "operations.pdf"
+    ]
+  },
+  {
+    "question": "When may I first drop off what I borrowed?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "08:45"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How do staff mark delicate trim?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "lilac tag"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Where should I put the stage footwear?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "rack Swift"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "How long are the laundry records retained?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "13 weeks"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Which day is my last chance to collect the costume?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "Saturday"
+    ],
+    "sources": [
+      "handover.md"
+    ]
+  },
+  {
+    "question": "Is the sash deposit refundable in cash?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What detergent is approved for fragile lace?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Does the return hatch have a door code?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How heavy is a hat box?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Who made rack Swift?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the price of an alteration?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Can fitting appointments be transferred?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How many garment bags are in stock?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]

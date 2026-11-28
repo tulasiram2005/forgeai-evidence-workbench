@@ -1,0 +1,3490 @@
+[
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "What holds the glass wedge steady?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.43059301376342773,
+      "margin": 0.14890199899673462,
+      "idfCoverage": 0,
+      "reranker": 0.000012597884960996453
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D1.3",
+          "D2.2",
+          "D2.4",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "brass cradle"
+    ],
+    "goldSources": [
+      "alignment.md"
+    ],
+    "indexed": [
+      [
+        "D1.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Lock the prism into a brass cradle.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Seating"
+            ],
+            "topic": "Lock the prism into a",
+            "text": "Lock the prism into a brass cradle.",
+            "source": "alignment.md",
+            "id": "D1.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "What holds the glass wedge steady?",
+          "score": 0.43059301376342773,
+          "margin": 0.14890199899673462,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.\nAllow the lamp 14 minutes to stabilize.\nUse a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "How long do we wait for stable light?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.45899200439453125,
+      "margin": 0.1881299912929535,
+      "idfCoverage": 0,
+      "reranker": 0.0024877209216356277
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.3",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D1.1",
+          "D1.4",
+          "D2.2",
+          "D1.3",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D1.3",
+          "D1.4",
+          "D2.3",
+          "D2.2",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [
+      "14 minutes"
+    ],
+    "goldSources": [
+      "alignment.md"
+    ],
+    "indexed": [
+      [
+        "D1.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Allow the lamp 14 minutes to stabilize.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Baseline"
+            ],
+            "topic": "Allow the lamp 14 minutes",
+            "text": "Allow the lamp 14 minutes to stabilize.",
+            "source": "alignment.md",
+            "id": "D1.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How long do we wait for stable light?",
+          "score": 0.45899200439453125,
+          "margin": 0.1881299912929535,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Allow the lamp 14 minutes to stabilize.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Allow the lamp 14 minutes to stabilize.\nRetain calibration scraps for 18 days.\nLock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "How wide should the opening be?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.2326589971780777,
+      "margin": 0.19697899743914604,
+      "idfCoverage": 0,
+      "reranker": 0.00004611828990164213
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.3",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "2 millimeters"
+    ],
+    "goldSources": [
+      "alignment.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Set the slit width to 2 millimeters.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Aperture"
+            ],
+            "topic": "Set the slit width to",
+            "text": "Set the slit width to 2 millimeters.",
+            "source": "alignment.md",
+            "id": "D1.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How wide should the opening be?",
+          "score": 0.2326589971780777,
+          "margin": 0.19697899743914604,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.\nThe shift physicist initials the trace bundle.\nLock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Which colour target do we align against?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3218579888343811,
+      "margin": 0.1385059952735901,
+      "idfCoverage": 0,
+      "reranker": 0.000026799729312187992
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D2.4",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D1.1",
+          "D2.1",
+          "D1.3",
+          "D2.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "green"
+    ],
+    "goldSources": [
+      "alignment.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Use a green reference card.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Alignment"
+            ],
+            "topic": "Use a green reference card.",
+            "text": "Use a green reference card.",
+            "source": "alignment.md",
+            "id": "D1.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which colour target do we align against?",
+          "score": 0.3218579888343811,
+          "margin": 0.1385059952735901,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use a green reference card.\nLock the prism into a brass cradle.\nAllow the lamp 14 minutes to stabilize.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "How many recordings do we need per sample?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.355987012386322,
+      "margin": 0.1991010159254074,
+      "idfCoverage": 0,
+      "reranker": 0.00001274770784220891
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D1.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.4",
+          "D2.3",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.2",
+          "D1.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D1.3",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "6 traces"
+    ],
+    "goldSources": [
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Save 6 traces for each specimen.",
+        "citations": [
+          {
+            "section": [
+              "Trace handling",
+              "Capture"
+            ],
+            "topic": "Save 6 traces for each",
+            "text": "Save 6 traces for each specimen.",
+            "source": "traces.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How many recordings do we need per sample?",
+          "score": 0.355987012386322,
+          "margin": 0.1991010159254074,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.\nRetain calibration scraps for 18 days.\nWrite the final spectrum as TSV.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Who must authorize the measurement set?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.18957599997520447,
+      "margin": 0.015328004956245422,
+      "idfCoverage": 0,
+      "reranker": 0.00001534787043055985
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D1.1",
+          "D1.2",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D2.3",
+          "D1.1",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "shift physicist"
+    ],
+    "goldSources": [
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "The shift physicist initials the trace bundle.",
+        "citations": [
+          {
+            "section": [
+              "Trace handling",
+              "Approval"
+            ],
+            "topic": "The shift physicist initials the",
+            "text": "The shift physicist initials the trace bundle.",
+            "source": "traces.md",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Who must authorize the measurement set?",
+          "score": 0.18957599997520447,
+          "margin": 0.015328004956245422,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.\nThe shift physicist initials the trace bundle.\nUse a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Which file type do I hand over?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.17298099398612976,
+      "margin": 0.024787992238998413,
+      "idfCoverage": 0,
+      "reranker": 0.000011324413208058104
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          7
+        ],
+        "allFactsByRank": 7,
+        "band": "top10",
+        "sourceRanks": [
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D2.2",
+          "D2.4",
+          "D1.3",
+          "D1.4",
+          "D1.1",
+          "D1.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D1.2",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "TSV"
+    ],
+    "goldSources": [
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D2.3"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Write the final spectrum as TSV.",
+        "citations": [
+          {
+            "section": [
+              "Trace handling",
+              "Export"
+            ],
+            "topic": "Write the final spectrum as",
+            "text": "Write the final spectrum as TSV.",
+            "source": "traces.md",
+            "id": "D2.3"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which file type do I hand over?",
+          "score": 0.17298099398612976,
+          "margin": 0.024787992238998413,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.\nWrite the final spectrum as TSV.\nThe shift physicist initials the trace bundle.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "When can old setup scraps be discarded?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.5733929872512817,
+      "margin": 0.3402959853410721,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.886648416519165
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.1",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1
+        ],
+        "allFactsByRank": 1,
+        "band": "top1",
+        "sourceRanks": [
+          1
+        ],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D1.4",
+          "D2.2",
+          "D1.1",
+          "D1.3",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "18 days"
+    ],
+    "goldSources": [
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D2.4"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Retain calibration scraps for 18 days.",
+        "citations": [
+          {
+            "section": [
+              "Trace handling",
+              "Disposal"
+            ],
+            "topic": "Retain calibration scraps for 18",
+            "text": "Retain calibration scraps for 18 days.",
+            "source": "traces.md",
+            "id": "D2.4"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "When can old setup scraps be discarded?",
+          "score": 0.5733929872512817,
+          "margin": 0.3402959853410721,
+          "promoted": true,
+          "lexicalMaximum": 0.161
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "answered"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Retain calibration scraps for 18 days.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Retain calibration scraps for 18 days.\nSave 6 traces for each specimen.\nUse a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "answered",
+      "text": "Retain calibration scraps for 18 days.",
+      "citations": [
+        {
+          "id": "D2.4",
+          "source": "traces.md",
+          "text": "Retain calibration scraps for 18 days."
+        }
+      ]
+    },
+    "passed": true,
+    "loss": "passed"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "How wide is the opening? Also, who signs the recordings?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.18497499823570251,
+      "margin": 0.053923994302749634,
+      "idfCoverage": 0,
+      "reranker": 0.00004934244498144835
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          3,
+          6
+        ],
+        "allFactsByRank": 6,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          1,
+          2
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.2",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.1",
+          "D1.2",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          4
+        ],
+        "allFactsByRank": 4,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.3",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D2.3",
+          "D1.2",
+          "D1.4",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [
+      "2 millimeters",
+      "shift physicist"
+    ],
+    "goldSources": [
+      "alignment.md",
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D1.3"
+      ],
+      [
+        "D2.2"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Set the slit width to 2 millimeters.\nThe shift physicist initials the trace bundle.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Aperture"
+            ],
+            "topic": "Set the slit width to",
+            "text": "Set the slit width to 2 millimeters.",
+            "source": "alignment.md",
+            "id": "D1.3"
+          },
+          {
+            "section": [
+              "Trace handling",
+              "Approval"
+            ],
+            "topic": "The shift physicist initials the",
+            "text": "The shift physicist initials the trace bundle.",
+            "source": "traces.md",
+            "id": "D2.2"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "How wide is the opening? Also, who signs the recordings?",
+          "score": 0.18497499823570251,
+          "margin": 0.053923994302749634,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "How wide is the opening",
+          "score": 0.15997500717639923,
+          "margin": 0.09463700652122498,
+          "promoted": false,
+          "lexicalMaximum": 0
+        },
+        {
+          "part": "who signs the recordings?",
+          "score": 0.1820250004529953,
+          "margin": 0.030964002013206482,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Set the slit width to 2 millimeters.\nThe shift physicist initials the trace bundle.\nUse a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Which target colour do I use and how many recordings are needed for one sample?",
+    "expected": "answered",
+    "signals": {
+      "cosine": 0.3769800066947937,
+      "margin": 0.22419200837612152,
+      "idfCoverage": 0,
+      "reranker": 0.0002334721793886274
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [
+          1,
+          5
+        ],
+        "allFactsByRank": 5,
+        "band": "top10",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [
+          3,
+          1
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D2.3",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [
+          2,
+          1
+        ],
+        "allFactsByRank": 2,
+        "band": "top3",
+        "sourceRanks": [
+          2,
+          1
+        ],
+        "top": [
+          "D2.1",
+          "D1.4",
+          "D2.3",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D1.1",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [
+          1,
+          3
+        ],
+        "allFactsByRank": 3,
+        "band": "top3",
+        "sourceRanks": [
+          1,
+          2
+        ],
+        "top": [
+          "D1.4",
+          "D1.2",
+          "D2.1",
+          "D1.1",
+          "D2.2",
+          "D1.3",
+          "D2.4",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [
+      "green",
+      "6 traces"
+    ],
+    "goldSources": [
+      "alignment.md",
+      "traces.md"
+    ],
+    "indexed": [
+      [
+        "D1.4"
+      ],
+      [
+        "D2.1"
+      ]
+    ],
+    "oracle": {
+      "response": {
+        "status": "answered",
+        "text": "Use a green reference card.\nSave 6 traces for each specimen.",
+        "citations": [
+          {
+            "section": [
+              "Optical bench",
+              "Alignment"
+            ],
+            "topic": "Use a green reference card.",
+            "text": "Use a green reference card.",
+            "source": "alignment.md",
+            "id": "D1.4"
+          },
+          {
+            "section": [
+              "Trace handling",
+              "Capture"
+            ],
+            "topic": "Save 6 traces for each",
+            "text": "Save 6 traces for each specimen.",
+            "source": "traces.md",
+            "id": "D2.1"
+          }
+        ]
+      },
+      "passed": true
+    },
+    "gate": {
+      "parts": [
+        {
+          "part": "Which target colour do I use and how many recordings are needed for one sample?",
+          "score": 0.3769800066947937,
+          "margin": 0.22419200837612152,
+          "promoted": false,
+          "lexicalMaximum": 0.10062499999999999
+        },
+        {
+          "part": "Which target colour do I use",
+          "score": 0.18372799456119537,
+          "margin": 0.0034019947052001953,
+          "promoted": false,
+          "lexicalMaximum": 0.2683333333333333
+        },
+        {
+          "part": "how many recordings are needed for one sample?",
+          "score": 0.38577499985694885,
+          "margin": 0.21984800696372986,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Save 6 traces for each specimen.\nUse a green reference card.\nWrite the final spectrum as TSV.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": false,
+    "loss": "gate"
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Which solvent cleans the prism?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.35451599955558777,
+      "margin": 0.1384509950876236,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.0017268444644287229
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.3",
+          "D2.4",
+          "D1.4",
+          "D2.2",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D2.2",
+          "D1.4",
+          "D2.4",
+          "D1.2",
+          "D1.3",
+          "D2.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which solvent cleans the prism?",
+          "score": 0.35451599955558777,
+          "margin": 0.1384509950876236,
+          "promoted": false,
+          "lexicalMaximum": 0.27555555555555555
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.\nSave 6 traces for each specimen.\nAllow the lamp 14 minutes to stabilize.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "What voltage should power the lamp?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.26666900515556335,
+      "margin": 0.19830700755119324,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.00014845069381408393
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D1.3",
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.3",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D1.3",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What voltage should power the lamp?",
+          "score": 0.26666900515556335,
+          "margin": 0.19830700755119324,
+          "promoted": false,
+          "lexicalMaximum": 0.2683333333333333
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Allow the lamp 14 minutes to stabilize.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Allow the lamp 14 minutes to stabilize.\nLock the prism into a brass cradle.\nSet the slit width to 2 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "What is the replacement price of a reference card?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.18891599774360657,
+      "margin": 0.05923199653625488,
+      "idfCoverage": 0.43921150083724114,
+      "reranker": 0.00020565160957630724
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.4",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D2.3",
+          "D1.2",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the replacement price of a reference card?",
+          "score": 0.18891599774360657,
+          "margin": 0.05923199653625488,
+          "promoted": false,
+          "lexicalMaximum": 0.435
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Use a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Use a green reference card.\nRetain calibration scraps for 18 days.\nSave 6 traces for each specimen.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Which TSV delimiter escape convention is required?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.30592700839042664,
+      "margin": 0.1553260087966919,
+      "idfCoverage": 0.1637403632161656,
+      "reranker": 0.00018319897935725749
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.2",
+          "D1.3",
+          "D1.1",
+          "D2.1",
+          "D1.2",
+          "D1.4",
+          "D2.4"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D2.4",
+          "D1.4",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Which TSV delimiter escape convention is required?",
+          "score": 0.30592700839042664,
+          "margin": 0.1553260087966919,
+          "promoted": false,
+          "lexicalMaximum": 0.185
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Write the final spectrum as TSV.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Write the final spectrum as TSV.\nThe shift physicist initials the trace bundle.\nSet the slit width to 2 millimeters.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Aperture"
+              ],
+              "topic": "Set the slit width to",
+              "text": "Set the slit width to 2 millimeters.",
+              "source": "alignment.md",
+              "id": "D1.3"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "What is the maximum acquisition temperature?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.16836099326610565,
+      "margin": 0.015244990587234497,
+      "idfCoverage": 0,
+      "reranker": 0.000010273393854731694
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.4",
+          "D1.2",
+          "D2.1",
+          "D1.3",
+          "D2.3",
+          "D1.1",
+          "D1.4",
+          "D2.2"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.1",
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D1.3",
+          "D2.4",
+          "D2.3",
+          "D1.1"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "What is the maximum acquisition temperature?",
+          "score": 0.16836099326610565,
+          "margin": 0.015244990587234497,
+          "promoted": false,
+          "lexicalMaximum": 0
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Retain calibration scraps for 18 days.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Retain calibration scraps for 18 days.\nAllow the lamp 14 minutes to stabilize.\nSave 6 traces for each specimen.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Baseline"
+              ],
+              "topic": "Allow the lamp 14 minutes",
+              "text": "Allow the lamp 14 minutes to stabilize.",
+              "source": "alignment.md",
+              "id": "D1.2"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Who can override the shift physicist?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.45051300525665283,
+      "margin": 0.32906200736761093,
+      "idfCoverage": 0.6103501821403401,
+      "reranker": 0.9951348900794983
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.4",
+          "D1.1",
+          "D1.2",
+          "D2.3",
+          "D1.3",
+          "D2.4",
+          "D2.1"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.2",
+          "D1.2",
+          "D1.1",
+          "D1.4",
+          "D2.3",
+          "D2.1",
+          "D1.3",
+          "D2.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Who can override the shift physicist?",
+          "score": 0.45051300525665283,
+          "margin": 0.32906200736761093,
+          "promoted": false,
+          "lexicalMaximum": 0.6088888888888888
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "The shift physicist initials the trace bundle.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "The shift physicist initials the trace bundle.\nUse a green reference card.\nLock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "The cited passage does not identify the responsible person.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "Is an aluminium cradle approved?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.24378900229930878,
+      "margin": 0.1583380028605461,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.0002815966436173767
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.3",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D1.3",
+          "D2.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.2",
+          "D2.4",
+          "D2.1",
+          "D1.3",
+          "D2.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D1.1",
+          "D2.1",
+          "D2.4",
+          "D1.4",
+          "D1.2",
+          "D2.2",
+          "D2.3",
+          "D1.3"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "Is an aluminium cradle approved?",
+          "score": 0.24378900229930878,
+          "margin": 0.1583380028605461,
+          "promoted": false,
+          "lexicalMaximum": 0.24666666666666665
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Lock the prism into a brass cradle.\nThe shift physicist initials the trace bundle.\nUse a green reference card.",
+          "citations": [
+            {
+              "section": [
+                "Optical bench",
+                "Seating"
+              ],
+              "topic": "Lock the prism into a",
+              "text": "Lock the prism into a brass cradle.",
+              "source": "alignment.md",
+              "id": "D1.1"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Approval"
+              ],
+              "topic": "The shift physicist initials the",
+              "text": "The shift physicist initials the trace bundle.",
+              "source": "traces.md",
+              "id": "D2.2"
+            },
+            {
+              "section": [
+                "Optical bench",
+                "Alignment"
+              ],
+              "topic": "Use a green reference card.",
+              "text": "Use a green reference card.",
+              "source": "alignment.md",
+              "id": "D1.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  },
+  {
+    "suite": "holdout3",
+    "name": "optics",
+    "question": "How many backup copies of the final spectrum are required?",
+    "expected": "refused",
+    "signals": {
+      "cosine": 0.3201510012149811,
+      "margin": 0.05203598737716675,
+      "idfCoverage": 0.281403598932747,
+      "reranker": 0.07302936911582947
+    },
+    "ranks": {
+      "lexical": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.1",
+          "D1.2",
+          "D1.3",
+          "D1.4",
+          "D2.1",
+          "D2.2",
+          "D2.4"
+        ]
+      },
+      "dense": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.3"
+        ]
+      },
+      "hybrid": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D2.1",
+          "D2.4",
+          "D1.2",
+          "D1.1",
+          "D2.2",
+          "D1.4",
+          "D1.3"
+        ]
+      },
+      "reranker": {
+        "factRanks": [],
+        "allFactsByRank": null,
+        "band": "miss",
+        "sourceRanks": [],
+        "top": [
+          "D2.3",
+          "D1.2",
+          "D2.1",
+          "D2.4",
+          "D1.3",
+          "D2.2",
+          "D1.1",
+          "D1.4"
+        ]
+      }
+    },
+    "goldFacts": [],
+    "goldSources": [],
+    "indexed": [],
+    "oracle": null,
+    "gate": {
+      "parts": [
+        {
+          "part": "How many backup copies of the final spectrum are required?",
+          "score": 0.3201510012149811,
+          "margin": 0.05203598737716675,
+          "promoted": false,
+          "lexicalMaximum": 0.36533333333333334
+        }
+      ],
+      "minimumCosine": 0.5,
+      "minimumMargin": 0.08,
+      "lexicalThreshold": 0.52,
+      "decision": "refused"
+    },
+    "forced": [
+      {
+        "k": 1,
+        "response": {
+          "status": "answered",
+          "text": "Write the final spectrum as TSV.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            }
+          ]
+        },
+        "passed": false
+      },
+      {
+        "k": 3,
+        "response": {
+          "status": "answered",
+          "text": "Write the final spectrum as TSV.\nSave 6 traces for each specimen.\nRetain calibration scraps for 18 days.",
+          "citations": [
+            {
+              "section": [
+                "Trace handling",
+                "Export"
+              ],
+              "topic": "Write the final spectrum as",
+              "text": "Write the final spectrum as TSV.",
+              "source": "traces.md",
+              "id": "D2.3"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Capture"
+              ],
+              "topic": "Save 6 traces for each",
+              "text": "Save 6 traces for each specimen.",
+              "source": "traces.md",
+              "id": "D2.1"
+            },
+            {
+              "section": [
+                "Trace handling",
+                "Disposal"
+              ],
+              "topic": "Retain calibration scraps for 18",
+              "text": "Retain calibration scraps for 18 days.",
+              "source": "traces.md",
+              "id": "D2.4"
+            }
+          ]
+        },
+        "passed": false
+      }
+    ],
+    "actual": {
+      "status": "refused",
+      "text": "I could not establish that from the supplied sources.",
+      "citations": []
+    },
+    "passed": true,
+    "loss": null
+  }
+]

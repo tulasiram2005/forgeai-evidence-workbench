@@ -1,10 +1,33 @@
 # ForgeAI · Inspection bench
 
+## Review in 5 minutes
+
+ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The live main-branch demo predates this draft.
+
+1. Open the workbench on this branch with `npm start`. Read the fresh-suite trust panel and ask a source question.
+2. Choose **Remove a source**. See how the response changes when its cited document is unavailable.
+3. Choose **Change a policy**. Inspect the before-and-after answers. In the evidence ledger, open **Development case diagnostics** for the frozen rank and judge traces.
+
+### Findings
+
+The exact-passage oracle passed 123/123 answerable questions across development holdouts 1 to 4. In 82 failed cases the required evidence was within the hybrid top three and the agent withheld the answer. In 11 it fell outside the top three. Holdout 4 contextual passed 22/60 overall and gave false answers on 9/24 near misses. The SQuAD2 reader increased supported recall on the first three suites from 29/93 to 36/93, but near-miss false answers rose from 9/57 to 25/57. The experiment stopped. [Per-case funnel and signal intervals](evidence/funnel/summary.json) · [Reader experiment](evidence/funnel/qa-study.json)
+
+On prospective holdout 5, contextual passed 25/60, with 37.9% balanced accuracy. Evidence-first passed 30/60, with 50.0% balanced accuracy, 0/30 supported answers and 0/24 near-miss false answers. Always refusing also achieved 50.0% balanced accuracy. Neither candidate qualified. Related passages are navigation aids and do not earn answer credit. [Preregistration](evidence/prereg/holdout5.md) · [Fresh results including Wilson intervals](evidence/holdout5/summary.json) · [Forecast versus actual, pilot n=5](evidence/holdout5/forecast.md)
+
+### Offline build
+
+After installing the PDF parser, use `node cli.mjs forge --brief B --docs D --out O` with a fresh output directory. The evidence-first runtime needs no remote model. Generation tries local Ollama with a 20-second request timeout, then a local llama.cpp CPU service on loopback port 18435 if available, then deterministic templates. Use `--no-llm` to skip generation services entirely. Model-authored hard paraphrases must pass the content-word overlap filter. Builds without qualifying paraphrases explicitly report missing hard-tier evidence. [macOS rehearsal](evidence/submission/macos-FINAL.md)
+
+
 Turn a brief and a document folder into an agent you can question, an evaluation suite you can replay, and an evidence trail you can inspect.
 
 **[Open the live workbench](https://forgeai-evidence-workbench.onrender.com/) · [Watch the captioned walkthrough (3 min 41 sec)](https://forgeai-evidence-workbench.onrender.com/demo/forgeai-walkthrough.mp4)**
 
 Start with **Test the agent** and ask “How much notice is needed for a shift swap?” Open its source passage. Switch to **Conservation operations** and ask “What is the pack quantity for MAT102?” The second question executes a catalogue lookup. Choose **New build** to try your own sources. Files and answers for custom builds stay in the browser tab. Export the dossier before closing the tab.
+
+## Earlier contextual release review
+
+Fresh-suite contextual retrieval passed 22/60 cases, including 1/30 supported questions and 15/24 correct refusals. It missed both preregistered effectiveness criteria. Review the raw responses before using this build for decisions. [Prospective results](evidence/v2/holdout4/REPORT.md) · [All-suite comparison](evidence/v2/release-results.md) · [Judge controls](evidence/v2/judge-stress.md) · [Linux rehearsals](evidence/v2/rehearsal-linux/)
 
 ## Release evidence
 
@@ -19,13 +42,18 @@ Both releases used local Qwen 2.5 1.5B inference on CPU. Each evidence directory
 
 ## Run a new brief
 
-Requires Node.js 22+. The website, CLI and tests use built-in APIs. Only PDF input needs Python and pypdf. For text PDFs, install the optional pinned reader with `python3 -m pip install -r requirements-pdf.txt` in a virtual environment. Scanned images require a text transcript or OCR before intake.
+The release CLI uses Node.js 22+, Git, Python, the pinned PDF reader and local MiniLM weights. Browser inference fetches the bundled model from the workbench origin on first use. Ollama is optional for question and brief generation. The CLI announces deterministic fallback if automatic detection or generation fails. From a Python virtual environment, run the following setup once.
+
+```sh
+python3 -m pip install -r requirements-pdf.txt -r retrieval/requirements.txt
+python3 -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2', revision='c9745ed1d9f207416be6d2e6f8de32d1f16199bf')"
+```
 
 ```sh
 npm test
 npm start
 # Open http://127.0.0.1:8417
-node cli.mjs build --brief examples/shore/brief.txt --docs examples/shore/docs --out runs/my-shore
+node cli.mjs forge --brief examples/shore/brief.txt --docs examples/shore/docs --out runs/my-shore
 node cli.mjs ask runs/my-shore/definition.json 'How much notice is needed for a shift swap?'
 node cli.mjs regression runs/my-shore/definition.json runs/my-shore/evals.json
 ```
@@ -138,3 +166,92 @@ Open **Change impact** and supply a revised definition or dossier. The browser r
 **Try the shore policy revision** compares the released shore definition with a controlled copy that changes the shift-swap deadline from 36 to 48 hours and drops the mileage-rate passage. Only the indexed passages differ. Six of 36 responses change: five quote the revised deadline and one loses its answer. The other 30 retain their status, text and cited source content. New topics outside the original questions require further review.
 
 CLI equivalent: `node cli.mjs impact evidence/shore/definition.json public/runs/shore-revision.json evidence/shore/evals.json`. The [full example report](evidence/shore/change-impact.json) preserves both sides. When comparing independently generated releases, differences may also come from changed configuration or model behavior. Local-model definitions require the CLI and a running local model.
+
+## V2 live review runbook
+
+Use Node 22+ and install the pinned pypdf dependency for PDF folders. Build into a new directory. The local model is optional.
+
+```sh
+node cli.mjs forge --brief examples/holdout/spares/brief.txt --docs examples/holdout/spares/docs --out runs/review-spares --structured --split-validation --budget-ms 180000
+node cli.mjs ask runs/review-spares/definition.json 'What is the return window?'
+node cli.mjs holdout examples/holdout/spares --structured --split-validation
+```
+
+Read FINAL.md, inspect the failures and review the generated and reserved case counts. Forge probes the local Ollama model list. If the model is unavailable it reports deterministic mode. If a connected model stalls, rerun with a fresh output directory and `--deterministic`. An explicitly requested model failure remains visible. Structured intake adds page provenance for text PDFs and extracts DOCX paragraphs. A blank or scanned page requests a transcript. The browser continues to accept text, Markdown and CSV.
+
+### Frozen reviewer questions
+
+Each folder has 25 cases. The build reads its documents before the harness opens its questions. The same reviewer cases run in every column. Local dense mode combines a semantic confidence gate, clause handling and conservative refusal rules. Its score measures the combined experiment. Generated validation cases share a corpus with tuning cases and are a separate measurement.
+
+| Folder | Original lexical | Structured lexical with split | Local dense experiment |
+|---|---:|---:|---:|
+| Staff | 9/25 | 13/25 | 16/25 |
+| Ship spares | 13/25 | 13/25 | 17/25 |
+| Technical bench | 13/25 | 13/25 | 14/25 |
+| Total | 35/75 | 39/75 | 47/75 |
+
+Across 30 answerable questions, refusals moved from 30 to 22 in the dense experiment. On 30 questions requiring refusal, incorrect answers moved from four to zero. All three files use synthetic examples, including shared question templates. The results guided development and need replication on another blind corpus. The dense path remains opt-in. With the pinned MiniLM model available locally, append `--experimental-dense` to the holdout command or use `ask DEFINITION --experimental-dense QUESTION`.
+
+[Original receipts](evidence/holdout/) · [Structured intake](evidence/v2/holdout/) · [Dense experiment](evidence/v2/dense/) · [Procurement release](evidence/v2/spares/FINAL.md) · [Interface changes and limitations](docs/ui/CHANGES.md)
+
+### Evidence controls and optional composition
+
+`node cli.mjs rescore DEFINITION EVALS` compares the strict release judge against a fact-and-provenance rule. A required phrase must occur in the answer and in a verified passage from an acceptable source. Replaying the two original releases changed zero verdicts across 73 cases. Each version of the judge has limits, especially with equivalent paraphrases. [Verdict comparisons](evidence/v2/rescore/)
+
+`node cli.mjs scope DEFINITION "topic one" "topic two" --semantic` displays the best lexical passage, its missing terms and its optional cosine score. Partial coverage warrants inspection. Token overlap alone cannot establish that a policy grants permission. [Recorded inspection](evidence/v2/shore-scope.json)
+
+`node cli.mjs ask DEFINITION --compose "question"` uses the local model to compose a cited response from whole passages or their complete labelled values. Invalid references, changed quantities and dropped qualifiers trigger a retry followed by extractive fallback. Run `node compare-compose.mjs` with the local model running to replay the three-way comparison. The extractive runner and both local prompt variants each passed 32 of the same 36 questions, with zero degraded answers on this run. The tie retained the extractive runner. [All candidate answers](evidence/v2/compose/comparison.json)
+
+### Contextual retrieval experiment
+
+Add `--contextual` during a CLI build to preserve Markdown heading paths and CSV column names in the definition. Use `ask DEFINITION --contextual QUESTION` to encode passages with that context. The optional local encoder expands four common catalogue headers (SKU, pack, qty and UOM). Returned citations retain the indexed source text. Explicit mixed letter-and-number identifiers must match a whole token in the passage. This conservative rule can refuse questions that use an alternative spelling of an identifier.
+
+Run `node cli.mjs holdout examples/holdout/spares --structured --split-validation --contextual` to reproduce a folder with the pinned encoder installed. The three original folders scored 16/25, 23/25 and 15/25 (staff, spares and bench). Compared with the previous dense experiment, seven previously failed cases passed and no previously passing case failed. Refusals on answerable questions fell from 22/30 to 15/30. Both configurations gave zero answers across the 30 cases requiring refusal. These fixtures share question structures and have been inspected during development.
+
+A new dispatch folder exposed an erroneous response for an absent catalogue code. Its eight cases scored 7/8 before the identifier check and 8/8 after. It now serves as a regression fixture. [Contextual receipts](evidence/v2/contextual/) · [Dispatch source documents and questions](examples/holdout/dispatch/)
+
+### Frozen comparison and ranking-only expansion
+
+[Read the two-suite report](evidence/v2/RETRIEVAL-REPORT.md) for the refusal analysis, threshold curve and full comparison. The first run on the second suite used the previous v2 code. Its fixtures, extraction overlap check and first-run receipts are preserved in Git. Lexical and contextual settings reproduce the respective release workflows, so their difference includes PDF intake and optimization settings. The normalized and expanded runs use the same intake, split, model encoder and operating thresholds.
+
+To reproduce expansion, start the supported local model server and install the pinned offline encoder. Build into a fresh folder. Only the contextual CLI ranker consumes generated metadata. The original text stays in the quoted passage. The holdout runner expands each corpus before opening its cases, and includes the actual generated metadata in its receipt.
+
+```sh
+python3 examples/holdout2/check.py
+node cli.mjs forge --brief examples/holdout2/vendors/brief.txt --docs examples/holdout2/vendors/docs --out runs/vendors-expanded --structured --split-validation --deterministic --expand-index
+node cli.mjs ask runs/vendors-expanded/definition.json --contextual 'What quantity does LK83 ship in?'
+node cli.mjs holdout examples/holdout2/vendors --structured --split-validation --expand-index
+node cli.mjs diagnose examples/holdout/staff --structured
+node retrieval/report-holdouts.mjs
+```
+
+Here `--deterministic` selects the portable agent compiler. Explicit `--expand-index` still invokes the local model for search metadata. Use `FORGE_BACKEND=llama.cpp` when serving the specified model with llama.cpp.
+
+### Answerability gate release decision
+
+**Keep contextual V2 as the preferred CLI experiment.** A new gate trained only on generated queries reduced false answers but failed to return a correct supported answer on the new evaluation corpus. The [complete study](evidence/v2/gate-study/REPORT.md) reconciles the earlier lexical and dense scores, lists the judge and configuration commits, attributes every failed answerable case on the second suite, and reports question-level Wilson intervals. The first two suites are development data. The third suite was frozen before scoring.
+
+In the browser, select **Calibrate answerability on these documents** in New build. The worker calibrates against the supplied corpus. The browser and CLI use the same self-hosted quantized word vectors, normalized identifiers, context construction, feature weights and cutoff selection. The portable encoder differs from the MiniLM transformer used by the earlier contextual CLI mode. The study includes a same-encoder control. Expansion is off by default.
+
+```sh
+node cli.mjs forge --brief examples/holdout3/optics/brief.txt --docs examples/holdout3/optics/docs --out runs/gate-review --deterministic --gate-v2
+node cli.mjs ask runs/gate-review/definition.json 'How long should the lamp stabilize?'
+node cli.mjs holdout examples/holdout3/optics --structured --split-validation --gate-v2
+node retrieval/gate-study-report.mjs
+```
+
+The top candidates are scored using cosine, rank margin, inverse-document-frequency coverage, unmatched rare terms, expected answer type and heading overlap. The calibration log in report.json records the generated samples, candidate cutoffs and selected operating point. The reference label is the source passage ID. Selection maximizes generated positive hits under the requested false-answer cap and breaks ties by fewer false answers, then a higher cutoff. The development holdouts are excluded from selection.
+
+For the optional CLI reranker, cache the pinned weights once, then add `--rerank` to the build or holdout command. The browser rejects reranker-dependent definitions. The CPU model is cross-encoder/ms-marco-TinyBERT-L-2-v2 at revision `81d1926f67cb8eee2c2be17ca9f793c7c3bd20cc`. Inference uses locally cached weights. Both development reranker receipts and the browser parity receipt are in the study folder.
+
+## Development reference comparison
+
+| Suite | Configuration | Overall | Answerable recall | Refusal recall | Near-miss false answers | Balanced accuracy |
+|---|---|---:|---:|---:|---:|---:|
+| pooled | V2 contextual, normalized IDs | 115/195 | 29/93 [22.7%, 41.2%] | 63/72 [77.9%, 93.3%] | 9/57 [8.5%, 27.4%] | 59.3% |
+| pooled | Always refuse | 72/195 | 0/93 [0.0%, 4.0%] | 72/72 [94.9%, 100.0%] | 0/57 [0.0%, 6.3%] | 50.0% |
+| pooled | Always answer with top-1 | 25/195 | 25/93 [18.9%, 36.7%] | 0/72 [0.0%, 5.1%] | 57/57 [93.7%, 100.0%] | 13.4% |
+
+[Full suite comparisons, interval definitions and historical configurations](evidence/v2/reference-results.md)
+
+The prospective release missed both effectiveness criteria. [Frozen fourth-suite results and reference agents](evidence/v2/holdout4/REPORT.md).

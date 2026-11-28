@@ -1,0 +1,166 @@
+[
+  {
+    "question": "Who can get me back into a frozen login?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "duty librarian"
+    ],
+    "sources": [
+      "accounts.md"
+    ]
+  },
+  {
+    "question": "How much time does a guest get?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "45 minutes"
+    ],
+    "sources": [
+      "accounts.md"
+    ]
+  },
+  {
+    "question": "What should I show to prove my identity?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "library card"
+    ],
+    "sources": [
+      "accounts.md"
+    ]
+  },
+  {
+    "question": "Which machine extends my pass?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "blue renewal terminal"
+    ],
+    "sources": [
+      "accounts.md"
+    ]
+  },
+  {
+    "question": "What balance adjustment follows a failed print?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "3 credits"
+    ],
+    "sources": [
+      "printing.md"
+    ]
+  },
+  {
+    "question": "What shade should draft sheets be?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "ivory"
+    ],
+    "sources": [
+      "printing.md"
+    ]
+  },
+  {
+    "question": "Where do I collect a finished wall print?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "desk Cedar"
+    ],
+    "sources": [
+      "printing.md"
+    ]
+  },
+  {
+    "question": "Who can remove a stuck item from the spooler?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "floor technician"
+    ],
+    "sources": [
+      "printing.md"
+    ]
+  },
+  {
+    "question": "What proves my identity? Also, where can I collect my wall print?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "library card",
+      "desk Cedar"
+    ],
+    "sources": [
+      "accounts.md",
+      "printing.md"
+    ]
+  },
+  {
+    "question": "How long can a guest stay logged in and who clears a stuck print?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "45 minutes",
+      "floor technician"
+    ],
+    "sources": [
+      "accounts.md",
+      "printing.md"
+    ]
+  },
+  {
+    "question": "Does a visitor pass work off campus?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the charge to replace a library card?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Can I renew at the blue terminal on Sunday?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What file size does the printer accept?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "When do unused print credits expire?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Does a failed poster earn double credit?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which email reaches the duty librarian?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the target response time for stalled jobs?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]
