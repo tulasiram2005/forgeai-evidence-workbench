@@ -1,5 +1,5 @@
 import {calibrateGate,gateRows} from './gate.mjs';
-import {validationIds,judgeControls} from './validation.mjs';
+import {validationIds,judgeControls,splitCases,splitScore} from './validation.mjs';
 // Shared by the browser and CLI. No network, persistence or ambient tool access.
 const stop = new Set('a an the and or to of in is are on for what which how does do about can i me tell please with by at as that it from my our your we should when where who must policy rules rule explain describe need assistant answer questions give help staff team according required apply applies details compare summarize requirement requirements both source sources document documents covers cover says say'.split(' '));
 const terms = s => [...new Set(String(s).toLowerCase().match(/[\p{L}\p{N}]+/gu)?.map(t=>t.length>4?t.replace(/(?:ing|s)$/,''):t).filter(t=>!stop.has(t)) || [])];
@@ -175,7 +175,7 @@ export async function connectedAnswer(def,q){
     return {status:'answered',text:d.current.temperature_2m+' °C at '+d.current.time+' UTC',tool:'weather',citations:[{id:'weather',source:url.href,text:String(d.current.temperature_2m)}]};
   }catch{return refusal('Live weather is unavailable.');}
 }
-function makeEvals(chunks,questions,gaps){
+function makeEvals(chunks,questions,gaps,minimum=20){
   const tests=[];
   function add(kind,question,expected,status='answered'){
     tests.push({id:'E'+String(tests.length+1).padStart(2,'0'),kind,question,status,expected:expected.map(cited)});
@@ -217,6 +217,16 @@ function makeEvals(chunks,questions,gaps){
     if(tests.length>=20)break;
     const c=sample[tests.length%sample.length];
     add('paraphrase',prompt+' '+c.topic+'?',[c]);
+  }
+  if(minimum>20){
+    const prompts=['Describe','Summarize','Explain','Give the details for','What does the source say about','Which passage explains','What is documented about','Tell me about','What information covers','What should I know about','What guidance covers','Please outline','What are the instructions for','What is the policy for','How does the document describe','Give the source wording for','Where can I read about','What is specified for','What is stated about','What do the records say about'];
+    for(const suffix of ['', ' according to the supplied document',' in the source material']){
+      for(const prompt of prompts)for(const c of sample){
+        if(tests.length>=minimum)return tests;
+        const question=prompt+' '+c.topic+suffix+'?';
+        if(!tests.some(t=>t.question===question))add('paraphrase',question,[c]);
+      }
+    }
   }
   return tests;
 }
@@ -300,7 +310,36 @@ export function build(brief,docs,opts={}){
     calibration=calibrateGate(definition,opts.rerank);
     definition.retrieval.gate={version:2,cut:calibration.selected.cut,reranker:calibration.reranker};
   }
-  const evals=makeEvals(chunks,model.questions,gaps), iterations=[];
+  const evals=makeEvals(chunks,model.questions,gaps,opts.release?60:20), iterations=[];
+  if(opts.release){
+    const parts=splitCases(evals);
+    const commitment=opts.commitTest?.(parts.test);
+    const development=[...parts.tune,...parts.validate];
+    const runner=opts.prepareRunner?.(definition,development)??answer;
+    const retained=[];
+    for(const splitConjunction of [false,true]){
+      const candidate={...definition,retrieval:{...definition.retrieval,splitConjunction}};
+      const results=evaluate(candidate,development,runner);
+      const tune=splitScore(results.slice(0,parts.tune.length));
+      const validate=splitScore(results.slice(parts.tune.length));
+      const previous=retained.at(-1);
+      const accepted=!previous || tune.passed>previous.tune.passed && validate.passed>=previous.validate.passed;
+      iterations.push({round:iterations.length+1,passed:tune.passed+validate.passed,total:development.length,
+        tuning:tune.passed,validation:validate.passed,accepted,configuration:candidate.retrieval,results,
+        addressed:[],change:splitConjunction?'Evaluate conjunction splitting':'Initial configuration'});
+      if(accepted)retained.push({candidate,tune,validate,results,round:iterations.length});
+    }
+    const best=retained.at(-1);
+    const final=evaluate(best.candidate,parts.test,opts.prepareRunner?.(best.candidate,parts.test)??answer);
+    const released=[...best.results,...final];
+    const controls=judgeControls(best.candidate,development,evaluate);
+    if(controls.some(c=>!c.rejected))throw Error('Judge control breach');
+    return {requirements,definition:best.candidate,evals,iterations,report:{model:opts.model||'Deterministic local compiler',
+      retainedRound:best.round,validationIds:parts.validate.map(c=>c.id),testIds:parts.test.map(c=>c.id),commitment,
+      splits:{tune:best.tune,validate:best.validate,test:splitScore(final)},testResults:final,
+      passed:released.filter(r=>r.passed).length,total:released.length,stop:'Frozen test scored once after selection',
+      failures:released.filter(r=>!r.passed),judgeControls:controls,metrics:summarizeEvidence(evals,released),limitations:['Generated paraphrases can share source vocabulary and templates.']}};
+  }
   const held=opts.splitValidation ? validationIds(evals) : new Set();
   let acceptedTuning=-1, acceptedHeld=-1, retainedRound=1;
   let previous=-1, best=definition, bestCount=-1, addressed=[],change='Initial definition',stop='Iteration limit reached';

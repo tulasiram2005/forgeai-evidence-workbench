@@ -23,3 +23,31 @@ export function judgeControls(definition, cases, evaluate) {
   return controls.map(([name,entry,response])=>({name,caseId:entry.id,
     rejected:!evaluate(definition,[entry],()=>response)[0].passed}));
 }
+
+export function splitCases(cases){
+  const buckets={tune:[],validate:[],test:[]};
+  const classes=Map.groupBy(cases,c=>c.status);
+  const target=Math.round(cases.length/5);
+  function allocate(available){
+    const quotas=[...classes].map(([key,rows])=>({key,quota:rows.length/5,count:Math.min(available[key],Math.floor(rows.length/5))}));
+    const ranked=quotas.sort((a,b)=>(b.quota-b.count)-(a.quota-a.count));
+    let remaining=target-ranked.reduce((n,v)=>n+v.count,0);
+    for(const row of ranked)if(remaining && row.count<available[row.key]){row.count++;remaining--;}
+    return Object.fromEntries(ranked.map(v=>[v.key,v.count]));
+  }
+  const sizes=Object.fromEntries([...classes].map(([k,v])=>[k,v.length]));
+  const test=allocate(sizes),valid=allocate(Object.fromEntries(Object.entries(sizes).map(([k,n])=>[k,n-test[k]])));
+  for(const [key,rows] of classes){
+    const sorted=[...rows].sort((a,b)=>a.question.localeCompare(b.question,'en'));
+    for(const [i,c] of sorted.entries()){
+      const perm=(i+Math.floor(rows.length/3))%rows.length;
+      buckets[perm<test[key]?'test':perm<test[key]+valid[key]?'validate':'tune'].push(c);
+    }
+  }
+  return buckets;
+}
+export function splitScore(results){
+  const n=results.length,x=results.filter(r=>r.passed).length,z=1.959963984540054,p=x/n,d=1+z*z/n;
+  const mid=(p+z*z/(2*n))/d,width=z*Math.sqrt((p*(1-p)+z*z/(4*n))/n)/d;
+  return {passed:x,total:n,lower:Math.max(0,mid-width),upper:Math.min(1,mid+width)};
+}

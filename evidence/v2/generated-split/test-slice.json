@@ -1,0 +1,146 @@
+[
+  {
+    "id": "E37",
+    "kind": "paraphrase",
+    "question": "Summarize The shift physicist initials the?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D2.2",
+        "source": "traces.md",
+        "text": "The shift physicist initials the trace bundle."
+      }
+    ]
+  },
+  {
+    "id": "E35",
+    "kind": "paraphrase",
+    "question": "Summarize Use a green reference card.?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D1.4",
+        "source": "alignment.md",
+        "text": "Use a green reference card."
+      }
+    ]
+  },
+  {
+    "id": "E38",
+    "kind": "paraphrase",
+    "question": "Summarize Write the final spectrum as?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D2.3",
+        "source": "traces.md",
+        "text": "Write the final spectrum as TSV."
+      }
+    ]
+  },
+  {
+    "id": "E02",
+    "kind": "grounded",
+    "question": "What are the details for Allow the lamp 14 minutes?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D1.2",
+        "source": "alignment.md",
+        "text": "Allow the lamp 14 minutes to stabilize."
+      }
+    ]
+  },
+  {
+    "id": "E01",
+    "kind": "grounded",
+    "question": "What are the details for Lock the prism into a?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D1.1",
+        "source": "alignment.md",
+        "text": "Lock the prism into a brass cradle."
+      }
+    ]
+  },
+  {
+    "id": "E08",
+    "kind": "grounded",
+    "question": "What are the details for Retain calibration scraps for 18?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D2.4",
+        "source": "traces.md",
+        "text": "Retain calibration scraps for 18 days."
+      }
+    ]
+  },
+  {
+    "id": "E05",
+    "kind": "grounded",
+    "question": "What are the details for Save 6 traces for each?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D2.1",
+        "source": "traces.md",
+        "text": "Save 6 traces for each specimen."
+      }
+    ]
+  },
+  {
+    "id": "E03",
+    "kind": "grounded",
+    "question": "What are the details for Set the slit width to?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D1.3",
+        "source": "alignment.md",
+        "text": "Set the slit width to 2 millimeters."
+      }
+    ]
+  },
+  {
+    "id": "E06",
+    "kind": "grounded",
+    "question": "What are the details for The shift physicist initials the?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D2.2",
+        "source": "traces.md",
+        "text": "The shift physicist initials the trace bundle."
+      }
+    ]
+  },
+  {
+    "id": "E04",
+    "kind": "grounded",
+    "question": "What are the details for Use a green reference card.?",
+    "status": "answered",
+    "expected": [
+      {
+        "id": "D1.4",
+        "source": "alignment.md",
+        "text": "Use a green reference card."
+      }
+    ]
+  },
+  {
+    "id": "E13",
+    "kind": "near-domain refusal",
+    "question": "What is the patent number for Lock the prism into a?",
+    "status": "refused",
+    "expected": []
+  },
+  {
+    "id": "E14",
+    "kind": "near-domain refusal",
+    "question": "What is the resale valuation for Allow the lamp 14 minutes?",
+    "status": "refused",
+    "expected": []
+  }
+]

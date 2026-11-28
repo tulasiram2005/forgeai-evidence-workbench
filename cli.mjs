@@ -11,7 +11,7 @@ const [command,...args]=process.argv.slice(2);
 const flag=k=>args.includes(k)?args[args.indexOf(k)+1]:undefined;
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 import {readDocuments} from './documents.mjs';
-const documents=folder=>readDocuments(folder,args.includes('--structured'));
+const documents=folder=>readDocuments(folder,command==='forge'||args.includes('--structured'));
 async function runBuild(workerData,budgetMs){
   if(!Number.isInteger(budgetMs)||budgetMs<1||budgetMs>1800000)throw Error('Budget must be 1–1,800,000 milliseconds.');
   const worker=new Worker(new URL('./build-worker.mjs',import.meta.url),{workerData});
@@ -30,6 +30,10 @@ async function runtimeAnswer(def,query){
     const {loadLocalGate,crossScores}=await import('./retrieval/local-gate.mjs');
     await loadLocalGate();
     if(def.retrieval.gate.reranker)return answer(def,query,undefined,crossScores(def,[query]));
+  }
+  if(def.runtime?.kind==='contextual-minilm'){
+    const {prepareRunner}=await import('./retrieval/release-runner.mjs');
+    return prepareRunner(def,[{question:query}])(def,query);
   }
   if(def.runtime?.kind==='local-evidence-selector')return (await import('./tournament.mjs')).modelAnswer(def,query);
   return connectedAnswer(def,query);
@@ -121,6 +125,10 @@ async function main(){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
     const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')};
+    if(command==='forge'){
+      Object.assign(opts,{release:true,contextual:true,splitValidation:true});
+      for(const old of ['--structured','--split-validation','--contextual'])if(args.includes(old))console.error('Deprecated '+old+' is already enabled.');
+    }
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
@@ -144,14 +152,16 @@ async function main(){
         if(response.ok && (await response.json()).models.some(m=>m.name===requested)) model=requested;
       }catch{ /* The portable compiler works without Ollama. */ }
     }
-    if(command==='forge')console.error(model?'Local model: '+model:'Using deterministic agent compiler.');
+    if(command==='forge')console.error(model?'Local model: '+model:'DEGRADED: local model unavailable or explicitly disabled. Using deterministic templates.');
     if(opts.expandIndex)console.error('Generating ranking metadata with the local model.');
-    const start=performance.now();
-    const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
-    run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
-    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
     const target=resolve(out);await mkdir(dirname(target),{recursive:true});const tmp=await mkdtemp(join(dirname(target),'.forge-'));
     try{
+      opts.commitPath=join(tmp,'test-slice.json');
+    const start=performance.now();
+    const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
+    if(opts.release && !opts.gateV2)run.definition.runtime={kind:'contextual-minilm'};
+    run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
+    const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};
       for(const [name,value] of Object.entries({...run,receipt})){
         await writeFile(join(tmp,name+'.json'),JSON.stringify(value,null,2)+'\n');
       }
@@ -165,10 +175,11 @@ async function main(){
         ...['refusalPrecision','requiredRefusals'].map(key=>{const m=run.report.metrics[key];return '- '+(key==='refusalPrecision'?'Precision':'Recall')+' · '+(m.total?m.matched+'/'+m.total:'No eligible cases');}),
         '', '## Remaining failures','',...run.report.failures.map(r=>'- '+r.id+' · '+r.category+' · '+r.question),
         ...(run.report.failures.length?[]:['All generated checks passed.']), '', '## Limits','',...run.report.limitations,''];
+      if(run.report.splits)lines.push('## Frozen split scores','',...Object.entries(run.report.splits).map(([name,m])=>name+' '+m.passed+'/'+m.total+' (95% Wilson '+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)'),'','Test slice SHA-256 '+run.report.commitment.sha256,'');
       await writeFile(join(tmp,'FINAL.md'),lines.join('\n'));
       await rename(tmp,target);
-    }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));
+    }finally{await rm(tmp,{recursive:true,force:true});}
   }else if(command==='ask' && args[1]==='--compose'){
     const {compose}=await import('./compose.mjs');
     console.log(JSON.stringify(await compose(await json(args[0]),args.slice(2).join(' ')),null,2));

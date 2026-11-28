@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: pip install -r requirements-pdf.txt
       - run: npm test && npm ci --prefix qa
       - run: qa/node_modules/.bin/playwright-core install --with-deps chromium
       - run: |
