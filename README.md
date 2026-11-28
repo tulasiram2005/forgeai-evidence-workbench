@@ -1,5 +1,24 @@
 # ForgeAI · Inspection bench
 
+## Factory rehearsal branch
+
+The [deployed pilot](https://forgeai-evidence-workbench.onrender.com/) runs commit `601446c`. This branch adds a local comparison and experimental reviewer commands.
+
+Run `node scripts/brief-contrast.mjs` to compile procurement and policy agents against the same catalogue and receiving instructions. Both receive the same questions. The script checks the selected tools, actual responses, citations, source hashes and CLI/browser-handler parity. [Observed responses](evidence/brief-contrast/results.json)
+
+For an independent rehearsal, a domain owner supplies a brief, documents, and a private JSON array of cases. Each case has `question`, `status` (answered, refused, or clarify), and, for an answer, `facts` (expected phrases) and `source` (the supporting filename). Include both supported and unsupported requests. Use a fresh checkout and store private inputs and outputs outside the repository. The owner keeps the seal or sends its hash to a reviewer before the build. Record the first attempt including failures. The automated grader checks phrases and source membership. Have the owner adjudicate paraphrases and any extra unsupported claims separately.
+
+```sh
+node scripts/blind-rehearsal.mjs seal CASES.json SEAL.json
+node scripts/blind-rehearsal.mjs run CASES.json SEAL.json BRIEF.txt DOCS NEW_OUTPUT
+```
+
+The experiment below accepts separately stated questions. Each part retains its own status and original citation. Include the entity and conditions in each question. The command does not resolve pronouns or infer omitted conditions across parts. Ordinary `ask` and benchmark scoring keep their existing output contract.
+
+```sh
+node cli.mjs review-parts NEW_OUTPUT/agent/definition.json 'What is the seal exception?' 'Who pays the processing fee?'
+```
+
 ## Review in 5 minutes
 
 ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The [live Render workbench](https://forgeai-evidence-workbench.onrender.com/) serves the reviewer pilot at commit `601446c`.

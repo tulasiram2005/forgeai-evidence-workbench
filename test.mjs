@@ -306,3 +306,21 @@ test('evidence-first separates pointers from the answer and refuses unsupported 
   assert.ok(actual.pointers.some(p=>p.source==='policy.txt'&&p.text.includes(p.highlighted)));
   assert.ok(!actual.text.includes('12 euros'));
 });
+
+test('experimental part review preserves exceptions, missing attributes and duplicate source labels', async()=>{
+  const {reviewParts}=await import('./public/review-parts.mjs');
+  const passage={id:'D1.1',source:'receiving.md',topic:'Seal exception',text:'Seal exception: Quarantine until a supervisor signs the slip.'};
+  const def={chunks:[passage],tools:[],runtime:{kind:'evidence-first'}};
+  const q=['What is the seal exception?','What is the fee for a seal exception?'];
+  const report=reviewParts(def,q);
+  assert.equal(report.coverage,'partial');
+  assert.equal(report.parts[0].text,passage.text);
+  assert.equal(report.parts[0].citations[0].id,passage.id);
+  assert.equal(report.parts[1].status,'refused');
+  assert.deepEqual(report.parts[1].citations,[]);
+  const other={...passage,id:'D2.1',source:'annex.md',text:'Seal exception: Return immediately.'};
+  const ambiguous=reviewParts({...def,chunks:[passage,other]},q);
+  assert.equal(ambiguous.coverage,'unresolved');
+  assert.equal(ambiguous.parts[0].status,'clarify');
+  assert.equal(ambiguous.parts[0].citations.length,2);
+});

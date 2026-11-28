@@ -42,6 +42,11 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='review-parts'){
+    const {reviewParts}=await import('./public/review-parts.mjs');
+    console.log(JSON.stringify(reviewParts(await json(args[0]),args.slice(1)),null,2));
+    return;
+  }
   if(command==='scope'){
     const {scopeReview}=await import('./scope-review.mjs');
     const def=await json(args[0]),topics=args.slice(1).filter(a=>a!=='--semantic');
