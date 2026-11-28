@@ -10,7 +10,7 @@ const item = (tag, content, cls) => {
   return element;
 };
 const format = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-const titles = { shore: 'North Pier shore desk', conservation: 'Conservation dispatch' };
+const titles = { shore: 'North Pier shore desk', spares:'Ship-spares desk', conservation: 'Conservation dispatch' };
 const pretty = value => String(value ?? '').replaceAll('_', ' ');
 let activeRun;
 let currentKey = 'shore';
@@ -29,6 +29,23 @@ for (const tab of document.querySelectorAll('[data-view]')) {
   tab.addEventListener('click', () => selectView(tab.dataset.view));
 }
 
+byId('start-query').onclick=()=>{
+  if(!activeRun)return;
+  selectView('runner');
+  byId('query').value=activeRun.evals.find(c=>c.status==='answered')?.question ?? '';
+  byId('query').focus();
+};
+byId('open-failures').onclick=()=>{
+  selectView('evidence');
+  byId('case-filter').value='fail';byId('case-search').value='';renderCases();
+  byId('case-filter').focus();
+};
+fetch('./runs/holdout-summary.json').then(response=>response.json()).then(data=>{
+  byId('field-scores').replaceChildren(...data.map(r=>{
+    const cell=item('div');cell.append(item('strong',r.passed+'/'+r.total),item('span',r.name));return cell;
+  }));
+}).catch(()=>{byId('field-scores').textContent='External results unavailable';});
+
 function evidenceRow(label, value) {
   const row = item('p');
   row.append(item('strong', label + ' '), document.createTextNode(format(value) || '—'));
@@ -40,7 +57,7 @@ function renderCases() {
   const list = byId('cases');
   list.replaceChildren();
   const filter = byId('case-filter').value;
-  const retained = activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
+  const retained = activeRun.iterations[activeRun.report.retainedRound-1] ?? activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
   const results = retained?.results ?? [];
   const definitions = new Map(activeRun.evals.map(entry => [entry.id, entry]));
   const search = byId('case-search').value.trim().toLowerCase();
@@ -103,9 +120,8 @@ function render(run, key) {
   const stats = [new Set(definition.chunks.map(chunk => chunk.source)).size + ' sources', iterations.length + (iterations.length === 1 ? ' evaluation round' : ' evaluation rounds'), (definition.tools?.length ?? 0) + ' attached tools'];
   byId('run-meta').replaceChildren(...stats.map(s => item('span', s)));
   byId('score').replaceChildren(document.createTextNode(String(report.passed)), item('small', ' / ' + report.total));
-  const percent = report.total ? Math.round(100 * report.passed / report.total) : 0;
-  byId('score-note').textContent = percent + '% of cases passed';
-  const retained = iterations.find(entry => entry.passed === report.passed);
+  byId('score-note').textContent = (report.total-report.passed)+' failed';
+  const retained = iterations[report.retainedRound-1] ?? iterations.find(entry => entry.passed === report.passed);
   byId('score-meter').replaceChildren(...(retained?.results ?? []).map(result => {
     const button = item('button',result.id,result.passed ? 'map-pass' : 'map-fail');
     const label = result.id+' · '+(result.passed?'Passed':'Failed')+' · '+result.question;
@@ -136,6 +152,8 @@ function render(run, key) {
       if (metric) byId('stop').append(item('p', label + ' · ' + (metric.total ? metric.matched + '/' + metric.total : 'N/A')));
     }
   }
+  if(retained?.tuning!==undefined)byId('stop').append(evidenceRow('Tuning',retained.tuning+'/'+(report.total-report.validationIds.length)),evidenceRow('Validation',retained.validation+'/'+report.validationIds.length));
+  if(report.judgeControls)byId('stop').append(evidenceRow('Broken controls rejected',report.judgeControls.filter(c=>c.rejected).length+'/'+report.judgeControls.length));
   if (report.limitations?.length) byId('stop').append(item('p', report.limitations[0]));
   byId('case-search').value = '';
   byId('case-filter').value = 'all';
@@ -441,7 +459,17 @@ async function runImpact(load){
         const row=item('details',undefined,'result-card');
         row.append(item('summary',c.id+' · '+c.change+' · '+c.question));
         for(const [label,res] of [['Before',c.before],['After',c.after]]){
-          row.append(evidenceRow(label+' ('+res.status+')',res.text));
+          const line=item('p');
+          line.append(item('strong',label+' · '+res.status+' '));
+          const other=label==='Before'?c.after.text:c.before.text;
+          const words=res.text.split(/(\s+)/),peer=other.split(/(\s+)/);
+          let first=0,last=0;
+          while(first<words.length && words[first]===peer[first])first++;
+          while(last<Math.min(words.length,peer.length)-first && words.at(-1-last)===peer.at(-1-last))last++;
+          line.append(document.createTextNode(words.slice(0,first).join('')),
+            item(label==='Before'?'del':'ins',words.slice(first,words.length-last).join('')),
+            document.createTextNode(words.slice(words.length-last).join('')));
+          row.append(line);
           for(const cite of res.citations)row.append(evidenceRow('Source',cite.source+' · '+cite.id));
         }
         result.append(row);
