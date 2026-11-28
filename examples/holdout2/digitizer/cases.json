@@ -1,0 +1,174 @@
+[
+  {
+    "kind": "paraphrase",
+    "question": "Which side of the film should face me as I load it?",
+    "status": "answered",
+    "facts": [
+      "upward"
+    ],
+    "sources": [
+      "scanner.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "What implement is safe for sweeping away specks?",
+    "status": "answered",
+    "facts": [
+      "sable brush"
+    ],
+    "sources": [
+      "scanner.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "How bright may the lamp be?",
+    "status": "answered",
+    "facts": [
+      "38 lux"
+    ],
+    "sources": [
+      "scanner.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Which way do I rotate the take-up hub?",
+    "status": "answered",
+    "facts": [
+      "clockwise"
+    ],
+    "sources": [
+      "scanner.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "What goes first in the filename for an archival original?",
+    "status": "answered",
+    "facts": [
+      "accession code"
+    ],
+    "sources": [
+      "records.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Who countersigns the image proof?",
+    "status": "answered",
+    "facts": [
+      "second operator"
+    ],
+    "sources": [
+      "records.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "What format should the customer receive?",
+    "status": "answered",
+    "facts": [
+      "TIFF"
+    ],
+    "sources": [
+      "records.md"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "When may I discard temporary images?",
+    "status": "answered",
+    "facts": [
+      "11 days"
+    ],
+    "sources": [
+      "records.md"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "How bright can the lamp be, and how long must temporary images survive?",
+    "status": "answered",
+    "facts": [
+      "38 lux",
+      "11 days"
+    ],
+    "sources": [
+      "scanner.md",
+      "records.md"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "Which way should I turn the hub and how should the archival name begin?",
+    "status": "answered",
+    "facts": [
+      "clockwise",
+      "accession code"
+    ],
+    "sources": [
+      "scanner.md",
+      "records.md"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "What can I use to dust the film and which format goes to viewers?",
+    "status": "answered",
+    "facts": [
+      "sable brush",
+      "TIFF"
+    ],
+    "sources": [
+      "scanner.md",
+      "records.md"
+    ]
+  },
+  {
+    "kind": "near miss",
+    "question": "What solvent removes sticky residue?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Which TIFF compression setting is required?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Is infrared illumination allowed?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "What humidity should film storage maintain?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Which accession code applies to a duplicate?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "What happens if the contact sheet is unsigned?",
+    "status": "refused"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "Which one?",
+    "status": "clarify"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "What about it?",
+    "status": "clarify"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "How should I do that?",
+    "status": "clarify"
+  }
+]

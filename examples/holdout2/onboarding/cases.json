@@ -1,0 +1,174 @@
+[
+  {
+    "kind": "paraphrase",
+    "question": "Which identity paper should I bring on day one?",
+    "status": "answered",
+    "facts": [
+      "passport"
+    ],
+    "sources": [
+      "arrival.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "What time does the welcome session start?",
+    "status": "answered",
+    "facts": [
+      "09:40"
+    ],
+    "sources": [
+      "arrival.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Who matches me with a workplace mentor?",
+    "status": "answered",
+    "facts": [
+      "roster coordinator"
+    ],
+    "sources": [
+      "arrival.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Where can I leave my car when I join?",
+    "status": "answered",
+    "facts": [
+      "lot C"
+    ],
+    "sources": [
+      "arrival.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Where do I pick up my typing gear?",
+    "status": "answered",
+    "facts": [
+      "room Willow"
+    ],
+    "sources": [
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "How long can I keep a screen on loan?",
+    "status": "answered",
+    "facts": [
+      "12 weeks"
+    ],
+    "sources": [
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "Who should hear about my missing entry pass?",
+    "status": "answered",
+    "facts": [
+      "security desk"
+    ],
+    "sources": [
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "paraphrase",
+    "question": "What needs to go back with my faulty headphones?",
+    "status": "answered",
+    "facts": [
+      "original packaging"
+    ],
+    "sources": [
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "When is the welcome session? Also, where can I get a keyboard?",
+    "status": "answered",
+    "facts": [
+      "09:40",
+      "room Willow"
+    ],
+    "sources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+    "status": "answered",
+    "facts": [
+      "lot C",
+      "security desk"
+    ],
+    "sources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "cross-document",
+    "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+    "status": "answered",
+    "facts": [
+      "passport",
+      "12 weeks"
+    ],
+    "sources": [
+      "arrival.pdf",
+      "equipment.pdf"
+    ]
+  },
+  {
+    "kind": "near miss",
+    "question": "Can I claim a parking subsidy?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "What fee applies to a lost access card?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Is a driving licence enough for induction?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "How much is the monitor deposit?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Can my buddy approve a promotion?",
+    "status": "refused"
+  },
+  {
+    "kind": "near miss",
+    "question": "Does the headset exchange come with postage?",
+    "status": "refused"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "Which one?",
+    "status": "clarify"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "What about it?",
+    "status": "clarify"
+  },
+  {
+    "kind": "ambiguous",
+    "question": "Where is that?",
+    "status": "clarify"
+  }
+]
