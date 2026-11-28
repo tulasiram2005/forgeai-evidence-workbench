@@ -225,3 +225,5 @@ For the optional CLI reranker, cache the pinned weights once, then add `--rerank
 | pooled | Always answer with top-1 | 25/195 | 25/93 [18.9%, 36.7%] | 0/72 [0.0%, 5.1%] | 57/57 [93.7%, 100.0%] | 13.4% |
 
 [Full suite comparisons, interval definitions and historical configurations](evidence/v2/reference-results.md)
+
+The prospective release missed both effectiveness criteria. [Frozen fourth-suite results and reference agents](evidence/v2/holdout4/REPORT.md).

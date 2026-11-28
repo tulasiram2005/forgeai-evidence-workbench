@@ -1,0 +1,114 @@
+{
+  "dateFormatControl": "Equivalent and changed dates checked on a separate dated fixture.",
+  "results": [
+    {
+      "suite": "holdout4",
+      "judgeVersion": "extractive-fact-source-v2",
+      "total": 60,
+      "scores": {
+        "alwaysRefuse": 24,
+        "alwaysAnswerTop1": 2,
+        "fabricateNumber": 0,
+        "citeWrongSource": 0,
+        "copyQuestion": 0,
+        "oracle": 60
+      },
+      "changes": {
+        "oracle appended claim": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle triple padding": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle case": {
+          "eligible": 28,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle whitespace": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle punctuation": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle source swap": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle number change": {
+          "eligible": 10,
+          "flips": 10,
+          "correct": false
+        },
+        "oracle number words": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle unit variants": {
+          "eligible": 5,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual number change": {
+          "eligible": 1,
+          "flips": 1,
+          "correct": false
+        },
+        "contextual appended claim": {
+          "eligible": 1,
+          "flips": 1,
+          "correct": false
+        },
+        "contextual triple padding": {
+          "eligible": 1,
+          "flips": 1,
+          "correct": false
+        },
+        "contextual case": {
+          "eligible": 1,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual whitespace": {
+          "eligible": 1,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual punctuation": {
+          "eligible": 1,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual number words": {
+          "eligible": 1,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual source swap": {
+          "eligible": 1,
+          "flips": 1,
+          "correct": false
+        },
+        "date formats": {
+          "eligible": 0,
+          "flips": 0,
+          "correct": true
+        }
+      },
+      "correctParaphraseFalseFails": 0,
+      "correctParaphraseTrials": 104,
+      "errors": []
+    }
+  ]
+}
+
