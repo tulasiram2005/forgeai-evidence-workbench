@@ -13,6 +13,10 @@ node scripts/blind-rehearsal.mjs seal CASES.json SEAL.json
 node scripts/blind-rehearsal.mjs run CASES.json SEAL.json BRIEF.txt DOCS NEW_OUTPUT
 ```
 
+For a paired comparison, a second person writes a ForgeAI-compatible decision configuration from the same brief and documents before seeing the private questions. Include `systemPrompt`, `tools`, `retrieval` and `runtime`. Append `--comparator CONFIG.json` to **both** seal and run. The runner fingerprints that file, supplies the factory's extracted chunks to both configurations, and writes both raw reviews and a per-question comparison. This measures decision configurations under a shared index. Record the human author's setup time independently. Use the same private folder for all outputs and keep it outside Git.
+
+The [development replay](evidence/brief-contrast/evaluation/findings.md) found no accuracy gains on natural questions. The paired runner has received a software smoke test. Independent human performance has yet to be collected.
+
 The experiment below accepts separately stated questions. Each part retains its own status and original citation. Include the entity and conditions in each question. The command does not resolve pronouns or infer omitted conditions across parts. Ordinary `ask` and benchmark scoring keep their existing output contract.
 
 ```sh
