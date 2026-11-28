@@ -221,3 +221,5 @@ del {background:#f6dfd2;color:#743a25} ins {background:#dceadc;color:#19452d}
 .field-method caption {text-align:left;margin-bottom:8px}
 .field-method th,.field-method td {border-bottom:1px solid var(--line);padding:8px 4px}
 @media(max-width:650px){.field-method table{table-layout:fixed}.field-method th{overflow-wrap:anywhere}}
+/* Reserve the opening dossier's four rows while its interactive cells hydrate. */
+#score-meter:empty {min-height:113px}
