@@ -1,3 +1,4 @@
+import {ollamaPort} from './model.mjs';
 import {readFile,readdir,writeFile,mkdir,mkdtemp,rename,rm,stat} from 'node:fs/promises';
 import {resolve,join,relative,dirname,extname} from 'node:path';
 import {execFileSync} from 'node:child_process';
@@ -148,7 +149,7 @@ async function main(){
     let model=args.includes('--model')?requested:null;
     if(command==='forge' && !model && !args.includes('--deterministic')){
       try{
-        const response=await fetch('http://127.0.0.1:11434/api/tags',{signal:AbortSignal.timeout(900)});
+        const response=await fetch('http://127.0.0.1:'+ollamaPort()+'/api/tags',{signal:AbortSignal.timeout(900)});
         if(response.ok && (await response.json()).models.some(m=>m.name===requested)) model=requested;
       }catch{ /* The portable compiler works without Ollama. */ }
     }

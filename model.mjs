@@ -51,7 +51,7 @@ export async function enrich(brief, docs) {
 
 export async function localJSON(messages, schema, model, maxTokens=850, timeoutMs=120_000) {
   const llama = process.env.FORGE_BACKEND === 'llama.cpp';
-  const url = llama ? 'http://127.0.0.1:18435/v1/chat/completions' : 'http://127.0.0.1:11434/api/chat';
+  const url = llama ? 'http://127.0.0.1:18435/v1/chat/completions' : 'http://127.0.0.1:'+ollamaPort()+'/api/chat';
   const request = llama
     ? {model, messages, temperature:0, seed:17, max_tokens:maxTokens,
        response_format:{type:'json_schema',json_schema:{name:'design',strict:true,schema:schema}}}
@@ -84,4 +84,10 @@ export function validateDesign(result, labels) {
     prompt: nonempty(result.prompt, 2400), topics: result.topics.map(t => nonempty(t, 200)),
     questions
   };
+}
+
+export function ollamaPort(){
+  const n=Number(process.env.FORGE_OLLAMA_PORT??11434);
+  if(!Number.isInteger(n)||n<1||n>65535)throw Error('Invalid local Ollama port.');
+  return n;
 }
