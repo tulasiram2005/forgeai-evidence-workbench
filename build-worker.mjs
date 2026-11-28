@@ -4,8 +4,13 @@ import {enrich} from './model.mjs';
 
 const {brief,docs,opts,model}=workerData;
 if(model){
-  opts.enrichment=await enrich(brief,docs);
-  opts.model=model;
+  try{
+    opts.enrichment=await enrich(brief,docs);
+    opts.model=model;
+  }catch(error){
+    if(!opts.autoDetect)throw error;
+    opts.degraded='Local model generation failed: '+error.message;
+  }
 }
 if(opts.gateV2){
   const {loadLocalGate,calibrationReranker}=await import('./retrieval/local-gate.mjs');
@@ -43,5 +48,6 @@ if(opts.release){
   }:prepareRunner;
 }
 const run=build(brief,docs,opts);
+if(opts.degraded)run.report.degraded=opts.degraded;
 if(opts.expandIndex)run.definition.searchExpansion=await (await import('./retrieval/expand.mjs')).expandIndex(run.definition);
 parentPort.postMessage({run,enrichment:opts.enrichment??null});

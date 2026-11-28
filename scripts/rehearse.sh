@@ -32,7 +32,7 @@ for mode in without with; do
     node cli.mjs forge --brief "$folder/brief.txt" --docs "$folder/docs" --out "$tmp/$mode-$name" >"$result/stdout.log" 2>"$result/stderr.log" || code=$?
     if [ "$code" = 0 ]; then
       cp "$tmp/$mode-$name/FINAL.md" "$result/"
-      if [ "$mode" = with ] && ! grep -q '^Local model:' "$result/stderr.log"; then code=1; fi
+      if [ "$mode" = with ] && { ! grep -q '^Local model:' "$result/stderr.log" || grep -q '^DEGRADED:' "$result/stderr.log"; }; then code=1; fi
     fi
     python3 -c 'import json,sys; print(json.dumps(dict(commit=sys.argv[1],exitCode=int(sys.argv[2]),wallSeconds=int(sys.argv[3]))))' "$(git rev-parse HEAD)" "$code" "$(($(date +%s)-start))" >"$result/receipt.json"
   done

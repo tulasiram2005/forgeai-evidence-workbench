@@ -127,7 +127,7 @@ async function main(){
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
     const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')};
     if(command==='forge'){
-      Object.assign(opts,{release:true,contextual:true,splitValidation:true});
+      Object.assign(opts,{autoDetect:!args.includes('--model'),release:true,contextual:true,splitValidation:true});
       for(const old of ['--structured','--split-validation','--contextual'])if(args.includes(old))console.error('Deprecated '+old+' is already enabled.');
     }
     if(args.includes('--interview')){
@@ -160,6 +160,7 @@ async function main(){
       opts.commitPath=join(tmp,'test-slice.json');
     const start=performance.now();
     const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
+    if(run.report.degraded)console.error('DEGRADED: '+run.report.degraded+'. Using deterministic templates.');
     if(opts.release && !opts.gateV2)run.definition.runtime={kind:'contextual-minilm'};
     run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
     const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};

@@ -1,0 +1,9 @@
+{
+  "out": "/var/folders/9k/sfd22fpx0xdb7yqw8wtvxrhh0000gn/T/tmp.Ii3KWJah2X/without-printmaking",
+  "passed": 60,
+  "total": 60,
+  "stop": "Frozen test scored once after selection",
+  "tools": [
+    "csv_lookup"
+  ]
+}
