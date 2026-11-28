@@ -1,0 +1,9 @@
+{
+  "out": "/tmp/tmp.CIShzSgTUR/with-bookbinding",
+  "passed": 58,
+  "total": 60,
+  "stop": "Frozen test scored once after selection",
+  "tools": [
+    "csv_lookup"
+  ]
+}

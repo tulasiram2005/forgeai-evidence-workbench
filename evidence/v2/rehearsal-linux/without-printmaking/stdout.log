@@ -1,0 +1,9 @@
+{
+  "out": "/tmp/tmp.CIShzSgTUR/without-printmaking",
+  "passed": 60,
+  "total": 60,
+  "stop": "Frozen test scored once after selection",
+  "tools": [
+    "csv_lookup"
+  ]
+}
