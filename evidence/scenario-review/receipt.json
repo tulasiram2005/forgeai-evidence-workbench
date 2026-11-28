@@ -1,0 +1,382 @@
+{
+  "kind": "Authored structured-policy regression",
+  "trials": [
+    {
+      "name": "mixed support",
+      "input": "I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "partial",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "answered",
+            "text": "Eligibility: Claims require a signed missing-receipt declaration.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expenses.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Eligibility: Claims require a signed missing-receipt declaration."
+              }
+            ]
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "answered",
+            "text": "Submission deadline: Submit within twelve calendar days of travel.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "filing.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Submission deadline: Submit within twelve calendar days of travel."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "different scenario",
+      "input": "I lost my bus receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost bus receipt",
+        "coverage": "unresolved",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "extra condition",
+      "input": "I lost my taxi receipt abroad. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt abroad",
+        "coverage": "unresolved",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "other action",
+      "input": "I lost my taxi receipt. Can I still appeal the fine, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "unresolved",
+        "parts": [
+          {
+            "question": "Can I still appeal the fine",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "no antecedent",
+      "input": "I lost my taxi receipt. Who approves it?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "unresolved",
+        "parts": [
+          {
+            "question": "Who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "revised deadline",
+      "input": "I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "partial",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "answered",
+            "text": "Eligibility: Claims require a signed missing-receipt declaration.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expenses.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Eligibility: Claims require a signed missing-receipt declaration."
+              }
+            ]
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "answered",
+            "text": "Submission deadline: Submit within six calendar days of travel.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "filing.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Submission deadline: Submit within six calendar days of travel."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "conflicting deadlines",
+      "input": "I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "partial",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "answered",
+            "text": "Eligibility: Claims require a signed missing-receipt declaration.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expenses.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Eligibility: Claims require a signed missing-receipt declaration."
+              }
+            ]
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "clarify",
+            "text": "The sources give different wording for this field. Review both before applying the rule.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "filing.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Submission deadline: Submit within six calendar days of travel."
+              },
+              {
+                "id": "D3.1",
+                "source": "other.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Submission deadline: Submit within twelve calendar days of travel."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "filing policy withdrawn",
+      "input": "I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "partial",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "answered",
+            "text": "Eligibility: Claims require a signed missing-receipt declaration.",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "expenses.md",
+                "section": [
+                  "Lost taxi receipt",
+                  "Claim the fare"
+                ],
+                "text": "Eligibility: Claims require a signed missing-receipt declaration."
+              }
+            ]
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "additional unmodeled restriction",
+      "input": "I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "lost taxi receipt",
+        "coverage": "unresolved",
+        "parts": [
+          {
+            "question": "Can I still claim the fare",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "who approves it",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "different domain and explicit approver",
+      "input": "Damaged access badge. Can I replace the badge, who approves it, and when do I submit?",
+      "result": {
+        "experimental": true,
+        "scenario": "damaged access badge",
+        "coverage": "partial",
+        "parts": [
+          {
+            "question": "Can I replace the badge",
+            "status": "answered",
+            "text": "Eligibility: Bring the damaged badge to the desk.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "filing.md",
+                "section": [
+                  "Damaged access badge",
+                  "Replace the badge"
+                ],
+                "text": "Eligibility: Bring the damaged badge to the desk."
+              }
+            ]
+          },
+          {
+            "question": "who approves it",
+            "status": "answered",
+            "text": "Approver: The access supervisor signs the replacement form.",
+            "citations": [
+              {
+                "id": "D2.2",
+                "source": "filing.md",
+                "section": [
+                  "Damaged access badge",
+                  "Replace the badge"
+                ],
+                "text": "Approver: The access supervisor signs the replacement form."
+              }
+            ]
+          },
+          {
+            "question": "when do I submit",
+            "status": "refused",
+            "text": "The supplied sources do not establish this part.",
+            "citations": []
+          }
+        ]
+      }
+    }
+  ]
+}

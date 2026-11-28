@@ -23,6 +23,17 @@ The experiment below accepts separately stated questions. Each part retains its 
 node cli.mjs review-parts NEW_OUTPUT/agent/definition.json 'What is the seal exception?' 'Who pays the processing fee?'
 ```
 
+### Single-question policy experiment
+
+Run `node scripts/scenario-rehearsal.mjs` for a reproducible CLI trial with changing source files. The experimental command accepts one conversational question, including a stated scenario, action and follow-ups. For example:
+
+```sh
+node cli.mjs forge --brief examples/scenario-review/brief.txt --docs examples/scenario-review/docs --out /tmp/forge-travel-trial --no-llm
+node cli.mjs review-scenario /tmp/forge-travel-trial/definition.json 'I lost my taxi receipt. Can I still claim the fare, who approves it, and when do I submit?'
+```
+
+Use a new output directory for each build. The supported source format is Markdown with the scenario as the first heading, the action as the second heading, and complete labelled policy statements for eligibility, approver and submission deadline. The resolver carries the action into follow-up questions and quotes each supported field, including its conditions. It declines unmatched contexts and unrecognized restrictions in the matched section. Conflicting field values surface for review. This requires curated headings and self-contained statements. General prose, arbitrary paraphrases and rules inherited from other documents require human review. [Authored trials and exact citations](evidence/scenario-review/receipt.json)
+
 ## Review in 5 minutes
 
 ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The [live Render workbench](https://forgeai-evidence-workbench.onrender.com/) serves the reviewer pilot at commit `601446c`.

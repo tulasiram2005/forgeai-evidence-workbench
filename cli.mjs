@@ -42,6 +42,11 @@ async function runtimeAnswer(def,query){
   return connectedAnswer(def,query);
 }
 async function main(){
+  if(command==='review-scenario'){
+    const {reviewScenario}=await import('./public/scenario-review.mjs');
+    console.log(JSON.stringify(reviewScenario(await json(args[0]),args.slice(1).join(' ')),null,2));
+    return;
+  }
   if(command==='review-parts'){
     const {reviewParts}=await import('./public/review-parts.mjs');
     console.log(JSON.stringify(reviewParts(await json(args[0]),args.slice(1)),null,2));
