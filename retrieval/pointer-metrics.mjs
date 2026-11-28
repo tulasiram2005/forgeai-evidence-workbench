@@ -10,7 +10,7 @@ for(const [i,suite] of suites.entries()){
     for(const r of results.filter(r=>r.actual.status==='refused')){
       const response=withPointers(r.actual,chunks,r.question);
       assert.deepEqual(response.citations,[]);
-      assert.ok(response.pointers.length<=2);
+      assert.ok(response.pointers.length<=3);
       const gold=r.sources??[];
       rows.push({suite,name,question:r.question,gold,pointers:response.pointers.map(p=>p.source),correct:gold.length?response.pointers.some(p=>gold.includes(p.source)):null});
     }

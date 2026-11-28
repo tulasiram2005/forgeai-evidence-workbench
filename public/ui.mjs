@@ -526,6 +526,10 @@ loadRun('shore');
 function showPointers(panel,response){
   if(response.status!=='refused'||!response.pointers?.length)return;
   const list=item('ul');
-  for(const p of response.pointers)list.append(item('li',p.source+' · '+p.id+' · '+p.text));
-  panel.append(item('h4','Related, not confirmed'),list);
+  for(const p of response.pointers){
+    const li=item('li'),mark=item('mark',p.highlighted??p.text);
+    li.append(item('small',p.source+' · '+p.id),mark);
+    list.append(li);
+  }
+  panel.append(item('h4','Closest evidence, not confirmed'),list);
 }

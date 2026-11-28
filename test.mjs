@@ -142,8 +142,8 @@ test('revision comparison distinguishes a changed deadline, a lost answer, and u
   const compatible=structuredClone(report);
   for(const row of compatible.results)for(const response of [row.before,row.after]){
     if(response.status==='refused'){
-      assert.ok(response.pointers.length<=2);
-      assert.ok(response.pointers.every(p=>p.label==='related, not confirmed'));
+      assert.ok(response.pointers.length<=3);
+      assert.ok(response.pointers.every(p=>p.label==='closest evidence, not confirmed' && p.text.includes(p.highlighted)));
       delete response.pointers;
     }
   }

@@ -99,12 +99,13 @@ export function rank(chunks,question){
 }
 export function withPointers(response,chunks,question){
   if(response.status!=='refused')return response;
-  const pointers=[],seen=new Set();
+  const pointers=[];
   for(const {c,matched} of rank(chunks,question)){
-    if(!matched || seen.has(c.source))continue;
-    seen.add(c.source);
-    pointers.push({label:'related, not confirmed',...cited(c)});
-    if(pointers.length===2)break;
+    if(!matched)continue;
+    const sentences=c.text.match(/[^.!?]+(?:[.!?]+|$)/g)??[c.text];
+    const highlighted=rank(sentences.map(text=>({text:text.trim(),topic:c.topic})),question)[0].c.text;
+    pointers.push({label:'closest evidence, not confirmed',...cited(c),highlighted});
+    if(pointers.length===3)break;
   }
   return {...response,pointers};
 }

@@ -21,7 +21,15 @@ try{
       }finally{worker.terminate();}
     },r);
     assert.deepEqual(observed.split,r.split);
-    assert.deepEqual(observed.answers,r.questions.map(c=>c.expected));
+    for(const [i,response] of observed.answers.entries()){
+      const {pointers,...core}=response;
+      const {pointers:previous,...expected}=r.questions[i].expected;
+      assert.deepEqual(core,expected);
+      if(response.status==='refused'){
+        assert.ok(pointers.length<=3);
+        assert.ok(pointers.every(p=>p.text.includes(p.highlighted)));
+      }
+    }
     results.push({fixture:r.fixture,matched:r.questions.length,generatedSplitsMatched:true});
   }
   fs.mkdirSync('evidence/ui',{recursive:true});
