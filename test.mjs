@@ -252,7 +252,9 @@ test('index expansion never becomes answer text, quoted evidence or reference fa
   const def=structuredClone(run.definition),original=JSON.stringify(def.chunks);
   const synthetic='Generated discovery phrase';
   def.searchExpansion=await expandIndex(def,async()=>({summary:synthetic,questions:['Query A?','Query B?','Query C?']}));
-  const actual=answer(def,'What are the details for Kiln cooldown?');
+  const target=def.chunks.find(c=>c.text.includes('18 hours'));
+  const encoder={contextual:true,filterIds:identifierIndex(def.chunks),score:(_,id)=>id===target.id?0.99:0};
+  const actual=experimentalAnswer(def,synthetic,encoder);
   assert.equal(actual.status,'answered');
   assert.ok(rankingText(def,def.chunks[0],true).includes(synthetic));
   assert.equal(JSON.stringify(def.chunks),original);

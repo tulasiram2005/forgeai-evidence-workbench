@@ -1,0 +1,413 @@
+{
+  "searchExpansion": {
+    "model": "qwen2.5:1.5b",
+    "passages": {
+      "D1.1": {
+        "summary": "The passage indicates that Curlew is the carrier for Larch Freight.",
+        "questions": [
+          "What is the carrier for Larch Freight?",
+          "Who is nominating Larch Freight as the carrier?",
+          "What is the name of the company that is nominating Larch Freight?"
+        ]
+      },
+      "D1.2": {
+        "summary": "The consignment note must include the purchase order reference.",
+        "questions": [
+          "What must be included on the consignment note?",
+          "Why is the purchase order reference important?",
+          "How does the consignment note relate to the purchase order?"
+        ]
+      },
+      "D2.1": {
+        "summary": "This entry is for a product with the SKU LK71, matte finish, and 16 shims in the pack.",
+        "questions": [
+          "What is the SKU of the product?",
+          "What is the finish of the product?",
+          "How many shims are included in the pack?"
+        ]
+      },
+      "D2.2": {
+        "summary": "This item is a 22-pin pin pack with gloss finish.",
+        "questions": [
+          "What is the SKU of the item?",
+          "What is the finish of the item?",
+          "How many pins does the pack contain?"
+        ]
+      },
+      "D2.3": {
+        "summary": "This passage contains metadata for a product with the SKU BD54, finish satin, and pack 9 spacers.",
+        "questions": [
+          "What is the SKU of the product?",
+          "What is the finish of the product?",
+          "How many spacers are included in the pack?"
+        ]
+      },
+      "D3.1": {
+        "summary": "The passage mentions that Osprey releases orders at gate Juniper.",
+        "questions": [
+          "What is the collection point for Osprey's orders?",
+          "Where does Osprey release its orders?",
+          "What is the name of the gate through which Osprey releases its orders?"
+        ]
+      },
+      "D3.2": {
+        "summary": "The deadline for reporting shortages is within 5 business days.",
+        "questions": [
+          "What is the deadline for reporting shortages?",
+          "How many business days are there until the deadline?",
+          "What is the consequence of not meeting the deadline?"
+        ]
+      },
+      "D3.3": {
+        "summary": "Osprey outbound pallets have amber seals.",
+        "questions": [
+          "What color are the seals on Osprey outbound pallets?",
+          "Why are the seals on Osprey outbound pallets amber?",
+          "What does the color of the seals indicate about the Osprey outbound pallets?"
+        ]
+      }
+    }
+  },
+  "passed": 10,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 1,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 1,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 6,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 9,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "How many thin wedges are supplied under LK71?",
+      "status": "answered",
+      "facts": [
+        "16 shims"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What surface treatment will BD54 have?",
+      "status": "answered",
+      "facts": [
+        "satin"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What quantity does LK83 ship in?",
+      "status": "answered",
+      "facts": [
+        "22 pins"
+      ],
+      "sources": [
+        "lots.csv"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where does the driver collect an Osprey order?",
+      "status": "answered",
+      "facts": [
+        "gate Juniper"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Collection point: Osprey releases orders at gate Juniper.",
+        "citations": [
+          {
+            "id": "D3.1",
+            "source": "osprey.pdf",
+            "text": "Collection point: Osprey releases orders at gate Juniper.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How long do I get to flag a short shipment?",
+      "status": "answered",
+      "facts": [
+        "5 business days"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which hue identifies a pallet leaving Osprey?",
+      "status": "answered",
+      "facts": [
+        "amber"
+      ],
+      "sources": [
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who transports goods going back to Curlew?",
+      "status": "answered",
+      "facts": [
+        "Larch Freight"
+      ],
+      "sources": [
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which purchasing reference belongs on the dispatch paperwork?",
+      "status": "answered",
+      "facts": [
+        "purchase order"
+      ],
+      "sources": [
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "How many LK71 wedges should arrive, and when must I flag missing stock?",
+      "status": "answered",
+      "facts": [
+        "16 shims",
+        "5 business days"
+      ],
+      "sources": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Where do I collect from Osprey and who handles a Curlew return?",
+      "status": "answered",
+      "facts": [
+        "gate Juniper",
+        "Larch Freight"
+      ],
+      "sources": [
+        "osprey.pdf",
+        "curlew.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Collection point: Osprey releases orders at gate Juniper.\nReturn carrier: Curlew nominates Larch Freight.",
+        "citations": [
+          {
+            "id": "D3.1",
+            "source": "osprey.pdf",
+            "text": "Collection point: Osprey releases orders at gate Juniper.",
+            "page": 1
+          },
+          {
+            "id": "D1.1",
+            "source": "curlew.pdf",
+            "text": "Return carrier: Curlew nominates Larch Freight.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which finish comes on BD54 and what marks an outbound pallet?",
+      "status": "answered",
+      "facts": [
+        "satin",
+        "amber"
+      ],
+      "sources": [
+        "lots.csv",
+        "osprey.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "How much does LK71 cost?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Who insures an Osprey consignment?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What is the overnight tariff with Larch Freight?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Is BD55 available?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Can Curlew accept refrigerated returns?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Does the shortage deadline include a grace period?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "How many of those?",
+      "status": "clarify",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    }
+  ]
+}

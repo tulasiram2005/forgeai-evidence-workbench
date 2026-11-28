@@ -1,0 +1,405 @@
+{
+  "searchExpansion": {
+    "model": "qwen2.5:1.5b",
+    "passages": {
+      "D1.1": {
+        "summary": "The passage instructs to prefix each master file with the accession code.",
+        "questions": [
+          "What should be done to each master file to ensure proper identification?",
+          "How can the accession code be added to each master file?",
+          "What is the purpose of prefixing each master file with the accession code?"
+        ]
+      },
+      "D1.2": {
+        "summary": "The passage describes a second operator signing a contact sheet.",
+        "questions": [
+          "Who signs the contact sheet?",
+          "What is a contact sheet?",
+          "What is the second operator doing in relation to the contact sheet?"
+        ]
+      },
+      "D1.3": {
+        "summary": "Export viewing copies as TIFF.",
+        "questions": [
+          "What format can viewing copies be exported as?",
+          "Is TIFF the only format available for exporting viewing copies?",
+          "What is the purpose of exporting viewing copies?"
+        ]
+      },
+      "D1.4": {
+        "summary": "Scratch scans should be kept for 11 days.",
+        "questions": [
+          "How long should scratch scans be retained?",
+          "What is the retention period for scratch scans?",
+          "Why is it important to keep scratch scans for 11 days?"
+        ]
+      },
+      "D2.1": {
+        "summary": "The passage provides instructions on how to insert a strip with emulsion facing upward.",
+        "questions": [
+          "What should be the orientation of the strip with emulsion when inserting it?",
+          "Where can the instructions be found in the document?",
+          "Is there any additional information provided in the operating guide?"
+        ]
+      },
+      "D2.2": {
+        "summary": "The passage provides instructions on cleaning.",
+        "questions": [
+          "What should be used for cleaning?",
+          "What is the recommended tool for removing loose dust?",
+          "How should the sable brush be used for cleaning?"
+        ]
+      },
+      "D2.3": {
+        "summary": "The passage provides information about cap illumination at 38 lux.",
+        "questions": [
+          "What is the cap illumination level?",
+          "What is the unit of measurement for cap illumination?",
+          "How is cap illumination typically measured?"
+        ]
+      },
+      "D2.4": {
+        "summary": "The passage instructs on turning the spindle clockwise.",
+        "questions": [
+          "What should be done to the spindle to proceed?",
+          "How should the spindle be moved to continue?",
+          "What action is required to advance the operation?"
+        ]
+      }
+    }
+  },
+  "passed": 9,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 1,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 5,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 10,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 1,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "Which side of the film should face me as I load it?",
+      "status": "answered",
+      "facts": [
+        "upward"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What implement is safe for sweeping away specks?",
+      "status": "answered",
+      "facts": [
+        "sable brush"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How bright may the lamp be?",
+      "status": "answered",
+      "facts": [
+        "38 lux"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Which way do I rotate the take-up hub?",
+      "status": "answered",
+      "facts": [
+        "clockwise"
+      ],
+      "sources": [
+        "scanner.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What goes first in the filename for an archival original?",
+      "status": "answered",
+      "facts": [
+        "accession code"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Prefix each master file with the accession code.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "records.md",
+            "text": "Prefix each master file with the accession code."
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who countersigns the image proof?",
+      "status": "answered",
+      "facts": [
+        "second operator"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What format should the customer receive?",
+      "status": "answered",
+      "facts": [
+        "TIFF"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "When may I discard temporary images?",
+      "status": "answered",
+      "facts": [
+        "11 days"
+      ],
+      "sources": [
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "How bright can the lamp be, and how long must temporary images survive?",
+      "status": "answered",
+      "facts": [
+        "38 lux",
+        "11 days"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which way should I turn the hub and how should the archival name begin?",
+      "status": "answered",
+      "facts": [
+        "clockwise",
+        "accession code"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "What can I use to dust the film and which format goes to viewers?",
+      "status": "answered",
+      "facts": [
+        "sable brush",
+        "TIFF"
+      ],
+      "sources": [
+        "scanner.md",
+        "records.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "What solvent removes sticky residue?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Which TIFF compression setting is required?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Is infrared illumination allowed?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What humidity should film storage maintain?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Which accession code applies to a duplicate?",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Prefix each master file with the accession code.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "records.md",
+            "text": "Prefix each master file with the accession code."
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "What happens if the contact sheet is unsigned?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "How should I do that?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

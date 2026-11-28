@@ -181,3 +181,20 @@ Add `--contextual` during a CLI build to preserve Markdown heading paths and CSV
 Run `node cli.mjs holdout examples/holdout/spares --structured --split-validation --contextual` to reproduce a folder with the pinned encoder installed. The three original folders scored 16/25, 23/25 and 15/25 (staff, spares and bench). Compared with the previous dense experiment, seven previously failed cases passed and no previously passing case failed. Refusals on answerable questions fell from 22/30 to 15/30. Both configurations gave zero answers across the 30 cases requiring refusal. These fixtures share question structures and have been inspected during development.
 
 A new dispatch folder exposed an erroneous response for an absent catalogue code. Its eight cases scored 7/8 before the identifier check and 8/8 after. It now serves as a regression fixture. [Contextual receipts](evidence/v2/contextual/) · [Dispatch source documents and questions](examples/holdout/dispatch/)
+
+### Frozen comparison and ranking-only expansion
+
+[Read the two-suite report](evidence/v2/RETRIEVAL-REPORT.md) for the refusal analysis, threshold curve and full comparison. The first run on the second suite used the previous v2 code. Its fixtures, extraction overlap check and first-run receipts are preserved in Git. Lexical and contextual settings reproduce the respective release workflows, so their difference includes PDF intake and optimization settings. The normalized and expanded runs use the same intake, split, model encoder and operating thresholds.
+
+To reproduce expansion, start the supported local model server and install the pinned offline encoder. Build into a fresh folder. Only the contextual CLI ranker consumes generated metadata. The original text stays in the quoted passage. The holdout runner expands each corpus before opening its cases, and includes the actual generated metadata in its receipt.
+
+```sh
+python3 examples/holdout2/check.py
+node cli.mjs forge --brief examples/holdout2/vendors/brief.txt --docs examples/holdout2/vendors/docs --out runs/vendors-expanded --structured --split-validation --deterministic --expand-index
+node cli.mjs ask runs/vendors-expanded/definition.json --contextual 'What quantity does LK83 ship in?'
+node cli.mjs holdout examples/holdout2/vendors --structured --split-validation --expand-index
+node cli.mjs diagnose examples/holdout/staff --structured
+node retrieval/report-holdouts.mjs
+```
+
+Here `--deterministic` selects the portable agent compiler. Explicit `--expand-index` still invokes the local model for search metadata. Use `FORGE_BACKEND=llama.cpp` when serving the specified model with llama.cpp.

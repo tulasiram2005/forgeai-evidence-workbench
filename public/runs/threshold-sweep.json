@@ -1,0 +1,226 @@
+{
+  "x": "Minimum dense cosine",
+  "series": [
+    "answerableRecall",
+    "refusalRecall",
+    "nearMissFalseAnswers"
+  ],
+  "points": [
+    {
+      "minimum": 0,
+      "margin": 0.08,
+      "passed": {
+        "count": 57,
+        "total": 75,
+        "rate": 0.76
+      },
+      "answerableRecall": {
+        "count": 19,
+        "total": 30,
+        "rate": 0.6333333333333333
+      },
+      "refusalRecall": {
+        "count": 29,
+        "total": 30,
+        "rate": 0.9666666666666667
+      },
+      "nearMissFalseAnswers": {
+        "count": 1,
+        "total": 15,
+        "rate": 0.06666666666666667
+      }
+    },
+    {
+      "minimum": 0.2,
+      "margin": 0.08,
+      "passed": {
+        "count": 57,
+        "total": 75,
+        "rate": 0.76
+      },
+      "answerableRecall": {
+        "count": 19,
+        "total": 30,
+        "rate": 0.6333333333333333
+      },
+      "refusalRecall": {
+        "count": 29,
+        "total": 30,
+        "rate": 0.9666666666666667
+      },
+      "nearMissFalseAnswers": {
+        "count": 1,
+        "total": 15,
+        "rate": 0.06666666666666667
+      }
+    },
+    {
+      "minimum": 0.3,
+      "margin": 0.08,
+      "passed": {
+        "count": 57,
+        "total": 75,
+        "rate": 0.76
+      },
+      "answerableRecall": {
+        "count": 19,
+        "total": 30,
+        "rate": 0.6333333333333333
+      },
+      "refusalRecall": {
+        "count": 29,
+        "total": 30,
+        "rate": 0.9666666666666667
+      },
+      "nearMissFalseAnswers": {
+        "count": 1,
+        "total": 15,
+        "rate": 0.06666666666666667
+      }
+    },
+    {
+      "minimum": 0.4,
+      "margin": 0.08,
+      "passed": {
+        "count": 55,
+        "total": 75,
+        "rate": 0.7333333333333333
+      },
+      "answerableRecall": {
+        "count": 17,
+        "total": 30,
+        "rate": 0.5666666666666667
+      },
+      "refusalRecall": {
+        "count": 29,
+        "total": 30,
+        "rate": 0.9666666666666667
+      },
+      "nearMissFalseAnswers": {
+        "count": 1,
+        "total": 15,
+        "rate": 0.06666666666666667
+      }
+    },
+    {
+      "minimum": 0.5,
+      "margin": 0.08,
+      "passed": {
+        "count": 54,
+        "total": 75,
+        "rate": 0.72
+      },
+      "answerableRecall": {
+        "count": 15,
+        "total": 30,
+        "rate": 0.5
+      },
+      "refusalRecall": {
+        "count": 30,
+        "total": 30,
+        "rate": 1
+      },
+      "nearMissFalseAnswers": {
+        "count": 0,
+        "total": 15,
+        "rate": 0
+      }
+    },
+    {
+      "minimum": 0.6,
+      "margin": 0.08,
+      "passed": {
+        "count": 44,
+        "total": 75,
+        "rate": 0.5866666666666667
+      },
+      "answerableRecall": {
+        "count": 5,
+        "total": 30,
+        "rate": 0.16666666666666666
+      },
+      "refusalRecall": {
+        "count": 30,
+        "total": 30,
+        "rate": 1
+      },
+      "nearMissFalseAnswers": {
+        "count": 0,
+        "total": 15,
+        "rate": 0
+      }
+    },
+    {
+      "minimum": 0.7,
+      "margin": 0.08,
+      "passed": {
+        "count": 40,
+        "total": 75,
+        "rate": 0.5333333333333333
+      },
+      "answerableRecall": {
+        "count": 1,
+        "total": 30,
+        "rate": 0.03333333333333333
+      },
+      "refusalRecall": {
+        "count": 30,
+        "total": 30,
+        "rate": 1
+      },
+      "nearMissFalseAnswers": {
+        "count": 0,
+        "total": 15,
+        "rate": 0
+      }
+    },
+    {
+      "minimum": 0.8,
+      "margin": 0.08,
+      "passed": {
+        "count": 39,
+        "total": 75,
+        "rate": 0.52
+      },
+      "answerableRecall": {
+        "count": 0,
+        "total": 30,
+        "rate": 0
+      },
+      "refusalRecall": {
+        "count": 30,
+        "total": 30,
+        "rate": 1
+      },
+      "nearMissFalseAnswers": {
+        "count": 0,
+        "total": 15,
+        "rate": 0
+      }
+    },
+    {
+      "minimum": 1,
+      "margin": 0.08,
+      "passed": {
+        "count": 39,
+        "total": 75,
+        "rate": 0.52
+      },
+      "answerableRecall": {
+        "count": 0,
+        "total": 30,
+        "rate": 0
+      },
+      "refusalRecall": {
+        "count": 30,
+        "total": 30,
+        "rate": 1
+      },
+      "nearMissFalseAnswers": {
+        "count": 0,
+        "total": 15,
+        "rate": 0
+      }
+    }
+  ]
+}
