@@ -10,29 +10,8 @@ import {Worker} from 'node:worker_threads';
 const [command,...args]=process.argv.slice(2);
 const flag=k=>args.includes(k)?args[args.indexOf(k)+1]:undefined;
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
-async function documents(folder){
-  const docs=[];let bytes=0;
-  async function walk(dir){
-    const entries=(await readdir(dir,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name));
-    for(const entry of entries){
-      const path=join(dir,entry.name);
-      if(entry.isDirectory()){if(!entry.name.startsWith('.')) await walk(path);continue;}
-      if(!entry.isFile()||!['.md','.txt','.csv','.pdf',...(args.includes('--structured')?['.docx']:[])].includes(extname(path).toLowerCase()))continue;
-      const size=(await stat(path)).size; bytes+=size;
-      if(docs.length>=32||bytes>16_000_000)throw Error('Input exceeds 32 files or 16 MB.');
-      if(args.includes('--structured') && /\.(pdf|docx)$/i.test(path)){
-        const parsed=JSON.parse(execFileSync('python3',[fileURLToPath(new URL('./read-document.py',import.meta.url)),path],{encoding:'utf8',timeout:20000,maxBuffer:4000000}));
-        if(!parsed.text.trim())throw Error('No readable text in '+entry.name);
-        docs.push({name:relative(folder,path),...parsed});
-        continue;
-      }
-      const text=/\.pdf$/i.test(path)?execFileSync('python3',['-c','from pypdf import PdfReader; import sys; print("\\n".join(p.extract_text() or "" for p in PdfReader(sys.argv[1]).pages))',path],{encoding:'utf8',timeout:20000,maxBuffer:1600000}):await readFile(path,'utf8');
-      if(!text.trim()) throw Error('No readable text in '+entry.name);
-      docs.push({name:relative(folder,path),text});
-    }
-  }
-  await walk(folder);return docs;
-}
+import {readDocuments} from './documents.mjs';
+const documents=folder=>readDocuments(folder,args.includes('--structured'));
 async function runBuild(workerData,budgetMs){
   if(!Number.isInteger(budgetMs)||budgetMs<1||budgetMs>1800000)throw Error('Budget must be 1–1,800,000 milliseconds.');
   const worker=new Worker(new URL('./build-worker.mjs',import.meta.url),{workerData});

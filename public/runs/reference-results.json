@@ -1,0 +1,1066 @@
+[
+  {
+    "config": "V1 lexical",
+    "commit": "6672204",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 35,
+      "total": 75,
+      "lower": 0.35815696338970343,
+      "upper": 0.5784246261091504
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 26,
+      "total": 30,
+      "lower": 0.703186733179637,
+      "upper": 0.9469034451594526
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 15,
+      "lower": 0.10897453325692374,
+      "upper": 0.5195043405598057
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.43333333333333335
+  },
+  {
+    "config": "V1 lexical",
+    "commit": "6672204",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 24,
+      "total": 60,
+      "lower": 0.2856949053488255,
+      "upper": 0.5263394650795924
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 16,
+      "total": 18,
+      "lower": 0.672002348698212,
+      "upper": 0.9689804773543876
+    },
+    "nearMissFalseAnswers": {
+      "count": 2,
+      "total": 18,
+      "lower": 0.03101952264561239,
+      "upper": 0.32799765130178804
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.4444444444444444
+  },
+  {
+    "config": "V1 lexical",
+    "commit": "6672204",
+    "group": "third",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 26,
+      "total": 60,
+      "lower": 0.3157239680468677,
+      "upper": 0.5589656122387444
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 20,
+      "total": 24,
+      "lower": 0.6414692935030095,
+      "upper": 0.9332132367136705
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 24,
+      "lower": 0.06678676328632951,
+      "upper": 0.3585307064969906
+    },
+    "suite": "holdout3",
+    "balancedAccuracy": 0.4166666666666667
+  },
+  {
+    "config": "Structured lexical, split",
+    "commit": "efb689a",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 39,
+      "total": 75,
+      "lower": 0.4087421577281785,
+      "upper": 0.6293088885725093
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Structured lexical, split",
+    "commit": "efb689a",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 24,
+      "total": 60,
+      "lower": 0.2856949053488255,
+      "upper": 0.5263394650795924
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 16,
+      "total": 18,
+      "lower": 0.672002348698212,
+      "upper": 0.9689804773543876
+    },
+    "nearMissFalseAnswers": {
+      "count": 2,
+      "total": 18,
+      "lower": 0.03101952264561239,
+      "upper": 0.32799765130178804
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.4444444444444444
+  },
+  {
+    "config": "Dense fallback",
+    "commit": "6875964",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 47,
+      "total": 75,
+      "lower": 0.513549651144567,
+      "upper": 0.7274403087597889
+    },
+    "answerableRecall": {
+      "count": 8,
+      "total": 30,
+      "lower": 0.14182663319596317,
+      "upper": 0.4444796169518888
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.6333333333333333
+  },
+  {
+    "config": "Dense fallback",
+    "commit": "6875964",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 25,
+      "total": 60,
+      "lower": 0.30064278558341617,
+      "upper": 0.5427191897735989
+    },
+    "answerableRecall": {
+      "count": 5,
+      "total": 33,
+      "lower": 0.06650457281607568,
+      "upper": 0.3091987588044212
+    },
+    "refusalRecall": {
+      "count": 12,
+      "total": 18,
+      "lower": 0.43749467295945105,
+      "upper": 0.837212252491663
+    },
+    "nearMissFalseAnswers": {
+      "count": 6,
+      "total": 18,
+      "lower": 0.1627877475083369,
+      "upper": 0.5625053270405489
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.40909090909090906
+  },
+  {
+    "config": "V2 contextual, original IDs",
+    "commit": "1d6e13c",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 54,
+      "total": 75,
+      "lower": 0.6095930981193548,
+      "upper": 0.8089684111882106
+    },
+    "answerableRecall": {
+      "count": 15,
+      "total": 30,
+      "lower": 0.33154125640533766,
+      "upper": 0.6684587435946623
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.75
+  },
+  {
+    "config": "V2 contextual, original IDs",
+    "commit": "1d6e13c",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 29,
+      "total": 60,
+      "lower": 0.36175049539732784,
+      "upper": 0.6069218996740751
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 33,
+      "lower": 0.10676021533020799,
+      "upper": 0.3775164499215069
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 18,
+      "lower": 0.5478541568378739,
+      "upper": 0.9099907189139831
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 18,
+      "lower": 0.09000928108601694,
+      "upper": 0.45214584316212625
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.494949494949495
+  },
+  {
+    "config": "V2 contextual, normalized IDs",
+    "commit": "6c68b0e",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 54,
+      "total": 75,
+      "lower": 0.6095930981193548,
+      "upper": 0.8089684111882106
+    },
+    "answerableRecall": {
+      "count": 15,
+      "total": 30,
+      "lower": 0.33154125640533766,
+      "upper": 0.6684587435946623
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.75
+  },
+  {
+    "config": "V2 contextual, normalized IDs",
+    "commit": "6c68b0e",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 29,
+      "total": 60,
+      "lower": 0.36175049539732784,
+      "upper": 0.6069218996740751
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 33,
+      "lower": 0.10676021533020799,
+      "upper": 0.3775164499215069
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 18,
+      "lower": 0.5478541568378739,
+      "upper": 0.9099907189139831
+    },
+    "nearMissFalseAnswers": {
+      "count": 4,
+      "total": 18,
+      "lower": 0.09000928108601694,
+      "upper": 0.45214584316212625
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.494949494949495
+  },
+  {
+    "config": "V2 contextual, normalized IDs",
+    "commit": "6c68b0e",
+    "group": "third",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 32,
+      "total": 60,
+      "lower": 0.4089342702715789,
+      "upper": 0.6537209395856151
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 30,
+      "lower": 0.11792388144489496,
+      "upper": 0.40928326158122164
+    },
+    "refusalRecall": {
+      "count": 19,
+      "total": 24,
+      "lower": 0.5952954674681133,
+      "upper": 0.9075517464714814
+    },
+    "nearMissFalseAnswers": {
+      "count": 5,
+      "total": 24,
+      "lower": 0.09244825352851857,
+      "upper": 0.40470453253188665
+    },
+    "suite": "holdout3",
+    "balancedAccuracy": 0.5125
+  },
+  {
+    "config": "V2 with local index expansion",
+    "commit": "e6db09c",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 49,
+      "total": 75,
+      "lower": 0.5405474609420188,
+      "upper": 0.7511772273632541
+    },
+    "answerableRecall": {
+      "count": 10,
+      "total": 30,
+      "lower": 0.19230498083676134,
+      "upper": 0.5121994835545616
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.6666666666666666
+  },
+  {
+    "config": "V2 with local index expansion",
+    "commit": "e6db09c",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 27,
+      "total": 60,
+      "lower": 0.3309365440675524,
+      "upper": 0.5750806411466566
+    },
+    "answerableRecall": {
+      "count": 4,
+      "total": 33,
+      "lower": 0.04816161309413555,
+      "upper": 0.2732550517107524
+    },
+    "refusalRecall": {
+      "count": 15,
+      "total": 18,
+      "lower": 0.6077796189608428,
+      "upper": 0.9416342319413856
+    },
+    "nearMissFalseAnswers": {
+      "count": 3,
+      "total": 18,
+      "lower": 0.05836576805861446,
+      "upper": 0.39222038103915724
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.4772727272727273
+  },
+  {
+    "config": "Portable encoder, earlier gate",
+    "commit": "9cffce0",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 48,
+      "total": 75,
+      "lower": 0.5270066131909779,
+      "upper": 0.7393507109138366
+    },
+    "answerableRecall": {
+      "count": 10,
+      "total": 30,
+      "lower": 0.19230498083676134,
+      "upper": 0.5121994835545616
+    },
+    "refusalRecall": {
+      "count": 29,
+      "total": 30,
+      "lower": 0.8332960900859082,
+      "upper": 0.9940914096183874
+    },
+    "nearMissFalseAnswers": {
+      "count": 1,
+      "total": 15,
+      "lower": 0.011866895493268553,
+      "upper": 0.2981652987378003
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.65
+  },
+  {
+    "config": "Portable encoder, earlier gate",
+    "commit": "9cffce0",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 26,
+      "total": 60,
+      "lower": 0.3157239680468677,
+      "upper": 0.5589656122387444
+    },
+    "answerableRecall": {
+      "count": 9,
+      "total": 33,
+      "lower": 0.1506744088542064,
+      "upper": 0.44217559002872625
+    },
+    "refusalRecall": {
+      "count": 9,
+      "total": 18,
+      "lower": 0.29031021505169974,
+      "upper": 0.7096897849483003
+    },
+    "nearMissFalseAnswers": {
+      "count": 9,
+      "total": 18,
+      "lower": 0.29031021505169974,
+      "upper": 0.7096897849483003
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.38636363636363635
+  },
+  {
+    "config": "Portable encoder, earlier gate",
+    "commit": "9cffce0",
+    "group": "third",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 27,
+      "total": 60,
+      "lower": 0.3309365440675524,
+      "upper": 0.5750806411466566
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 30,
+      "lower": 0.11792388144489496,
+      "upper": 0.40928326158122164
+    },
+    "refusalRecall": {
+      "count": 14,
+      "total": 24,
+      "lower": 0.3883466586522876,
+      "upper": 0.7553239739018824
+    },
+    "nearMissFalseAnswers": {
+      "count": 10,
+      "total": 24,
+      "lower": 0.24467602609811764,
+      "upper": 0.6116533413477124
+    },
+    "suite": "holdout3",
+    "balancedAccuracy": 0.4083333333333333
+  },
+  {
+    "config": "V2 + calibrated gate",
+    "commit": "972af33",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 39,
+      "total": 75,
+      "lower": 0.4087421577281785,
+      "upper": 0.6293088885725093
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "V2 + calibrated gate",
+    "commit": "972af33",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 25,
+      "total": 60,
+      "lower": 0.30064278558341617,
+      "upper": 0.5427191897735989
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 17,
+      "total": 18,
+      "lower": 0.7424269921812741,
+      "upper": 0.990124809021697
+    },
+    "nearMissFalseAnswers": {
+      "count": 1,
+      "total": 18,
+      "lower": 0.009875190978303097,
+      "upper": 0.25757300781872594
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.4722222222222222
+  },
+  {
+    "config": "V2 + calibrated gate",
+    "commit": "972af33",
+    "group": "third",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 30,
+      "total": 60,
+      "lower": 0.3773502424155577,
+      "upper": 0.6226497575844423
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "suite": "holdout3",
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Calibrated gate + CLI reranker",
+    "commit": "972af33",
+    "group": "first",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 39,
+      "total": 75,
+      "lower": 0.4087421577281785,
+      "upper": 0.6293088885725093
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "suite": "holdout",
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Calibrated gate + CLI reranker",
+    "commit": "972af33",
+    "group": "second",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 25,
+      "total": 60,
+      "lower": 0.30064278558341617,
+      "upper": 0.5427191897735989
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 17,
+      "total": 18,
+      "lower": 0.7424269921812741,
+      "upper": 0.990124809021697
+    },
+    "nearMissFalseAnswers": {
+      "count": 1,
+      "total": 18,
+      "lower": 0.009875190978303097,
+      "upper": 0.25757300781872594
+    },
+    "suite": "holdout2",
+    "balancedAccuracy": 0.4722222222222222
+  },
+  {
+    "config": "Always refuse",
+    "suite": "holdout",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 30,
+      "total": 75,
+      "lower": 0.2966251564586679,
+      "upper": 0.5131196120378932
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 30,
+      "total": 30,
+      "lower": 0.8864866068260312,
+      "upper": 0.9999999999999999
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 15,
+      "lower": 0,
+      "upper": 0.20388330103584862
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Always answer with top-1",
+    "suite": "holdout",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 9,
+      "total": 75,
+      "lower": 0.06443371823944515,
+      "upper": 0.2125964020474873
+    },
+    "answerableRecall": {
+      "count": 9,
+      "total": 30,
+      "lower": 0.16664748268243793,
+      "upper": 0.47875787458714947
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "nearMissFalseAnswers": {
+      "count": 15,
+      "total": 15,
+      "lower": 0.7961166989641515,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.15
+  },
+  {
+    "config": "Always refuse",
+    "suite": "holdout2",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 18,
+      "total": 60,
+      "lower": 0.19898166138769108,
+      "upper": 0.42508707946914487
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 33,
+      "lower": 0,
+      "upper": 0.10426999754245206
+    },
+    "refusalRecall": {
+      "count": 18,
+      "total": 18,
+      "lower": 0.8241207763533425,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 18,
+      "lower": 0,
+      "upper": 0.17587922364665765
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Always answer with top-1",
+    "suite": "holdout2",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 9,
+      "total": 60,
+      "lower": 0.08097440580167739,
+      "upper": 0.2611458906977855
+    },
+    "answerableRecall": {
+      "count": 9,
+      "total": 33,
+      "lower": 0.1506744088542064,
+      "upper": 0.44217559002872625
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 18,
+      "lower": 0,
+      "upper": 0.17587922364665765
+    },
+    "nearMissFalseAnswers": {
+      "count": 18,
+      "total": 18,
+      "lower": 0.8241207763533425,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.13636363636363635
+  },
+  {
+    "config": "Always refuse",
+    "suite": "holdout3",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 24,
+      "total": 60,
+      "lower": 0.2856949053488255,
+      "upper": 0.5263394650795924
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 30,
+      "lower": 0,
+      "upper": 0.11351339317396876
+    },
+    "refusalRecall": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Always answer with top-1",
+    "suite": "holdout3",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 7,
+      "total": 60,
+      "lower": 0.057677206400560316,
+      "upper": 0.22178788024170856
+    },
+    "answerableRecall": {
+      "count": 7,
+      "total": 30,
+      "lower": 0.11792388144489496,
+      "upper": 0.40928326158122164
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 24,
+      "lower": 1.3877787807814457e-17,
+      "upper": 0.13797620467498017
+    },
+    "nearMissFalseAnswers": {
+      "count": 24,
+      "total": 24,
+      "lower": 0.8620237953250198,
+      "upper": 1
+    },
+    "balancedAccuracy": 0.11666666666666667
+  },
+  {
+    "config": "V1 lexical",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 85,
+      "total": 195,
+      "lower": 0.36820146088743944,
+      "upper": 0.5060702320066274
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 93,
+      "lower": 0,
+      "upper": 0.03966750261173514
+    },
+    "refusalRecall": {
+      "count": 62,
+      "total": 72,
+      "lower": 0.762868127494437,
+      "upper": 0.9227726922970102
+    },
+    "nearMissFalseAnswers": {
+      "count": 10,
+      "total": 57,
+      "lower": 0.0981885223970996,
+      "upper": 0.29367352829693927
+    },
+    "balancedAccuracy": 0.4305555555555556
+  },
+  {
+    "config": "V2 contextual, normalized IDs",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 115,
+      "total": 195,
+      "lower": 0.5196196698744,
+      "upper": 0.6563999600739066
+    },
+    "answerableRecall": {
+      "count": 29,
+      "total": 93,
+      "lower": 0.22672869251325084,
+      "upper": 0.411855851480413
+    },
+    "refusalRecall": {
+      "count": 63,
+      "total": 72,
+      "lower": 0.7791894627583916,
+      "upper": 0.9328221577942649
+    },
+    "nearMissFalseAnswers": {
+      "count": 9,
+      "total": 57,
+      "lower": 0.0853579597035527,
+      "upper": 0.2736317694063802
+    },
+    "balancedAccuracy": 0.5934139784946236
+  },
+  {
+    "config": "Portable encoder, earlier gate",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 101,
+      "total": 195,
+      "lower": 0.44814911873655955,
+      "upper": 0.5870548072531019
+    },
+    "answerableRecall": {
+      "count": 26,
+      "total": 93,
+      "lower": 0.19850339172000364,
+      "upper": 0.37812421695828824
+    },
+    "refusalRecall": {
+      "count": 52,
+      "total": 72,
+      "lower": 0.6095356707476457,
+      "upper": 0.8123971414317063
+    },
+    "nearMissFalseAnswers": {
+      "count": 20,
+      "total": 57,
+      "lower": 0.2400042200916009,
+      "upper": 0.480581046443498
+    },
+    "balancedAccuracy": 0.5008960573476702
+  },
+  {
+    "config": "V2 + calibrated gate",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 94,
+      "total": 195,
+      "lower": 0.41294519274689817,
+      "upper": 0.5518508812634405
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 93,
+      "lower": 0,
+      "upper": 0.03966750261173514
+    },
+    "refusalRecall": {
+      "count": 71,
+      "total": 72,
+      "lower": 0.9254339785252386,
+      "upper": 0.9975440481170943
+    },
+    "nearMissFalseAnswers": {
+      "count": 1,
+      "total": 57,
+      "lower": 0.003103664651408093,
+      "upper": 0.09290749178567684
+    },
+    "balancedAccuracy": 0.4930555555555556
+  },
+  {
+    "config": "Always refuse",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 72,
+      "total": 195,
+      "lower": 0.30463176793679947,
+      "upper": 0.43888248556709686
+    },
+    "answerableRecall": {
+      "count": 0,
+      "total": 93,
+      "lower": 0,
+      "upper": 0.03966750261173514
+    },
+    "refusalRecall": {
+      "count": 72,
+      "total": 72,
+      "lower": 0.9493488274035422,
+      "upper": 1
+    },
+    "nearMissFalseAnswers": {
+      "count": 0,
+      "total": 57,
+      "lower": 0,
+      "upper": 0.06313883485297894
+    },
+    "balancedAccuracy": 0.5
+  },
+  {
+    "config": "Always answer with top-1",
+    "suite": "pooled",
+    "judge": "fact-source-v1",
+    "passed": {
+      "count": 25,
+      "total": 195,
+      "lower": 0.0883679957580216,
+      "upper": 0.18240782302756584
+    },
+    "answerableRecall": {
+      "count": 25,
+      "total": 93,
+      "lower": 0.18921308125080688,
+      "upper": 0.3667622156556944
+    },
+    "refusalRecall": {
+      "count": 0,
+      "total": 72,
+      "lower": 0,
+      "upper": 0.05065117259645781
+    },
+    "nearMissFalseAnswers": {
+      "count": 57,
+      "total": 57,
+      "lower": 0.9368611651470209,
+      "upper": 0.9999999999999998
+    },
+    "balancedAccuracy": 0.13440860215053763
+  }
+]

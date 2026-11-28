@@ -53,3 +53,13 @@ Holdouts 1 and 2 are development data. Their past failures informed the choice o
 The portable system changes both encoder and gate relative to historical MiniLM V2. The portable-encoder control in metrics.json keeps the previous gate. On holdout 3 the control passed 27/60. A higher total driven by more refusals does not demonstrate improved supported answering. The optional reranker is a separate development experiment. It was excluded from holdout 3 to preserve the declared comparison.
 
 [All counts and curves manifest](metrics.json) · [Per-question failure evidence](../error-analysis-holdout2.json) · [Raw gate receipts with generated calibration pairs and curves](gate/) · [First third-suite receipts](../holdout3/frozen/) · [Browser and CLI parity receipt](browser-cli-parity.json)
+
+## Development reference comparison
+
+| Suite | Configuration | Overall | Answerable recall | Refusal recall | Near-miss false answers | Balanced accuracy |
+|---|---|---:|---:|---:|---:|---:|
+| pooled | V2 contextual, normalized IDs | 115/195 | 29/93 [22.7%, 41.2%] | 63/72 [77.9%, 93.3%] | 9/57 [8.5%, 27.4%] | 59.3% |
+| pooled | Always refuse | 72/195 | 0/93 [0.0%, 4.0%] | 72/72 [94.9%, 100.0%] | 0/57 [0.0%, 6.3%] | 50.0% |
+| pooled | Always answer with top-1 | 25/195 | 25/93 [18.9%, 36.7%] | 0/72 [0.0%, 5.1%] | 57/57 [93.7%, 100.0%] | 13.4% |
+
+[Full suite comparisons, interval definitions and historical configurations](../reference-results.md)

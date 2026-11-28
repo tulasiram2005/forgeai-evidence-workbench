@@ -215,3 +215,13 @@ node retrieval/gate-study-report.mjs
 The top candidates are scored using cosine, rank margin, inverse-document-frequency coverage, unmatched rare terms, expected answer type and heading overlap. The calibration log in report.json records the generated samples, candidate cutoffs and selected operating point. The reference label is the source passage ID. Selection maximizes generated positive hits under the requested false-answer cap and breaks ties by fewer false answers, then a higher cutoff. The development holdouts are excluded from selection.
 
 For the optional CLI reranker, cache the pinned weights once, then add `--rerank` to the build or holdout command. The browser rejects reranker-dependent definitions. The CPU model is cross-encoder/ms-marco-TinyBERT-L-2-v2 at revision `81d1926f67cb8eee2c2be17ca9f793c7c3bd20cc`. Inference uses locally cached weights. Both development reranker receipts and the browser parity receipt are in the study folder.
+
+## Development reference comparison
+
+| Suite | Configuration | Overall | Answerable recall | Refusal recall | Near-miss false answers | Balanced accuracy |
+|---|---|---:|---:|---:|---:|---:|
+| pooled | V2 contextual, normalized IDs | 115/195 | 29/93 [22.7%, 41.2%] | 63/72 [77.9%, 93.3%] | 9/57 [8.5%, 27.4%] | 59.3% |
+| pooled | Always refuse | 72/195 | 0/93 [0.0%, 4.0%] | 72/72 [94.9%, 100.0%] | 0/57 [0.0%, 6.3%] | 50.0% |
+| pooled | Always answer with top-1 | 25/195 | 25/93 [18.9%, 36.7%] | 0/72 [0.0%, 5.1%] | 57/57 [93.7%, 100.0%] | 13.4% |
+
+[Full suite comparisons, interval definitions and historical configurations](evidence/v2/reference-results.md)

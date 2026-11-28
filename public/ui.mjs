@@ -40,20 +40,23 @@ byId('open-failures').onclick=()=>{
   byId('case-filter').value='fail';byId('case-search').value='';renderCases();
   byId('case-filter').focus();
 };
-fetch('./runs/holdout-summary.json').then(response=>response.json()).then(data=>{
+fetch('./runs/reference-results.json').then(response=>response.json()).then(data=>{
+  const configs=['V2 contextual, normalized IDs','Always refuse','Always answer with top-1'];
   const table=item('table');
-  table.append(item('caption','Cases passed on the same frozen questions'));
+  table.append(item('caption','Development suites combined'));
   const heading=item('tr');
-  for(const name of ['Folder','Baseline','Structured intake','Local dense experiment'])heading.append(item('th',name));
+  for(const name of ['Configuration','Answerable recall','Refusal recall','Balanced accuracy'])heading.append(item('th',name));
   table.append(heading);
-  for(const r of data){
-    const line=item('tr');line.append(item('th',r.name));
-    for(const score of [r.baseline,r,r.dense]) line.append(item('td',score.passed+'/'+score.total));
+  const interval=m=>m.count+'/'+m.total+' ('+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)';
+  for(const config of configs){
+    const r=data.find(row=>row.suite==='pooled' && row.config===config);
+    const line=item('tr');
+    line.append(item('th',config),item('td',interval(r.answerableRecall)),item('td',interval(r.refusalRecall)),item('td',(100*r.balancedAccuracy).toFixed(1)+'%'));
     table.append(line);
   }
-  byId('field-detail').replaceChildren(table,item('p','The headline strip shows structured lexical intake. The dense experiment runs on the CLI. These developer-authored fixtures are separate from each workspace’s generated case map.'));
-  byId('field-scores').replaceChildren(...data.map(r=>{
-    const cell=item('div');cell.append(item('strong',r.passed+'/'+r.total),item('span',r.name));return cell;
+  byId('field-detail').replaceChildren(table,item('p','Class recalls include question-level 95% Wilson intervals. Balanced accuracy weights both classes equally.'));
+  byId('field-scores').replaceChildren(...data.filter(r=>r.config===configs[0] && r.suite!=='pooled').map((r,i)=>{
+    const cell=item('div');cell.append(item('strong',r.passed.count+'/'+r.passed.total),item('span','Development suite '+(i+1)));return cell;
   }));
 }).catch(()=>{byId('field-scores').textContent='External results unavailable';});
 
