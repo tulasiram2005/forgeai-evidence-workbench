@@ -72,7 +72,7 @@ function renderCases() {
   list.replaceChildren();
   const filter = byId('case-filter').value;
   const retained = activeRun.iterations[activeRun.report.retainedRound-1] ?? activeRun.iterations.find(entry => entry.passed === activeRun.report.passed);
-  const results = retained?.results ?? [];
+  const results = [...(retained?.results ?? []),...(activeRun.report.testResults??[])];
   const definitions = new Map(activeRun.evals.map(entry => [entry.id, entry]));
   const search = byId('case-search').value.trim().toLowerCase();
   const sorted = [...results].sort((a,b) => Number(a.passed)-Number(b.passed));
@@ -141,7 +141,8 @@ function render(run, key) {
   byId('score').replaceChildren(document.createTextNode(String(report.passed)), item('small', ' / ' + report.total));
   byId('score-note').textContent = (report.total-report.passed)+' failed';
   const retained = iterations[report.retainedRound-1] ?? iterations.find(entry => entry.passed === report.passed);
-  byId('score-meter').replaceChildren(...(retained?.results ?? []).map(result => {
+  const released=[...(retained?.results??[]),...(report.testResults??[])];
+  byId('score-meter').replaceChildren(...released.map(result => {
     const button = item('button',result.id,result.passed ? 'map-pass' : 'map-fail');
     const label = result.id+' · '+(result.passed?'Passed':'Failed')+' · '+result.question;
     button.title = label;
@@ -165,11 +166,12 @@ function render(run, key) {
     return node;
   }));
   const classes=new Map();
-  for(const r of retained?.results??[]){
+  for(const r of released){
     const score=classes.get(r.kind)??{passed:0,total:0};
     score.total++;score.passed+=Number(r.passed);classes.set(r.kind,score);
   }
   byId('stop').replaceChildren(item('p', 'Stopped · ' + pretty(report.stop)), item('p', 'Compiler · ' + (report.model || 'Local')));
+  for(const [name,m] of Object.entries(report.splits??{}))byId('stop').append(evidenceRow(name,m.passed+'/'+m.total+' (95% Wilson '+(100*m.lower).toFixed(1)+'% to '+(100*m.upper).toFixed(1)+'%)'));
   for(const [kind,score] of classes)byId('stop').append(evidenceRow(pretty(kind),score.passed+'/'+score.total));
   if (report.metrics) {
     for (const [key,label] of [['citationPrecision','Cited passages matching expectations'],['evidenceRecall','Expected passages recovered'],['requiredRefusals','Required refusals observed']]) {

@@ -6,6 +6,10 @@ Turn a brief and a document folder into an agent you can question, an evaluation
 
 Start with **Test the agent** and ask “How much notice is needed for a shift swap?” Open its source passage. Switch to **Conservation operations** and ask “What is the pack quantity for MAT102?” The second question executes a catalogue lookup. Choose **New build** to try your own sources. Files and answers for custom builds stay in the browser tab. Export the dossier before closing the tab.
 
+## V2 release review
+
+Fresh-suite contextual retrieval passed 22/60 cases, including 1/30 supported questions and 15/24 correct refusals. It missed both preregistered effectiveness criteria. Review the raw responses before using this build for decisions. [Prospective results](evidence/v2/holdout4/REPORT.md) · [All-suite comparison](evidence/v2/release-results.md) · [Judge controls](evidence/v2/judge-stress.md) · [Linux rehearsals](evidence/v2/rehearsal-linux/)
+
 ## Release evidence
 
 | Compiled agent | Generated checks, by round | Released | Attached tools | Unsupported request |
@@ -19,13 +23,18 @@ Both releases used local Qwen 2.5 1.5B inference on CPU. Each evidence directory
 
 ## Run a new brief
 
-Requires Node.js 22+. The website, CLI and tests use built-in APIs. Only PDF input needs Python and pypdf. For text PDFs, install the optional pinned reader with `python3 -m pip install -r requirements-pdf.txt` in a virtual environment. Scanned images require a text transcript or OCR before intake.
+The release CLI uses Node.js 22+, Git, Python, the pinned PDF reader and local MiniLM weights. Browser inference fetches the bundled model from the workbench origin on first use. Ollama is optional for question and brief generation. The CLI announces deterministic fallback if automatic detection or generation fails. From a Python virtual environment, run the following setup once.
+
+```sh
+python3 -m pip install -r requirements-pdf.txt -r retrieval/requirements.txt
+python3 -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2', revision='c9745ed1d9f207416be6d2e6f8de32d1f16199bf')"
+```
 
 ```sh
 npm test
 npm start
 # Open http://127.0.0.1:8417
-node cli.mjs build --brief examples/shore/brief.txt --docs examples/shore/docs --out runs/my-shore
+node cli.mjs forge --brief examples/shore/brief.txt --docs examples/shore/docs --out runs/my-shore
 node cli.mjs ask runs/my-shore/definition.json 'How much notice is needed for a shift swap?'
 node cli.mjs regression runs/my-shore/definition.json runs/my-shore/evals.json
 ```
