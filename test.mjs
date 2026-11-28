@@ -154,3 +154,14 @@ test('identical answers retain provenance changes but ignore passage renumbering
   after.chunks[0].source='b.txt';
   assert.equal((await compareReleases(before,after,cases)).results[0].change,'Citation changed');
 });
+
+test('split validation excludes reserved cases from repair targets and exercises the judge',()=>{
+  const r=build('Explain kiln cooldown and glaze measure',[
+    {name:'oven.txt',text:'Kiln cooldown: Wait 18 hours.'},
+    {name:'glaze.txt',text:'Glaze measure: Add 8 grams.'}],{splitValidation:true});
+  const ids=r.report.validationIds;
+  assert.ok(ids.length>0 && ids.length<r.evals.length);
+  assert.ok(r.iterations.every(i=>i.addressed.every(id=>!ids.includes(id))));
+  assert.equal(r.report.judgeControls.filter(c=>c.rejected).length,4);
+  assert.equal(r.iterations[r.report.retainedRound-1].passed,r.report.passed);
+});

@@ -97,10 +97,10 @@ async function main(){
     if(!result.definition)process.exitCode=2;
     return;
   }
-  if(command==='build'){
+  if(command==='build' || command==='forge'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
-    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={};
+    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation')};
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
@@ -116,7 +116,15 @@ async function main(){
       opts.approvedRequirements=draft;
     }
     const budgetMs=Number(flag('--budget-ms')??180000);
-    const model=args.includes('--model')?(process.env.FORGE_MODEL||'qwen2.5:1.5b'):null;
+    const requested=process.env.FORGE_MODEL||'qwen2.5:1.5b';
+    let model=args.includes('--model')?requested:null;
+    if(command==='forge' && !model && !args.includes('--deterministic')){
+      try{
+        const response=await fetch('http://127.0.0.1:11434/api/tags',{signal:AbortSignal.timeout(900)});
+        if(response.ok && (await response.json()).models.some(m=>m.name===requested)) model=requested;
+      }catch{ /* The portable compiler works without Ollama. */ }
+    }
+    if(command==='forge')console.error(model?'Local model: '+model:'Using deterministic compiler. No model inference requested or available.');
     const start=performance.now();
     const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
     run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
@@ -126,6 +134,13 @@ async function main(){
       for(const [name,value] of Object.entries({...run,receipt})){
         await writeFile(join(tmp,name+'.json'),JSON.stringify(value,null,2)+'\n');
       }
+      const lines=['# Build review','',run.report.model,'', '## Evaluation rounds','',
+        ...run.iterations.map(r=>'- Round '+r.round+' · '+r.passed+'/'+r.total+(r.accepted===undefined?'':' · tuning '+r.tuning+'/'+(r.total-run.report.validationIds.length)+' · validation '+r.validation+'/'+run.report.validationIds.length+' · '+(r.accepted?'accepted':'rejected'))),
+        '', 'Released round '+run.report.retainedRound+'. '+run.report.stop+'.','','## Judge controls','',
+        ...run.report.judgeControls.map(c=>'- '+c.name+' · '+(c.rejected?'rejected':'accepted')),
+        '', '## Remaining failures','',...run.report.failures.map(r=>'- '+r.id+' · '+r.category+' · '+r.question),
+        ...(run.report.failures.length?[]:['All generated checks passed.']), '', '## Limits','',...run.report.limitations,''];
+      await writeFile(join(tmp,'FINAL.md'),lines.join('\n'));
       await rename(tmp,target);
     }finally{await rm(tmp,{recursive:true,force:true});}
     console.log(JSON.stringify({out,passed:run.report.passed,total:run.report.total,stop:run.report.stop,tools:run.definition.tools},null,2));

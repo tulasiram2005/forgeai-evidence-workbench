@@ -1,3 +1,4 @@
+import {validationIds,judgeControls} from './validation.mjs';
 // Shared by the browser and CLI. No network, persistence or ambient tool access.
 const stop = new Set('a an the and or to of in is are on for what which how does do about can i me tell please with by at as that it from my our your we should when where who must policy rules rule explain describe need assistant answer questions give help staff team according required apply applies details compare summarize requirement requirements both source sources document documents covers cover says say'.split(' '));
 const terms = s => [...new Set(String(s).toLowerCase().match(/[\p{L}\p{N}]+/gu)?.map(t=>t.length>4?t.replace(/(?:ing|s)$/,''):t).filter(t=>!stop.has(t)) || [])];
@@ -261,15 +262,26 @@ export function build(brief,docs,opts={}){
   const gaps=requirements.mustRefuse;
   let definition={version:1,systemPrompt:[model.prompt||'Answer the requester using the supplied corpus.', 'Audience: '+requirements.audience+'. Tone: '+requirements.tone+'. Quote only verified passages with source IDs. Ask for clarification when the topic is missing. Refuse unsupported requests.'].join('\n'),requirements,tools:selectTools(brief,docs),gaps,chunks,retrieval:{chunking:'Sentence or CSV record; 750-character text ceiling',threshold:0.52,splitConjunction:false},outputContract:{status:['answered','clarify','refused'],text:'string',citations:'Array<{id, source, text}>',tool:'optional registry ID'}};
   const evals=makeEvals(chunks,model.questions,gaps), iterations=[];
+  const held=opts.splitValidation ? validationIds(evals) : new Set();
+  let acceptedTuning=-1, acceptedHeld=-1, retainedRound=1;
   let previous=-1, best=definition, bestCount=-1, addressed=[],change='Initial definition',stop='Iteration limit reached';
   for(let round=1;round<=3;round++){
     const results=evaluate(definition,evals), passed=results.filter(r=>r.passed).length;
     iterations.push({round,passed,total:results.length,change,addressed,before:previous<0?null:previous,after:passed,configuration:{...definition.retrieval},results});
-    if(passed>bestCount){best=definition;bestCount=passed;}
+    const tuningResults=results.filter(r=>!held.has(r.id));
+    const tuning=tuningResults.filter(r=>r.passed).length;
+    const validation=passed-tuning;
+    if(opts.splitValidation){
+      const accepted=tuning>acceptedTuning && validation>=acceptedHeld-1;
+      Object.assign(iterations.at(-1),{tuning,validation,accepted});
+      if(!accepted){stop='Candidate failed split acceptance';break;}
+      acceptedTuning=tuning; acceptedHeld=validation;
+    }
+    if(opts.splitValidation || passed>bestCount){best=definition;bestCount=passed;retainedRound=round;}
     if(passed===results.length){stop='All generated checks passed';break;}
-    if(passed<=previous){stop='No improvement; retained best definition';break;}
+    if(!opts.splitValidation && passed<=previous){stop='No improvement; retained best definition';break;}
     previous=passed;
-    const fails=results.filter(r=>!r.passed);
+    const fails=tuningResults.filter(r=>!r.passed);
     const cross=fails.filter(r=>r.kind==='cross-source');
     const wrong=fails.filter(r=>r.category==='wrong refusal');
     if(cross.length&&!definition.retrieval.splitConjunction){
@@ -282,5 +294,7 @@ export function build(brief,docs,opts={}){
   }
   const released=evaluate(best,evals);
   const failures=released.filter(r=>!r.passed);
-  return {requirements,definition:best,evals,iterations,report:{passed:bestCount,total:evals.length,stop,failures,metrics:summarizeEvidence(evals,released),model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
+  const controls=judgeControls(best,evals,evaluate);
+  if(controls.some(c=>!c.rejected))throw Error('Evaluation judge accepted a broken control.');
+  return {requirements,definition:best,evals,iterations,report:{retainedRound,judgeControls:controls,...(opts.splitValidation?{validationIds:[...held]}:{}),passed:bestCount,total:evals.length,stop,failures,metrics:summarizeEvidence(evals,released),model:opts.model||'Deterministic local compiler',limitations:['Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.','A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes.']}};
 }
