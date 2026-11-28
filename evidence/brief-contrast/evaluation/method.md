@@ -1,0 +1,5 @@
+# Partial-answer development replay
+
+Compare strict dispatch and experimental review-parts on all original questions in development holdouts 1 through 4. Freeze candidate 49c0d52 before scoring. Compile each corpus through the no-model forge CLI. Preserve question text and ordering. Pair adjacent entries as explicit independent questions. If the final group has only one entry, repeat the first as its companion and exclude the repeated entry from metrics. Do not split or rewrite compound questions. Judge each part with the existing extractive fact-and-source judge. Report per-class results, near-miss false answers and case-level changes. A group marked partial is not automatically a correct answer. This replay tests the explicit-parts interface and does not simulate a human authoring decompositions.
+
+Keep the experiment off by default. No tuning on these results. A development gain alone does not justify release. A new owner-supplied evaluation and separately adjudicated unsupported assertions would still be required.
