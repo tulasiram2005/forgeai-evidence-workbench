@@ -35,6 +35,20 @@ if(phase==='after'){
  const violations=await page.evaluate(async()=> (await axe.run()).violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)})));
  reports.push({tab,violations});
  }
+ await page.click('#remove-step');
+ await page.waitForSelector('#response h3');
+ await page.click('#policy-step');
+ await page.waitForFunction(()=>document.querySelector('#impact-status').textContent.includes('36'));
+ const custom=await page.evaluate(async()=>{
+   const worker=new Worker('/compiler.worker.mjs',{type:'module'});
+   try{return await new Promise((resolve,reject)=>{
+     worker.onmessage=({data})=>data.error?reject(Error(data.error)):resolve({runtime:data.run.definition.runtime.kind,verdict:data.run.report.assessment.verdict});
+     worker.onerror=e=>reject(Error(e.message));
+     worker.postMessage({brief:'Explain coat storage.',documents:[{name:'cloakroom.txt',text:'Coat storage: Use the maple wardrobe.'}]});
+   });}finally{worker.terminate();}
+ });
+ if(custom.runtime!=='evidence-first'||custom.verdict!=='DO NOT SHIP')throw Error('Incorrect default release');
+ await writeFile('evidence/ui/default-build.json',JSON.stringify(custom,null,2));
  await writeFile('evidence/ui/axe.json',JSON.stringify(reports,null,2));
  await writeFile('evidence/ui/external-requests.json',JSON.stringify(external));
  if(external.length||reports.some(r=>r.violations.length))throw Error('Accessibility or external request check failed');

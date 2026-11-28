@@ -556,6 +556,8 @@ fetch('./runs/submission.json').then(r=>r.json()).then(({summary,fresh,cases})=>
   const root=byId('fresh-trust'),strict=fresh.find(r=>r.config==='strict'),control=fresh.find(r=>r.config==='alwaysRefuse');
   root.replaceChildren(item('p','Fresh suite · '+strict.answerableRecall.count+'/'+strict.answerableRecall.total+' supported answers. '+strict.nearMissFalseAnswers.count+'/'+strict.nearMissFalseAnswers.total+' near-miss false answers.'),
     item('p','Balanced accuracy: evidence-first '+(100*strict.balancedAccuracy).toFixed(1)+'%, always refuse '+(100*control.balancedAccuracy).toFixed(1)+'%.'));
+  const development=summary.find(r=>r.suite==='holdout4');
+  root.append(item('p','Earlier contextual build · development suite 4: '+development.losses.passed+'/'+development.answerable+' supported answers.'));
   const pooled=summary.find(r=>r.suite==='pooled'),chart=byId('funnel-chart');
   for(const [label,value] of [['Indexed gold facts',pooled.oracle],['All facts in the top three',pooled.answerable-pooled.outsideHybridTop3],['Correct contextual answer',pooled.losses.passed]]){
     const bar=item('progress');bar.max=pooled.answerable;bar.value=value;bar.setAttribute('aria-label',label);
