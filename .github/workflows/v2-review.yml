@@ -1,0 +1,27 @@
+name: Inspect v2
+on:
+  push:
+    branches: [v2]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test && npm ci --prefix qa
+      - run: qa/node_modules/.bin/playwright-core install --with-deps chromium
+      - run: |
+          python3 -m http.server 8437 --bind 127.0.0.1 --directory public >/tmp/forge-http.log 2>&1 &
+          node qa/browser.mjs before https://forgeai-evidence-workbench.onrender.com
+          node qa/browser.mjs after http://127.0.0.1:8437
+          CHROME_PATH=$(node --input-type=module -e "import {chromium} from './qa/node_modules/playwright-core/index.mjs';console.log(chromium.executablePath())") qa/node_modules/.bin/lighthouse http://127.0.0.1:8437 --chrome-flags="--headless --no-sandbox" --output=json --output-path=evidence/ui/lighthouse.json --only-categories=performance,accessibility,best-practices --quiet
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: interface-inspection
+          path: evidence/ui
