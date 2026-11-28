@@ -1,0 +1,372 @@
+{
+  "passed": 12,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 5,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 2
+    },
+    "near miss": {
+      "passed": 5,
+      "total": 8
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "falseRefusals": {
+    "count": 5,
+    "total": 10
+  },
+  "falseAnswersOnRefusals": {
+    "count": 3,
+    "total": 8
+  },
+  "results": [
+    {
+      "question": "How quickly must I tell you my bike was stolen?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "72 hours"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "First notice: Report theft within 72 hours.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "filing.pdf",
+            "text": "First notice: Report theft within 72 hours.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Who gets my initial message?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "intake desk"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What paperwork proves I bought it?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "original receipt"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Purchase evidence: Supply the original receipt.",
+        "citations": [
+          {
+            "id": "D1.3",
+            "source": "filing.pdf",
+            "text": "Purchase evidence: Supply the original receipt.",
+            "page": 3
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Who oversees my case?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "claims examiner"
+      ],
+      "sources": [
+        "filing.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where do I take a bicycle the police found?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "shed Elm"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+        "citations": [
+          {
+            "id": "D2.1",
+            "source": "inspection.pdf",
+            "text": "Inspection location: Bring recovered bicycles to shed Elm.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "Who has to come in person?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "registered owner"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What does Harbour pay for one check?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "28 euros"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "inspection.pdf",
+            "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+            "page": 3
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "How many pictures should I send showing dents?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "four"
+      ],
+      "sources": [
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "answered",
+        "text": "Photographs: Supply four images of visible damage.",
+        "citations": [
+          {
+            "id": "D2.4",
+            "source": "inspection.pdf",
+            "text": "Photographs: Supply four images of visible damage.",
+            "page": 4
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "original receipt",
+        "shed Elm"
+      ],
+      "sources": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who manages my case and how many pictures of the dents are needed?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "claims examiner",
+        "four"
+      ],
+      "sources": [
+        "filing.pdf",
+        "inspection.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What deductible applies after a theft?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Is crash damage covered overseas?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Can the inspection fee be paid in dollars?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+        "citations": [
+          {
+            "id": "D2.3",
+            "source": "inspection.pdf",
+            "text": "Inspection fee: Harbour pays 28 euros per assessment.",
+            "page": 3
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "Is a scan accepted instead of the original receipt?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Purchase evidence: Supply the original receipt.",
+        "citations": [
+          {
+            "id": "D1.3",
+            "source": "filing.pdf",
+            "text": "Purchase evidence: Supply the original receipt.",
+            "page": 3
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "What is the maximum bicycle payout?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "How long does reimbursement take after inspection?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which phone number accepts theft notices?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "First notice: Report theft within 72 hours.",
+        "citations": [
+          {
+            "id": "D1.1",
+            "source": "filing.pdf",
+            "text": "First notice: Report theft within 72 hours.",
+            "page": 1
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "question": "What appeal deadline applies after denial?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}
