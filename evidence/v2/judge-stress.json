@@ -1,0 +1,334 @@
+{
+  "dateFormatControl": "Equivalent and changed dates checked on a separate dated fixture.",
+  "results": [
+    {
+      "suite": "holdout",
+      "judgeVersion": "extractive-fact-source-v2",
+      "total": 75,
+      "scores": {
+        "alwaysRefuse": 30,
+        "alwaysAnswerTop1": 9,
+        "fabricateNumber": 0,
+        "citeWrongSource": 0,
+        "copyQuestion": 0,
+        "oracle": 75
+      },
+      "changes": {
+        "oracle number change": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle appended claim": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle triple padding": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle case": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle whitespace": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle punctuation": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle number words": {
+          "eligible": 29,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle unit variants": {
+          "eligible": 18,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle source swap": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "contextual number change": {
+          "eligible": 15,
+          "flips": 15,
+          "correct": false
+        },
+        "contextual appended claim": {
+          "eligible": 15,
+          "flips": 15,
+          "correct": false
+        },
+        "contextual triple padding": {
+          "eligible": 15,
+          "flips": 15,
+          "correct": false
+        },
+        "contextual case": {
+          "eligible": 15,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual whitespace": {
+          "eligible": 15,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual punctuation": {
+          "eligible": 15,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual number words": {
+          "eligible": 14,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual unit variants": {
+          "eligible": 5,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual source swap": {
+          "eligible": 15,
+          "flips": 15,
+          "correct": false
+        },
+        "date formats": {
+          "eligible": 0,
+          "flips": 0,
+          "correct": true
+        }
+      },
+      "correctParaphraseFalseFails": 0,
+      "correctParaphraseTrials": 201,
+      "errors": []
+    },
+    {
+      "suite": "holdout2",
+      "judgeVersion": "extractive-fact-source-v2",
+      "total": 60,
+      "scores": {
+        "alwaysRefuse": 18,
+        "alwaysAnswerTop1": 9,
+        "fabricateNumber": 0,
+        "citeWrongSource": 0,
+        "copyQuestion": 0,
+        "oracle": 60
+      },
+      "changes": {
+        "oracle appended claim": {
+          "eligible": 33,
+          "flips": 33,
+          "correct": false
+        },
+        "oracle triple padding": {
+          "eligible": 33,
+          "flips": 33,
+          "correct": false
+        },
+        "oracle case": {
+          "eligible": 31,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle whitespace": {
+          "eligible": 33,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle punctuation": {
+          "eligible": 33,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle source swap": {
+          "eligible": 33,
+          "flips": 33,
+          "correct": false
+        },
+        "oracle number change": {
+          "eligible": 11,
+          "flips": 11,
+          "correct": false
+        },
+        "oracle number words": {
+          "eligible": 9,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual appended claim": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "contextual triple padding": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "contextual case": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual whitespace": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual punctuation": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual source swap": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "contextual number change": {
+          "eligible": 2,
+          "flips": 2,
+          "correct": false
+        },
+        "contextual number words": {
+          "eligible": 2,
+          "flips": 0,
+          "correct": true
+        },
+        "date formats": {
+          "eligible": 0,
+          "flips": 0,
+          "correct": true
+        }
+      },
+      "correctParaphraseFalseFails": 0,
+      "correctParaphraseTrials": 129,
+      "errors": []
+    },
+    {
+      "suite": "holdout3",
+      "judgeVersion": "extractive-fact-source-v2",
+      "total": 60,
+      "scores": {
+        "alwaysRefuse": 24,
+        "alwaysAnswerTop1": 7,
+        "fabricateNumber": 0,
+        "citeWrongSource": 0,
+        "copyQuestion": 0,
+        "oracle": 60
+      },
+      "changes": {
+        "oracle number change": {
+          "eligible": 11,
+          "flips": 11,
+          "correct": false
+        },
+        "oracle appended claim": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle triple padding": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "oracle case": {
+          "eligible": 29,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle whitespace": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle punctuation": {
+          "eligible": 30,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle number words": {
+          "eligible": 11,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle unit variants": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "oracle source swap": {
+          "eligible": 30,
+          "flips": 30,
+          "correct": false
+        },
+        "contextual number change": {
+          "eligible": 4,
+          "flips": 4,
+          "correct": false
+        },
+        "contextual appended claim": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "contextual triple padding": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "contextual case": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual whitespace": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual punctuation": {
+          "eligible": 7,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual number words": {
+          "eligible": 4,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual unit variants": {
+          "eligible": 3,
+          "flips": 0,
+          "correct": true
+        },
+        "contextual source swap": {
+          "eligible": 7,
+          "flips": 7,
+          "correct": false
+        },
+        "date formats": {
+          "eligible": 0,
+          "flips": 0,
+          "correct": true
+        }
+      },
+      "correctParaphraseFalseFails": 0,
+      "correctParaphraseTrials": 135,
+      "errors": []
+    }
+  ]
+}
