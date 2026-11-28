@@ -1,0 +1,37 @@
+{
+  "experimental": true,
+  "coverage": "partial",
+  "parts": [
+    {
+      "question": "What is the seal exception?",
+      "status": "answered",
+      "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip.",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "receiving.md",
+          "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip."
+        }
+      ]
+    },
+    {
+      "question": "What is the transfer deadline?",
+      "status": "answered",
+      "text": "Transfer deadline: Send the signed slip to stores before the next shift begins.",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "receiving.md",
+          "text": "Transfer deadline: Send the signed slip to stores before the next shift begins."
+        }
+      ]
+    },
+    {
+      "question": "Who pays the processing fee?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    }
+  ]
+}

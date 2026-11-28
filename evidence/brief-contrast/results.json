@@ -18,6 +18,13 @@
         "csv_lookup",
         "calculator"
       ],
+      "permissionProbe": {
+        "challenge": "What is the pack for KL-028?",
+        "expectedGrant": true,
+        "original": "answered",
+        "mutated": "refused",
+        "mutationDetected": true
+      },
       "responses": [
         {
           "question": "What is the pack for KL-028?",
@@ -97,6 +104,13 @@
       ],
       "brief": "Help policy reviewers explain seal exceptions and transfer deadlines in the receiving policy. Do not perform catalog lookup or calculate order quantities.",
       "tools": [],
+      "permissionProbe": {
+        "challenge": "What is the pack for KL-028?",
+        "expectedGrant": false,
+        "original": "refused",
+        "mutated": "answered",
+        "mutationDetected": true
+      },
       "responses": [
         {
           "question": "What is the pack for KL-028?",

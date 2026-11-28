@@ -38,8 +38,24 @@ try{
       }
       responses.push({question,actual});
     }
+    // Generate a tool-permission challenge from this catalogue. Its expected grant
+    // comes from the review brief, independently of the compiled definition.
+    const record=def.chunks.find(chunk=>chunk.columns?.includes('SKU') && chunk.columns.includes('pack'));
+    const sku=record.row[record.columns.indexOf('SKU')];
+    const pack=record.row[record.columns.indexOf('pack')];
+    const challenge='What is the pack for '+sku+'?';
+    const permitted=name==='procurement';
+    const altered={...def,tools:permitted?def.tools.filter(tool=>tool!=='csv_lookup'):[...def.tools,'csv_lookup']};
+    const baseline=await browserAnswer(def,challenge);
+    const mutant=await browserAnswer(altered,challenge);
+    const meetsContract=response=>permitted
+      ? response.status==='answered' && response.tool==='csv_lookup' && response.text===pack
+      : response.status==='refused' && !response.tool;
+    assert.ok(meetsContract(baseline));
+    assert.ok(!meetsContract(mutant),'Permission probe missed a deliberately incorrect tool grant');
+    const permissionProbe={challenge,expectedGrant:permitted,original:baseline.status,mutated:mutant.status,mutationDetected:true};
     const receipt=JSON.parse(readFileSync(join(dir,'receipt.json')));
-    runs.push({name,inputs:receipt.inputs,brief:def.requirements.scope,tools:def.tools,responses});
+    runs.push({name,inputs:receipt.inputs,brief:def.requirements.scope,tools:def.tools,permissionProbe,responses});
   }
   assert.deepEqual(runs[0].inputs,runs[1].inputs);
   console.log(JSON.stringify({kind:'Authored functional comparison',runs},null,2));
