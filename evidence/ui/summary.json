@@ -1,0 +1,16 @@
+{
+  "testedCommit": "aee6fed",
+  "run": "https://github.com/tulasiram2005/forgeai-evidence-workbench/actions/runs/46101928307",
+  "source": "GitHub Actions, localhost static release, mobile emulation",
+  "screenshots": {
+    "before": 24,
+    "after": 24
+  },
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "layoutShift": 0.0002958485942935735,
+  "initialNonFontTransferBytes": 144039
+}
