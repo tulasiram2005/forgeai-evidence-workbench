@@ -113,6 +113,16 @@ export function withPointers(response,chunks,question){
 export function answer(def,q,ranker=rank,rerank){
   return withPointers(answerCore(def,q,ranker,rerank),def.chunks,q);
 }
+export function localToolAnswer(def,q){
+  if(def.tools.includes('current_date')&&/^(?:what is |what.s )?(?:the current date|today.s date)\??$/i.test(q))
+    return {status:'answered',text:new Date().toISOString().slice(0,10)+' UTC',citations:[],tool:'current_date'};
+  const op=q.match(/^(?:calculate\s+)?(-?\d{1,12}(?:\.\d+)?)\s*([+*/×-])\s*(-?\d{1,12}(?:\.\d+)?)\s*\??$/i);
+  if(op && def.tools.includes('calculator')){
+    const a=Number(op[1]), b=Number(op[3]), n={'+':a+b,'-':a-b,'/':a/b,'*':a*b,'×':a*b}[op[2]];
+    return Number.isFinite(n)?{status:'answered',text:String(n),tool:'calculator',citations:[]}:refusal('That calculation has no finite result.');
+  }
+  return null;
+}
 function answerCore(def,q,ranker,rerank){
   q=String(q).trim().slice(0,2000);
   const gate=def.retrieval.gate;
@@ -126,13 +136,8 @@ function answerCore(def,q,ranker,rerank){
   }
   if(!q || suspicious.test(q) || (gate && /\b(?:invent|fabricate)\b/i.test(q))) return refusal();
   if(def.gaps?.some(g=>terms(g).length && terms(g).every(t=>terms(q).includes(t)))) return refusal();
-  if(def.tools.includes('current_date')&&/^(?:what is |what.s )?(?:the current date|today.s date)\??$/i.test(q))
-    return {status:'answered',text:new Date().toISOString().slice(0,10)+' UTC',citations:[],tool:'current_date'};
-  const op=q.match(/^(?:calculate\s+)?(-?\d{1,12}(?:\.\d+)?)\s*([+*/×-])\s*(-?\d{1,12}(?:\.\d+)?)\s*\??$/i);
-  if(op && def.tools.includes('calculator')){
-    const a=Number(op[1]), b=Number(op[3]), n={'+':a+b,'-':a-b,'/':a/b,'*':a*b,'×':a*b}[op[2]];
-    return Number.isFinite(n)?{status:'answered',text:String(n),tool:'calculator',citations:[]}:refusal('That calculation has no finite result.');
-  }
+  const toolResponse=localToolAnswer(def,q);
+  if(toolResponse)return toolResponse;
   if(/^weather\s/i.test(q) && def.tools.includes('weather')) return refusal('Use the connected CLI runner for live weather.');
   if(!terms(q).length || /^(which one|what about it)\??$/i.test(q)) return {status:'clarify',text:'Which topic or record do you mean?',citations:[]};
   // A known record alone cannot establish a separately requested attribute.

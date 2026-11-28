@@ -1,0 +1,183 @@
+{
+  "kind": "Authored functional comparison",
+  "runs": [
+    {
+      "name": "procurement",
+      "inputs": [
+        {
+          "source": "catalog.csv",
+          "sha256": "9817dba37a87083288538581862c108b598b136a1e059a78a2c39933c4b69bf1"
+        },
+        {
+          "source": "receiving.md",
+          "sha256": "f29c7e1b9164cd3bc279610e2b1e0ad095b281caf8b3c81e5b165099ab8c0139"
+        }
+      ],
+      "brief": "Help procurement staff look up catalog records and calculate order quantities. Explain the supplied receiving policy.",
+      "tools": [
+        "csv_lookup",
+        "calculator"
+      ],
+      "responses": [
+        {
+          "question": "What is the pack for KL-028?",
+          "actual": {
+            "status": "answered",
+            "text": "18",
+            "tool": "csv_lookup",
+            "citations": [
+              {
+                "id": "D1.1",
+                "source": "catalog.csv",
+                "text": "SKU = KL-028 · pack = 18 · finish = bronze"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Calculate 18 * 3",
+          "actual": {
+            "status": "answered",
+            "text": "54",
+            "tool": "calculator",
+            "citations": []
+          }
+        },
+        {
+          "question": "Give the source wording for Seal exception",
+          "actual": {
+            "status": "answered",
+            "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "receiving.md",
+                "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip."
+              }
+            ]
+          }
+        },
+        {
+          "question": "What is the price for KL-028?",
+          "actual": {
+            "status": "refused",
+            "text": "I could not confirm an answer. Inspect the closest source passages.",
+            "citations": [],
+            "pointers": [
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.1",
+                "source": "catalog.csv",
+                "text": "SKU = KL-028 · pack = 18 · finish = bronze",
+                "highlighted": "SKU = KL-028 · pack = 18 · finish = bronze"
+              },
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.2",
+                "source": "catalog.csv",
+                "text": "SKU = KL-0280 · pack = 42 · finish = zinc",
+                "highlighted": "SKU = KL-0280 · pack = 42 · finish = zinc"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "audit",
+      "inputs": [
+        {
+          "source": "catalog.csv",
+          "sha256": "9817dba37a87083288538581862c108b598b136a1e059a78a2c39933c4b69bf1"
+        },
+        {
+          "source": "receiving.md",
+          "sha256": "f29c7e1b9164cd3bc279610e2b1e0ad095b281caf8b3c81e5b165099ab8c0139"
+        }
+      ],
+      "brief": "Help policy reviewers explain seal exceptions and transfer deadlines in the receiving policy. Do not perform catalog lookup or calculate order quantities.",
+      "tools": [],
+      "responses": [
+        {
+          "question": "What is the pack for KL-028?",
+          "actual": {
+            "status": "refused",
+            "text": "I could not confirm an answer. Inspect the closest source passages.",
+            "citations": [],
+            "pointers": [
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.1",
+                "source": "catalog.csv",
+                "text": "SKU = KL-028 · pack = 18 · finish = bronze",
+                "highlighted": "SKU = KL-028 · pack = 18 · finish = bronze"
+              },
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.2",
+                "source": "catalog.csv",
+                "text": "SKU = KL-0280 · pack = 42 · finish = zinc",
+                "highlighted": "SKU = KL-0280 · pack = 42 · finish = zinc"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Calculate 18 * 3",
+          "actual": {
+            "status": "refused",
+            "text": "I could not confirm an answer. Inspect the closest source passages.",
+            "citations": [],
+            "pointers": [
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.1",
+                "source": "catalog.csv",
+                "text": "SKU = KL-028 · pack = 18 · finish = bronze",
+                "highlighted": "SKU = KL-028 · pack = 18 · finish = bronze"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Give the source wording for Seal exception",
+          "actual": {
+            "status": "answered",
+            "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip.",
+            "citations": [
+              {
+                "id": "D2.1",
+                "source": "receiving.md",
+                "text": "Seal exception: A torn seal requires quarantine until the receiving lead signs the exception slip."
+              }
+            ]
+          }
+        },
+        {
+          "question": "What is the price for KL-028?",
+          "actual": {
+            "status": "refused",
+            "text": "I could not confirm an answer. Inspect the closest source passages.",
+            "citations": [],
+            "pointers": [
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.1",
+                "source": "catalog.csv",
+                "text": "SKU = KL-028 · pack = 18 · finish = bronze",
+                "highlighted": "SKU = KL-028 · pack = 18 · finish = bronze"
+              },
+              {
+                "label": "closest evidence, not confirmed",
+                "id": "D1.2",
+                "source": "catalog.csv",
+                "text": "SKU = KL-0280 · pack = 42 · finish = zinc",
+                "highlighted": "SKU = KL-0280 · pack = 42 · finish = zinc"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

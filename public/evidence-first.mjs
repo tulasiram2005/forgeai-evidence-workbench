@@ -1,7 +1,9 @@
 import {recordLookup} from './record-lookup.mjs';
-import {answer,withPointers} from './engine.mjs';
+import {answer,localToolAnswer,withPointers} from './engine.mjs';
 const canonical=s=>s.toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 export function strictAnswer(def,question){
+  const toolResponse=localToolAnswer(def,question.trim());
+  if(toolResponse)return toolResponse;
   const lookup=recordLookup(def,question);
   if(lookup)return lookup;
   const q=canonical(question);

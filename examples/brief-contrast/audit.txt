@@ -1,0 +1,1 @@
+Help policy reviewers explain seal exceptions and transfer deadlines in the receiving policy. Do not perform catalog lookup or calculate order quantities.
