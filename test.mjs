@@ -233,3 +233,29 @@ test('contextual ranker requires the exact identifier even for near-identical co
   assert.equal(response.status,'answered');
   assert.equal(response.citations[0].text,'sku = AX-71 · pack = 4 caps');
 });
+
+import {identifierIndex} from './retrieval/identifiers.mjs';
+import {expandIndex} from './retrieval/expand.mjs';
+import {rankingText} from './retrieval/hybrid.mjs';
+test('record equivalence uses whole identifiers in both query and source',()=>{
+  for(const source of ['AX007','ax-7','AX_0007','Ax 07','AX/7']){
+    const chunks=[{id:'p',text:'sku = '+source,row:[source]}], filter=identifierIndex(chunks);
+    for(const q of ['ax7','AX-007','ax_00007','ax 7','Ax/07'])assert.equal(filter(chunks,'Find '+q).length,1,source+' / '+q);
+    for(const q of ['AX70','XAX7','AX7B','X-AX7','AX007-9','ax 8','zz007','AX000'])assert.equal(filter(chunks,'Find '+q).length,0,source+' / '+q);
+  }
+  for(const source of ['XAX7','AX7B','AX710','X-AX7','AX7-9']){
+    const chunks=[{id:'p',text:source}];
+    assert.equal(identifierIndex(chunks)(chunks,'AX7').length,0);
+  }
+});
+test('index expansion never becomes answer text, quoted evidence or reference facts',async()=>{
+  const def=structuredClone(run.definition),original=JSON.stringify(def.chunks);
+  const synthetic='Generated discovery phrase';
+  def.searchExpansion=await expandIndex(def,async()=>({summary:synthetic,questions:['Query A?','Query B?','Query C?']}));
+  const actual=answer(def,'What are the details for Kiln cooldown?');
+  assert.equal(actual.status,'answered');
+  assert.ok(rankingText(def,def.chunks[0],true).includes(synthetic));
+  assert.equal(JSON.stringify(def.chunks),original);
+  assert.ok(!JSON.stringify(actual).includes(synthetic));
+  assert.equal(factVerdict(def,{status:'answered',must_include_facts:[synthetic],acceptable_sources:['oven.txt']},actual).passed,false);
+});

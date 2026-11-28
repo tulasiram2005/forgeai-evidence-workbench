@@ -7,4 +7,6 @@ if(model){
   opts.enrichment=await enrich(brief,docs);
   opts.model=model;
 }
-parentPort.postMessage({run:build(brief,docs,opts),enrichment:opts.enrichment??null});
+const run=build(brief,docs,opts);
+if(opts.expandIndex)run.definition.searchExpansion=await (await import('./retrieval/expand.mjs')).expandIndex(run.definition);
+parentPort.postMessage({run,enrichment:opts.enrichment??null});

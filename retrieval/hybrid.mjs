@@ -1,3 +1,4 @@
+import {identifierIndex} from './identifiers.mjs';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {answer, rank} from '../public/engine.mjs';
@@ -10,15 +11,20 @@ export function passageContext(chunk) {
   }
   return chunk.text;
 }
+export function rankingText(def,chunk,contextual){
+  const source=contextual?passageContext(chunk):chunk.text;
+  const entry=contextual && def.searchExpansion?.passages[chunk.id];
+  return entry?[source,entry.summary,...entry.questions].join(' '):source;
+}
 export function encode(def, queries, contextual=false) {
   const unique = [...new Set(queries)];
-  const payload = {passages:def.chunks.map(c=>contextual?passageContext(c):c.text), queries:unique};
+  const payload = {passages:def.chunks.map(c=>rankingText(def,c,contextual)), queries:unique};
   const script = fileURLToPath(new URL('./semantic.py', import.meta.url));
   const raw = execFileSync('python3',[script],{input:JSON.stringify(payload),encoding:'utf8',timeout:120000,maxBuffer:16_000_000});
   const {scores,...model} = JSON.parse(raw);
   const chunks = new Map(def.chunks.map((c,i)=>[c.id,i]));
   const table = new Map(unique.map((q,i)=>[q,scores[i]]));
-  return {model, contextual, score:(query,id)=>table.get(query)?.[chunks.get(id)]};
+  return {model, contextual, filterIds:contextual?identifierIndex(def.chunks):null, score:(query,id)=>table.get(query)?.[chunks.get(id)]};
 }
 
 // Ties share rank. Otherwise file order could masquerade as retrieval evidence.
@@ -55,10 +61,10 @@ export function answerQueries(query) {
 
 // Experimental fallback for low-overlap questions. The original threshold still
 // applies unless the encoder independently separates its top passage.
-export function experimentalAnswer(def, query, encoder) {
+export function experimentalAnswer(def, query, encoder, policy={}) {
   const parts=String(query).split(/\?\s+(?:also,?\s+)?(?=\S)/i);
   if(parts.length>1){
-    const answers=parts.map(part=>experimentalAnswer(def,part,encoder));
+    const answers=parts.map(part=>experimentalAnswer(def,part,encoder,policy));
     if(answers.some(a=>a.status!=='answered'))return answers.find(a=>a.status!=='answered');
     const cited=new Map(answers.flatMap(a=>a.citations).map(c=>[c.id,c]));
     const citations=[...cited.values()];
@@ -70,7 +76,9 @@ export function experimentalAnswer(def, query, encoder) {
     // Embeddings can place adjacent catalogue codes almost on top of each other.
     // Restrict candidates to passages containing every explicit record identifier.
     let pool=chunks;
-    if(encoder.contextual){
+    if(encoder.filterIds){
+      pool=encoder.filterIds(chunks,part);
+    }else if(encoder.contextual){
       const identifiers=value=>(value.toLowerCase().match(/[a-z0-9]+(?:[-_][a-z0-9]+)*/g)??[])
         .filter(token=>/[a-z]/.test(token) && /[0-9]/.test(token));
       const keys=identifiers(part);
@@ -82,7 +90,7 @@ export function experimentalAnswer(def, query, encoder) {
     const rows=candidates(pool,part,encoder);
     const dense=[...rows].sort((a,b)=>b.cosine-a.cosine);
     const top=dense[0];
-    if(top && top.cosine>=0.50 && top.cosine-(dense[1]?.cosine??0)>=0.08){
+    if(top && top.cosine>=(policy.minimum??0.50) && top.cosine-(dense[1]?.cosine??0)>=(policy.margin??0.08)){
       const score=Math.max(top.score,def.retrieval.threshold);
       // Preserve ties for conflicting same-topic sources.
       return [top,...rows.filter(r=>r!==top && r.c.topic===top.c.topic)].map(r=>({...r,score}));

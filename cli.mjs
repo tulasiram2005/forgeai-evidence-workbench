@@ -71,9 +71,14 @@ async function main(){
       factBased:scores.filter(r=>r.passed).length,flips:scores.filter(r=>r.previous!==r.passed),scores},null,2));
     return;
   }
+  if(command==='diagnose'){
+    const {diagnose}=await import('./retrieval/diagnose.mjs');
+    console.log(JSON.stringify(await diagnose(args[0],documents),null,2));
+    return;
+  }
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),contextual:args.includes('--contextual')}),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),contextual:args.includes('--contextual')||args.includes('--expand-index'),expandIndex:args.includes('--expand-index')}),null,2));
     return;
   }
   if(command==='impact'){
@@ -127,7 +132,7 @@ async function main(){
   if(command==='build' || command==='forge'){
     const briefPath=flag('--brief'),folder=flag('--docs'),out=flag('--out');
     if(!briefPath||!folder||!out) throw Error('Use build --brief FILE --docs FOLDER --out NEW_FOLDER [--model] [--interview].');
-    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),contextual:args.includes('--contextual')};
+    const brief=(await readFile(briefPath,'utf8')).trim(),docs=await documents(folder),opts={splitValidation:args.includes('--split-validation'),contextual:args.includes('--contextual')||args.includes('--expand-index'),expandIndex:args.includes('--expand-index')};
     if(args.includes('--interview')){
       const rl=createInterface({input:process.stdin,output:process.stdout});
       try{opts.audience=await rl.question('Who will use this agent? ');opts.tone=await rl.question('What tone should it use? ');}finally{rl.close();}
