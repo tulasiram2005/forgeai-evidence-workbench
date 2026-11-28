@@ -1,0 +1,166 @@
+[
+  {
+    "question": "How quickly must I tell you my bike was stolen?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "72 hours"
+    ],
+    "sources": [
+      "filing.pdf"
+    ]
+  },
+  {
+    "question": "Who gets my initial message?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "intake desk"
+    ],
+    "sources": [
+      "filing.pdf"
+    ]
+  },
+  {
+    "question": "What paperwork proves I bought it?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "original receipt"
+    ],
+    "sources": [
+      "filing.pdf"
+    ]
+  },
+  {
+    "question": "Who oversees my case?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "claims examiner"
+    ],
+    "sources": [
+      "filing.pdf"
+    ]
+  },
+  {
+    "question": "Where do I take a bicycle the police found?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "shed Elm"
+    ],
+    "sources": [
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "Who has to come in person?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "registered owner"
+    ],
+    "sources": [
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "What does Harbour pay for one check?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "28 euros"
+    ],
+    "sources": [
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "How many pictures should I send showing dents?",
+    "kind": "paraphrase",
+    "status": "answered",
+    "facts": [
+      "four"
+    ],
+    "sources": [
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "What proves I purchased the bike? Also, where do I present it for a check?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "original receipt",
+      "shed Elm"
+    ],
+    "sources": [
+      "filing.pdf",
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "Who manages my case and how many pictures of the dents are needed?",
+    "kind": "cross-document",
+    "status": "answered",
+    "facts": [
+      "claims examiner",
+      "four"
+    ],
+    "sources": [
+      "filing.pdf",
+      "inspection.pdf"
+    ]
+  },
+  {
+    "question": "What deductible applies after a theft?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is crash damage covered overseas?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Can the inspection fee be paid in dollars?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Is a scan accepted instead of the original receipt?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What is the maximum bicycle payout?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "How long does reimbursement take after inspection?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which phone number accepts theft notices?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "What appeal deadline applies after denial?",
+    "kind": "near miss",
+    "status": "refused"
+  },
+  {
+    "question": "Which one?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  },
+  {
+    "question": "What about it?",
+    "kind": "ambiguous",
+    "status": "clarify"
+  }
+]
