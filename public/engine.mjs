@@ -97,7 +97,21 @@ export function rank(chunks,question){
     return {c,score,matched};
   }).sort((a,b)=>b.score-a.score || b.matched-a.matched);
 }
+export function withPointers(response,chunks,question){
+  if(response.status!=='refused')return response;
+  const pointers=[],seen=new Set();
+  for(const {c,matched} of rank(chunks,question)){
+    if(!matched || seen.has(c.source))continue;
+    seen.add(c.source);
+    pointers.push({label:'related, not confirmed',...cited(c)});
+    if(pointers.length===2)break;
+  }
+  return {...response,pointers};
+}
 export function answer(def,q,ranker=rank,rerank){
+  return withPointers(answerCore(def,q,ranker,rerank),def.chunks,q);
+}
+function answerCore(def,q,ranker,rerank){
   q=String(q).trim().slice(0,2000);
   const gate=def.retrieval.gate;
   if(gate?.reranker && !rerank)throw Error('This agent requires the pinned CLI reranker.');

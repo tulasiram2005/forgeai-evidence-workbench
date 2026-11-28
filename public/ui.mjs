@@ -101,6 +101,7 @@ function renderCases() {
     if (observed !== undefined) {
       if (observed.status) response.append(item('strong',pretty(observed.status)));
       response.append(item('p',format(observed?.text ?? observed)));
+      showPointers(response,observed);
       for (const cite of observed.citations ?? []) response.append(item('small',cite.source+' · '+cite.id));
     }
     comparison.append(reference,response);
@@ -245,6 +246,7 @@ byId('chat-form').addEventListener('submit', async event => {
     if (activeRun !== startingRun) return;
     const panel = item('div', undefined, 'result-card');
     panel.append(item('div', pretty(response.status), 'kicker'), item('h3', 'Agent response'), item('p', response.text));
+    showPointers(panel,response);
     for (const citation of response.citations ?? []) {
       const quote = item('div', undefined, 'quote');
       quote.append(item('strong', citation.source + (citation.id ? ' · ' + citation.id : '')), item('span', citation.text));
@@ -518,3 +520,10 @@ byId('impact-demo').onclick=()=>runImpact(async()=>{
 });
 byId('impact-download').onclick=()=>download(impactReport,'forgeai-impact.json');
 loadRun('shore');
+
+function showPointers(panel,response){
+  if(response.status!=='refused'||!response.pointers?.length)return;
+  const list=item('ul');
+  for(const p of response.pointers)list.append(item('li',p.source+' · '+p.id+' · '+p.text));
+  panel.append(item('h4','Related, not confirmed'),list);
+}

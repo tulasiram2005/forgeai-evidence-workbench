@@ -1,4 +1,4 @@
-import {answer,rank} from './engine.mjs';
+import {answer,rank,withPointers} from './engine.mjs';
 // Ties share rank. Otherwise file order could masquerade as retrieval evidence.
 function ranks(rows, key) {
   const sorted = [...rows].sort((a,b)=>b[key]-a[key]);
@@ -34,6 +34,9 @@ export function answerQueries(query) {
 // Experimental fallback for low-overlap questions. The original threshold still
 // applies unless the encoder independently separates its top passage.
 export function experimentalAnswer(def, query, encoder, policy={}) {
+  return withPointers(contextualCore(def,query,encoder,policy),def.chunks,query);
+}
+function contextualCore(def,query,encoder,policy){
   const parts=String(query).split(/\?\s+(?:also,?\s+)?(?=\S)/i);
   if(parts.length>1){
     const answers=parts.map(part=>experimentalAnswer(def,part,encoder,policy));

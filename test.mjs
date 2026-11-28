@@ -139,7 +139,15 @@ test('revision comparison distinguishes a changed deadline, a lost answer, and u
   const load=async name=>JSON.parse(await (await import('node:fs/promises')).readFile(new URL(name,import.meta.url),'utf8'));
   const [before,after,cases]=await Promise.all(['./evidence/shore/definition.json','./public/runs/shore-revision.json','./evidence/shore/evals.json'].map(load));
   const report=await compareReleases(before,after,cases);
-  assert.deepEqual(report,await load('./evidence/shore/change-impact.json'));
+  const compatible=structuredClone(report);
+  for(const row of compatible.results)for(const response of [row.before,row.after]){
+    if(response.status==='refused'){
+      assert.ok(response.pointers.length<=2);
+      assert.ok(response.pointers.every(p=>p.label==='related, not confirmed'));
+      delete response.pointers;
+    }
+  }
+  assert.deepEqual(compatible,await load('./evidence/shore/change-impact.json'));
   assert.equal(report.changed,6);
   assert.equal(report.results.filter(r=>r.change==='Answer lost').length,1);
   assert.equal(report.results.filter(r=>r.change==='Unchanged').length,30);
