@@ -8,12 +8,11 @@ if(model){
   opts.model=model;
 }
 if(opts.gateV2){
-  const {loadLocalGate,crossScores}=await import('./retrieval/local-gate.mjs');
+  const {loadLocalGate,calibrationReranker}=await import('./retrieval/local-gate.mjs');
   await loadLocalGate();
   if(opts.cliRerank){
     const seed=build(brief,docs,{...opts,gateV2:false});
-    const {generatedCases}=await import('./public/gate.mjs');
-    opts.rerank=crossScores(seed.definition,[...generatedCases(seed.definition).map(c=>c.q),...seed.evals.map(c=>c.question)]);
+    opts.rerank=calibrationReranker(seed);
   }
 }
 const run=build(brief,docs,opts);

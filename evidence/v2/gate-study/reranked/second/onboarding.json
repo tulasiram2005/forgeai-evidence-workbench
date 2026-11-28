@@ -1,0 +1,1100 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": true,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 2.290234025619303,
+      "hits": 1,
+      "falseAnswers": 1
+    },
+    "curve": [
+      {
+        "cut": 3.5954646220195063,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.5954646220195063,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.290234025619303,
+        "hits": 1,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.279702119551364,
+        "hits": 1,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.26385337490742,
+        "hits": 1,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.2192236603211732,
+        "hits": 1,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.206768487752835,
+        "hits": 1,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.190926910752644,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.1766847942126244,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.1351186625552394,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 1.9349615903003796,
+        "hits": 2,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 1.8244976035667209,
+        "hits": 2,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 1.8243456275747783,
+        "hits": 3,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 1.8235606886038083,
+        "hits": 3,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 1.817808158379196,
+        "hits": 3,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 1.7691115284111052,
+        "hits": 3,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 1.7021177997513426,
+        "hits": 3,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 1.692289174904514,
+        "hits": 3,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 1.556433378909402,
+        "hits": 3,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 1.5438618496433272,
+        "hits": 3,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 1.5408938716291969,
+        "hits": 4,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 1.5341192701443997,
+        "hits": 4,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 1.5338898078122978,
+        "hits": 5,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 1.5276433195544608,
+        "hits": 5,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 1.4882804883984642,
+        "hits": 6,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 1.4653712204393639,
+        "hits": 6,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 1.4635709621479962,
+        "hits": 6,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 1.4572821732540935,
+        "hits": 6,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 1.4378385549614365,
+        "hits": 6,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 1.41544931291632,
+        "hits": 6,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 1.4085464145489373,
+        "hits": 6,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 1.3926735700830644,
+        "hits": 6,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 1.3793973487051272,
+        "hits": 6,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 1.3509745372722723,
+        "hits": 6,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 1.333139419327368,
+        "hits": 6,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.3293704878963168,
+        "hits": 6,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.325258174390985,
+        "hits": 6,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.3150812482780707,
+        "hits": 6,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 1.3104593390475447,
+        "hits": 6,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 1.3059166973195768,
+        "hits": 6,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 1.3005367357532611,
+        "hits": 6,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 1.2917571347068477,
+        "hits": 6,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 1.2778817984238684,
+        "hits": 6,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 1.267061229905378,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.246559365573298,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.2388119701327704,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.235689915994607,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.2196298484353703,
+        "hits": 7,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.1827156987553122,
+        "hits": 7,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.181135955952569,
+        "hits": 7,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.1757557953006221,
+        "hits": 7,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.1450016839613584,
+        "hits": 7,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.1290855574989938,
+        "hits": 7,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.0789483543976706,
+        "hits": 7,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.0724204423810988,
+        "hits": 7,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.0587855277424076,
+        "hits": 7,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.0535419873490133,
+        "hits": 7,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.0251149177098513,
+        "hits": 7,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 0.9776656924547382,
+        "hits": 7,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 0.9660731397228963,
+        "hits": 7,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 0.9581315128807764,
+        "hits": 7,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 0.924960900418736,
+        "hits": 7,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 0.9025990330902163,
+        "hits": 7,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 0.8320634517352423,
+        "hits": 7,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 0.7927217028528963,
+        "hits": 7,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 0.7607600623115869,
+        "hits": 8,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 0.5634611629626771,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 0.42784157299024356,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.0806167477973595,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Identification?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 1.5408938716291969
+      },
+      {
+        "q": "What is documented about Orientation?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 1.2196298484353703
+      },
+      {
+        "q": "What is documented about Buddy assignment?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 1.8243456275747783
+      },
+      {
+        "q": "What is documented about Parking?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 0.7607600623115869
+      },
+      {
+        "q": "What is documented about Keyboard collection?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 1.4882804883984642
+      },
+      {
+        "q": "What is documented about Loan period?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 1.5338898078122978
+      },
+      {
+        "q": "What is documented about Lost access card?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 1.9349615903003796
+      },
+      {
+        "q": "What is documented about Headset exchange?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 2.290234025619303
+      },
+      {
+        "q": "What is the deductible for Identification?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 1.1450016839613584
+      },
+      {
+        "q": "What is the commission for Orientation?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 1.5341192701443997
+      },
+      {
+        "q": "What is the royalty for Buddy assignment?",
+        "attribute": "royalty",
+        "topId": "D1.3",
+        "score": 1.817808158379196
+      },
+      {
+        "q": "What is the deduction for Parking?",
+        "attribute": "deduction",
+        "topId": "D1.4",
+        "score": 1.1757557953006221
+      },
+      {
+        "q": "What is the amortization for Keyboard collection?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 1.3926735700830644
+      },
+      {
+        "q": "What is the depreciation for Loan period?",
+        "attribute": "depreciation",
+        "topId": "D2.2",
+        "score": 1.5276433195544608
+      },
+      {
+        "q": "What is the waiver for Lost access card?",
+        "attribute": "waiver",
+        "topId": "D2.3",
+        "score": 2.279702119551364
+      },
+      {
+        "q": "What is the surcharge for Headset exchange?",
+        "attribute": "surcharge",
+        "topId": "D2.4",
+        "score": 2.5954646220195063
+      },
+      {
+        "q": "What is the deactivation date for Identification?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 0.8320634517352423
+      },
+      {
+        "q": "What is the issuer for Orientation?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 1.5438618496433272
+      },
+      {
+        "q": "What is the invoice number for Buddy assignment?",
+        "attribute": "invoice number",
+        "topId": "D1.3",
+        "score": 1.3509745372722723
+      },
+      {
+        "q": "What is the indemnity for Parking?",
+        "attribute": "indemnity",
+        "topId": "D1.4",
+        "score": 1.0587855277424076
+      },
+      {
+        "q": "What is the exchange rate for Keyboard collection?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 1.246559365573298
+      },
+      {
+        "q": "What is the deposit for Loan period?",
+        "attribute": "deposit",
+        "topId": "D2.2",
+        "score": 1.8244976035667209
+      },
+      {
+        "q": "What is the franchise fee for Lost access card?",
+        "attribute": "franchise fee",
+        "topId": "D2.3",
+        "score": 1.3793973487051272
+      },
+      {
+        "q": "What is the restocking fee for Identification?",
+        "attribute": "restocking fee",
+        "topId": "D1.4",
+        "score": 0.0806167477973595
+      },
+      {
+        "q": "What is the tax rate for Orientation?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 1.181135955952569
+      },
+      {
+        "q": "What is the grace period for Buddy assignment?",
+        "attribute": "grace period",
+        "topId": "D1.3",
+        "score": 1.267061229905378
+      },
+      {
+        "q": "What is the renewal period for Parking?",
+        "attribute": "renewal period",
+        "topId": "D1.4",
+        "score": 1.1827156987553122
+      },
+      {
+        "q": "What is the expiry date for Keyboard collection?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 1.41544931291632
+      },
+      {
+        "q": "What is the interest rate for Loan period?",
+        "attribute": "interest rate",
+        "topId": "D2.2",
+        "score": 1.7021177997513426
+      },
+      {
+        "q": "What is the vendor address for Lost access card?",
+        "attribute": "vendor address",
+        "topId": "D2.3",
+        "score": 2.2192236603211732
+      },
+      {
+        "q": "What is the insurance premium for Headset exchange?",
+        "attribute": "insurance premium",
+        "topId": "D2.4",
+        "score": 2.26385337490742
+      },
+      {
+        "q": "What is the license number for Identification?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 1.333139419327368
+      },
+      {
+        "q": "What is the emission rating for Orientation?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 1.4653712204393639
+      },
+      {
+        "q": "What is the seismic rating for Buddy assignment?",
+        "attribute": "seismic rating",
+        "topId": "D1.3",
+        "score": 1.2388119701327704
+      },
+      {
+        "q": "What is the customs duty for Parking?",
+        "attribute": "customs duty",
+        "topId": "D1.4",
+        "score": 0.5634611629626771
+      },
+      {
+        "q": "What is the auction value for Keyboard collection?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.3150812482780707
+      },
+      {
+        "q": "What is the rental fee for Loan period?",
+        "attribute": "rental fee",
+        "topId": "D2.2",
+        "score": 1.0724204423810988
+      },
+      {
+        "q": "What is the failure probability for Lost access card?",
+        "attribute": "failure probability",
+        "topId": "D2.3",
+        "score": 1.7691115284111052
+      },
+      {
+        "q": "What is the audit interval for Identification?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 1.0251149177098513
+      },
+      {
+        "q": "What is the embargo date for Orientation?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 0.9025990330902163
+      },
+      {
+        "q": "What is the transfer fee for Buddy assignment?",
+        "attribute": "transfer fee",
+        "topId": "D1.3",
+        "score": 1.1290855574989938
+      },
+      {
+        "q": "What is the storage charge for Parking?",
+        "attribute": "storage charge",
+        "topId": "D1.4",
+        "score": 1.4378385549614365
+      },
+      {
+        "q": "What is the design patent for Keyboard collection?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 1.4085464145489373
+      },
+      {
+        "q": "What is the payroll code for Loan period?",
+        "attribute": "payroll code",
+        "topId": "D2.2",
+        "score": 0.9660731397228963
+      },
+      {
+        "q": "What is the dispatch postcode for Lost access card?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.3",
+        "score": 2.206768487752835
+      },
+      {
+        "q": "What is the tariff band for Headset exchange?",
+        "attribute": "tariff band",
+        "topId": "D2.4",
+        "score": 2.1766847942126244
+      },
+      {
+        "q": "What is the export permit for Identification?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.4572821732540935
+      },
+      {
+        "q": "What is the approval stamp for Orientation?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 0.7927217028528963
+      },
+      {
+        "q": "What is the shelf life for Buddy assignment?",
+        "attribute": "shelf life",
+        "topId": "D1.3",
+        "score": 1.2778817984238684
+      },
+      {
+        "q": "What is the solubility for Parking?",
+        "attribute": "solubility",
+        "topId": "D1.4",
+        "score": 1.0789483543976706
+      },
+      {
+        "q": "What is the heat capacity for Keyboard collection?",
+        "attribute": "heat capacity",
+        "topId": "D2.1",
+        "score": 1.3059166973195768
+      },
+      {
+        "q": "What is the torque limit for Loan period?",
+        "attribute": "torque limit",
+        "topId": "D2.2",
+        "score": 1.4635709621479962
+      },
+      {
+        "q": "What is the duty cycle for Lost access card?",
+        "attribute": "duty cycle",
+        "topId": "D2.3",
+        "score": 2.190926910752644
+      },
+      {
+        "q": "What is the proof load for Identification?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 1.0535419873490133
+      },
+      {
+        "q": "What is the retirement date for Orientation?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 1.3005367357532611
+      },
+      {
+        "q": "What is the discount rate for Buddy assignment?",
+        "attribute": "discount rate",
+        "topId": "D1.3",
+        "score": 1.235689915994607
+      },
+      {
+        "q": "What is the replacement value for Parking?",
+        "attribute": "replacement value",
+        "topId": "D1.4",
+        "score": 1.325258174390985
+      },
+      {
+        "q": "What is the billing currency for Keyboard collection?",
+        "attribute": "billing currency",
+        "topId": "D2.1",
+        "score": 1.3293704878963168
+      },
+      {
+        "q": "What is the vat code for Loan period?",
+        "attribute": "vat code",
+        "topId": "D2.2",
+        "score": 1.3104593390475447
+      },
+      {
+        "q": "What is the escrow fee for Lost access card?",
+        "attribute": "escrow fee",
+        "topId": "D2.3",
+        "score": 1.692289174904514
+      },
+      {
+        "q": "What is the ballot count for Headset exchange?",
+        "attribute": "ballot count",
+        "topId": "D2.4",
+        "score": 2.1351186625552394
+      },
+      {
+        "q": "What is the bond maturity for Identification?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 0.924960900418736
+      },
+      {
+        "q": "What is the trademark number for Orientation?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 0.9776656924547382
+      },
+      {
+        "q": "What is the insurance limit for Buddy assignment?",
+        "attribute": "insurance limit",
+        "topId": "D1.3",
+        "score": 1.556433378909402
+      },
+      {
+        "q": "What is the review quorum for Parking?",
+        "attribute": "review quorum",
+        "topId": "D1.4",
+        "score": 0.42784157299024356
+      },
+      {
+        "q": "What is the franchise territory for Keyboard collection?",
+        "attribute": "franchise territory",
+        "topId": "D2.1",
+        "score": 1.2917571347068477
+      },
+      {
+        "q": "What is the bank routing code for Loan period?",
+        "attribute": "bank routing code",
+        "topId": "D2.2",
+        "score": 0.9581315128807764
+      },
+      {
+        "q": "What is the capital allowance for Lost access card?",
+        "attribute": "capital allowance",
+        "topId": "D2.3",
+        "score": 1.8235606886038083
+      }
+    ]
+  },
+  "passed": 8,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 3
+    },
+    "near miss": {
+      "passed": 5,
+      "total": 6
+    },
+    "ambiguous": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "falseRefusals": {
+    "count": 11,
+    "total": 11
+  },
+  "falseAnswersOnRefusals": {
+    "count": 1,
+    "total": 6
+  },
+  "results": [
+    {
+      "kind": "paraphrase",
+      "question": "Which identity paper should I bring on day one?",
+      "status": "answered",
+      "facts": [
+        "passport"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What time does the welcome session start?",
+      "status": "answered",
+      "facts": [
+        "09:40"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who matches me with a workplace mentor?",
+      "status": "answered",
+      "facts": [
+        "roster coordinator"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where can I leave my car when I join?",
+      "status": "answered",
+      "facts": [
+        "lot C"
+      ],
+      "sources": [
+        "arrival.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Where do I pick up my typing gear?",
+      "status": "answered",
+      "facts": [
+        "room Willow"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "How long can I keep a screen on loan?",
+      "status": "answered",
+      "facts": [
+        "12 weeks"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "Who should hear about my missing entry pass?",
+      "status": "answered",
+      "facts": [
+        "security desk"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "paraphrase",
+      "question": "What needs to go back with my faulty headphones?",
+      "status": "answered",
+      "facts": [
+        "original packaging"
+      ],
+      "sources": [
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "When is the welcome session? Also, where can I get a keyboard?",
+      "status": "answered",
+      "facts": [
+        "09:40",
+        "room Willow"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Where should my vehicle go, and who do I tell if my entry pass disappears?",
+      "status": "answered",
+      "facts": [
+        "lot C",
+        "security desk"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "cross-document",
+      "question": "Which identity paper is accepted and what is the screen borrowing limit?",
+      "status": "answered",
+      "facts": [
+        "passport",
+        "12 weeks"
+      ],
+      "sources": [
+        "arrival.pdf",
+        "equipment.pdf"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "kind": "near miss",
+      "question": "Can I claim a parking subsidy?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "What fee applies to a lost access card?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Is a driving licence enough for induction?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "How much is the monitor deposit?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Can my buddy approve a promotion?",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "near miss",
+      "question": "Does the headset exchange come with postage?",
+      "status": "refused",
+      "actual": {
+        "status": "answered",
+        "text": "Headset exchange: Bring the original packaging.",
+        "citations": [
+          {
+            "id": "D2.4",
+            "source": "equipment.pdf",
+            "text": "Headset exchange: Bring the original packaging.",
+            "page": 4
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Which one?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "What about it?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "ambiguous",
+      "question": "Where is that?",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

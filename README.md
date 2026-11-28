@@ -198,3 +198,20 @@ node retrieval/report-holdouts.mjs
 ```
 
 Here `--deterministic` selects the portable agent compiler. Explicit `--expand-index` still invokes the local model for search metadata. Use `FORGE_BACKEND=llama.cpp` when serving the specified model with llama.cpp.
+
+### Answerability gate release decision
+
+**Keep contextual V2 as the preferred CLI experiment.** A new gate trained only on generated queries reduced false answers but failed to return a correct supported answer on the new evaluation corpus. The [complete study](evidence/v2/gate-study/REPORT.md) reconciles the earlier lexical and dense scores, lists the judge and configuration commits, attributes every failed answerable case on the second suite, and reports question-level Wilson intervals. The first two suites are development data. The third suite was frozen before scoring.
+
+In the browser, select **Calibrate answerability on these documents** in New build. The worker calibrates against the supplied corpus. The browser and CLI use the same self-hosted quantized word vectors, normalized identifiers, context construction, feature weights and cutoff selection. The portable encoder differs from the MiniLM transformer used by the earlier contextual CLI mode. The study includes a same-encoder control. Expansion is off by default.
+
+```sh
+node cli.mjs forge --brief examples/holdout3/optics/brief.txt --docs examples/holdout3/optics/docs --out runs/gate-review --deterministic --gate-v2
+node cli.mjs ask runs/gate-review/definition.json 'How long should the lamp stabilize?'
+node cli.mjs holdout examples/holdout3/optics --structured --split-validation --gate-v2
+node retrieval/gate-study-report.mjs
+```
+
+The top candidates are scored using cosine, rank margin, inverse-document-frequency coverage, unmatched rare terms, expected answer type and heading overlap. The calibration log in report.json records the generated samples, candidate cutoffs and selected operating point. The reference label is the source passage ID. Selection maximizes generated positive hits under the requested false-answer cap and breaks ties by fewer false answers, then a higher cutoff. The development holdouts are excluded from selection.
+
+For the optional CLI reranker, cache the pinned weights once, then add `--rerank` to the build or holdout command. The browser rejects reranker-dependent definitions. The CPU model is cross-encoder/ms-marco-TinyBERT-L-2-v2 at revision `81d1926f67cb8eee2c2be17ca9f793c7c3bd20cc`. Inference uses locally cached weights. Both development reranker receipts and the browser parity receipt are in the study folder.

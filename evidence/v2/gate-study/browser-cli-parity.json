@@ -1,0 +1,42 @@
+[
+  {
+    "fixture": "examples/holdout/dispatch",
+    "matched": 8,
+    "questions": [
+      "How many seals come in an NX47 kit?",
+      "How many clips will one NX48 kit contain?",
+      "How many clips come in the NX49 kit?",
+      "What is the warranty period for NX47?",
+      "At what temperature should a cold delivery wait?",
+      "Who receives the pictures of damaged boxes?",
+      "How many seals come in an NX47 kit? Also, at what temperature should a cold delivery wait?",
+      "Which one?"
+    ]
+  },
+  {
+    "fixture": "examples/holdout3/optics",
+    "matched": 20,
+    "questions": [
+      "What holds the glass wedge steady?",
+      "How long do we wait for stable light?",
+      "How wide should the opening be?",
+      "Which colour target do we align against?",
+      "How many recordings do we need per sample?",
+      "Who must authorize the measurement set?",
+      "Which file type do I hand over?",
+      "When can old setup scraps be discarded?",
+      "How wide is the opening? Also, who signs the recordings?",
+      "Which target colour do I use and how many recordings are needed for one sample?",
+      "Which solvent cleans the prism?",
+      "What voltage should power the lamp?",
+      "What is the replacement price of a reference card?",
+      "Which TSV delimiter escape convention is required?",
+      "What is the maximum acquisition temperature?",
+      "Who can override the shift physicist?",
+      "Is an aluminium cradle approved?",
+      "How many backup copies of the final spectrum are required?",
+      "Which one?",
+      "What about it?"
+    ]
+  }
+]

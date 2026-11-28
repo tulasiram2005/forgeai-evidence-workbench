@@ -5,14 +5,21 @@ import {answer, build} from './public/engine.mjs';
 export async function holdout(folder, readDocuments, options={}) {
   const brief = await readFile(join(folder,'brief.txt'),'utf8');
   const docs = await readDocuments(join(folder,'docs'));
-  if(options.cliRerank)throw Error('Use forge --rerank and ask for explicit CLI reranking.');
   if(options.gateV2||options.staticContext)await (await import('./retrieval/local-gate.mjs')).loadLocalGate();
+  if(options.cliRerank){
+    const {calibrationReranker}=await import('./retrieval/local-gate.mjs');
+    options={...options,rerank:calibrationReranker(build(brief,docs,{...options,gateV2:false}))};
+  }
   const {definition,report} = build(brief, docs, options);
   if(options.expandIndex)definition.searchExpansion=await (await import('./retrieval/expand.mjs')).expandIndex(definition);
   // Only open reviewer expectations after the agent definition is final.
   const cases = JSON.parse(await readFile(join(folder,'cases.json'),'utf8'));
   let runner=answer;
-  if(options.staticContext){
+  if(options.cliRerank){
+    const {crossScores}=await import('./retrieval/local-gate.mjs');
+    const scores=crossScores(definition,cases.map(c=>c.question));
+    runner=(d,q)=>answer(d,q,undefined,scores);
+  }else if(options.staticContext){
     const {staticContextEncoder}=await import('./public/gate.mjs');
     const {experimentalAnswer}=await import('./public/contextual.mjs');
     const encoder=staticContextEncoder(definition);
