@@ -1,0 +1,27 @@
+name: Reviewer workflow
+on:
+  push:
+    branches: [codex/pointer-review-pilot]
+    paths: ['public/**', 'examples/repair-desk/**', 'qa/**', 'scripts/repair-desk.mjs', '.github/workflows/pilot.yml']
+permissions:
+  contents: read
+jobs:
+  exercise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: pip install -r requirements-pdf.txt
+      - run: npm test
+      - run: node scripts/repair-desk.mjs > /tmp/repair.json && diff evidence/repair-desk/receipt.json /tmp/repair.json
+      - run: npm ci --prefix qa && qa/node_modules/.bin/playwright-core install --with-deps chromium
+      - run: |
+          python3 -m http.server 8437 --bind 127.0.0.1 --directory public >/tmp/http.log 2>&1 &
+          node qa/repair-desk.mjs http://127.0.0.1:8437 > /tmp/browser-receipt.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reviewer-browser-receipt
+          path: /tmp/browser-receipt.json

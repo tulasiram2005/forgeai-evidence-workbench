@@ -8,6 +8,12 @@ ForgeAI is a local workbench for inspecting document evidence, checking citation
 2. Choose **Remove a source**. See how the response changes when its cited document is unavailable.
 3. Choose **Change a policy**. Inspect the before-and-after answers. In the evidence ledger, open **Development case diagnostics** for the frozen rank and judge traces.
 
+### Try your own records on the pilot branch
+
+Run `node scripts/repair-desk.mjs` from the repository root. The script builds an agent from a repair desk CSV and a Markdown handover, questions it through the CLI, checks the browser answer handler against the same responses, moves a part to another drawer, then removes the stock register and rebuilds. The full responses and citations are in [the functional receipt](evidence/repair-desk/receipt.json).
+
+For a hands-on review, start the workbench, choose **New build**, enter a brief authorizing inventory lookup, and attach your own CSV with an **asset ID** and a **drawer** column. In **Test the agent**, ask “What is the drawer for BX-017?” using an ID from your file. Try a partial ID and a column your file omits. After a refusal, **Search passages by meaning** loads the bundled model and displays original excerpts for manual inspection. The first search downloads the model from the workbench host. This branch is a post-submission pilot.
+
 ### Findings
 
 The exact-passage oracle passed 123/123 answerable questions across development holdouts 1 to 4. In 82 failed cases the required evidence was within the hybrid top three and the agent withheld the answer. In 11 it fell outside the top three. Holdout 4 contextual passed 22/60 overall and gave false answers on 9/24 near misses. The SQuAD2 reader increased supported recall on the first three suites from 29/93 to 36/93, but near-miss false answers rose from 9/57 to 25/57. The experiment stopped. [Per-case funnel and signal intervals](evidence/funnel/summary.json) · [Reader experiment](evidence/funnel/qa-study.json)

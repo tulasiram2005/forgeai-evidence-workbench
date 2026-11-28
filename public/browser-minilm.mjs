@@ -1,6 +1,6 @@
 import {identifierIndex} from './identifiers.mjs';
 import {rankingText} from './passage-context.mjs';
-import {experimentalAnswer,experimentQueries} from './contextual.mjs';
+import {candidates,experimentalAnswer,experimentQueries} from './contextual.mjs';
 
 const root=new URL('./models/minilm/',import.meta.url);
 let pending;
@@ -68,9 +68,8 @@ async function vectors(texts){
   }
   return result;
 }
-export async function contextualRunner(def,questions){
+async function prepareEncoder(def,queries){
   const passages=def.chunks.map(c=>rankingText(def,c,true));
-  const queries=questions.flatMap(experimentQueries);
   const encoded=await vectors([...new Set([...passages,...queries])]);
   const byId=new Map(def.chunks.map((c,i)=>[c.id,encoded.get(passages[i])]));
   const encoder={contextual:true,filterIds:identifierIndex(def.chunks),score:(q,id)=>{
@@ -79,5 +78,13 @@ export async function contextualRunner(def,questions){
     for(let i=0;i<a.length;i++)sum+=a[i]*b[i];
     return Math.round(sum*1e6)/1e6;
   }};
+  return encoder;
+}
+export async function contextualRunner(def,questions){
+  const encoder=await prepareEncoder(def,questions.flatMap(experimentQueries));
   return (d,q)=>experimentalAnswer(d,q,encoder);
+}
+export async function inspectPassages(def,question){
+  const encoder=await prepareEncoder(def,[question]);
+  return candidates(def.chunks,question,encoder).slice(0,3).map(r=>r.c);
 }

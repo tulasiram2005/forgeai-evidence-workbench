@@ -252,6 +252,26 @@ byId('chat-form').addEventListener('submit', async event => {
     const panel = item('div', undefined, 'result-card');
     panel.append(item('div', pretty(response.status), 'kicker'), item('h3', 'Agent response'), item('p', response.text));
     showPointers(panel,response);
+    if(response.status==='refused'){
+      const inspect=item('button','Search passages by meaning','outline');
+      const sources=item('div');sources.setAttribute('aria-live','polite');
+      inspect.onclick=async()=>{
+        inspect.disabled=true;
+        sources.textContent='Loading the local search model…';
+        try{
+          const {inspectPassages}=await import('./browser-minilm.mjs');
+          const passages=await inspectPassages(startingRun.definition,question);
+          sources.replaceChildren(item('h4','Passages to inspect'),item('p','A passage may mention the subject and omit the fact you asked for.'));
+          for(const p of passages){
+            const block=item('blockquote');block.append(item('strong',p.source+' · '+p.id),item('p',p.text));sources.append(block);
+          }
+        }catch(error){
+          sources.textContent='Passage search could not load. '+error.message;
+          inspect.disabled=false;
+        }
+      };
+      panel.append(inspect,sources);
+    }
     for (const citation of response.citations ?? []) {
       const quote = item('div', undefined, 'quote');
       quote.append(item('strong', citation.source + (citation.id ? ' · ' + citation.id : '')), item('span', citation.text));

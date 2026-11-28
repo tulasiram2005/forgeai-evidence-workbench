@@ -1,0 +1,197 @@
+{
+  "study": "Authored functional regression, not a blind evaluation",
+  "passed": 10,
+  "results": [
+    {
+      "question": "What is the drawer for BX-017?",
+      "status": "answered",
+      "text": "West, upper",
+      "tool": "csv_lookup",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "stock.csv",
+          "text": "asset ID = BX-017 · drawer = West, upper · finish = matte"
+        }
+      ]
+    },
+    {
+      "question": "Show me the finish for bx-0170",
+      "status": "answered",
+      "text": "polished",
+      "tool": "csv_lookup",
+      "citations": [
+        {
+          "id": "D2.2",
+          "source": "stock.csv",
+          "text": "asset ID = BX-0170 · drawer = South · finish = polished"
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer for BX-044?",
+      "status": "clarify",
+      "text": "More than one row matches this record and field. Check the source rows before choosing a value.",
+      "citations": [
+        {
+          "id": "D2.3",
+          "source": "stock.csv",
+          "text": "asset ID = BX-044 · drawer = North · finish = satin"
+        },
+        {
+          "id": "D2.4",
+          "source": "stock.csv",
+          "text": "asset ID = BX-044 · drawer = East · finish = satin"
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer for BX-028?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "stock.csv",
+          "text": "asset ID = BX-028 · drawer =  · finish = gloss",
+          "highlighted": "asset ID = BX-028 · drawer =  · finish = gloss"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "stock.csv",
+          "text": "asset ID = BX-0170 · drawer = South · finish = polished",
+          "highlighted": "asset ID = BX-0170 · drawer = South · finish = polished"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "stock.csv",
+          "text": "asset ID = BX-044 · drawer = North · finish = satin",
+          "highlighted": "asset ID = BX-044 · drawer = North · finish = satin"
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer for BX-01?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "stock.csv",
+          "text": "asset ID = BX-028 · drawer =  · finish = gloss",
+          "highlighted": "asset ID = BX-028 · drawer =  · finish = gloss"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "stock.csv",
+          "text": "asset ID = BX-0170 · drawer = South · finish = polished",
+          "highlighted": "asset ID = BX-0170 · drawer = South · finish = polished"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.3",
+          "source": "stock.csv",
+          "text": "asset ID = BX-044 · drawer = North · finish = satin",
+          "highlighted": "asset ID = BX-044 · drawer = North · finish = satin"
+        }
+      ]
+    },
+    {
+      "question": "What is the price for BX-017?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "stock.csv",
+          "text": "asset ID = BX-017 · drawer = West, upper · finish = matte",
+          "highlighted": "asset ID = BX-017 · drawer = West, upper · finish = matte"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "stock.csv",
+          "text": "asset ID = BX-028 · drawer =  · finish = gloss",
+          "highlighted": "asset ID = BX-028 · drawer =  · finish = gloss"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "stock.csv",
+          "text": "asset ID = BX-0170 · drawer = South · finish = polished",
+          "highlighted": "asset ID = BX-0170 · drawer = South · finish = polished"
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer and price for BX-017?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": [
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.1",
+          "source": "stock.csv",
+          "text": "asset ID = BX-017 · drawer = West, upper · finish = matte",
+          "highlighted": "asset ID = BX-017 · drawer = West, upper · finish = matte"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.5",
+          "source": "stock.csv",
+          "text": "asset ID = BX-028 · drawer =  · finish = gloss",
+          "highlighted": "asset ID = BX-028 · drawer =  · finish = gloss"
+        },
+        {
+          "label": "closest evidence, not confirmed",
+          "id": "D2.2",
+          "source": "stock.csv",
+          "text": "asset ID = BX-0170 · drawer = South · finish = polished",
+          "highlighted": "asset ID = BX-0170 · drawer = South · finish = polished"
+        }
+      ]
+    },
+    {
+      "question": "Give the source wording for Seal check",
+      "status": "answered",
+      "text": "Seal check: Place inspected seals on the green tray before closing the desk.",
+      "citations": [
+        {
+          "id": "D1.1",
+          "source": "handover.md",
+          "text": "Seal check: Place inspected seals on the green tray before closing the desk."
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer for BX-017?",
+      "status": "answered",
+      "text": "Vault",
+      "tool": "csv_lookup",
+      "citations": [
+        {
+          "id": "D2.1",
+          "source": "stock.csv",
+          "text": "asset ID = BX-017 · drawer = Vault · finish = matte"
+        }
+      ]
+    },
+    {
+      "question": "What is the drawer for BX-017?",
+      "status": "refused",
+      "text": "I could not confirm an answer. Inspect the closest source passages.",
+      "citations": [],
+      "pointers": []
+    }
+  ]
+}
