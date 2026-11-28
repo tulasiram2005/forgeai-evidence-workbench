@@ -148,21 +148,18 @@ async function main(){
     }
     const budgetMs=Number(flag('--budget-ms')??180000);
     const requested=process.env.FORGE_MODEL||'qwen2.5:1.5b';
-    let model=args.includes('--model')?requested:null;
-    if(command==='forge' && !model && !args.includes('--deterministic')){
-      try{
-        const response=await fetch('http://127.0.0.1:'+ollamaPort()+'/api/tags',{signal:AbortSignal.timeout(900)});
-        if(response.ok && (await response.json()).models.some(m=>m.name===requested)) model=requested;
-      }catch{ /* The portable compiler works without Ollama. */ }
-    }
-    if(command==='forge')console.error(model?'Local model: '+model:'DEGRADED: local model unavailable or explicitly disabled. Using deterministic templates.');
+    const disabled=args.includes('--no-llm')||args.includes('--deterministic');
+    if(disabled&&(args.includes('--model')||opts.expandIndex))throw Error('Explicit model generation conflicts with --no-llm or --deterministic.');
+    const model=!disabled&&(command==='forge'||args.includes('--model'))?requested:null;
+    if(command==='forge')console.error(model?'Checking local model generation: '+model:'DEGRADED: model disabled; deterministic templates.');
     if(opts.expandIndex)console.error('Generating ranking metadata with the local model.');
     const target=resolve(out);await mkdir(dirname(target),{recursive:true});const tmp=await mkdtemp(join(dirname(target),'.forge-'));
     try{
       opts.commitPath=join(tmp,'test-slice.json');
     const start=performance.now();
     const {run,enrichment}=await runBuild({brief,docs,opts,model},budgetMs);
-    if(run.report.degraded)console.error('DEGRADED: '+run.report.degraded+'. Using deterministic templates.');
+    if(run.report.degraded)console.error('DEGRADED: '+run.report.degraded);
+    if(run.report.generationBackend)console.error('Local model: '+run.report.model+' ('+run.report.generationBackend+')');
     if(opts.release && !opts.gateV2)run.definition.runtime={kind:opts.evidenceFirst?'evidence-first':'contextual-minilm'};
     run.report.budget={limitMs:budgetMs,elapsedMs:Math.round(performance.now()-start),scope:'model generation, compilation and optimization after intake'};
     const receipt={compiler:run.report.model,inputs:docs.map(d=>({source:d.name,sha256:createHash('sha256').update(d.text).digest('hex')})),enrichment,...(opts.approvedRequirements?{requirementsApproved:true}:{})};

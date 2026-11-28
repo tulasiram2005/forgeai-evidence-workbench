@@ -6,13 +6,30 @@ import {enrich} from './model.mjs';
 
 const {brief,docs,opts,model}=workerData;
 if(model){
-  try{
-    opts.enrichment=await enrich(brief,docs);
-    opts.model=model;
-  }catch(error){
-    if(!opts.autoDetect)throw error;
-    opts.degraded='Local model generation failed: '+error.message;
+  const requested=process.env.FORGE_BACKEND;
+  const backends=requested==='llama.cpp'?['llama.cpp']:opts.autoDetect?['ollama','llama.cpp']:['ollama'];
+  const failures=[];
+  for(const backend of backends){
+    process.env.FORGE_BACKEND=backend;
+    try{
+      opts.enrichment=await enrich(brief,docs,20000);
+      opts.model=model;
+      opts.generationBackend=backend;
+      break;
+    }catch(error){
+      failures.push(backend+': '+error.message);
+      if(!opts.autoDetect)throw error;
+    }
   }
+  if(failures.length)opts.degraded=failures.join(' / ')+'. Selected '+(opts.generationBackend??'deterministic templates')+'.';
+}
+if(opts.release && opts.enrichment){
+  try{
+    const {hardQuestions}=await import('./retrieval/hard-questions.mjs');
+    for(const q of await hardQuestions(docs,model)){
+      if(!opts.enrichment.questions.some(existing=>existing.question===q.question))opts.enrichment.questions.push(q);
+    }
+  }catch(error){opts.hardTierNotice='Hard paraphrase generation unavailable: '+error.message;}
 }
 if(opts.gateV2){
   const {loadLocalGate,calibrationReranker}=await import('./retrieval/local-gate.mjs');
@@ -51,6 +68,8 @@ if(opts.release){
 }
 const run=build(brief,docs,opts);
 if(opts.release)run.report.assessment=describeRelease(run);
+if(opts.generationBackend)run.report.generationBackend=opts.generationBackend;
+if(opts.hardTierNotice)run.report.hardTierNotice=opts.hardTierNotice;
 if(opts.degraded)run.report.degraded=opts.degraded;
 if(opts.expandIndex)run.definition.searchExpansion=await (await import('./retrieval/expand.mjs')).expandIndex(run.definition);
 parentPort.postMessage({run,enrichment:opts.enrichment??null});

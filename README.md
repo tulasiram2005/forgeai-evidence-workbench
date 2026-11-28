@@ -1,12 +1,31 @@
 # ForgeAI · Inspection bench
 
+## Review in 5 minutes
+
+ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The live main-branch demo predates this draft.
+
+1. Open the workbench on this branch with `npm start`. Read the fresh-suite trust panel and ask a source question.
+2. Choose **Remove a source**. See how the response changes when its cited document is unavailable.
+3. Choose **Change a policy**. Inspect the before-and-after answers. In the evidence ledger, open **Development case diagnostics** for the frozen rank and judge traces.
+
+### Findings
+
+The exact-passage oracle passed 123/123 answerable questions across development holdouts 1 to 4. In 82 failed cases the required evidence was within the hybrid top three and the agent withheld the answer. In 11 it fell outside the top three. Holdout 4 contextual passed 22/60 overall and gave false answers on 9/24 near misses. The SQuAD2 reader increased supported recall on the first three suites from 29/93 to 36/93, but near-miss false answers rose from 9/57 to 25/57. The experiment stopped. [Per-case funnel and signal intervals](evidence/funnel/summary.json) · [Reader experiment](evidence/funnel/qa-study.json)
+
+On prospective holdout 5, contextual passed 25/60, with 37.9% balanced accuracy. Evidence-first passed 30/60, with 50.0% balanced accuracy, 0/30 supported answers and 0/24 near-miss false answers. Always refusing also achieved 50.0% balanced accuracy. Neither candidate qualified. Related passages are navigation aids and do not earn answer credit. [Preregistration](evidence/prereg/holdout5.md) · [Fresh results including Wilson intervals](evidence/holdout5/summary.json) · [Forecast versus actual, pilot n=5](evidence/holdout5/forecast.md)
+
+### Offline build
+
+After installing the PDF parser, use `node cli.mjs forge --brief B --docs D --out O` with a fresh output directory. The evidence-first runtime needs no remote model. Generation tries local Ollama with a 20-second request timeout, then a local llama.cpp CPU service on loopback port 18435 if available, then deterministic templates. Use `--no-llm` to skip generation services entirely. Model-authored hard paraphrases must pass the content-word overlap filter. Builds without qualifying paraphrases explicitly report missing hard-tier evidence. [macOS rehearsal](evidence/submission/macos-FINAL.md)
+
+
 Turn a brief and a document folder into an agent you can question, an evaluation suite you can replay, and an evidence trail you can inspect.
 
 **[Open the live workbench](https://forgeai-evidence-workbench.onrender.com/) · [Watch the captioned walkthrough (3 min 41 sec)](https://forgeai-evidence-workbench.onrender.com/demo/forgeai-walkthrough.mp4)**
 
 Start with **Test the agent** and ask “How much notice is needed for a shift swap?” Open its source passage. Switch to **Conservation operations** and ask “What is the pack quantity for MAT102?” The second question executes a catalogue lookup. Choose **New build** to try your own sources. Files and answers for custom builds stay in the browser tab. Export the dossier before closing the tab.
 
-## V2 release review
+## Earlier contextual release review
 
 Fresh-suite contextual retrieval passed 22/60 cases, including 1/30 supported questions and 15/24 correct refusals. It missed both preregistered effectiveness criteria. Review the raw responses before using this build for decisions. [Prospective results](evidence/v2/holdout4/REPORT.md) · [All-suite comparison](evidence/v2/release-results.md) · [Judge controls](evidence/v2/judge-stress.md) · [Linux rehearsals](evidence/v2/rehearsal-linux/)
 

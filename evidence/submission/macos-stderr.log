@@ -1,0 +1,3 @@
+Checking local model generation: qwen2.5:1.5b
+DEGRADED: ollama: fetch failed. Selected llama.cpp.
+Local model: qwen2.5:1.5b (llama.cpp)

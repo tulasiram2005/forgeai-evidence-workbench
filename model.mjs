@@ -30,7 +30,7 @@ function nonempty(value, max) {
   return value.trim();
 }
 
-export async function enrich(brief, docs) {
+export async function enrich(brief, docs,timeoutMs=20000) {
   nonempty(brief, 8000);
   if (!Array.isArray(docs) || docs.length === 0) throw new Error('Provide documents for the local compiler.');
   const selected = docs.slice(0, 12);
@@ -45,7 +45,7 @@ export async function enrich(brief, docs) {
   const model = process.env.FORGE_MODEL || 'qwen2.5:1.5b';
   const messages = [{role:'system',content:compilerPrompt},
     {role:'user', content:JSON.stringify({brief, samples,allowedQuestionLabels:labels})}];
-  const result = await localJSON(messages, designSchema, model);
+  const result = await localJSON(messages, designSchema, model,850,timeoutMs);
   return validateDesign(result, labels);
 }
 

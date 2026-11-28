@@ -286,3 +286,23 @@ test('generated-only operating point meets the cap and maximizes supported recal
   for(const k of ['cosine','margin','coverage','unmatchedRare','typeMatch','heading','score'])assert.ok(Number.isFinite(rows[0][k]));
   assert.deepEqual(r.definition.retrieval.gate.cut,c.selected.cut);
 });
+
+test('hard-tier warning requires measured low recall and a saturated easy tier',async()=>{
+  const {describeRelease,overlap}=await import('./public/verdict.mjs');
+  const assess=hard=>describeRelease({iterations:[{results:[{kind:'grounded',passed:true},...hard]}],
+    report:{retainedRound:1,judgeControls:[],testResults:[]}});
+  assert.equal(assess([]).warning,null);
+  assert.equal(assess([{kind:'paraphrase-hard',passed:false}]).warning,'SATURATED EVAL');
+  assert.equal(assess([{kind:'paraphrase-hard',passed:true}]).warning,null);
+  assert.ok(overlap('Where can visitors leave their outerwear?','Coat storage: Use the maple wardrobe.')<=.4);
+});
+test('evidence-first separates pointers from the answer and refuses unsupported attributes',async()=>{
+  const {strictAnswer}=await import('./public/evidence-first.mjs');
+  const def=build('Explain locker deposits.',[{name:'policy.txt',text:'Locker deposit: Leave 12 euros.'}]).definition;
+  assert.equal(strictAnswer(def,'Explain locker deposit').status,'answered');
+  const actual=strictAnswer(def,'Is the locker deposit refundable?');
+  assert.equal(actual.status,'refused');
+  assert.deepEqual(actual.citations,[]);
+  assert.ok(actual.pointers.some(p=>p.source==='policy.txt'&&p.text.includes(p.highlighted)));
+  assert.ok(!actual.text.includes('12 euros'));
+});
