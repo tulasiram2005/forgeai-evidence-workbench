@@ -1,0 +1,12 @@
+[
+  {
+    "fixture": "examples/holdout/dispatch",
+    "matched": 8,
+    "generatedSplitsMatched": true
+  },
+  {
+    "fixture": "examples/holdout3/optics",
+    "matched": 20,
+    "generatedSplitsMatched": true
+  }
+]
