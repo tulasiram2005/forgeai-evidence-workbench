@@ -24,6 +24,16 @@ function corpusIndex(def){
     rare:t=>(frequency.get(t)??0)<=Math.max(1,docs.size*0.1),filter:identifierIndex(def.chunks)};
   byChunks.set(def.chunks,index);return index;
 }
+export function staticContextEncoder(def){
+  const index=corpusIndex(def),cache=new Map();
+  return {contextual:true,filterIds:index.filter,score(query,id){
+    if(!cache.has(query))cache.set(query,vector(query));
+    const q=cache.get(query),v=index.docs.get(id).vector;
+    let cosine=0;
+    for(let i=0;i<q.length;i++)cosine+=q[i]*v[i];
+    return cosine;
+  }};
+}
 export function gateRows(def,question,pool=def.chunks,rerank){
   const index=corpusIndex(def),words=[...terms(question)],q=vector(question);
   const weight=words.reduce((sum,t)=>sum+index.idf(t),0)||1;

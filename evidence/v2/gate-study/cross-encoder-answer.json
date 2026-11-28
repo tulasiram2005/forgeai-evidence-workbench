@@ -1,0 +1,11 @@
+{
+  "status": "answered",
+  "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift.",
+  "citations": [
+    {
+      "id": "D2.1",
+      "source": "shift-handbook.txt",
+      "text": "Shift swap notice: Submit swap requests at least 36 hours before the affected shift."
+    }
+  ]
+}

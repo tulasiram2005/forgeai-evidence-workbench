@@ -87,7 +87,7 @@ async function main(){
   }
   if(command==='holdout'){
     const {holdout}=await import('./holdout.mjs');
-    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),experimentalDense:args.includes('--experimental-dense'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')}),null,2));
+    console.log(JSON.stringify(await holdout(args[0],documents,{splitValidation:args.includes('--split-validation'),staticContext:args.includes('--static-context'),experimentalDense:args.includes('--experimental-dense'),gateV2:args.includes('--gate-v2')||args.includes('--rerank'),cliRerank:args.includes('--rerank'),contextual:args.includes('--contextual')||args.includes('--expand-index')||args.includes('--gate-v2')||args.includes('--rerank'),expandIndex:args.includes('--expand-index')}),null,2));
     return;
   }
   if(command==='impact'){

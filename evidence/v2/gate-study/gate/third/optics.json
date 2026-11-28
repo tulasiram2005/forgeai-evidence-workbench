@@ -1,0 +1,1085 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": false,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 2.349138513964269,
+      "hits": 1,
+      "falseAnswers": 2
+    },
+    "curve": [
+      {
+        "cut": 3.552273868177851,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.552273868177851,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.3914568555875717,
+        "hits": 0,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.349138513964269,
+        "hits": 1,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.3242713588418775,
+        "hits": 1,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.3139332035616027,
+        "hits": 1,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.3007630992485506,
+        "hits": 1,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.2251824276327365,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.1947376877964047,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.1940170884117576,
+        "hits": 2,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.147277826309539,
+        "hits": 2,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 2.117476215874354,
+        "hits": 2,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 2.114902589128585,
+        "hits": 2,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 1.9722602938377813,
+        "hits": 2,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 1.9606982790953207,
+        "hits": 2,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 1.9492452719255093,
+        "hits": 3,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 1.9434625158052932,
+        "hits": 3,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 1.9084780478666572,
+        "hits": 3,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 1.9083618414838652,
+        "hits": 3,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 1.9050461334446587,
+        "hits": 3,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 1.8935768116135756,
+        "hits": 3,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 1.8935096595596466,
+        "hits": 4,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 1.8792205329491567,
+        "hits": 4,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 1.8774631034114615,
+        "hits": 4,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 1.8665162522167413,
+        "hits": 4,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 1.8443005368222514,
+        "hits": 4,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 1.839948535235093,
+        "hits": 4,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 1.814249049027316,
+        "hits": 5,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 1.8097503916512279,
+        "hits": 5,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 1.8000122734405266,
+        "hits": 5,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 1.7976779797782017,
+        "hits": 5,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 1.7962434266942597,
+        "hits": 5,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 1.7899442223725812,
+        "hits": 5,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 1.7881745318791313,
+        "hits": 5,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.7874125624019466,
+        "hits": 5,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.7811542546049839,
+        "hits": 5,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.780481341006903,
+        "hits": 5,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 1.777261424470424,
+        "hits": 5,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 1.7698395553606499,
+        "hits": 5,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 1.7466085113577712,
+        "hits": 5,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 1.740807698407565,
+        "hits": 5,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 1.733954868177374,
+        "hits": 5,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 1.732805658404024,
+        "hits": 5,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.7313860950697217,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.7298386703879876,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.7004735348604736,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.6948818247803226,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.6872459622196943,
+        "hits": 7,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.6849526529455006,
+        "hits": 7,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.6647774263395114,
+        "hits": 7,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.6618768300121505,
+        "hits": 7,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.634523005236697,
+        "hits": 7,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.6202632608076883,
+        "hits": 7,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.5869889027627462,
+        "hits": 7,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.5594242930486986,
+        "hits": 7,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.5495730136758785,
+        "hits": 7,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.5153205439691575,
+        "hits": 7,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.5063654453454156,
+        "hits": 7,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.4897585009808842,
+        "hits": 7,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.4232502843279686,
+        "hits": 8,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.3992895538542502,
+        "hits": 8,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.3261576178496635,
+        "hits": 8,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 1.3038035854724177,
+        "hits": 8,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 1.2979122241618934,
+        "hits": 8,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 1.2415767163466793,
+        "hits": 8,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 1.1833013128456915,
+        "hits": 8,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 1.1629185645963733,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 1.1206742111932837,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 1.0727142079980474,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Lock the prism into a?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 1.4232502843279686
+      },
+      {
+        "q": "What is documented about Allow the lamp 14 minutes?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 1.7313860950697217
+      },
+      {
+        "q": "What is documented about Set the slit width to?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 1.814249049027316
+      },
+      {
+        "q": "What is documented about Use a green reference card.?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 1.8935096595596466
+      },
+      {
+        "q": "What is documented about Save 6 traces for each?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 2.1940170884117576
+      },
+      {
+        "q": "What is documented about The shift physicist initials the?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 1.9492452719255093
+      },
+      {
+        "q": "What is documented about Write the final spectrum as?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 1.6872459622196943
+      },
+      {
+        "q": "What is documented about Retain calibration scraps for 18?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 2.349138513964269
+      },
+      {
+        "q": "What is the deductible for Lock the prism into a?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 1.5594242930486986
+      },
+      {
+        "q": "What is the commission for Allow the lamp 14 minutes?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 2.1947376877964047
+      },
+      {
+        "q": "What is the royalty for Set the slit width to?",
+        "attribute": "royalty",
+        "topId": "D1.3",
+        "score": 1.777261424470424
+      },
+      {
+        "q": "What is the deduction for Use a green reference card.?",
+        "attribute": "deduction",
+        "topId": "D1.4",
+        "score": 2.3242713588418775
+      },
+      {
+        "q": "What is the amortization for Save 6 traces for each?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 1.9722602938377813
+      },
+      {
+        "q": "What is the depreciation for The shift physicist initials the?",
+        "attribute": "depreciation",
+        "topId": "D2.2",
+        "score": 1.8774631034114615
+      },
+      {
+        "q": "What is the waiver for Write the final spectrum as?",
+        "attribute": "waiver",
+        "topId": "D2.3",
+        "score": 1.7874125624019466
+      },
+      {
+        "q": "What is the surcharge for Retain calibration scraps for 18?",
+        "attribute": "surcharge",
+        "topId": "D2.4",
+        "score": 2.552273868177851
+      },
+      {
+        "q": "What is the deactivation date for Lock the prism into a?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 1.0727142079980474
+      },
+      {
+        "q": "What is the issuer for Allow the lamp 14 minutes?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 2.3139332035616027
+      },
+      {
+        "q": "What is the invoice number for Set the slit width to?",
+        "attribute": "invoice number",
+        "topId": "D1.3",
+        "score": 1.9050461334446587
+      },
+      {
+        "q": "What is the indemnity for Use a green reference card.?",
+        "attribute": "indemnity",
+        "topId": "D1.4",
+        "score": 1.9083618414838652
+      },
+      {
+        "q": "What is the exchange rate for Save 6 traces for each?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 1.8000122734405266
+      },
+      {
+        "q": "What is the deposit for The shift physicist initials the?",
+        "attribute": "deposit",
+        "topId": "D2.2",
+        "score": 2.117476215874354
+      },
+      {
+        "q": "What is the franchise fee for Write the final spectrum as?",
+        "attribute": "franchise fee",
+        "topId": "D2.3",
+        "score": 1.1629185645963733
+      },
+      {
+        "q": "What is the restocking fee for Lock the prism into a?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 1.2979122241618934
+      },
+      {
+        "q": "What is the tax rate for Allow the lamp 14 minutes?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 1.8665162522167413
+      },
+      {
+        "q": "What is the grace period for Set the slit width to?",
+        "attribute": "grace period",
+        "topId": "D1.3",
+        "score": 1.8792205329491567
+      },
+      {
+        "q": "What is the renewal period for Use a green reference card.?",
+        "attribute": "renewal period",
+        "topId": "D1.4",
+        "score": 1.780481341006903
+      },
+      {
+        "q": "What is the expiry date for Save 6 traces for each?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 1.740807698407565
+      },
+      {
+        "q": "What is the interest rate for The shift physicist initials the?",
+        "attribute": "interest rate",
+        "topId": "D2.2",
+        "score": 1.7881745318791313
+      },
+      {
+        "q": "What is the vendor address for Write the final spectrum as?",
+        "attribute": "vendor address",
+        "topId": "D2.3",
+        "score": 1.6202632608076883
+      },
+      {
+        "q": "What is the insurance premium for Retain calibration scraps for 18?",
+        "attribute": "insurance premium",
+        "topId": "D2.4",
+        "score": 2.114902589128585
+      },
+      {
+        "q": "What is the license number for Lock the prism into a?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 1.5063654453454156
+      },
+      {
+        "q": "What is the emission rating for Allow the lamp 14 minutes?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 1.839948535235093
+      },
+      {
+        "q": "What is the seismic rating for Set the slit width to?",
+        "attribute": "seismic rating",
+        "topId": "D1.3",
+        "score": 1.9434625158052932
+      },
+      {
+        "q": "What is the customs duty for Use a green reference card.?",
+        "attribute": "customs duty",
+        "topId": "D1.4",
+        "score": 1.6647774263395114
+      },
+      {
+        "q": "What is the auction value for Save 6 traces for each?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.7899442223725812
+      },
+      {
+        "q": "What is the rental fee for The shift physicist initials the?",
+        "attribute": "rental fee",
+        "topId": "D2.2",
+        "score": 1.1206742111932837
+      },
+      {
+        "q": "What is the failure probability for Write the final spectrum as?",
+        "attribute": "failure probability",
+        "topId": "D2.3",
+        "score": 1.7298386703879876
+      },
+      {
+        "q": "What is the audit interval for Lock the prism into a?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 1.1833013128456915
+      },
+      {
+        "q": "What is the embargo date for Allow the lamp 14 minutes?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 1.4897585009808842
+      },
+      {
+        "q": "What is the transfer fee for Set the slit width to?",
+        "attribute": "transfer fee",
+        "topId": "D1.3",
+        "score": 1.3992895538542502
+      },
+      {
+        "q": "What is the storage charge for Use a green reference card.?",
+        "attribute": "storage charge",
+        "topId": "D1.4",
+        "score": 1.9084780478666572
+      },
+      {
+        "q": "What is the design patent for Save 6 traces for each?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 1.7962434266942597
+      },
+      {
+        "q": "What is the payroll code for The shift physicist initials the?",
+        "attribute": "payroll code",
+        "topId": "D2.2",
+        "score": 1.6948818247803226
+      },
+      {
+        "q": "What is the dispatch postcode for Write the final spectrum as?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.3",
+        "score": 1.7698395553606499
+      },
+      {
+        "q": "What is the tariff band for Retain calibration scraps for 18?",
+        "attribute": "tariff band",
+        "topId": "D2.4",
+        "score": 2.3007630992485506
+      },
+      {
+        "q": "What is the export permit for Lock the prism into a?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.5869889027627462
+      },
+      {
+        "q": "What is the approval stamp for Allow the lamp 14 minutes?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 1.732805658404024
+      },
+      {
+        "q": "What is the shelf life for Set the slit width to?",
+        "attribute": "shelf life",
+        "topId": "D1.3",
+        "score": 1.7976779797782017
+      },
+      {
+        "q": "What is the solubility for Use a green reference card.?",
+        "attribute": "solubility",
+        "topId": "D1.4",
+        "score": 2.2251824276327365
+      },
+      {
+        "q": "What is the heat capacity for Save 6 traces for each?",
+        "attribute": "heat capacity",
+        "topId": "D2.1",
+        "score": 1.8443005368222514
+      },
+      {
+        "q": "What is the torque limit for The shift physicist initials the?",
+        "attribute": "torque limit",
+        "topId": "D2.2",
+        "score": 1.7004735348604736
+      },
+      {
+        "q": "What is the duty cycle for Write the final spectrum as?",
+        "attribute": "duty cycle",
+        "topId": "D2.3",
+        "score": 1.8097503916512279
+      },
+      {
+        "q": "What is the proof load for Lock the prism into a?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 1.6618768300121505
+      },
+      {
+        "q": "What is the retirement date for Allow the lamp 14 minutes?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 1.9606982790953207
+      },
+      {
+        "q": "What is the discount rate for Set the slit width to?",
+        "attribute": "discount rate",
+        "topId": "D1.3",
+        "score": 1.7466085113577712
+      },
+      {
+        "q": "What is the replacement value for Use a green reference card.?",
+        "attribute": "replacement value",
+        "topId": "D1.4",
+        "score": 2.147277826309539
+      },
+      {
+        "q": "What is the billing currency for Save 6 traces for each?",
+        "attribute": "billing currency",
+        "topId": "D2.1",
+        "score": 1.5153205439691575
+      },
+      {
+        "q": "What is the vat code for The shift physicist initials the?",
+        "attribute": "vat code",
+        "topId": "D2.2",
+        "score": 1.6849526529455006
+      },
+      {
+        "q": "What is the escrow fee for Write the final spectrum as?",
+        "attribute": "escrow fee",
+        "topId": "D2.3",
+        "score": 1.3261576178496635
+      },
+      {
+        "q": "What is the ballot count for Retain calibration scraps for 18?",
+        "attribute": "ballot count",
+        "topId": "D2.4",
+        "score": 2.3914568555875717
+      },
+      {
+        "q": "What is the bond maturity for Lock the prism into a?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 1.2415767163466793
+      },
+      {
+        "q": "What is the trademark number for Allow the lamp 14 minutes?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 1.5495730136758785
+      },
+      {
+        "q": "What is the insurance limit for Set the slit width to?",
+        "attribute": "insurance limit",
+        "topId": "D1.3",
+        "score": 1.8935768116135756
+      },
+      {
+        "q": "What is the review quorum for Use a green reference card.?",
+        "attribute": "review quorum",
+        "topId": "D1.4",
+        "score": 1.7811542546049839
+      },
+      {
+        "q": "What is the franchise territory for Save 6 traces for each?",
+        "attribute": "franchise territory",
+        "topId": "D2.1",
+        "score": 1.3038035854724177
+      },
+      {
+        "q": "What is the bank routing code for The shift physicist initials the?",
+        "attribute": "bank routing code",
+        "topId": "D2.2",
+        "score": 1.634523005236697
+      },
+      {
+        "q": "What is the capital allowance for Write the final spectrum as?",
+        "attribute": "capital allowance",
+        "topId": "D2.3",
+        "score": 1.733954868177374
+      }
+    ]
+  },
+  "passed": 10,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 2
+    },
+    "near miss": {
+      "passed": 8,
+      "total": 8
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "falseRefusals": {
+    "count": 10,
+    "total": 10
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 8
+  },
+  "results": [
+    {
+      "question": "What holds the glass wedge steady?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "brass cradle"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How long do we wait for stable light?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "14 minutes"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How wide should the opening be?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "2 millimeters"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which colour target do we align against?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "green"
+      ],
+      "sources": [
+        "alignment.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How many recordings do we need per sample?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "6 traces"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who must authorize the measurement set?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "shift physicist"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which file type do I hand over?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "TSV"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "When can old setup scraps be discarded?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "18 days"
+      ],
+      "sources": [
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How wide is the opening? Also, who signs the recordings?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "2 millimeters",
+        "shift physicist"
+      ],
+      "sources": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which target colour do I use and how many recordings are needed for one sample?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "green",
+        "6 traces"
+      ],
+      "sources": [
+        "alignment.md",
+        "traces.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which solvent cleans the prism?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What voltage should power the lamp?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the replacement price of a reference card?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which TSV delimiter escape convention is required?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the maximum acquisition temperature?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Who can override the shift physicist?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Is an aluminium cradle approved?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "How many backup copies of the final spectrum are required?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}

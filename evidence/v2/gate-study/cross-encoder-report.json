@@ -1,0 +1,1110 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": true,
+    "positives": 16,
+    "negatives": 60,
+    "selected": {
+      "cut": 3.098096894586254,
+      "hits": 1,
+      "falseAnswers": 2
+    },
+    "curve": [
+      {
+        "cut": 4.3554882348074795,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 3.35548823480748,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 3.124228481775477,
+        "hits": 0,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 3.098096894586254,
+        "hits": 1,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 3.0482482094848358,
+        "hits": 1,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 3.038186868870548,
+        "hits": 1,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.9262828655394757,
+        "hits": 1,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.8551891717288522,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.8489530107661825,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.844581929778668,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 2.8422408194736555,
+        "hits": 1,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 2.8092770786825914,
+        "hits": 1,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 2.7613109700762606,
+        "hits": 1,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 2.7062584062166364,
+        "hits": 1,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.688841306328722,
+        "hits": 2,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.5884325462907163,
+        "hits": 3,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.546548691242456,
+        "hits": 4,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.5241000464380643,
+        "hits": 4,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 2.4895528955764448,
+        "hits": 5,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 2.473073482938285,
+        "hits": 5,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 2.4673332588445884,
+        "hits": 6,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 2.466999378746161,
+        "hits": 6,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 2.4644997762098857,
+        "hits": 6,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.447037223096328,
+        "hits": 6,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 2.430060388215866,
+        "hits": 6,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 2.4056794974155427,
+        "hits": 6,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 2.4026902248070545,
+        "hits": 6,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.3729856295045852,
+        "hits": 7,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.3448427878284823,
+        "hits": 8,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.3361399364640723,
+        "hits": 8,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 2.322798585789296,
+        "hits": 8,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.3187047936900482,
+        "hits": 9,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.28321070326641,
+        "hits": 9,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 2.277227406301801,
+        "hits": 10,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 2.2663808187743744,
+        "hits": 10,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 2.2505926446547635,
+        "hits": 10,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 2.2460976697753967,
+        "hits": 10,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 2.222653803100073,
+        "hits": 10,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.2067805594326586,
+        "hits": 11,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.197226671764322,
+        "hits": 11,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 2.1731209583952418,
+        "hits": 11,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 2.1508038607623994,
+        "hits": 12,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 2.135801764394282,
+        "hits": 12,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 2.1348454341212086,
+        "hits": 12,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 2.1225933676471596,
+        "hits": 12,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 2.1203744632507613,
+        "hits": 12,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 2.116774402579309,
+        "hits": 12,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 2.053034912966325,
+        "hits": 12,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 2.043977049724317,
+        "hits": 12,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 2.034432941245341,
+        "hits": 12,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.9864126417129782,
+        "hits": 12,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.9826909630082294,
+        "hits": 12,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.978082713393088,
+        "hits": 13,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.9742616757024356,
+        "hits": 13,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.96304870252719,
+        "hits": 13,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.950817864388093,
+        "hits": 13,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.9414701231316556,
+        "hits": 14,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.9079795078130795,
+        "hits": 14,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.8891069443200428,
+        "hits": 14,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.8864757295258638,
+        "hits": 14,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.8828047129164809,
+        "hits": 14,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.8476114975377238,
+        "hits": 14,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.8475552964372304,
+        "hits": 14,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.8461657474873097,
+        "hits": 14,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.8190374989777964,
+        "hits": 14,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.8091337396425178,
+        "hits": 14,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.8016671359969691,
+        "hits": 14,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.7768166194528645,
+        "hits": 14,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.7547547092460714,
+        "hits": 14,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 1.7429838590053486,
+        "hits": 14,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 1.7255317326232176,
+        "hits": 14,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 1.7231994876394192,
+        "hits": 14,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 1.69973169603569,
+        "hits": 14,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 1.5133009644217057,
+        "hits": 14,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 1.3893700823382389,
+        "hits": 15,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 1.1854791975615064,
+        "hits": 15,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.9958339670792307,
+        "hits": 15,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Travel reimbursement deadline?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 3.098096894586254
+      },
+      {
+        "q": "What is documented about Travel reimbursement evidence?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 2.4673332588445884
+      },
+      {
+        "q": "What is documented about Local rail fare?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 2.5884325462907163
+      },
+      {
+        "q": "What is documented about Taxi approval?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 2.4895528955764448
+      },
+      {
+        "q": "What is documented about Meal allowance?",
+        "gold": "D1.5",
+        "topId": "D1.5",
+        "score": 2.688841306328722
+      },
+      {
+        "q": "What is documented about Expense correction?",
+        "gold": "D1.6",
+        "topId": "D1.6",
+        "score": 2.2067805594326586
+      },
+      {
+        "q": "What is documented about Mileage rate?",
+        "gold": "D1.7",
+        "topId": "D1.7",
+        "score": 2.3187047936900482
+      },
+      {
+        "q": "What is documented about Missing receipt?",
+        "gold": "D1.8",
+        "topId": "D1.8",
+        "score": 1.9414701231316556
+      },
+      {
+        "q": "What is documented about Shift swap notice?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 2.546548691242456
+      },
+      {
+        "q": "What is documented about Shift swap approval?",
+        "gold": "D2.2",
+        "topId": "D2.1",
+        "score": 1.9826909630082294
+      },
+      {
+        "q": "What is documented about Annual leave notice?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 2.1508038607623994
+      },
+      {
+        "q": "What is documented about Annual leave approver?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 2.3448427878284823
+      },
+      {
+        "q": "What is documented about Emergency leave contact?",
+        "gold": "D2.5",
+        "topId": "D2.5",
+        "score": 2.277227406301801
+      },
+      {
+        "q": "What is documented about Shift swap record?",
+        "gold": "D2.6",
+        "topId": "D2.6",
+        "score": 1.978082713393088
+      },
+      {
+        "q": "What is documented about Training leave allowance?",
+        "gold": "D2.7",
+        "topId": "D2.7",
+        "score": 2.3729856295045852
+      },
+      {
+        "q": "What is documented about Returning from leave?",
+        "gold": "D2.8",
+        "topId": "D2.8",
+        "score": 1.3893700823382389
+      },
+      {
+        "q": "What is the deductible for Travel reimbursement deadline?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 3.35548823480748
+      },
+      {
+        "q": "What is the commission for Local rail fare?",
+        "attribute": "commission",
+        "topId": "D1.3",
+        "score": 3.124228481775477
+      },
+      {
+        "q": "What is the royalty for Meal allowance?",
+        "attribute": "royalty",
+        "topId": "D1.5",
+        "score": 2.8489530107661825
+      },
+      {
+        "q": "What is the deduction for Mileage rate?",
+        "attribute": "deduction",
+        "topId": "D1.7",
+        "score": 2.4026902248070545
+      },
+      {
+        "q": "What is the amortization for Shift swap notice?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 2.7062584062166364
+      },
+      {
+        "q": "What is the depreciation for Annual leave notice?",
+        "attribute": "depreciation",
+        "topId": "D2.3",
+        "score": 2.197226671764322
+      },
+      {
+        "q": "What is the waiver for Emergency leave contact?",
+        "attribute": "waiver",
+        "topId": "D2.5",
+        "score": 2.5241000464380643
+      },
+      {
+        "q": "What is the surcharge for Training leave allowance?",
+        "attribute": "surcharge",
+        "topId": "D2.7",
+        "score": 2.473073482938285
+      },
+      {
+        "q": "What is the deactivation date for Travel reimbursement evidence?",
+        "attribute": "deactivation date",
+        "topId": "D1.2",
+        "score": 1.8190374989777964
+      },
+      {
+        "q": "What is the issuer for Taxi approval?",
+        "attribute": "issuer",
+        "topId": "D1.4",
+        "score": 2.8551891717288522
+      },
+      {
+        "q": "What is the invoice number for Expense correction?",
+        "attribute": "invoice number",
+        "topId": "D1.6",
+        "score": 1.8016671359969691
+      },
+      {
+        "q": "What is the indemnity for Missing receipt?",
+        "attribute": "indemnity",
+        "topId": "D1.8",
+        "score": 1.950817864388093
+      },
+      {
+        "q": "What is the exchange rate for Shift swap approval?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 2.053034912966325
+      },
+      {
+        "q": "What is the deposit for Annual leave approver?",
+        "attribute": "deposit",
+        "topId": "D2.4",
+        "score": 2.8092770786825914
+      },
+      {
+        "q": "What is the franchise fee for Shift swap record?",
+        "attribute": "franchise fee",
+        "topId": "D2.6",
+        "score": 1.69973169603569
+      },
+      {
+        "q": "What is the restocking fee for Travel reimbursement deadline?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 3.038186868870548
+      },
+      {
+        "q": "What is the tax rate for Local rail fare?",
+        "attribute": "tax rate",
+        "topId": "D1.3",
+        "score": 2.430060388215866
+      },
+      {
+        "q": "What is the grace period for Meal allowance?",
+        "attribute": "grace period",
+        "topId": "D1.5",
+        "score": 2.3361399364640723
+      },
+      {
+        "q": "What is the renewal period for Mileage rate?",
+        "attribute": "renewal period",
+        "topId": "D1.7",
+        "score": 1.8091337396425178
+      },
+      {
+        "q": "What is the expiry date for Shift swap notice?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 2.447037223096328
+      },
+      {
+        "q": "What is the interest rate for Annual leave notice?",
+        "attribute": "interest rate",
+        "topId": "D2.3",
+        "score": 1.9864126417129782
+      },
+      {
+        "q": "What is the vendor address for Emergency leave contact?",
+        "attribute": "vendor address",
+        "topId": "D2.5",
+        "score": 2.116774402579309
+      },
+      {
+        "q": "What is the insurance premium for Training leave allowance?",
+        "attribute": "insurance premium",
+        "topId": "D2.7",
+        "score": 2.2460976697753967
+      },
+      {
+        "q": "What is the license number for Travel reimbursement evidence?",
+        "attribute": "license number",
+        "topId": "D1.2",
+        "score": 2.322798585789296
+      },
+      {
+        "q": "What is the emission rating for Taxi approval?",
+        "attribute": "emission rating",
+        "topId": "D1.4",
+        "score": 1.8461657474873097
+      },
+      {
+        "q": "What is the seismic rating for Expense correction?",
+        "attribute": "seismic rating",
+        "topId": "D1.6",
+        "score": 1.7255317326232176
+      },
+      {
+        "q": "What is the customs duty for Missing receipt?",
+        "attribute": "customs duty",
+        "topId": "D1.8",
+        "score": 1.8475552964372304
+      },
+      {
+        "q": "What is the auction value for Shift swap approval?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.7231994876394192
+      },
+      {
+        "q": "What is the rental fee for Annual leave approver?",
+        "attribute": "rental fee",
+        "topId": "D2.4",
+        "score": 1.8828047129164809
+      },
+      {
+        "q": "What is the failure probability for Shift swap record?",
+        "attribute": "failure probability",
+        "topId": "D2.6",
+        "score": 1.7429838590053486
+      },
+      {
+        "q": "What is the audit interval for Travel reimbursement deadline?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 2.9262828655394757
+      },
+      {
+        "q": "What is the embargo date for Local rail fare?",
+        "attribute": "embargo date",
+        "topId": "D1.3",
+        "score": 1.96304870252719
+      },
+      {
+        "q": "What is the transfer fee for Meal allowance?",
+        "attribute": "transfer fee",
+        "topId": "D1.5",
+        "score": 2.844581929778668
+      },
+      {
+        "q": "What is the storage charge for Mileage rate?",
+        "attribute": "storage charge",
+        "topId": "D1.7",
+        "score": 2.1203744632507613
+      },
+      {
+        "q": "What is the design patent for Shift swap notice?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 2.4056794974155427
+      },
+      {
+        "q": "What is the payroll code for Annual leave notice?",
+        "attribute": "payroll code",
+        "topId": "D2.3",
+        "score": 1.8891069443200428
+      },
+      {
+        "q": "What is the dispatch postcode for Emergency leave contact?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.5",
+        "score": 2.043977049724317
+      },
+      {
+        "q": "What is the tariff band for Training leave allowance?",
+        "attribute": "tariff band",
+        "topId": "D2.7",
+        "score": 2.222653803100073
+      },
+      {
+        "q": "What is the export permit for Travel reimbursement evidence?",
+        "attribute": "export permit",
+        "topId": "D1.2",
+        "score": 2.2505926446547635
+      },
+      {
+        "q": "What is the approval stamp for Taxi approval?",
+        "attribute": "approval stamp",
+        "topId": "D1.4",
+        "score": 2.8422408194736555
+      },
+      {
+        "q": "What is the shelf life for Expense correction?",
+        "attribute": "shelf life",
+        "topId": "D1.6",
+        "score": 1.5133009644217057
+      },
+      {
+        "q": "What is the solubility for Missing receipt?",
+        "attribute": "solubility",
+        "topId": "D1.8",
+        "score": 1.7547547092460714
+      },
+      {
+        "q": "What is the heat capacity for Shift swap approval?",
+        "attribute": "heat capacity",
+        "topId": "D2.2",
+        "score": 1.8476114975377238
+      },
+      {
+        "q": "What is the torque limit for Annual leave approver?",
+        "attribute": "torque limit",
+        "topId": "D2.4",
+        "score": 2.1348454341212086
+      },
+      {
+        "q": "What is the duty cycle for Shift swap record?",
+        "attribute": "duty cycle",
+        "topId": "D2.6",
+        "score": 2.7613109700762606
+      },
+      {
+        "q": "What is the proof load for Travel reimbursement deadline?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 3.0482482094848358
+      },
+      {
+        "q": "What is the retirement date for Local rail fare?",
+        "attribute": "retirement date",
+        "topId": "D1.3",
+        "score": 2.1731209583952418
+      },
+      {
+        "q": "What is the discount rate for Meal allowance?",
+        "attribute": "discount rate",
+        "topId": "D1.5",
+        "score": 2.4644997762098857
+      },
+      {
+        "q": "What is the replacement value for Mileage rate?",
+        "attribute": "replacement value",
+        "topId": "D1.7",
+        "score": 2.2663808187743744
+      },
+      {
+        "q": "What is the billing currency for Shift swap notice?",
+        "attribute": "billing currency",
+        "topId": "D2.1",
+        "score": 2.466999378746161
+      },
+      {
+        "q": "What is the vat code for Annual leave notice?",
+        "attribute": "vat code",
+        "topId": "D2.3",
+        "score": 2.1225933676471596
+      },
+      {
+        "q": "What is the escrow fee for Emergency leave contact?",
+        "attribute": "escrow fee",
+        "topId": "D2.5",
+        "score": 1.1854791975615064
+      },
+      {
+        "q": "What is the ballot count for Training leave allowance?",
+        "attribute": "ballot count",
+        "topId": "D2.7",
+        "score": 2.28321070326641
+      },
+      {
+        "q": "What is the bond maturity for Travel reimbursement evidence?",
+        "attribute": "bond maturity",
+        "topId": "D1.2",
+        "score": 2.034432941245341
+      },
+      {
+        "q": "What is the trademark number for Taxi approval?",
+        "attribute": "trademark number",
+        "topId": "D1.4",
+        "score": 1.8864757295258638
+      },
+      {
+        "q": "What is the insurance limit for Expense correction?",
+        "attribute": "insurance limit",
+        "topId": "D1.6",
+        "score": 1.9079795078130795
+      },
+      {
+        "q": "What is the review quorum for Missing receipt?",
+        "attribute": "review quorum",
+        "topId": "D1.8",
+        "score": 0.9958339670792307
+      },
+      {
+        "q": "What is the franchise territory for Shift swap approval?",
+        "attribute": "franchise territory",
+        "topId": "D2.2",
+        "score": 1.7768166194528645
+      },
+      {
+        "q": "What is the bank routing code for Annual leave approver?",
+        "attribute": "bank routing code",
+        "topId": "D2.4",
+        "score": 1.9742616757024356
+      },
+      {
+        "q": "What is the capital allowance for Shift swap record?",
+        "attribute": "capital allowance",
+        "topId": "D2.6",
+        "score": 2.135801764394282
+      }
+    ]
+  },
+  "retainedRound": 2,
+  "judgeControls": [
+    {
+      "name": "Always refuses",
+      "caseId": "E01",
+      "rejected": true
+    },
+    {
+      "name": "Always answers",
+      "caseId": "E21",
+      "rejected": true
+    },
+    {
+      "name": "Fabricated number",
+      "caseId": "E01",
+      "rejected": true
+    },
+    {
+      "name": "Wrong source",
+      "caseId": "E01",
+      "rejected": true
+    }
+  ],
+  "passed": 17,
+  "total": 30,
+  "stop": "No targeted repair available",
+  "failures": [
+    {
+      "id": "E02",
+      "question": "What are the details for Travel reimbursement evidence?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E05",
+      "question": "What are the details for Meal allowance?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E06",
+      "question": "What are the details for Expense correction?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E07",
+      "question": "What are the details for Mileage rate?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E08",
+      "question": "What are the details for Missing receipt?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E10",
+      "question": "What are the details for Shift swap approval?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E11",
+      "question": "What are the details for Annual leave notice?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E12",
+      "question": "What are the details for Annual leave approver?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E13",
+      "question": "What are the details for Emergency leave contact?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E14",
+      "question": "What are the details for Shift swap record?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E15",
+      "question": "What are the details for Training leave allowance?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E16",
+      "question": "What are the details for Returning from leave?",
+      "kind": "grounded",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    },
+    {
+      "id": "E18",
+      "question": "Explain Travel reimbursement evidence and also Shift swap notice?",
+      "kind": "cross-source",
+      "passed": false,
+      "category": "wrong refusal",
+      "grounded": true,
+      "correct": false,
+      "expectedStatus": "answered",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      }
+    }
+  ],
+  "metrics": {
+    "citationPrecision": {
+      "matched": 10,
+      "total": 10
+    },
+    "evidenceRecall": {
+      "matched": 10,
+      "total": 24
+    },
+    "requiredRefusals": {
+      "matched": 8,
+      "total": 8
+    },
+    "refusalPrecision": {
+      "matched": 8,
+      "total": 21
+    }
+  },
+  "model": "Deterministic local compiler",
+  "limitations": [
+    "Generated checks share corpus vocabulary. Scores measure suite agreement, not unseen accuracy.",
+    "A citation proves source membership. Lexical retrieval can miss paraphrases and unsupported attributes."
+  ],
+  "budget": {
+    "limitMs": 180000,
+    "elapsedMs": 4716,
+    "scope": "model generation, compilation and optimization after intake"
+  }
+}

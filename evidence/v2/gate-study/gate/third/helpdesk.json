@@ -1,0 +1,1085 @@
+{
+  "calibration": {
+    "version": 2,
+    "encoder": "potion-base-2M-int8",
+    "reranker": false,
+    "positives": 8,
+    "negatives": 60,
+    "selected": {
+      "cut": 2.4485774577859063,
+      "hits": 1,
+      "falseAnswers": 6
+    },
+    "curve": [
+      {
+        "cut": 3.781435994285405,
+        "hits": 0,
+        "falseAnswers": 0
+      },
+      {
+        "cut": 2.781435994285405,
+        "hits": 0,
+        "falseAnswers": 1
+      },
+      {
+        "cut": 2.7091781311254057,
+        "hits": 0,
+        "falseAnswers": 2
+      },
+      {
+        "cut": 2.6906793105150806,
+        "hits": 0,
+        "falseAnswers": 3
+      },
+      {
+        "cut": 2.6156601862061146,
+        "hits": 0,
+        "falseAnswers": 4
+      },
+      {
+        "cut": 2.516848327703884,
+        "hits": 0,
+        "falseAnswers": 5
+      },
+      {
+        "cut": 2.5079746101033455,
+        "hits": 0,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.4485774577859063,
+        "hits": 1,
+        "falseAnswers": 6
+      },
+      {
+        "cut": 2.40041836950913,
+        "hits": 1,
+        "falseAnswers": 7
+      },
+      {
+        "cut": 2.399936526459154,
+        "hits": 1,
+        "falseAnswers": 8
+      },
+      {
+        "cut": 2.3603164474220044,
+        "hits": 1,
+        "falseAnswers": 9
+      },
+      {
+        "cut": 2.352112781175192,
+        "hits": 1,
+        "falseAnswers": 10
+      },
+      {
+        "cut": 2.3059842631903686,
+        "hits": 1,
+        "falseAnswers": 11
+      },
+      {
+        "cut": 2.3047005561926204,
+        "hits": 1,
+        "falseAnswers": 12
+      },
+      {
+        "cut": 2.3016208812984056,
+        "hits": 1,
+        "falseAnswers": 13
+      },
+      {
+        "cut": 2.2999562498565203,
+        "hits": 1,
+        "falseAnswers": 14
+      },
+      {
+        "cut": 2.296106940943937,
+        "hits": 1,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 2.284813534887141,
+        "hits": 2,
+        "falseAnswers": 15
+      },
+      {
+        "cut": 2.275560518968261,
+        "hits": 2,
+        "falseAnswers": 16
+      },
+      {
+        "cut": 2.2128709474978763,
+        "hits": 2,
+        "falseAnswers": 17
+      },
+      {
+        "cut": 2.198004899103603,
+        "hits": 2,
+        "falseAnswers": 18
+      },
+      {
+        "cut": 2.1814014146117424,
+        "hits": 2,
+        "falseAnswers": 19
+      },
+      {
+        "cut": 2.1598026994271287,
+        "hits": 2,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.1470183951897086,
+        "hits": 3,
+        "falseAnswers": 20
+      },
+      {
+        "cut": 2.131945300038786,
+        "hits": 3,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 2.129294957636616,
+        "hits": 4,
+        "falseAnswers": 21
+      },
+      {
+        "cut": 2.1246933717271728,
+        "hits": 4,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.105516401724193,
+        "hits": 5,
+        "falseAnswers": 22
+      },
+      {
+        "cut": 2.1024779749433957,
+        "hits": 5,
+        "falseAnswers": 23
+      },
+      {
+        "cut": 2.0703427290251004,
+        "hits": 5,
+        "falseAnswers": 24
+      },
+      {
+        "cut": 2.067512478322687,
+        "hits": 5,
+        "falseAnswers": 25
+      },
+      {
+        "cut": 2.066964692218728,
+        "hits": 5,
+        "falseAnswers": 26
+      },
+      {
+        "cut": 2.065520486948436,
+        "hits": 5,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 2.030327005282601,
+        "hits": 6,
+        "falseAnswers": 27
+      },
+      {
+        "cut": 1.9751459434268221,
+        "hits": 6,
+        "falseAnswers": 28
+      },
+      {
+        "cut": 1.9545984203640747,
+        "hits": 6,
+        "falseAnswers": 29
+      },
+      {
+        "cut": 1.9373974635644673,
+        "hits": 6,
+        "falseAnswers": 30
+      },
+      {
+        "cut": 1.909846144309774,
+        "hits": 6,
+        "falseAnswers": 31
+      },
+      {
+        "cut": 1.8630787763866745,
+        "hits": 6,
+        "falseAnswers": 32
+      },
+      {
+        "cut": 1.8274704379503632,
+        "hits": 6,
+        "falseAnswers": 33
+      },
+      {
+        "cut": 1.816153533507426,
+        "hits": 6,
+        "falseAnswers": 34
+      },
+      {
+        "cut": 1.7980986998264386,
+        "hits": 6,
+        "falseAnswers": 35
+      },
+      {
+        "cut": 1.7871303434568542,
+        "hits": 6,
+        "falseAnswers": 36
+      },
+      {
+        "cut": 1.7850263089412863,
+        "hits": 6,
+        "falseAnswers": 37
+      },
+      {
+        "cut": 1.7840629287741743,
+        "hits": 6,
+        "falseAnswers": 38
+      },
+      {
+        "cut": 1.7781642593343252,
+        "hits": 6,
+        "falseAnswers": 39
+      },
+      {
+        "cut": 1.7664636073719715,
+        "hits": 6,
+        "falseAnswers": 40
+      },
+      {
+        "cut": 1.6790916838122671,
+        "hits": 6,
+        "falseAnswers": 41
+      },
+      {
+        "cut": 1.6731581658595769,
+        "hits": 6,
+        "falseAnswers": 42
+      },
+      {
+        "cut": 1.631872093605807,
+        "hits": 6,
+        "falseAnswers": 43
+      },
+      {
+        "cut": 1.6281597298763486,
+        "hits": 6,
+        "falseAnswers": 44
+      },
+      {
+        "cut": 1.5741574391352497,
+        "hits": 6,
+        "falseAnswers": 45
+      },
+      {
+        "cut": 1.5604764755331406,
+        "hits": 6,
+        "falseAnswers": 46
+      },
+      {
+        "cut": 1.5239112543292943,
+        "hits": 6,
+        "falseAnswers": 47
+      },
+      {
+        "cut": 1.5232367024517457,
+        "hits": 6,
+        "falseAnswers": 48
+      },
+      {
+        "cut": 1.496274928039411,
+        "hits": 6,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.4576378916357289,
+        "hits": 7,
+        "falseAnswers": 49
+      },
+      {
+        "cut": 1.4559318967665662,
+        "hits": 7,
+        "falseAnswers": 50
+      },
+      {
+        "cut": 1.4175626840369473,
+        "hits": 7,
+        "falseAnswers": 51
+      },
+      {
+        "cut": 1.3757862309731972,
+        "hits": 7,
+        "falseAnswers": 52
+      },
+      {
+        "cut": 1.347818734100372,
+        "hits": 7,
+        "falseAnswers": 53
+      },
+      {
+        "cut": 1.3310627826273462,
+        "hits": 7,
+        "falseAnswers": 54
+      },
+      {
+        "cut": 1.327642457114364,
+        "hits": 7,
+        "falseAnswers": 55
+      },
+      {
+        "cut": 1.268376218159396,
+        "hits": 7,
+        "falseAnswers": 56
+      },
+      {
+        "cut": 1.2494159401341165,
+        "hits": 7,
+        "falseAnswers": 57
+      },
+      {
+        "cut": 1.2118212393148686,
+        "hits": 7,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 1.1346324435868778,
+        "hits": 8,
+        "falseAnswers": 58
+      },
+      {
+        "cut": 0.9409487919185031,
+        "hits": 8,
+        "falseAnswers": 59
+      },
+      {
+        "cut": 0.8383980795435468,
+        "hits": 8,
+        "falseAnswers": 60
+      }
+    ],
+    "samples": [
+      {
+        "q": "What is documented about Ask the duty librarian to?",
+        "gold": "D1.1",
+        "topId": "D1.1",
+        "score": 1.1346324435868778
+      },
+      {
+        "q": "What is documented about Visitor passes expire after 45?",
+        "gold": "D1.2",
+        "topId": "D1.2",
+        "score": 2.284813534887141
+      },
+      {
+        "q": "What is documented about Present a library card at?",
+        "gold": "D1.3",
+        "topId": "D1.3",
+        "score": 1.4576378916357289
+      },
+      {
+        "q": "What is documented about Use the blue renewal terminal.?",
+        "gold": "D1.4",
+        "topId": "D1.4",
+        "score": 2.105516401724193
+      },
+      {
+        "q": "What is documented about A failed job earns 3?",
+        "gold": "D2.1",
+        "topId": "D2.1",
+        "score": 2.1470183951897086
+      },
+      {
+        "q": "What is documented about Load ivory stock for proof?",
+        "gold": "D2.2",
+        "topId": "D2.2",
+        "score": 2.4485774577859063
+      },
+      {
+        "q": "What is documented about Completed posters wait at desk?",
+        "gold": "D2.3",
+        "topId": "D2.3",
+        "score": 2.129294957636616
+      },
+      {
+        "q": "What is documented about Only the floor technician clears?",
+        "gold": "D2.4",
+        "topId": "D2.4",
+        "score": 2.030327005282601
+      },
+      {
+        "q": "What is the deductible for Ask the duty librarian to?",
+        "attribute": "deductible",
+        "topId": "D1.1",
+        "score": 1.8630787763866745
+      },
+      {
+        "q": "What is the commission for Visitor passes expire after 45?",
+        "attribute": "commission",
+        "topId": "D1.2",
+        "score": 2.7091781311254057
+      },
+      {
+        "q": "What is the royalty for Present a library card at?",
+        "attribute": "royalty",
+        "topId": "D1.3",
+        "score": 1.3757862309731972
+      },
+      {
+        "q": "What is the deduction for Use the blue renewal terminal.?",
+        "attribute": "deduction",
+        "topId": "D1.4",
+        "score": 2.3603164474220044
+      },
+      {
+        "q": "What is the amortization for A failed job earns 3?",
+        "attribute": "amortization",
+        "topId": "D2.1",
+        "score": 2.198004899103603
+      },
+      {
+        "q": "What is the depreciation for Load ivory stock for proof?",
+        "attribute": "depreciation",
+        "topId": "D2.2",
+        "score": 2.5079746101033455
+      },
+      {
+        "q": "What is the waiver for Completed posters wait at desk?",
+        "attribute": "waiver",
+        "topId": "D2.3",
+        "score": 2.3047005561926204
+      },
+      {
+        "q": "What is the surcharge for Only the floor technician clears?",
+        "attribute": "surcharge",
+        "topId": "D2.4",
+        "score": 2.1024779749433957
+      },
+      {
+        "q": "What is the deactivation date for Ask the duty librarian to?",
+        "attribute": "deactivation date",
+        "topId": "D1.1",
+        "score": 1.631872093605807
+      },
+      {
+        "q": "What is the issuer for Visitor passes expire after 45?",
+        "attribute": "issuer",
+        "topId": "D1.2",
+        "score": 2.781435994285405
+      },
+      {
+        "q": "What is the invoice number for Present a library card at?",
+        "attribute": "invoice number",
+        "topId": "D1.3",
+        "score": 1.7840629287741743
+      },
+      {
+        "q": "What is the indemnity for Use the blue renewal terminal.?",
+        "attribute": "indemnity",
+        "topId": "D1.4",
+        "score": 2.352112781175192
+      },
+      {
+        "q": "What is the exchange rate for A failed job earns 3?",
+        "attribute": "exchange rate",
+        "topId": "D2.1",
+        "score": 2.067512478322687
+      },
+      {
+        "q": "What is the deposit for Load ivory stock for proof?",
+        "attribute": "deposit",
+        "topId": "D2.2",
+        "score": 2.516848327703884
+      },
+      {
+        "q": "What is the franchise fee for Completed posters wait at desk?",
+        "attribute": "franchise fee",
+        "topId": "D2.3",
+        "score": 1.5741574391352497
+      },
+      {
+        "q": "What is the restocking fee for Ask the duty librarian to?",
+        "attribute": "restocking fee",
+        "topId": "D1.1",
+        "score": 1.2494159401341165
+      },
+      {
+        "q": "What is the tax rate for Visitor passes expire after 45?",
+        "attribute": "tax rate",
+        "topId": "D1.2",
+        "score": 2.399936526459154
+      },
+      {
+        "q": "What is the grace period for Present a library card at?",
+        "attribute": "grace period",
+        "topId": "D1.3",
+        "score": 0.9409487919185031
+      },
+      {
+        "q": "What is the renewal period for Use the blue renewal terminal.?",
+        "attribute": "renewal period",
+        "topId": "D1.4",
+        "score": 2.6906793105150806
+      },
+      {
+        "q": "What is the expiry date for A failed job earns 3?",
+        "attribute": "expiry date",
+        "topId": "D2.1",
+        "score": 1.7850263089412863
+      },
+      {
+        "q": "What is the interest rate for Load ivory stock for proof?",
+        "attribute": "interest rate",
+        "topId": "D2.2",
+        "score": 2.40041836950913
+      },
+      {
+        "q": "What is the vendor address for Completed posters wait at desk?",
+        "attribute": "vendor address",
+        "topId": "D2.3",
+        "score": 2.1814014146117424
+      },
+      {
+        "q": "What is the insurance premium for Only the floor technician clears?",
+        "attribute": "insurance premium",
+        "topId": "D2.4",
+        "score": 1.7871303434568542
+      },
+      {
+        "q": "What is the license number for Ask the duty librarian to?",
+        "attribute": "license number",
+        "topId": "D1.1",
+        "score": 1.347818734100372
+      },
+      {
+        "q": "What is the emission rating for Visitor passes expire after 45?",
+        "attribute": "emission rating",
+        "topId": "D1.2",
+        "score": 2.275560518968261
+      },
+      {
+        "q": "What is the seismic rating for Present a library card at?",
+        "attribute": "seismic rating",
+        "topId": "D1.3",
+        "score": 1.3310627826273462
+      },
+      {
+        "q": "What is the customs duty for Use the blue renewal terminal.?",
+        "attribute": "customs duty",
+        "topId": "D1.4",
+        "score": 1.6790916838122671
+      },
+      {
+        "q": "What is the auction value for A failed job earns 3?",
+        "attribute": "auction value",
+        "topId": "D2.1",
+        "score": 1.9751459434268221
+      },
+      {
+        "q": "What is the rental fee for Load ivory stock for proof?",
+        "attribute": "rental fee",
+        "topId": "D2.2",
+        "score": 1.6731581658595769
+      },
+      {
+        "q": "What is the failure probability for Completed posters wait at desk?",
+        "attribute": "failure probability",
+        "topId": "D2.3",
+        "score": 1.816153533507426
+      },
+      {
+        "q": "What is the audit interval for Ask the duty librarian to?",
+        "attribute": "audit interval",
+        "topId": "D1.1",
+        "score": 0.8383980795435468
+      },
+      {
+        "q": "What is the embargo date for Visitor passes expire after 45?",
+        "attribute": "embargo date",
+        "topId": "D1.2",
+        "score": 2.3016208812984056
+      },
+      {
+        "q": "What is the transfer fee for Present a library card at?",
+        "attribute": "transfer fee",
+        "topId": "D1.3",
+        "score": 1.2118212393148686
+      },
+      {
+        "q": "What is the storage charge for Use the blue renewal terminal.?",
+        "attribute": "storage charge",
+        "topId": "D1.4",
+        "score": 2.2128709474978763
+      },
+      {
+        "q": "What is the design patent for A failed job earns 3?",
+        "attribute": "design patent",
+        "topId": "D2.1",
+        "score": 2.065520486948436
+      },
+      {
+        "q": "What is the payroll code for Load ivory stock for proof?",
+        "attribute": "payroll code",
+        "topId": "D2.2",
+        "score": 1.9373974635644673
+      },
+      {
+        "q": "What is the dispatch postcode for Completed posters wait at desk?",
+        "attribute": "dispatch postcode",
+        "topId": "D2.3",
+        "score": 1.7664636073719715
+      },
+      {
+        "q": "What is the tariff band for Only the floor technician clears?",
+        "attribute": "tariff band",
+        "topId": "D2.4",
+        "score": 2.1246933717271728
+      },
+      {
+        "q": "What is the export permit for Ask the duty librarian to?",
+        "attribute": "export permit",
+        "topId": "D1.1",
+        "score": 1.327642457114364
+      },
+      {
+        "q": "What is the approval stamp for Visitor passes expire after 45?",
+        "attribute": "approval stamp",
+        "topId": "D1.2",
+        "score": 2.1598026994271287
+      },
+      {
+        "q": "What is the shelf life for Present a library card at?",
+        "attribute": "shelf life",
+        "topId": "D1.3",
+        "score": 1.4175626840369473
+      },
+      {
+        "q": "What is the solubility for Use the blue renewal terminal.?",
+        "attribute": "solubility",
+        "topId": "D1.4",
+        "score": 2.6156601862061146
+      },
+      {
+        "q": "What is the heat capacity for A failed job earns 3?",
+        "attribute": "heat capacity",
+        "topId": "D2.1",
+        "score": 1.9545984203640747
+      },
+      {
+        "q": "What is the torque limit for Load ivory stock for proof?",
+        "attribute": "torque limit",
+        "topId": "D2.2",
+        "score": 1.8274704379503632
+      },
+      {
+        "q": "What is the duty cycle for Completed posters wait at desk?",
+        "attribute": "duty cycle",
+        "topId": "D2.3",
+        "score": 1.909846144309774
+      },
+      {
+        "q": "What is the proof load for Ask the duty librarian to?",
+        "attribute": "proof load",
+        "topId": "D1.1",
+        "score": 1.5604764755331406
+      },
+      {
+        "q": "What is the retirement date for Visitor passes expire after 45?",
+        "attribute": "retirement date",
+        "topId": "D1.2",
+        "score": 2.3059842631903686
+      },
+      {
+        "q": "What is the discount rate for Present a library card at?",
+        "attribute": "discount rate",
+        "topId": "D1.3",
+        "score": 1.496274928039411
+      },
+      {
+        "q": "What is the replacement value for Use the blue renewal terminal.?",
+        "attribute": "replacement value",
+        "topId": "D1.4",
+        "score": 2.2999562498565203
+      },
+      {
+        "q": "What is the billing currency for A failed job earns 3?",
+        "attribute": "billing currency",
+        "topId": "D2.1",
+        "score": 2.066964692218728
+      },
+      {
+        "q": "What is the vat code for Load ivory stock for proof?",
+        "attribute": "vat code",
+        "topId": "D2.2",
+        "score": 2.131945300038786
+      },
+      {
+        "q": "What is the escrow fee for Completed posters wait at desk?",
+        "attribute": "escrow fee",
+        "topId": "D2.3",
+        "score": 1.5239112543292943
+      },
+      {
+        "q": "What is the ballot count for Only the floor technician clears?",
+        "attribute": "ballot count",
+        "topId": "D2.4",
+        "score": 2.0703427290251004
+      },
+      {
+        "q": "What is the bond maturity for Ask the duty librarian to?",
+        "attribute": "bond maturity",
+        "topId": "D1.1",
+        "score": 1.268376218159396
+      },
+      {
+        "q": "What is the trademark number for Visitor passes expire after 45?",
+        "attribute": "trademark number",
+        "topId": "D1.2",
+        "score": 2.296106940943937
+      },
+      {
+        "q": "What is the insurance limit for Present a library card at?",
+        "attribute": "insurance limit",
+        "topId": "D1.3",
+        "score": 1.5232367024517457
+      },
+      {
+        "q": "What is the review quorum for Use the blue renewal terminal.?",
+        "attribute": "review quorum",
+        "topId": "D1.4",
+        "score": 1.6281597298763486
+      },
+      {
+        "q": "What is the franchise territory for A failed job earns 3?",
+        "attribute": "franchise territory",
+        "topId": "D2.1",
+        "score": 1.4559318967665662
+      },
+      {
+        "q": "What is the bank routing code for Load ivory stock for proof?",
+        "attribute": "bank routing code",
+        "topId": "D2.2",
+        "score": 1.7980986998264386
+      },
+      {
+        "q": "What is the capital allowance for Completed posters wait at desk?",
+        "attribute": "capital allowance",
+        "topId": "D2.3",
+        "score": 1.7781642593343252
+      }
+    ]
+  },
+  "passed": 10,
+  "total": 20,
+  "classes": {
+    "paraphrase": {
+      "passed": 0,
+      "total": 8
+    },
+    "cross-document": {
+      "passed": 0,
+      "total": 2
+    },
+    "near miss": {
+      "passed": 8,
+      "total": 8
+    },
+    "ambiguous": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "falseRefusals": {
+    "count": 10,
+    "total": 10
+  },
+  "falseAnswersOnRefusals": {
+    "count": 0,
+    "total": 8
+  },
+  "results": [
+    {
+      "question": "Who can get me back into a frozen login?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "duty librarian"
+      ],
+      "sources": [
+        "accounts.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How much time does a guest get?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "45 minutes"
+      ],
+      "sources": [
+        "accounts.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What should I show to prove my identity?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "library card"
+      ],
+      "sources": [
+        "accounts.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Which machine extends my pass?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "blue renewal terminal"
+      ],
+      "sources": [
+        "accounts.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What balance adjustment follows a failed print?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "3 credits"
+      ],
+      "sources": [
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What shade should draft sheets be?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "ivory"
+      ],
+      "sources": [
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Where do I collect a finished wall print?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "desk Cedar"
+      ],
+      "sources": [
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Who can remove a stuck item from the spooler?",
+      "kind": "paraphrase",
+      "status": "answered",
+      "facts": [
+        "floor technician"
+      ],
+      "sources": [
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "What proves my identity? Also, where can I collect my wall print?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "library card",
+        "desk Cedar"
+      ],
+      "sources": [
+        "accounts.md",
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "How long can a guest stay logged in and who clears a stuck print?",
+      "kind": "cross-document",
+      "status": "answered",
+      "facts": [
+        "45 minutes",
+        "floor technician"
+      ],
+      "sources": [
+        "accounts.md",
+        "printing.md"
+      ],
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": false
+    },
+    {
+      "question": "Does a visitor pass work off campus?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the charge to replace a library card?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Can I renew at the blue terminal on Sunday?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What file size does the printer accept?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "When do unused print credits expire?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Does a failed poster earn double credit?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which email reaches the duty librarian?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What is the target response time for stalled jobs?",
+      "kind": "near miss",
+      "status": "refused",
+      "actual": {
+        "status": "refused",
+        "text": "I could not establish that from the supplied sources.",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "Which one?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    },
+    {
+      "question": "What about it?",
+      "kind": "ambiguous",
+      "status": "clarify",
+      "actual": {
+        "status": "clarify",
+        "text": "Which topic or record do you mean?",
+        "citations": []
+      },
+      "passed": true
+    }
+  ]
+}
