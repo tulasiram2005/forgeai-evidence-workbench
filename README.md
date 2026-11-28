@@ -2,9 +2,9 @@
 
 ## Review in 5 minutes
 
-ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The live main-branch demo predates this draft.
+ForgeAI is a local workbench for inspecting document evidence, checking citations and measuring when a document agent should withhold an answer. The submission verdict is **DO NOT SHIP for autonomous answering**. New builds use evidence-first review. The [live Render workbench](https://forgeai-evidence-workbench.onrender.com/) serves the reviewer pilot at commit `601446c`.
 
-1. Open the workbench on this branch with `npm start`. Read the fresh-suite trust panel and ask a source question.
+1. Open the live Render workbench, or run `npm start` on this branch. Read the fresh-suite trust panel and ask a source question.
 2. Choose **Remove a source**. See how the response changes when its cited document is unavailable.
 3. Choose **Change a policy**. Inspect the before-and-after answers. In the evidence ledger, open **Development case diagnostics** for the frozen rank and judge traces.
 
@@ -92,7 +92,7 @@ The [original synthetic corpora and design notes](examples/) are included. The [
 
 ## Hosting
 
-Render publishes the live workbench from main after the test suite passes. Its build copies the public assets and demo into dist. A [GitHub Pages mirror](https://tulasiram2005.github.io/forgeai-evidence-workbench/) uses branch publishing. The `gh-pages` branch contains the contents of `public/`, `demo/` and an empty `.nojekyll` file. The runtime needs no hosted model, API key, paid account feature or paid plugin.
+Render is pinned to the manually deployed pilot commit. Automatic deployment is off. Its build installs the pinned PDF parser, runs the tests, and copies the public assets and demo into dist. The earlier [GitHub Pages site](https://tulasiram2005.github.io/forgeai-evidence-workbench/) uses branch publishing. The `gh-pages` branch contains the contents of `public/`, `demo/` and an empty `.nojekyll` file. The runtime needs no hosted model, API key, paid account feature or paid plugin.
 
 ### Archive challenge
 
